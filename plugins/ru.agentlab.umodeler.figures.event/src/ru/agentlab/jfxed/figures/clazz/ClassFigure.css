@@ -1,0 +1,43 @@
+.ClassFigure{
+	-fx-background-color: YELLOW;
+    -fx-background-radius: 5;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+	-fx-alignment: CENTER;
+	-fx-padding: 15 35 15 35;
+}
+
+.ClassFigure-Rect{
+	-fx-fill: CYAN;
+    -fx-stroke: #FFFFFF;
+    -fx-stroke-type: inside;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-arc-height: 5;
+    -fx-arc-width: 5;
+    -fx-padding: 5;
+}
+
+.ClassFigure-Name-Section{
+	-fx-alignment: center;
+    -fx-padding: 5;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius: 5 5 0 0;
+}
+
+
+.ClassFigure-Line{
+}
+
+.ClassFigure-Text{
+    -fx-font: bold 14pt "Arial";
+    -fx-stroke-type: outside;
+    -fx-stroke-width: 0;
+}
+
+.ClassFigure-Methods-List{
+    -fx-padding: 6;
+	-fx-spacing: 70;
+}
