@@ -1,6 +1,37 @@
+# Dirs With Binaries #
+/plugins/*/bin/
+/plugins/*/lib/
+/plugins/*/target/
+/plugins/*/xtend-gen/
+/plugins/*/src-gen/
+/plugins/*/classes/
+temp
+.manager
+
+# Binary Files #
 *.class
+*.dll
+*.lib
+*.exe
+*.obj
 
 # Package Files #
 *.jar
 *.war
 *.ear
+*.zip
+*.rar
+*.7z
+*.tar
+
+# Temporary Files #
+*.bak
+*.log
+
+# Data Files #
+*.dat
+*.idn
+
+# Agent Platform #
+APDescription.txt
+MTPs-Main-Container.txt
