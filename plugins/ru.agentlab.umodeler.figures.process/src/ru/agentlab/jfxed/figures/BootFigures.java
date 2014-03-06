@@ -1,6 +1,7 @@
 package ru.agentlab.jfxed.figures;
 
 import ru.agentlab.jfxed.figures.clazz.ClassFigure;
+import ru.agentlab.jfxed.figures.clazz.ClassArrow;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
@@ -9,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.shape.Polyline;
 
 public class BootFigures extends Application {
 	
@@ -33,14 +35,34 @@ public class BootFigures extends Application {
 		AnchorPane root = new AnchorPane();
 		
 		final ClassFigure source = new ClassFigure();
+		
+		final ClassArrow arrow = new ClassArrow();
+		
 		root.getChildren().add(source.getRoot());
 		root.getChildren().add(new VBox());
 		
-		Scene scene = new Scene(root, 800, 800);
+		root.getChildren().add(arrow.getRoot());
+		root.getChildren().add(new VBox());
+		
+		Scene scene = new Scene(root, 1000, 600);
 		//scene.getStylesheets().addAll(ClassFigure.class.getResource("ClassFigure.css").toExternalForm());
 		
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		
+		Polyline polyline = new Polyline();
+	    polyline.getPoints().addAll(new Double[]{
+	        0.0, 10.0,
+	        40.0, 10.0,
+	        40.0, 0.0,
+	        70.0, 20.0,
+	        40.0, 40.0,
+	        40.0, 30.0,
+	        0.0, 30.0,
+	        0.0, 10.0
+	     });
+	    
+	    root.getChildren().add(polyline);
 		
 		
 		/*source.getRoot().setOnMousePressed(new EventHandler<MouseEvent>() {
