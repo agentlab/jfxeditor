@@ -1,6 +1,7 @@
 package ru.agentlab.jfxed.figures;
 
-import ru.agentlab.jfxed.figures.clazz.ClassFigure;
+import ru.agentlab.jfxed.figures.clazz.Rectangle;
+import ru.agentlab.jfxed.figures.clazz.Coub;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
@@ -12,7 +13,7 @@ import javafx.stage.Stage;
 
 public class BootFigures extends Application {
 	
-	ClassFigure sourceToMove;
+	//Rectangle sourceToMove;
 	
 	double sceneStartX;
 	double sceneStartY;
@@ -32,8 +33,10 @@ public class BootFigures extends Application {
 
 		AnchorPane root = new AnchorPane();
 		
-		final ClassFigure source = new ClassFigure();
+		final Rectangle source = new Rectangle();
+		final Coub coub = new Coub();
 		root.getChildren().add(source.getRoot());
+		root.getChildren().add(coub.getRoot());
 		root.getChildren().add(new VBox());
 		
 		Scene scene = new Scene(root, 400, 200);
