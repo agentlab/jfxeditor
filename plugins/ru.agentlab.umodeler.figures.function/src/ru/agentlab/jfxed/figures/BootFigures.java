@@ -1,6 +1,7 @@
 package ru.agentlab.jfxed.figures;
 
 import ru.agentlab.jfxed.figures.clazz.ClassFigure;
+import ru.agentlab.jfxed.figures.clazz2.Path;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
@@ -33,10 +34,12 @@ public class BootFigures extends Application {
 		AnchorPane root = new AnchorPane();
 		
 		final ClassFigure source = new ClassFigure();
+		final Path source2 = new Path();
 		root.getChildren().add(source.getRoot());
 		root.getChildren().add(new VBox());
-		
-		Scene scene = new Scene(root, 400, 200);
+		root.getChildren().add(source2.getRoot());
+		root.getChildren().add(new VBox());
+		Scene scene = new Scene(root, 800, 600);
 		//scene.getStylesheets().addAll(ClassFigure.class.getResource("ClassFigure.css").toExternalForm());
 		
 		primaryStage.setScene(scene);
