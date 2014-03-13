@@ -7,7 +7,7 @@ import ru.agentlab.jfxed.figures.BaseFigure
 
 class ClassFigure extends BaseFigure {
 	
-	String name = "Gap";
+	String name = " State2";
 	
 	new (){
 		root = new VBox
@@ -21,14 +21,18 @@ class ClassFigure extends BaseFigure {
 		
 		root.children += new HBox => [
 			styleClass += "ClassFigure-Name-Section"
-			
+		    
+		    children += new HBox => [
+				styleClass += "ClassFigure-Inc"
+			]		
 			children += new Text => [
 				text = name
 				styleClass += "ClassFigure-Text"
-			]
+			]			
 		]
+
 		
-		/*root.children += new VBox => [
+	/*	root.children += new VBox => [
 			styleClass += "ClassFigure-Methods-List"
 			
 			children += new Text => [

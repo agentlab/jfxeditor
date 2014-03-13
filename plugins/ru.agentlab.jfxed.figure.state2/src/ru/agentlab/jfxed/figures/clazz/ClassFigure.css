@@ -1,0 +1,58 @@
+.ClassFigure{
+	-fx-background-color: linear-gradient(to top, #01796f, #00c8ff);
+    -fx-background-radius: 20px;
+    -fx-border-color: #44466c;
+    -fx-border-width: 1;
+    -fx-border-radius: 20px;  
+    
+    -fx-alignment: CENTER;
+	-fx-padding: 10 20 30 20;
+}
+
+.ClassFigure-Rect{
+	-fx-fill: CYAN;
+    -fx-stroke: #FFFFFF;
+    -fx-stroke-type: outside;
+     
+    -fx-border-radius: 5;
+    -fx-background-radius: 0;
+    -fx-arc-height: 5;
+    -fx-arc-width: 5;
+    -fx-padding: 5;
+}
+
+.ClassFigure-Inc{
+	-fx-background-color: linear-gradient(to top, #556832, #7fff00);
+	-fx-background-radius: 5px;
+	-fx-border-color: #44466c;
+    -fx-border-width: 1;
+    -fx-border-radius: 5px; 
+    
+    -fx-alignment: CENTER;
+    -fx-padding: 2 10 2 10; 
+}
+
+/*  .ClassFigure-Name-Section{
+	-fx-alignment: center;
+    -fx-padding: 5;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius: 5 5 0 0;
+}
+
+*/
+.ClassFigure-Line{
+}
+
+ .ClassFigure-Text{
+    -fx-font: norm 15pt "Arial";
+    -fx-stroke-type: outside;
+    -fx-stroke-width: 0;
+    
+}
+
+.ClassFigure-Methods-List{
+    -fx-padding: 5;
+	-fx-spacing: 5;
+	
+}
