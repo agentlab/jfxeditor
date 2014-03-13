@@ -7,7 +7,7 @@ import ru.agentlab.jfxed.figures.BaseFigure
 
 class ClassFigure extends BaseFigure {
 	
-	String name = "Specifications";
+	String name = "Gap";
 	
 	new (){
 		root = new VBox
