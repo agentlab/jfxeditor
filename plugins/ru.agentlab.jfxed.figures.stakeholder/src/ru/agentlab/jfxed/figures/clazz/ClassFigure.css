@@ -1,0 +1,65 @@
+.ClassFigure{
+	-fx-background-color: #f984e5;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-radius: 0;    
+    
+    
+    -fx-alignment: CENTER;
+	-fx-padding: 5 8 50 8;
+}
+
+.ClassFigure-Rect{
+	-fx-fill: CRYMSON;
+    -fx-stroke: #FFFFFF;
+    -fx-stroke-type: outside;
+     
+    -fx-border-radius: 5;
+    -fx-background-radius: 0;
+    -fx-arc-height: 5;
+    -fx-arc-width: 5;
+    -fx-padding: 5;
+}
+
+.Vasya {
+	-fx-fill: #f984e5;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+	
+}
+
+.Kolbasa{
+	-fx-fill: #000000;
+    -fx-stroke: #000000;
+    -fx-border-radius: 5;
+    -fx-background-radius: 0;
+    -fx-arc-height: 5;
+    -fx-arc-width: 5;
+    -fx-padding: 5;
+}
+
+/*  .ClassFigure-Name-Section{
+	-fx-alignment: center;
+    -fx-padding: 5;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius: 5 5 0 0;
+}
+
+*/
+.ClassFigure-Line{
+}
+
+ .ClassFigure-Text{
+    -fx-font: norm 18pt "Arial";
+    -fx-stroke-type: centered;
+    -fx-stroke-width: 0;      
+}
+
+.ClassFigure-Methods-List{
+    -fx-padding: 5;
+	-fx-spacing: 5;
+	
+}
