@@ -11,13 +11,13 @@ class BaseFigure {
 	var double sceneStartY = 0
 	var double figureStartTranslateX = 0
 	var double figureStartTranslateY = 0
-	// РќР°С‡Р°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹ РѕР±СЉРµРєС‚Р°
+	// Начальные размеры объекта
 	var public double initWidth = 320
 	var public double initHeight = 150
-	// РњР°РєСЃРёРјР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹ РѕР±СЉРµРєС‚Р°
+	// Максимальные размеры объекта
 	var public double maxWidth = 350
 	var public double maxHeight = 300
-	// РњРёРЅРёРјР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹ РѕР±СЉРµРєС‚Р°
+	// Минимальные размеры объекта
 	var public double minWidth = 200
 	var public double minHeight = 100
 	
@@ -36,9 +36,9 @@ class BaseFigure {
 	}
 	
 	def void initHandlers() {
-		// РЎРѕР±С‹С‚РёРµ РЅР°Р¶Р°С‚РёСЏ РЅР° РєР»Р°РІРёС€Сѓ РјС‹С€РєРё
+		// Событие нажатия на клавишу мышки
 		root.onMouseClicked = [ MouseEvent event |
-			if (!dragged) { // Р•СЃР»Рё РЅРµ Р±С‹Р»Рѕ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРѕ РїРµСЂРµРјРµС‰РµРЅРёСЏ, С‚Рѕ Рё РЅРµ СЂР°Р·СЂРµС€Р°РµРј СЂРµСЃР°Р№Р·РёС‚СЊ РѕР±СЉРµРєС‚
+			if (!dragged) { // Если не было зарегистрировано перемещения, то и не разрешаем ресайзить объект
 				resizing = !resizing;
 			}
 			if (resizing) {
@@ -50,24 +50,24 @@ class BaseFigure {
             dragged = false
 		]
 		
-		// РЎРѕР±С‹С‚РёРµ РѕС‚РїСѓСЃРєР°РЅРёСЏ РєР»Р°РІРёС€Рё РјС‹С€РєРё
+		// Событие отпускания клавиши мышки
 		//root.onMouseReleased = [ MouseEvent event |
 		//	println("Mouse released")
 	    //]
 
-		// РЎРѕР±С‹С‚РёРµ Р·Р°Р¶РёРјР°РЅРёСЏ РєР»Р°РІРёС€Рё РјС‹С€РєРё
+		// Событие зажимания клавиши мышки
 		root.onMousePressed = [ MouseEvent event |
 			println("Mouse pressed")
 			
-			// РџРѕР»СѓС‡Р°РµРј РЅР°С‡Р°Р»СЊРЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РґР»СЏ РїРµСЂРµРјРµС‰РµРЅРёСЏ РѕР±СЉРµРєС‚Р°
+			// Получаем начальные координаты для перемещения объекта
 			sceneStartX = event.getSceneX()
 			sceneStartY = event.getSceneY()
 			
-			// РџРѕР»СѓС‡Р°РµРј РЅР°С‡Р°Р»СЊРЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РґР»СЏ СЂРµСЃР°Р№Р·Р° РѕР±СЉРµРєС‚Р°
+			// Получаем начальные координаты для ресайза объекта
 			sizeStartX = event.getSceneX()
 			sizeStartY = event.getSceneY()
 
-			// РџРѕР»СѓС‡Р°РµРј СЂР°Р·РјРµСЂС‹ РѕР±СЉРµРєС‚Р°
+			// Получаем размеры объекта
 			rootWidth = root.width
 			rootHeight = root.height 
 			
@@ -76,14 +76,14 @@ class BaseFigure {
 			figureStartTranslateY = node.translateY	
 	    ]
 		
-		// РЎРѕР±С‹С‚РёРµ РґРІРёР¶РµРЅРёСЏ РјС‹С€РєРё
+		// Событие движения мышки
 		root.onMouseDragged = [ MouseEvent event |
 			dragged = true
-			if (!resizing) { // РџРµСЂРµРјРµС‰РµРЅРёРµ РѕР±СЉРµРєС‚Р°
+			if (!resizing) { // Перемещение объекта
 				println("Moving: [x:" + event.sceneX + "] [y:" + event.sceneY + "]");
 				root.translateX = figureStartTranslateX + event.sceneX - sceneStartX;
 				root.translateY = figureStartTranslateY + event.sceneY - sceneStartY;
-			} else { // Р РµСЃР°Р№Р· РѕР±СЉРµРєС‚Р°
+			} else { // Ресайз объекта
 				println("Resizing [x:" + event.sceneX + "] [y:" + event.sceneY + "]");
 	        	root.setPrefWidth = rootWidth + event.sceneX - sizeStartX;
 	        	root.setPrefHeight = rootHeight + event.sceneY - sizeStartY;

@@ -9,16 +9,16 @@ class ClassFigure extends BaseFigure {
 	new (){
 		root = new VBox
 		
-		// Р—Р°РґР°РµРј РїР°СЂР°РјРµС‚СЂС‹ СЂР°Р·РјРµСЂР° РѕР±СЉРµРєС‚Р°
+		// Задаем параметры размера объекта
 		root.setPrefHeight(initHeight)
 		root.setPrefWidth(initWidth)
 		root.setMaxSize(maxWidth, maxHeight)
 		root.setMinSize(minWidth, minHeight)
 		
-		// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј РѕР±СЂР°Р±РѕС‚С‡РёРє РјС‹С€РєРё
+		// Инициализируем обработчик мышки
 		initHandlers()
 		
-		// Р¦РµРЅС‚СЂРёСЂСѓРµРј РѕР±СЉРµРєС‚
+		// Центрируем объект
 		var double centerX = 0
 		var double centerY = 0
 		centerX = (760 / 2) - (initWidth / 2)
@@ -26,7 +26,7 @@ class ClassFigure extends BaseFigure {
 		root.setLayoutX(centerX);
     	root.setLayoutY(centerY);
 		
-		// РџРѕРґРєР»СЋС‡Р°РµРј СЃС‚РёР»Рё
+		// Подключаем стили
 		val css = ClassFigure.getResource("ClassFigure.css").toExternalForm()
 		root.getStylesheets().addAll(css)
 		
