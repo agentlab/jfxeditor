@@ -31,21 +31,21 @@
 
 */
 .ClassFigure-Line{
-	-fx-background-color: #000000;
+	-fx-background-color: #99ccff;
     -fx-background-radius: 0;
     -fx-border-color: #99ccff;
-    -fx-border-width: 2;
+    -fx-border-width: 3;
     -fx-border-radius: 0;    
-    
+   
     
 	-fx-padding: 5 8 100 8;
 }
 
- .ClassFigure-Text{
-    -fx-font: norm 15pt "Arial";
-    -fx-stroke-type: outside;
+ .Text{
+    -fx-font: norm 18pt "Arial";
+    -fx-stroke-type: centered;
     -fx-stroke-width: 0;
-    
+ 
 }
 
 .ClassFigure-Methods-List{
@@ -54,31 +54,9 @@
 	
 }
 
-.Polygon{
-    -fx-width: 0;
-    -fx-height: 0;
-    -fx-border-left: 100px solid transparent;
-    -fx-border-right: 100px solid transparent;
-    -fx-border-bottom: 150px solid #00B2FF;
-    -fx-position: relative;
-    
-    -fx-padding: 5 100 50 3;
-	-fx-spacing: 5;
-	-fx-background-color: #ff2255;
-	-fx-border-color: #99ccff;
-    -fx-border-width: 2;
-    -fx-border-radius: 0;    
-    
+.Polyline{
+   
+    -fx-fill: #99eedd;
+    -fx-stroke: #33aadd;
+	-fx-stroke-width: 3;
 }
-
-.Shape{
--fx-fill: BLACK; 	 
--fx-smooth: 	true ;	 
--fx-stroke: 	null ;	 
--fx-stroke-dash-array: null ; 
--fx-stroke-dash-offset: 	0;	 
--fx-stroke-line-cap: square; 	 
--fx-stroke-line-join: miter; 	 
- 
--fx-stroke-width:	5;
-	}

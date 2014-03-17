@@ -32,7 +32,7 @@
 }
 
  .ClassFigure-Text{
-    -fx-font: norm 15pt "Arial";
+    -fx-font: norm 18pt "Arial";
     -fx-stroke-type: outside;
     -fx-stroke-width: 0;
     
@@ -52,3 +52,10 @@
   overflow: hidden;
   margin: 0 auto;
 }*/
+
+.Polyline{
+   
+    -fx-fill: #99eedd;
+    -fx-stroke: #33aadd;
+	-fx-stroke-width: 3;
+}
