@@ -28,7 +28,7 @@ public class BootFigures extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		primaryStage.setTitle("Hello World!");
+		primaryStage.setTitle("Interaction");
 
 		AnchorPane root = new AnchorPane();
 		
