@@ -12,29 +12,30 @@ public class ProductViewpointTest {
 	static String NS = SOURCE + "#";
 	
 	public static void main (String[] args){
-		OntModel m = ModelFactory.createOntologyModel();
-		OntClass productClass = m.createClass(NS + "Product");
+		OntModel m = ModelFactory.createOntologyModel();//создается пустая база знаний
+		OntClass productClass = m.createClass(NS + "Product");//создаем отдельные triple
 		OntClass contractClass = m.createClass(NS + "Contract");
 		OntClass associationClass = m.createClass(NS + "Association");
 		
-		OntClass aggregationClass = m.createClass(NS + "Agregation");
-		aggregationClass.addSuperClass(associationClass);
+		OntClass aggregationClass = m.createClass(NS + "Agregation");//связь
+		aggregationClass.addSuperClass(associationClass);//родительская связь
 		
-		ObjectProperty propTo = m.createObjectProperty(NS + "To");
+		ObjectProperty propTo = m.createObjectProperty(NS + "To");//объекты - свойства
 		ObjectProperty propFrom = m.createObjectProperty(NS + "From");
 		
-		propTo.addDomain(aggregationClass);
+		propTo.addDomain(aggregationClass);//свойства у aggregation
 		propFrom.addDomain(aggregationClass);
 		
-		propTo.addRange(contractClass);
+		propTo.addRange(contractClass);//то что могут принимать
 		propFrom.addRange(productClass);
 		
+		//наполнение базы 
 		Individual productIndividual = m.createIndividual(NS + "jkljklj2", productClass);
 		Individual contractIndividual = m.createIndividual(NS + "jkljklj3", contractClass);
 		
 		Individual aggregationIndividual = m.createIndividual(NS + "jkljklj1", aggregationClass);
-		aggregationIndividual.addProperty(propTo, contractIndividual);
+		aggregationIndividual.addProperty(propTo, contractIndividual);//от продукта к контракту
 		aggregationIndividual.addProperty(propFrom, productIndividual);
-		m.write(System.out);
+		m.write(System.out);//и в консоль
 	}
 }
