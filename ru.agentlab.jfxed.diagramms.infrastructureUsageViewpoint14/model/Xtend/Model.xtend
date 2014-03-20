@@ -1,0 +1,5 @@
+package Xtend
+
+class Model {
+	
+}
