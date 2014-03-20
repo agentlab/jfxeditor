@@ -11,6 +11,7 @@ public class ProductViewpointTest {
 	static String SOURCE = "http://www.eswc2006.org/technologies/ontology";
 	static String NS = SOURCE + "#";
 	
+	//test from sourcetree
 	public static void main (String[] args){
 		OntModel m = ModelFactory.createOntologyModel();//создается пустая база знаний
 		OntClass productClass = m.createClass(NS + "Product");//создаем отдельные triple
