@@ -1,0 +1,36 @@
+.ClassPass{
+	-fx-background-color: #99FF99;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 0;    
+    -fx-alignment: CENTER;
+	-fx-padding: 0;
+	}
+	.ClassFigure-Rect{
+	-fx-fill: CYAN;
+    -fx-stroke: #FFFFFF;
+    -fx-stroke-type: outside;
+     
+    -fx-border-radius: 5;
+    -fx-background-radius: 0;
+    -fx-arc-height: 5;
+    -fx-arc-width: 5;
+    -fx-padding: 5;
+}
+
+
+.ClassFigure-Line{
+}
+
+ .ClassFigure-Text{
+    -fx-font: norm 15pt "Arial";
+    -fx-stroke-type: outside;
+    -fx-stroke-width: 0;
+    
+}
+
+.ClassFigure-Methods-List{
+    -fx-padding: 5;
+	-fx-spacing: 5;
+	}

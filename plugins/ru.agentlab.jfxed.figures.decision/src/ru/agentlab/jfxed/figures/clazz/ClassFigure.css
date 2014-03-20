@@ -1,0 +1,62 @@
+.ClassFigure{
+	-fx-background-color: #99ee22;
+    -fx-background-radius: 0;
+    -fx-border-color: #99ccff;
+    -fx-border-width: 2;
+    -fx-border-radius: 0;    
+    
+    -fx-alignment: CENTER;
+	-fx-padding: 5 8 50 8;
+}
+
+.ClassFigure-Rect{
+	-fx-fill: CYAN;
+    -fx-stroke: #FFFFFF;
+    -fx-stroke-type: outside;
+     
+    -fx-border-radius: 5;
+    -fx-background-radius: 0;
+    -fx-arc-height: 5;
+    -fx-arc-width: 5;
+    -fx-padding: 5;
+}
+
+/*  .ClassFigure-Name-Section{
+	-fx-alignment: center;
+    -fx-padding: 5;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius: 5 5 0 0;
+}
+
+*/
+.ClassFigure-Line{
+	-fx-background-color: #99ccff;
+    -fx-background-radius: 0;
+    -fx-border-color: #99ccff;
+    -fx-border-width: 3;
+    -fx-border-radius: 0;    
+   
+    
+	-fx-padding: 5 8 100 8;
+}
+
+ .Text{
+    -fx-font: norm 18pt "Arial";
+    -fx-stroke-type: centered;
+    -fx-stroke-width: 0;
+ 
+}
+
+.ClassFigure-Methods-List{
+    -fx-padding: 5;
+	-fx-spacing: 5;
+	
+}
+
+.Polyline{
+   
+    -fx-fill: #99eedd;
+    -fx-stroke: #33aadd;
+	-fx-stroke-width: 3;
+}
