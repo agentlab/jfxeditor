@@ -34,10 +34,19 @@
 	-fx-stroke-width: 20;
 	
 }
-.ClassFigure2SemiCircle {
+
+.ClassFigure2SemiCircleCENTRED {
 	-fx-alignment: top-right;
     -fx-stroke-type: outside;
     -fx-stroke-width: 0;
+}
+
+.ClassFigure2SemiCircle {
+	-fx-fill: #FFFF66;
+    -fx-stroke: #000000;
+	-fx-alignment: top-right;
+    -fx-stroke-type: outside;
+    -fx-stroke-width: 2;
 }
 
 

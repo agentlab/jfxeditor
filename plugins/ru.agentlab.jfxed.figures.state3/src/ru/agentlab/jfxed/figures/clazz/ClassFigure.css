@@ -1,47 +1,35 @@
 .ClassFigure{
-	-fx-background-color: white;
-    -fx-background-radius: 0;
-    -fx-border-color: #7f8eff;
-    -fx-border-width: 2;
-    -fx-border-radius: 5;    
+    -fx-background-color: 
+        rgba(0,0,0,0.08),
+        linear-gradient(#5a61af, #51536d),
+        linear-gradient(#e4fbff 0%,#cee6fb 10%, #a5d3fb 50%);
+    -fx-text-fill: #242d35;
+    -fx-font-size: 14px;
     
-    -fx-alignment: CENTER;
-	-fx-padding: 5 8 50 8;
+    -fx-background-radius: 15 15 15 15;
+    -fx-border-color: #74bbf9;
+    -fx-border-width: 1;
+    -fx-border-radius: 12 12 12 12;
+	-fx-padding: 0;
 }
 
-.ClassFigure-Rect{
-	-fx-fill: CYAN;
-    -fx-stroke: #FFFFFF;
-    -fx-stroke-type: outside;
-     
-    -fx-border-radius: 5;
-    -fx-background-radius: 0;
-    -fx-arc-height: 5;
-    -fx-arc-width: 5;
-    -fx-padding: 5;
-}
-
-/*  .ClassFigure-Name-Section{
+.ClassFigure-Name-Section{
 	-fx-alignment: center;
-    -fx-padding: 5;
+    -fx-padding: 6 45 6 45;
     -fx-border-color: black;
     -fx-border-width: 0 0 1 0;
+    -fx-border-color: #74bbf9;
     -fx-border-radius: 5 5 0 0;
 }
 
-*/
-.ClassFigure-Line{
-}
-
- .ClassFigure-Text{
-    -fx-font: norm 15pt "Arial";
+.ClassFigure-Text{
+    -fx-font: 12pt "CourierNew";
     -fx-stroke-type: outside;
     -fx-stroke-width: 0;
-    
 }
 
 .ClassFigure-Methods-List{
-    -fx-padding: 5;
-	-fx-spacing: 5;
-	
+	-fx-background-radius: 0 0 12 12;
+	/*-fx-background-color: WHITE;
+    -fx-padding: 60;*/
 }

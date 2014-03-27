@@ -4,7 +4,21 @@ import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.scene.text.Text
 import ru.agentlab.jfxed.figures.BaseFigure
-import javafx.scene.shape.Polliline
+import javafx.scene.layout.HBox
+import javafx.scene.layout.VBox
+import javafx.scene.text.Text
+import ru.agentlab.jfxed.figures.BaseFigure
+
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.scene.Group;
+import javafx.scene.Node;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Polygon;
+import javafx.scene.shape.Polyline
+
 
 class ClassPass extends BaseFigure {
 	String name = "";
@@ -23,7 +37,7 @@ new (){
 		
 			children += new Text => [
 				text = name
-				styleClass += "ClassFigure-Text"
+				styleClass += "Text"
 				
 		
 			]
