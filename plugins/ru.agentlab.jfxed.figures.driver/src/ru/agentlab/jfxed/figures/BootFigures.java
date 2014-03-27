@@ -26,7 +26,6 @@ public class BootFigures extends Application {
 		launch(args);
 	}
 
-	@Override
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("Hello World!");
 

@@ -13,6 +13,7 @@ import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
+import javafx.scene.shape.Polyline
 
 class ClassFigure extends BaseFigure {
 	
@@ -26,14 +27,35 @@ class ClassFigure extends BaseFigure {
 		val s = ClassFigure.getResource("ClassFigure.css").toExternalForm()
 		root.stylesheets += s
 		
-		root.styleClass += "ClassFigure"; //figure
+	//var1
+	root.children += new Group => [
+ 		children += new Polyline => [
+ 				points +=  30d 
+ 				points +=  60d 
+ 				points +=  150d
+ 				points +=  0d
+ 	            points += 270d
+ 	            points += 60d                      
+ 	            points += 150d
+ 	            points += 120d	            	            
+ 	            points += 30d
+ 	            points += 60d	            
+ 	            
+ 	            
+ 	            styleClass += "Polyline"
+ 
+         ]
+ 			 
 		
-		root.children += new HBox => [
-			styleClass += "Polygon"//ClassFigure-Name-Section
+		//root.styleClass += "ClassFigure"; //figure
+		
+		
 		
 			children += new Text => [
 				text = name
-				styleClass += "ClassFigure-Text"
+				styleClass += "Text"
+				layoutX = 70
+ 				layoutY = 65
 			]
 		]
 		

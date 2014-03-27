@@ -29,17 +29,37 @@ class ClassFigure extends BaseFigure {
 				styleClass += "ClassFigure-Text"
 				
 			root.children += new HBox => [
-				styleClass += "ClassFigure2SemiCircle"
-				
+				styleClass += "ClassFigure2SemiCircleCENTRED"
 				
 				children += new Arc() => [
+					styleClass += "ClassFigure2SemiCircle"
 					centerX = 50.0f
 					centerY = 50.0f
-					radiusX=25.0f
-					radiusY=25.0f
-					startAngle = 45.0f
-					length = 100.0f
-					//atype= ArcType.ROUND
+					radiusX=15.0f
+					radiusY=15.0f
+					startAngle = 90.0f
+					length = 180.0f
+					type= ArcType.ROUND
+					
+					
+				] 
+				
+					children += new Line() => [
+						setStartX(0.0f);
+						setStartY(0.0f);
+						setEndX(5.0f);
+						setEndY(0.0f);
+					]
+					
+					children += new Arc() => [
+					styleClass += "ClassFigure2SemiCircle"
+					centerX = 50.0f
+					centerY = 50.0f
+					radiusX=15.0f
+					radiusY=15.0f
+					startAngle = -90.0f
+					length = 180.0f
+					type= ArcType.ROUND
 					
 					
 				]
