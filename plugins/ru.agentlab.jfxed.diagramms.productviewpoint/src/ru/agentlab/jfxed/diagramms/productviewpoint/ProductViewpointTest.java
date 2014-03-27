@@ -13,30 +13,30 @@ public class ProductViewpointTest {
 	
 	//test from sourcetree
 	public static void main (String[] args){
-		OntModel m = ModelFactory.createOntologyModel(); //создается пустая база знаний
-		OntClass productClass = m.createClass(NS + "Product"); //создаем отдельные triple
+		OntModel m = ModelFactory.createOntologyModel();//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+		OntClass productClass = m.createClass(NS + "Product");//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ triple
 		OntClass contractClass = m.createClass(NS + "Contract");
 		OntClass associationClass = m.createClass(NS + "Association");
 		
-		OntClass aggregationClass = m.createClass(NS + "Agregation"); //связь
-		aggregationClass.addSuperClass(associationClass); //родительская связь
+		OntClass aggregationClass = m.createClass(NS + "Agregation");//пїЅпїЅпїЅпїЅпїЅ
+		aggregationClass.addSuperClass(associationClass);//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 		
-		ObjectProperty propTo = m.createObjectProperty(NS + "To"); //объекты - свойства
+		ObjectProperty propTo = m.createObjectProperty(NS + "To");//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		ObjectProperty propFrom = m.createObjectProperty(NS + "From");
 		
-		propTo.addDomain(aggregationClass); //свойства у aggregation
+		propTo.addDomain(aggregationClass);//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ aggregation
 		propFrom.addDomain(aggregationClass);
 		
-		propTo.addRange(contractClass); //то что могут принимать
+		propTo.addRange(contractClass);//пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		propFrom.addRange(productClass);
 		
-		//наполнение базы 
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ 
 		Individual productIndividual = m.createIndividual(NS + "jkljklj2", productClass);
 		Individual contractIndividual = m.createIndividual(NS + "jkljklj3", contractClass);
 		
 		Individual aggregationIndividual = m.createIndividual(NS + "jkljklj1", aggregationClass);
-		aggregationIndividual.addProperty(propTo, contractIndividual); //от продукта к контракту
+		aggregationIndividual.addProperty(propTo, contractIndividual);//пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		aggregationIndividual.addProperty(propFrom, productIndividual);
-		m.write(System.out); //и в консоль
+		m.write(System.out);//пїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	}
 }
