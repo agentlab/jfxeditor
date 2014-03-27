@@ -30,8 +30,10 @@ public class Diagramm {
 		propFrom.addRange(productClass);
 		
 		//наполнение базы 
-		Individual productIndividual = m.createIndividual(NS + "jkljklj2", productClass);
-		Individual contractIndividual = m.createIndividual(NS + "jkljklj3", contractClass);
+		Individual accountIndividual = m.createIndividual(NS + "account's individuals", characterClass);
+		Individual regionIndividual = m.createIndividual(NS + "region's individuals", characterClass);
+		Individual itemIndividual = m.createIndividual(NS + "item's individuals", itemInstantionClass);
+		Individual creepIndividual = m.createIndividual(NS + "creep's individuals", creepInstantionClass);
 		
 		Individual aggregationIndividual = m.createIndividual(NS + "jkljklj1", aggregationClass);
 		aggregationIndividual.addProperty(propTo, contractIndividual);//от продукта к контракту
