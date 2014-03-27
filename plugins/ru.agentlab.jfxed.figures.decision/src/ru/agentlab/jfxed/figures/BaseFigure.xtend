@@ -20,7 +20,6 @@ class BaseFigure {
 	
 	def void initHandlers() {
 		
-		
 		root.onMousePressed = [ MouseEvent event |
 			println("setOnMousePressed")
 			sceneStartX = event.getSceneX()

@@ -29,8 +29,7 @@ public class BootFigures extends Application {
 	double figureStartTranslateX;
 	double figureStartTranslateY;
 	
-	
-	
+	//commit 27.03
 	public static void main(String[] args) {
 		launch(args);
 	}

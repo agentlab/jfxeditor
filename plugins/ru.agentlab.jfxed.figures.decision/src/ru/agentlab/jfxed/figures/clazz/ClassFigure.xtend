@@ -27,7 +27,7 @@ class ClassFigure extends BaseFigure {
 		val s = ClassFigure.getResource("ClassFigure.css").toExternalForm()
 		root.stylesheets += s
 		
-	//var1
+	
 	root.children += new Group => [
  		children += new Polyline => [
  				points +=  30d 
