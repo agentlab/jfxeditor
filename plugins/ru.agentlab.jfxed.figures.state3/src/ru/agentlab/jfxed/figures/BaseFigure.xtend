@@ -11,13 +11,13 @@ class BaseFigure {
 	var double sceneStartY = 0
 	var double figureStartTranslateX = 0
 	var double figureStartTranslateY = 0
-	// Начальные размеры объекта
+	
 	var public double initWidth = 320
 	var public double initHeight = 150
-	// Максимальные размеры объекта
+	
 	var public double maxWidth = 350
 	var public double maxHeight = 300
-	// Минимальные размеры объекта
+	
 	var public double minWidth = 200
 	var public double minHeight = 100
 	
