@@ -156,13 +156,49 @@ public class ProductViewpointTest {
 		fromStateRequest.addProperty(propFrom, stateTheRequest);
 		
 		//ê another customeró
-//		Individual fromStateRequest = m.createIndividual(NS + "fromStateRequest", aggregationClass);
-//		fromStateRequest.addProperty(propTo, anotherCustomer);
-//		fromStateRequest.addProperty(propFrom, stateTheRequest);
+		Individual fromRespectSystem = m.createIndividual(NS + "fromRespectSystem", aggregationClass);
+		fromRespectSystem.addProperty(propTo, anotherCustomer);
+		fromRespectSystem.addProperty(propFrom, respectSystem);
 		
 		Individual fromFuckOff = m.createIndividual(NS + "fromStateRequest", aggregationClass);
-		fromStateRequest.addProperty(propTo, anotherCustomer);
-		fromStateRequest.addProperty(propFrom, fuckOff);
+		fromFuckOff.addProperty(propTo, anotherCustomer);
+		fromFuckOff.addProperty(propFrom, fuckOff);
+		
+		//ê Q-Maticó
+		
+		Individual fromReachTheCounter = m.createIndividual(NS + "fromReachTheCounter", aggregationClass);
+		fromReachTheCounter.addProperty(propTo, qMatic);
+		fromReachTheCounter.addProperty(propFrom, reachTheCounter);
+		
+		Individual fromGetTicket = m.createIndividual(NS + "fromGetTicket", aggregationClass);
+		fromGetTicket.addProperty(propTo, qMatic);
+		fromGetTicket.addProperty(propFrom, getTicket);
+		
+		Individual fromTicket = m.createIndividual(NS + "fromTicket", aggregationClass);
+		fromTicket.addProperty(propTo, qMatic);
+		fromTicket.addProperty(propFrom, ticket);
+		
+		Individual fromWorkCorrectly = m.createIndividual(NS + "fromWorkCorrectly", aggregationClass);
+		fromWorkCorrectly.addProperty(propTo, qMatic);
+		fromWorkCorrectly.addProperty(propFrom, workCorrectly);
+		
+		//ê CounterStuffy
+		Individual fromGiveService = m.createIndividual(NS + "fromGiveService", aggregationClass);
+		fromGiveService.addProperty(propTo, counterStaff);
+		fromGiveService.addProperty(propFrom, giveGoodService);
+		
+		Individual fromGetService = m.createIndividual(NS + "fromGetService", aggregationClass);
+		fromGetService.addProperty(propTo, counterStaff);
+		fromGetService.addProperty(propFrom, getService);
+		
+		Individual fromPushButton = m.createIndividual(NS + "fromPushButton", aggregationClass);
+		fromPushButton.addProperty(propTo, counterStaff);
+		fromPushButton.addProperty(propFrom, pushButton);
+		
+		Individual fromCheckTicket = m.createIndividual(NS + "fromCheckTicket", aggregationClass);
+		fromCheckTicket.addProperty(propTo, counterStaff);
+		fromCheckTicket.addProperty(propFrom, checkTicket);
+		
 		
 		
 		
