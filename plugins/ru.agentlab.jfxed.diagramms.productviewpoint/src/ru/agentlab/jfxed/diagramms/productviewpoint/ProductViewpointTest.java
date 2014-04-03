@@ -73,8 +73,18 @@ public class ProductViewpointTest {
 		
 		propFrom.addRange(productClass);//продуки содержит конракт т.е. связь между ними инвертировать связи
 		
+		propFrom.addRange(businessServiceClass);
+		propFrom.addRange(businessInterfaceClass);
+		propFrom.addRange(businessEventClass);
+		propFrom.addRange(businessProcessClass);
+		
+		
+		
 		propTo.addRange(contractClass);//т.е. продукт содержит конракт
 		propTo.addRange(businessServiceClass);//и бизнесСервис
+		propTo.addRange(valueClass);
+		//propTo.addRange(valueClass);
+		
 		
 		//наполнение базы создание экзампляров
 		Individual productIndividual = m.createIndividual(NS + "jkljklj2", productClass);//тоже спросить

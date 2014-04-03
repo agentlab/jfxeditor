@@ -25,6 +25,8 @@ public class DragDropTest extends GuiTest {
 
     private ListView<String> list1;
     private ListView<String> list2;
+    
+    
 
     /**
      * A typical event handler to start a drag-drop operation.
