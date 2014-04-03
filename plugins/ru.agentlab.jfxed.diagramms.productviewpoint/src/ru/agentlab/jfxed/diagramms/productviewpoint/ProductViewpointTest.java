@@ -13,16 +13,17 @@ public class ProductViewpointTest {
 	//test from sourcetree
 	public static void main (String[] args){
 		
-		{
 		/*
 		 * Здесь объявляем объекты квадратики схемы
 		 * */
 		OntModel m = ModelFactory.createOntologyModel();//создается пустая база знаний
+		
+		ObjectProperty propTo = m.createObjectProperty(NS + "To");//объекты - свойства
+		ObjectProperty propFrom = m.createObjectProperty(NS + "From");
+		
 		OntClass productClass = m.createClass(NS + "Product");//создаем отдельные triple
 		OntClass contractClass = m.createClass(NS + "Contract");
-		/****
-		 * Мои добавления
-		 * ****/
+		
 		OntClass businessServiceClass = m.createClass(NS + "Business Service");
 		OntClass valueClass = m.createClass(NS + "Value");
 		
@@ -56,24 +57,24 @@ public class ProductViewpointTest {
 		OntClass triggeringClass = m.createClass(NS + "Triggering");//triggering
 		OntClass accessClass = m.createClass(NS + "Composition");//composition
 		
-		//сюдя повсему мы говорим что наши стрелочки это association
+		//сюда повсему мы говорим что наши стрелочки это association
 		aggregationClass.addSuperClass(associationClass);//родительская связь
+		usedByClass.addSuperClass(associationClass);//родительская связь
+		compositionClass.addSuperClass(associationClass);//родительская связь
+		triggeringClass.addSuperClass(associationClass);//родительская связь
+		accessClass.addSuperClass(associationClass);//родительская связь
 		
 		/*
 		 * end
 		 * */
 		
-		ObjectProperty propTo = m.createObjectProperty(NS + "To");//объекты - свойства
-		ObjectProperty propFrom = m.createObjectProperty(NS + "From");
-		
 		propTo.addDomain(aggregationClass);//свойства у aggregation
 		propFrom.addDomain(aggregationClass);
 		
-		propTo.addRange(contractClass);//то что могут принимать
 		propFrom.addRange(productClass);//продуки содержит конракт т.е. связь между ними инвертировать связи
 		
-		
-		//propFrom.addRange(businessServiceClass);//свойство говорящее что businessServiceClass отдает данные
+		propTo.addRange(contractClass);//т.е. продукт содержит конракт
+		propTo.addRange(businessServiceClass);//и бизнесСервис
 		
 		//наполнение базы создание экзампляров
 		Individual productIndividual = m.createIndividual(NS + "jkljklj2", productClass);//тоже спросить
@@ -83,12 +84,12 @@ public class ProductViewpointTest {
 		
 		Individual aggregationIndividual = m.createIndividual(NS + "jkljklj1", aggregationClass);
 		
-		aggregationIndividual.addProperty(propTo, contractIndividual);//от продукта к контракту
 		aggregationIndividual.addProperty(propFrom, productIndividual);
-		aggregationIndividual.addProperty(propFrom, businessServiceIndividual);//делаем связку
+		
+		aggregationIndividual.addProperty(propTo, contractIndividual);//от продукта к контракту
+		aggregationIndividual.addProperty(propTo, businessServiceIndividual);//делаем связку
 		
 		
 		m.write(System.out);//и в консоль
-			}
 		}
 	}
