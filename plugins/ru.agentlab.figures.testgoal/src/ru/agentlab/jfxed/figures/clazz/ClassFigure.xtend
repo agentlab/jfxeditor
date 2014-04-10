@@ -20,7 +20,7 @@ class ClassFigure extends BaseFigure {
 		
 		root.styleClass += "ClassFigure";
 		
-		root.children += new HBox => [
+		root.children += new VBox => [
 			
 			children += new Polyline => [
 				styleClass += "ClassFigure-Line"
@@ -51,6 +51,8 @@ class ClassFigure extends BaseFigure {
 			children += new Text => [
 				text = name
 				styleClass += "ClassFigure-Text"
+				setTranslateX(175);
+				setTranslateY(-80);
 			]
 		]
 		
