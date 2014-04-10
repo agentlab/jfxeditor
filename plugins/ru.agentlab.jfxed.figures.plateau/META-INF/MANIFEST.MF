@@ -11,7 +11,10 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
  org.eclipse.fx.core;bundle-version="0.9.0",
- org.eclipse.fx.javafx;bundle-version="2.2.0"
+ org.eclipse.fx.javafx;bundle-version="2.2.0",
+ org.eclipse.xtend.lib,
+ com.google.guava
 Bundle-ActivationPolicy: lazy
 Export-Package: ru.agentlab.jfxed.figures,
  ru.agentlab.jfxed.figures.clazz
+

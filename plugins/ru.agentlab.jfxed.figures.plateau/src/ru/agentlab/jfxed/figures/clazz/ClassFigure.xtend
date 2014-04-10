@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.figures.clazz
+package ru.agentlab.jfxed.figures.clazz;
 
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
@@ -26,6 +26,8 @@ class ClassFigure extends BaseFigure {
 			children += new Text => [
 				text = name
 				styleClass += "ClassFigure-Text"
+				setTranslateX (60)
+				setTranslateY (7)
 
 			]
 	children += new Polyline => [
@@ -61,20 +63,7 @@ class ClassFigure extends BaseFigure {
 			]
 		]
 		
-	/*	root.children += new VBox => [
-			styleClass += "ClassFigure-Methods-List"
-			
-			children += new Text => [
-				text = "method 1 lalalala"
-			]
-			
-			children += new Text => [
-				text = "method 2 lalalala"
-			]
-			
-			children += new Text => [
-				text = "method 3 lalalala"
-			]
-		]*/
 	}
+
+
 }

@@ -4,7 +4,6 @@ import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.scene.text.Text
 import ru.agentlab.jfxed.figures.BaseFigure
-import javafx.scene.shape.Polyline
 
 class ClassPass extends BaseFigure {
 	String name = "";
