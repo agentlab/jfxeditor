@@ -12,10 +12,11 @@ public class ProductViewpointTest {
 	static String NS = SOURCE + "#";
 	
 	//test from sourcetree
+	
 	public static void main (String[] args){
-		OntModel m = ModelFactory.createOntologyModel();//создается пустая база знаний
+		OntModel m = ModelFactory.createOntologyModel();  //создается пустая база знаний
+		
 		//создаем отдельные triple
-		OntClass contractClass = m.createClass(NS + "Contract");
 		
 		OntClass GoalClass = m.createClass(NS + "Goal");
 		OntClass StrategyClass = m.createClass(NS + "Strategy");
@@ -25,21 +26,22 @@ public class ProductViewpointTest {
 		OntClass aggregationClass = m.createClass(NS + "Agregation");//связь
 		OntClass aggregation1Class = m.createClass(NS + "Agregation1");
 		
-		aggregationClass.addSuperClass(GoalClass);//родительская связь
+		aggregationClass.addSuperClass(GoalClass);  //родительская связь
 		
-		ObjectProperty propTo = m.createObjectProperty(NS + "To");//объекты - свойства
+		ObjectProperty propTo = m.createObjectProperty(NS + "To");  //объекты - свойства
 		ObjectProperty propFrom = m.createObjectProperty(NS + "From");
 		
-		propTo.addDomain(aggregationClass);//свойства у aggregation
+		propTo.addDomain(aggregationClass); //свойства у aggregation
 		propFrom.addDomain(aggregationClass);
 		
-		propTo.addRange(GoalClass);//       то что могут принимать
+		propTo.addRange(GoalClass);  //   то что могут принимать
 		propTo.addRange(StrategyClass);
 		propTo.addRange(SolutionClass);
 		propFrom.addRange(GoalClass);
 		propFrom.addRange(StrategyClass);
 		
 		//наполнение базы 
+		
 		Individual RailwiseSafe = m.createIndividual(NS + "Railwise System", GoalClass);
 		
 		Individual NoExtraHazards = m.createIndividual(NS + "No additional", GoalClass);
@@ -96,10 +98,26 @@ public class ProductViewpointTest {
 		FrfalseToSolu1.addProperty(propTo,TheSolution1 );  
 		FrfalseToSolu1.addProperty(propFrom, FalseAlarm);
 		
+		Individual FrPredictToLatest = m.createIndividual(NS + "FrPredictToLatest", aggregation1Class);
+		FrPredictToLatest.addProperty(propTo,Latest );  
+		FrPredictToLatest.addProperty(propFrom, PredictFailure);
+		
+		Individual FrPredictToDistribute = m.createIndividual(NS + "FrPredictToDistribute", aggregationClass);
+		FrPredictToDistribute.addProperty(propTo,Distribute );  
+		FrPredictToDistribute.addProperty(propFrom, DataAnalysis);
+		
+		Individual FrPredictToDataCollection = m.createIndividual(NS + "FrPredictToDataCollection", aggregationClass);
+		FrPredictToDataCollection.addProperty(propTo,DataCollection );  
+		FrPredictToDataCollection.addProperty(propFrom, DataAnalysis);
+		
 		
 		m.write(System.out); //и в консоль
 		
 		
+		
+	}
+	
+	public class Transform {
 		
 	}
 }
