@@ -1,6 +1,5 @@
 package ru.agentlab.jfxed.figures.clazz
 
-import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.scene.text.Text
 import ru.agentlab.jfxed.figures.BaseFigure
@@ -56,20 +55,5 @@ class ClassFigure extends BaseFigure {
 			]
 		]
 		
-	/*	root.children += new VBox => [
-			styleClass += "ClassFigure-Methods-List"
-			
-			children += new Text => [
-				text = "method 1 lalalala"
-			]
-			
-			children += new Text => [
-				text = "method 2 lalalala"
-			]
-			
-			children += new Text => [
-				text = "method 3 lalalala"
-			]
-		]*/
 	}
 }
