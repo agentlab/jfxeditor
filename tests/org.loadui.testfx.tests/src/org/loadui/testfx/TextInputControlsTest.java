@@ -33,6 +33,6 @@ public class TextInputControlsTest extends GuiTest
 		push(TAB); // To change focus from the TextField.
 
 		clearTextIn( TEXT_FIELD );
-		verifyThat( TEXT_FIELD, hasText("") );
+		verifyThat( TEXT_FIELD, hasText("hkjh") );
 	}
 }
