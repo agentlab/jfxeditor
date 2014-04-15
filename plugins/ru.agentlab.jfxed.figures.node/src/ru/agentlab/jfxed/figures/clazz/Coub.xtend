@@ -1,62 +1,28 @@
 package ru.agentlab.jfxed.figures.clazz
 
-import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
-import javafx.scene.text.Text
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Polygon
+import javafx.scene.shape.Polyline
+import javafx.scene.Group;
 import ru.agentlab.jfxed.figures.BaseFigure
-import javafx.scene.input.MouseEvent
-import javafx.scene.layout.Pane
-import javafx.scene.Node
-
 
 class Coub extends BaseFigure {
-	
-	//String name = "ClassName";
-
-	var double sceneStartX = 0
-	var double sceneStartY = 0
-	var double figureStartTranslateX = 0
-	var double figureStartTranslateY = 0
-	var Node node = null;
-
-	
 	new (){
 		root = new VBox
+
+		var pligon = new Polygon()
+		pligon.getPoints().addAll(#[10.0, 0.0, 80.0, 00.0, 80.0, 50.0, 70.0, 60.0, 0.0, 60.0, 0.0, 10.0])
+		pligon.setFill(Color.CYAN)
+		pligon.setStroke(Color.BLACK)
+		pligon.setStrokeWidth(0.8)
 		
-		initHandlers()
+		var line = new Polyline(#[0.0, 10.0, 70.0, 10.0, 80.0, 0.0, 70.0, 10.0, 70.0, 60.0])
+		var group = new Group(pligon,line)
+		root.children += group
 		
-		val s = Coub.getResource("Style.css").toExternalForm()
-		root.stylesheets += s
+		root.translateX = 160
+		root.translateY = 5
 		
-		root.styleClass += "ClassFigure-Coub";
-		
-		root.children += new VBox => [
-			styleClass += "ClassFigure-Methods-List"
-			
-		]
-		
-		
-		
-		}
-		@Override
-		override void initHandlers(){
-			
-			root.onMousePressed = [ MouseEvent event |
-			println("setOnMousePressed_adada")
-			sceneStartX = event.getSceneX()
-			sceneStartY = event.getSceneY()
-			
-			node = event.source as Node
-			figureStartTranslateX = node.translateX
-			figureStartTranslateY = node.translateY
-	    ]
-		
-		root.onMouseDragged = [ MouseEvent event |
-			println("setOnMouseDragged");
-			println(event.sceneX + " " + event.sceneY);
-			root.translateX = figureStartTranslateX + event.sceneX - sceneStartX
-			root.translateY = figureStartTranslateY + event.sceneY - sceneStartY
-		]
-			
 		}
 	}

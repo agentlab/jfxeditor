@@ -1,21 +1,10 @@
-.ClassFigure-Coub{
-	-fx-background-color: CYAN;
-	-fx-border-color: black;
-    -fx-stroke-type: inside;
-    -fx-arc-height: 5;
-    -fx-arc-width: 5;
-    -fx-padding: 20 80;
-	-fx-border-width: 1;
-    -fx-alignment: CENTER;
-	}
-
 .ClassFigure-Rect{
 	-fx-background-color: CYAN;
 	-fx-border-color: black;
     -fx-stroke-type: inside;
     -fx-arc-height: 5;
     -fx-arc-width: 5;
-    -fx-padding: 10 40;
+    -fx-padding: 20 40;
 }
 
 .ClassFigure-Name-Section{
@@ -33,9 +22,4 @@
     -fx-font: bold 14pt "Arial";
     -fx-stroke-type: outside;
     -fx-stroke-width: 0;
-}
-
-.ClassFigure-Methods-List{
-    -fx-padding: 5;
-	-fx-spacing: 5;
 }

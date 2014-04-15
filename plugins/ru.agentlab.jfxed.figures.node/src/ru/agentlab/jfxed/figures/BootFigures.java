@@ -1,28 +1,15 @@
 package ru.agentlab.jfxed.figures;
 
+import ru.agentlab.jfxed.figures.clazz.LineFig;
 import ru.agentlab.jfxed.figures.clazz.Rectangle;
 import ru.agentlab.jfxed.figures.clazz.Coub;
 import javafx.application.Application;
-import javafx.event.EventHandler;
-import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class BootFigures extends Application {
-	
-	//Rectangle sourceToMove;
-	
-	double sceneStartX;
-	double sceneStartY;
-	
-	double figureStartTranslateX;
-	double figureStartTranslateY;
-	
-	
-	
+		
 	public static void main(String[] args) {
 		launch(args);
 	}
@@ -33,42 +20,17 @@ public class BootFigures extends Application {
 
 		AnchorPane root = new AnchorPane();
 		
-		final Rectangle source = new Rectangle();
+		final Rectangle rect = new Rectangle();
 		final Coub coub = new Coub();
-		root.getChildren().add(source.getRoot());
+		final LineFig line = new LineFig();
+		root.getChildren().add(rect.getRoot());
+		root.getChildren().add(line.getRoot());
 		root.getChildren().add(coub.getRoot());
-		root.getChildren().add(new VBox());
 		
-		Scene scene = new Scene(root, 400, 200);
-		//scene.getStylesheets().addAll(ClassFigure.class.getResource("ClassFigure.css").toExternalForm());
-		
+		Scene scene = new Scene(root, 250, 70);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
-		
-		/*source.getRoot().setOnMousePressed(new EventHandler<MouseEvent>() {
-
-	        @Override
-	        public void handle(MouseEvent event) {
-	            System.out.println("setOnMousePressed");
-	            sceneStartX = event.getSceneX();
-	            sceneStartY = event.getSceneY();
-	            figureStartTranslateX = ((Node) event.getSource()).getTranslateX();
-	            figureStartTranslateY = ((Node) event.getSource()).getTranslateY();
-	        }
-	    });
-		
-		
-		source.getRoot().setOnMouseDragged(new EventHandler<MouseEvent>() {
-
-	        @Override
-	        public void handle(MouseEvent event) {
-	        	System.out.println("setOnMouseDragged");
-	        	System.out.println(event.getSceneX() + " " + event.getSceneY());
-	        	source.getRoot().setTranslateX(figureStartTranslateX + event.getSceneX() - sceneStartX);
-	        	source.getRoot().setTranslateY(figureStartTranslateY + event.getSceneY() - sceneStartY);
-	        }
-	    });*/
 
 	}
 }
