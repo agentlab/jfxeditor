@@ -1,6 +1,6 @@
 package ru.agentlab.jfxed.figures;
 
-import ru.agentlab.jfxed.figures.clazz.ClassFigure;
+import ru.agentlab.jfxed.figures.interaction.ClassFigure;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
