@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="ru.agentlab.jfxed.figure" name="JfxEditor Figure" schema="schema/ru.agentlab.jfxed.figure.exsd"/>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="ru.agentlab.jfxed.editors.MyEditorPart"
+            default="false"
+            icon="icons/sample.gif"
+            id="ru.agentlab.jfxed.editors.MyEditorPartId"
+            name="My FX Editor">
+      </editor>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="ru.agentlab.jfxed.actions.MyHandler"
+            id="ru.agentlab.jfxed.actions.newModel"
+            name="New Model">
+      </command>
+   </extension>
+   
+    <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="fileMenu123123"
+               label="MyMenu">
+            <command
+               commandId="ru.agentlab.jfxed.actions.newModel"
+               icon="icons/sample.gif"
+               id="ru.agentlab.jfxed.actions.newModel"
+               label="New uModeler Model"
+               style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+</plugin>
