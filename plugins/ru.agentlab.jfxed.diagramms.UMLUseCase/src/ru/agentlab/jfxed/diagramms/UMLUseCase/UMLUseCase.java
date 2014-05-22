@@ -68,9 +68,55 @@ public class UMLUseCase {
 		Individual atm = m.createIndividual(NS + "ATM", atmClass);
 		
 		
-		Individual aggregationIndividual = m.createIndividual(NS + "agr1", aggregationClass);
-		//aggregationIndividual.addProperty(aggrPropTo, contractIndividual);// îò ïðîäóêòà ê êîíòðàêòó
-		//aggregationIndividual.addProperty(propFrom, productIndividual);
+		Individual aggregationIndividual = m.createIndividual(NS + "agg1", aggregationClass);
+		//создание связей atm с use case
+		aggregationIndividual.addProperty(aggrPropFrom, atm);
+		aggregationIndividual.addProperty(aggrPropTo, withdrawCash);
+		aggregationIndividual.addProperty(aggrPropFrom, atm);
+		aggregationIndividual.addProperty(aggrPropTo, checkBalance);
+		aggregationIndividual.addProperty(aggrPropFrom, atm);
+		aggregationIndividual.addProperty(aggrPropTo, donate);
+		aggregationIndividual.addProperty(aggrPropFrom, atm);
+		aggregationIndividual.addProperty(aggrPropTo, transferMoney);
+		aggregationIndividual.addProperty(aggrPropFrom, atm);
+		aggregationIndividual.addProperty(aggrPropTo, payBills);
+		aggregationIndividual.addProperty(aggrPropFrom, atm);
+		aggregationIndividual.addProperty(aggrPropTo, login);
+		aggregationIndividual.addProperty(aggrPropFrom, atm);
+		aggregationIndividual.addProperty(aggrPropTo, handleInvalidPassword);
+		aggregationIndividual.addProperty(aggrPropFrom, atm);
+		aggregationIndividual.addProperty(aggrPropTo, handleAbort);
+		
+		Individual associationIndividual = m.createIndividual(NS + "agg2", associationClass);
+		associationIndividual.addProperty(assocPropFrom, user);
+		associationIndividual.addProperty(assocPropTo, withdrawCash);
+		associationIndividual.addProperty(assocPropFrom, user);
+		associationIndividual.addProperty(assocPropTo, checkBalance);
+		associationIndividual.addProperty(assocPropFrom, user);
+		associationIndividual.addProperty(assocPropTo, donate);
+		associationIndividual.addProperty(assocPropFrom, user);
+		associationIndividual.addProperty(assocPropTo, transferMoney);
+		associationIndividual.addProperty(assocPropFrom, user);
+		associationIndividual.addProperty(assocPropTo, payBills);
+		
+		Individual inclusionIndividual = m.createIndividual(NS + "agg3", inclusionClass);
+		inclusionIndividual.addProperty(incPropFrom, withdrawCash);
+		inclusionIndividual.addProperty(incPropTo, login);
+		inclusionIndividual.addProperty(incPropFrom, checkBalance);
+		inclusionIndividual.addProperty(incPropTo, login);
+		inclusionIndividual.addProperty(incPropFrom, donate);
+		inclusionIndividual.addProperty(incPropTo, login);
+		inclusionIndividual.addProperty(incPropFrom, transferMoney);
+		inclusionIndividual.addProperty(incPropTo, login);
+		inclusionIndividual.addProperty(incPropFrom, payBills);
+		inclusionIndividual.addProperty(incPropTo, login);
+		
+		Individual extensionIndividual = m.createIndividual(NS + "agg4", extensionClass);
+		extensionIndividual.addProperty(extPropFrom, handleInvalidPassword);
+		extensionIndividual.addProperty(extPropTo, login);
+		extensionIndividual.addProperty(extPropFrom, handleAbort);
+		extensionIndividual.addProperty(extPropTo, login);
+		
 		m.write(System.out);// в консоль
 	}
 }
