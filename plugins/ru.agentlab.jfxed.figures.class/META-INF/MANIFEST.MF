@@ -9,10 +9,15 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
- org.eclipse.fx.core;bundle-version="0.9.0",
- org.eclipse.fx.javafx;bundle-version="2.2.0",
- ru.agentlab.jfxed.figures;bundle-version="1.0.0",
- ru.agentlab.jfxed;bundle-version="1.0.0"
+ com.google.guava,
+ org.eclipse.fx.core,
+ org.eclipse.fx.javafx,
+ org.eclipse.fx.osgi.util,
+ de.fxdiagram.lib,
+ de.fxdiagram.core,
+ de.fxdiagram.annotations,
+ ru.agentlab.jfxed,
+ ru.agentlab.jfxed.figures
 Bundle-ActivationPolicy: lazy
 Export-Package: ru.agentlab.jfxed.figures.clazz,
  ru.agentlab.jfxed.figures.clazz.tests

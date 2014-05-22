@@ -29,7 +29,7 @@ public class BootFigures extends Application {
 
 		AnchorPane root = new AnchorPane();
 		
-		final ClassFigure source = new ClassFigure();
+		final ClassFigure source = new ClassFigure("sdfsf");
 		root.getChildren().add(source.getRoot());
 		root.getChildren().add(new VBox());
 		
