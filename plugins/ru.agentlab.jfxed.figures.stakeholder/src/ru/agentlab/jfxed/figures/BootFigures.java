@@ -1,6 +1,6 @@
 package ru.agentlab.jfxed.figures;
 
-import ru.agentlab.jfxed.figures.clazz.ClassFigure;
+import ru.agentlab.jfxed.figures.clazz.Stakeholder;
 import ru.agentlab.jfxed.figures.clazz.ClassPass;
 import javafx.application.Application;
 import javafx.event.EventHandler;
@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 public class BootFigures extends Application {
 	
-	ClassFigure sourceToMove;
+	Stakeholder sourceToMove;
 	
 	double sceneStartX;
 	double sceneStartY;
@@ -33,7 +33,7 @@ public class BootFigures extends Application {
 
 		AnchorPane root = new AnchorPane();
 		
-		final ClassFigure source = new ClassFigure();
+		final Stakeholder source = new Stakeholder("ghjgjh");
 		
 		root.getChildren().add(source.getRoot());
 		root.getChildren().add(new VBox());

@@ -1,26 +1,25 @@
 package ru.agentlab.jfxed.figures.clazz
 
-import javafx.scene.layout.HBox
-import javafx.scene.layout.VBox
-import javafx.scene.text.Text
-import ru.agentlab.jfxed.figures.BaseFigure
-import javafx.scene.shape.Polyline
+import de.fxdiagram.core.XNode
 import javafx.scene.Group
+import javafx.scene.layout.VBox
 import javafx.scene.shape.Circle
+import javafx.scene.shape.Polyline
+import javafx.scene.text.Text
+import ru.agentlab.jfxed.IFigure
 
-class ClassFigure extends BaseFigure {
+class Stakeholder extends XNode implements IFigure {
 	
-	String name = "Stakeholder";
-	
-	new (){
-		root = new VBox
+	new (String name){
+		super(name)
+		node = new VBox
 		
-		initHandlers()
 		
-		val s = ClassFigure.getResource("ClassFigure.css").toExternalForm()
-		root.stylesheets += s
 		
-		root.children += new Group => [
+		val s = Stakeholder.getResource("ClassFigure.css").toExternalForm()
+		stylesheets += s
+		
+		children += new Group => [
 		children += new Polyline => [
 				points +=  60d 
 				points +=  40d 
@@ -41,6 +40,7 @@ class ClassFigure extends BaseFigure {
 	            points += 60d 
 	            points += 40d
 	            
+	            styleClass.clear
 	            styleClass += "Vasya"
 
         
@@ -92,4 +92,10 @@ class ClassFigure extends BaseFigure {
 			]
 		]*/
 	}
+
+override getRoot() {
+		
+		return this
+	}
+
 }
