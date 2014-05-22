@@ -46,6 +46,10 @@ class BootFigures2 extends Application {
 				layoutY = 280
 				width = 80
 				height = 30
+				
+				addMethod("method 1 lalalala")
+				addMethod("method 2 lalalala")
+				addMethod("method 3 lalalala")
 			]
 			nodes += target
 			

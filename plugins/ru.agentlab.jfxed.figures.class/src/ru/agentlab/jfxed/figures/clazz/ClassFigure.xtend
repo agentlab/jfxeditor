@@ -29,21 +29,35 @@ class ClassFigure extends XNode implements IFigure {
 			]
 			
 			children += methodsCompartment => [
-			styleClass += "ClassFigure-Methods-List"
-			
-				children += new Text => [
-					text = "method 1 lalalala"
-				]
-				
-				children += new Text => [
-					text = "method 2 lalalala"
-				]
-			
-				children += new Text => [
-					text = "method 3 lalalala"
-				]
+				styleClass += "ClassFigure-Methods-List"
 			]
 		]
+	}
+	
+	def setName(String name) {
+		nameTextBox.text = name
+	}
+	
+	def getName() {
+		nameTextBox.text
+	}
+	
+	def addMethod(String name) {
+		methodsCompartment => [
+			children += new Text => [
+				text = name
+			]
+		]
+	}
+	
+	def removeMethod(String name) {
+		for (int i : 0 ..< methodsCompartment.children.size) {
+			var t = methodsCompartment.children.get(i) as Text
+			if(t.text.equals(name)) {
+				methodsCompartment.children.remove(i)
+				return
+			}
+		}
 	}
 	
 	override protected createAnchors() {
