@@ -11,7 +11,7 @@ import com.sun.javafx.css.converters.SizeConverter.SequenceConverter
 
 class ClassFigure extends BaseFigure {
 
-	public String name = "Interaction";
+	public String name = "Interaction1";
 	public Text textStr;
 
 	public def setlabel(String str1) {
