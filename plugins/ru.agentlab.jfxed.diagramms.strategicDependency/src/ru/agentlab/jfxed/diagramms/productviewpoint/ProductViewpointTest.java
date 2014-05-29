@@ -9,7 +9,8 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 public class ProductViewpointTest {
 
 	static String SOURCE = "http://test/";
-	static String NS = SOURCE + "#";
+	static String NS = 
+			SOURCE + "#";
 	
 	//test from sourcetree
 	public static void main (String[] args){

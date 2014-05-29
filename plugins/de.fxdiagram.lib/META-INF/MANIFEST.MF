@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FX Diagram Lib
+Bundle-SymbolicName: de.fxdiagram.lib
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.xtend.lib;bundle-version="2.4.2",
+ de.fxdiagram.core,
+ de.fxdiagram.annotations,
+ org.eclipse.fx.javafx,
+ org.eclipse.fx.core,
+ org.eclipse.fx.osgi.util
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: .
+Export-Package: de.fxdiagram.lib.anchors,
+ de.fxdiagram.lib.media,
+ de.fxdiagram.lib.model,
+ de.fxdiagram.lib.nodes,
+ de.fxdiagram.lib.simple,
+ de.fxdiagram.lib.tools

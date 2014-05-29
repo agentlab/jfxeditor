@@ -5,7 +5,6 @@ Bundle-SymbolicName: ru.agentlab.jfxed.figures;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
-Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
@@ -14,4 +13,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.fx.javafx;bundle-version="2.2.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: ru.agentlab.jfxed.figures,
- ru.agentlab.jfxed.figures.clazz
+ ru.agentlab.jfxed.figures.requirement

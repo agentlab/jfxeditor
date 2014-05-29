@@ -1,14 +1,11 @@
 package ru.agentlab.jfxed.figures;
 
-import ru.agentlab.jfxed.figures.clazz.ClassFigure;
 import javafx.application.Application;
-import javafx.event.EventHandler;
-import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import ru.agentlab.jfxed.figures.requirement.ClassFigure;
 
 public class BootFigures extends Application {
 	
@@ -19,6 +16,7 @@ public class BootFigures extends Application {
 	
 	double figureStartTranslateX;
 	double figureStartTranslateY;
+	
 	
 	
 	

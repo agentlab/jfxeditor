@@ -1,17 +1,15 @@
 # Dirs With Binaries #
 /plugins/*/bin/
-/plugins/*/lib/
 /plugins/*/target/
 /plugins/*/xtend-gen/
 /plugins/*/src-gen/
 /plugins/*/classes/
-temp
-.manager
+#temp
+#.manager
 
 # Binary Files #
 *.class
 *.dll
-*.lib
 *.exe
 *.obj
 
