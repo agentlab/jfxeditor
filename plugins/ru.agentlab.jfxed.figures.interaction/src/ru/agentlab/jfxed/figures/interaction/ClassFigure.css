@@ -1,44 +1,45 @@
 .ClassFigure{
 	-fx-background-color: #FFFF66;
-    -fx-background-radius: 5;
+    -fx-background-radius: 5.0;
     -fx-border-color: black;
-    -fx-border-width: 1;
-    -fx-border-radius: 5;
-    
-	-fx-padding: 0;
+    -fx-border-width: 1.0;
+    -fx-border-radius: 5.0;
+	-fx-padding: 0.0;
 }
 
 .ClassFigure-Rect{
 	-fx-fill: #FFFF66;
     -fx-stroke: #FFFFFF;
-    -fx-stroke-type: inside;
-    -fx-border-radius: 5;
-    -fx-background-radius: 5;
-    -fx-arc-height: 50;
-    -fx-arc-width: 50;
-    -fx-padding: 5;
+    -fx-stroke-type: centred;
+    -fx-border-radius: 5.0;
+    -fx-background-radius: 5.0;
+    -fx-arc-height: 50.0;
+    -fx-arc-width: 50.0;
+    -fx-padding: 5.0;
 }
 
 .ClassFigure-Name-Section{
-    -fx-padding: 50;
+    -fx-padding: 50.0;
     -fx-border-color: black;
-    -fx-border-width: 0 0 1 0;
-    -fx-border-radius: 5 5 0 0;
+    -fx-border-width: 0.0 0.0 1.0 0.0;
+    -fx-border-radius: 5.0 5.0 0.0 0.0;
 }
 
 
 .ClassCircle1 {
-	-fx-scale-x: 20;
- 	-fx-scale-y: 20; 
+	-fx-scale-x: 20.0;
+ 	-fx-scale-y: 20.0; 
 	-fx-stroke: BLACK;
-	-fx-stroke-width: 20;
+	-fx-stroke-width: 20.0;
 	
 }
 
 .ClassFigure2SemiCircleCENTRED {
 	-fx-alignment: top-right;
     -fx-stroke-type: outside;
-    -fx-stroke-width: 0;
+    -fx-stroke-width: 0.0;
+    -fx-padding: 5.0;
+    
 }
 
 .ClassFigure2SemiCircle {
@@ -46,19 +47,24 @@
     -fx-stroke: #000000;
 	-fx-alignment: top-right;
     -fx-stroke-type: outside;
-    -fx-stroke-width: 2;
+    -fx-stroke-width: 2.0;
+}
+
+.ClassFigureLine {
+		-fx-fill: #FFFF66;
+	    -fx-stroke: #FFFF66;
 }
 
 
 .ClassFigure-Text{
 
 	-fx-alignment: center;
-    -fx-font: bold 20pt "Arial";
-    -fx-stroke-type: outside;
-    -fx-stroke-width: 0;
+    -fx-font: bold 20.0pt "Arial";
+    -fx-stroke-type: centred;
+    -fx-stroke-width: 0.0;
 }
 
 .ClassFigure-Methods-List{
-    -fx-padding: 5;
-	-fx-spacing: 5;
+    -fx-padding: 5.0;
+	-fx-spacing: 5.0;
 }
