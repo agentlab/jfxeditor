@@ -1,14 +1,22 @@
 .Vasya {
 	-fx-fill: #f984e5;
+
     -fx-background-radius: 0;
     -fx-border-color: black;
-    -fx-border-width: 1;
+	
+}
+.Stakeholder{
+	-fx-fill: #FF0000;
+	-fx-background-color: #f984e5;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
 	
 }
 
 .Kolbasa{
-	-fx-fill: #000000;
-    -fx-stroke: #000000;
+	-fx-fill: #FF0000;
+
+    -fx-stroke: #FF0000;
     -fx-border-radius: 5;
     -fx-background-radius: 0;
     -fx-arc-height: 5;

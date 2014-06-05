@@ -33,19 +33,20 @@ public class BootFigures extends Application {
 
 		AnchorPane root = new AnchorPane();
 		
-		final Stakeholder source = new Stakeholder("ghjgjh");
+		final Stakeholder source = new Stakeholder("Bom");
 		
 		root.getChildren().add(source.getRoot());
 		root.getChildren().add(new VBox());
 		
-		Scene scene = new Scene(root, 400, 200);
-		//scene.getStylesheets().addAll(ClassFigure.class.getResource("ClassFigure.css").toExternalForm());
+		Scene scene = new Scene(root, 180, 100);
+		scene.getStylesheets().addAll(Stakeholder.class.getResource("Stakeholder.css").toExternalForm());
+		
 		
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
 		
-		/*source.getRoot().setOnMousePressed(new EventHandler<MouseEvent>() {
+		source.getRoot().setOnMousePressed(new EventHandler<MouseEvent>() {
 
 	        @Override
 	        public void handle(MouseEvent event) {
@@ -67,7 +68,7 @@ public class BootFigures extends Application {
 	        	source.getRoot().setTranslateX(figureStartTranslateX + event.getSceneX() - sceneStartX);
 	        	source.getRoot().setTranslateY(figureStartTranslateY + event.getSceneY() - sceneStartY);
 	        }
-	    });*/
+	    });
 
 	}
 }
