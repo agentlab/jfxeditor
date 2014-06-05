@@ -4,10 +4,10 @@ Bundle-Name: StrategicDependency
 Bundle-SymbolicName: ru.agentlab.jfxed.diagramms.strategicDependency
 Bundle-Version: 1.0.0.qualifier
 Export-Package: ru.agentlab.jfxed.diagramms.productviewpoint
-Require-Bundle: org.apache.jena.core;bundle-version="2.11.0",
- org.apache.jena.iri;bundle-version="0.9.5",
- org.apache.jena.sdb;bundle-version="1.4.0",
- org.apache.jena.tdb;bundle-version="1.0.0",
- org.slf4j.api;bundle-version="1.7.2",
- org.slf4j.ext;bundle-version="1.7.2",
- org.slf4j.log4j;bundle-version="1.7.2"
+Require-Bundle: org.apache.jena.core,
+ org.apache.jena.iri,
+ org.apache.jena.sdb,
+ org.apache.jena.tdb,
+ org.slf4j.api,
+ org.slf4j.ext,
+ org.slf4j.log4j
