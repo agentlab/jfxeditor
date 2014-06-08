@@ -21,12 +21,14 @@ public class ProductViewpointTest {
 		ObjectProperty propTo = m.createObjectProperty(NS + "To");//объекты - свойства
 		ObjectProperty propFrom = m.createObjectProperty(NS + "From");
 		
+		/**
+		 * Вершины графа
+		 */
+		
 		OntClass productClass = m.createClass(NS + "Product");//создаем отдельные triple
 		OntClass contractClass = m.createClass(NS + "Contract");
-		
 		OntClass businessServiceClass = m.createClass(NS + "Business Service");
 		OntClass valueClass = m.createClass(NS + "Value");
-		
 		OntClass businessInterfaceClass = m.createClass(NS + "Business interface");
 		OntClass businessEventClass = m.createClass(NS + "Business event");
 		OntClass businessProcessClass = m.createClass(NS + "Business process");
@@ -56,9 +58,11 @@ public class ProductViewpointTest {
 		OntClass compositionClass = m.createClass(NS + "Composition");//composition
 		OntClass triggeringClass = m.createClass(NS + "Triggering");//triggering
 		OntClass accessClass = m.createClass(NS + "Composition");//composition
+		OntClass realizationClass = m.createClass(NS + "CRealization");
 		
 		//сюда повсему мы говорим что наши стрелочки это association
 		aggregationClass.addSuperClass(associationClass);//родительская связь
+		assigmentClass.addSuperClass(assigmentClass);//родительская связь
 		usedByClass.addSuperClass(associationClass);//родительская связь
 		compositionClass.addSuperClass(associationClass);//родительская связь
 		triggeringClass.addSuperClass(associationClass);//родительская связь
@@ -71,34 +75,143 @@ public class ProductViewpointTest {
 		propTo.addDomain(aggregationClass);//свойства у aggregation
 		propFrom.addDomain(aggregationClass);
 		
-		propFrom.addRange(productClass);//продуки содержит конракт т.е. связь между ними инвертировать связи
-		
+		//связи в
+		propFrom.addRange(productClass);//продукт содержит конракт т.е. связь между ними инвертировать связи
+		propFrom.addRange(valueClass);
 		propFrom.addRange(businessServiceClass);
 		propFrom.addRange(businessInterfaceClass);
 		propFrom.addRange(businessEventClass);
 		propFrom.addRange(businessProcessClass);
+		propFrom.addRange(businessRoleClass);
+		propFrom.addRange(businessActorClass);
+		propFrom.addRange(applicationServiceClass);
+		propFrom.addRange(applicationInterfaceClass);
+		propFrom.addRange(applicationComponentClass);
 		
-		
-		
-		propTo.addRange(contractClass);//т.е. продукт содержит конракт
+		//связи от
+		propTo.addRange(contractClass);//т.е. продукт содержит контракт
 		propTo.addRange(businessServiceClass);//и бизнесСервис
 		propTo.addRange(valueClass);
-		//propTo.addRange(valueClass);
+		propTo.addRange(businessEventClass);
+		propTo.addRange(businessProcessClass);
+		propTo.addRange(businessInterfaceClass);
+		propTo.addRange(businessRoleClass);
+		propTo.addRange(businessActorClass);
+		propTo.addRange(applicationServiceClass);
+		propTo.addRange(applicationInterfaceClass);
+		propTo.addRange(applicationComponentClass);
 		
 		
 		//наполнение базы создание экзампляров
-		Individual productIndividual = m.createIndividual(NS + "jkljklj2", productClass);//тоже спросить
-		Individual contractIndividual = m.createIndividual(NS + "jkljklj3", contractClass);
+		Individual productIndividual = m.createIndividual(NS + "product", productClass);
+		Individual contractIndividual = m.createIndividual(NS + "contract", contractClass);
+		Individual businessServiceIndividual = m.createIndividual(NS+ "businessService", businessServiceClass);
+		Individual valueIndividual = m.createIndividual(NS+ "value", valueClass);
+		Individual businessInterfaceIndividual = m.createIndividual(NS+ "businessInterface", businessInterfaceClass);
+		Individual businessEventIndividual = m.createIndividual(NS+ "businessEvent", businessEventClass);
+		Individual businessProcessIndividual = m.createIndividual(NS+ "businessProcess", businessProcessClass);
+		Individual businessRoleIndividual = m.createIndividual(NS+ "businessRole", businessRoleClass);
+		Individual businessActorIndividual = m.createIndividual(NS+ "businessActor", businessActorClass);
+		Individual applicationServiceIndividual = m.createIndividual(NS+ "applicationService", applicationServiceClass);
+		Individual applicationInterfaceIndividual = m.createIndividual(NS+ "applicationInterface", applicationInterfaceClass);
+		Individual applicationComponentIndividual = m.createIndividual(NS+ "applicationComponent", applicationComponentClass);
 		
-		Individual businessServiceIndividual = m.createIndividual(NS+ "4", businessServiceClass);
+		//связи
+		Individual aggToPFromCo_BS_ASIndividual = m.createIndividual(NS + "aggToProd_FromCo_BS_AS", aggregationClass);
+		aggToPFromCo_BS_ASIndividual.addProperty(propFrom, productIndividual);
+		aggToPFromCo_BS_ASIndividual.addProperty(propTo, contractIndividual);//от продукта к контракту
+		aggToPFromCo_BS_ASIndividual.addProperty(propTo, businessServiceIndividual);//делаем связку
+		aggToPFromCo_BS_ASIndividual.addProperty(propTo, applicationServiceIndividual);
 		
-		Individual aggregationIndividual = m.createIndividual(NS + "jkljklj1", aggregationClass);
+		Individual assocValueProduct = m.createIndividual(NS + "assocValueProduct", associationClass);
+		assocValueProduct.addProperty(propFrom, valueIndividual);
+		assocValueProduct.addProperty(propTo, valueIndividual);
+		assocValueProduct.addProperty(propFrom, productIndividual);
+		assocValueProduct.addProperty(propTo, productIndividual);
 		
-		aggregationIndividual.addProperty(propFrom, productIndividual);
+		Individual assigmBusActorBusRole = m.createIndividual(NS + "assigmentBusinessRole_BusinessActor", assigmentClass);
+		assigmBusActorBusRole.addProperty(propTo, businessRoleIndividual);
+		assigmBusActorBusRole.addProperty(propTo, businessActorIndividual);
+		assigmBusActorBusRole.addProperty(propFrom, businessRoleIndividual);
+		assigmBusActorBusRole.addProperty(propFrom, businessActorIndividual);
 		
-		aggregationIndividual.addProperty(propTo, contractIndividual);//от продукта к контракту
-		aggregationIndividual.addProperty(propTo, businessServiceIndividual);//делаем связку
+		Individual assigmBusRoleBusProc = m.createIndividual(NS + "assigmBusRoleBusProc", assigmentClass);
+		assigmBusRoleBusProc.addProperty(propTo, businessRoleIndividual);
+		assigmBusRoleBusProc.addProperty(propTo, businessProcessIndividual);
+		assigmBusRoleBusProc.addProperty(propFrom, businessRoleIndividual);
+		assigmBusRoleBusProc.addProperty(propFrom, businessProcessIndividual);
 		
+		Individual assigBusServBusInt = m.createIndividual(NS + "assigBusServBusInt", assigmentClass);
+		assigBusServBusInt.addProperty(propTo, businessServiceIndividual);
+		assigBusServBusInt.addProperty(propTo, businessInterfaceIndividual);
+		assigBusServBusInt.addProperty(propFrom, businessServiceIndividual);
+		assigBusServBusInt.addProperty(propFrom, businessInterfaceIndividual);
+		
+		Individual assigBusServAppInt = m.createIndividual(NS + "assigBusServAppInt", assigmentClass);
+		assigBusServAppInt.addProperty(propTo, businessServiceIndividual);
+		assigBusServAppInt.addProperty(propTo, applicationInterfaceIndividual);
+		assigBusServAppInt.addProperty(propFrom, businessServiceIndividual);
+		assigBusServAppInt.addProperty(propFrom, applicationInterfaceIndividual);
+		
+		Individual realizBusServBusProc = m.createIndividual(NS + "realizBusServAppInt", realizationClass);
+		realizBusServBusProc.addProperty(propFrom, businessServiceIndividual);
+		realizBusServBusProc.addProperty(propTo, businessProcessIndividual);
+		
+		Individual usedbyBusProcBusServ = m.createIndividual(NS + "usedbyBusProcBusServt", usedByClass);
+		usedbyBusProcBusServ.addProperty(propTo, businessServiceIndividual);
+		usedbyBusProcBusServ.addProperty(propFrom, businessProcessIndividual);
+		
+		Individual realizBusRoleBusInt = m.createIndividual(NS + "realizBusRoleBusInt", realizationClass);
+		realizBusRoleBusInt.addProperty(propFrom, businessRoleIndividual);
+		realizBusRoleBusInt.addProperty(propTo, businessInterfaceIndividual);
+		
+		Individual composBusRoleBusInt = m.createIndividual(NS + "composBusRoleBusInt", compositionClass);
+		composBusRoleBusInt.addProperty(propFrom, businessRoleIndividual);
+		composBusRoleBusInt.addProperty(propTo, businessInterfaceIndividual);
+		
+		Individual realizAppCompAppInt = m.createIndividual(NS + "realizAppCompAppInt", realizationClass);
+		realizAppCompAppInt.addProperty(propFrom, applicationComponentIndividual);
+		realizAppCompAppInt.addProperty(propTo, applicationInterfaceIndividual);
+		
+		Individual composAppCompAppInt = m.createIndividual(NS + "composAppCompAppInt", compositionClass);
+		composAppCompAppInt.addProperty(propFrom, applicationComponentIndividual);
+		composAppCompAppInt.addProperty(propTo, applicationInterfaceIndividual);
+		
+		Individual assigAppServAppInt = m.createIndividual(NS + "assigAppServAppInt", assigmentClass);
+		assigAppServAppInt.addProperty(propFrom, applicationServiceIndividual);
+		assigAppServAppInt.addProperty(propTo, applicationInterfaceIndividual);
+		assigAppServAppInt.addProperty(propFrom, applicationInterfaceIndividual);
+		assigAppServAppInt.addProperty(propTo, applicationServiceIndividual);
+		
+		Individual assigAppCompBusProc = m.createIndividual(NS + "assigAppCompBusProc", assigmentClass);
+		assigAppCompBusProc.addProperty(propFrom, businessProcessIndividual);
+		assigAppCompBusProc.addProperty(propTo, applicationComponentIndividual);
+		assigAppCompBusProc.addProperty(propTo, businessProcessIndividual);
+		assigAppCompBusProc.addProperty(propFrom, applicationComponentIndividual);
+		
+		Individual usedbyAppIntBusRole = m.createIndividual(NS + "usedbyAppIntBusRole", usedByClass);
+		usedbyAppIntBusRole.addProperty(propFrom, businessRoleIndividual);
+		usedbyAppIntBusRole.addProperty(propTo, applicationInterfaceIndividual);
+		
+		Individual usedbyAppServBusProc = m.createIndividual(NS + "usedbyAppIntBusRole", usedByClass);
+		usedbyAppServBusProc.addProperty(propFrom, businessProcessIndividual);
+		usedbyAppServBusProc.addProperty(propTo, applicationServiceIndividual);
+		
+		Individual trigBusProc = m.createIndividual(NS + "trigBusProc", triggeringClass);
+		trigBusProc.addProperty(propFrom, businessProcessIndividual);
+		trigBusProc.addProperty(propTo, businessProcessIndividual);
+		
+		Individual accessBusProc = m.createIndividual(NS + "accessBusProc", accessClass);
+		accessBusProc.addProperty(propFrom, businessProcessIndividual);
+		accessBusProc.addProperty(propTo, businessProcessIndividual);
+		
+		Individual trigBusProcBusEvent = m.createIndividual(NS + "trigBusProcBusEvent", triggeringClass);
+		trigBusProcBusEvent.addProperty(propFrom, businessEventIndividual);
+		trigBusProcBusEvent.addProperty(propTo, businessProcessIndividual);
+		
+		Individual trigBusEventBusProc = m.createIndividual(NS + "trigBusEventBusProc", triggeringClass);
+		trigBusProcBusEvent.addProperty(propTo, businessEventIndividual);
+		trigBusProcBusEvent.addProperty(propFrom, businessProcessIndividual);
 		
 		m.write(System.out);//и в консоль
 		}
