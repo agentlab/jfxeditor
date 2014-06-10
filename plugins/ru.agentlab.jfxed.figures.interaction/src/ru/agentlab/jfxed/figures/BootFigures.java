@@ -37,21 +37,6 @@ public class BootFigures extends Application {
 		root.getChildren().add(source.getRoot());
 		root.getChildren().add(new VBox());
 		
-		final ClassFigure source2 = new ClassFigure();
-		source2.setlabel("Interaction1\n" + "Interaction2\n");
-		root.getChildren().add(source2.getRoot());
-		root.getChildren().add(new VBox());
-		
-		final ClassFigure source3 = new ClassFigure();
-		source3.setlabel("Interaction1\n" + "Interaction2\n" + "Interaction3\n");
-		root.getChildren().add(source3.getRoot());
-		root.getChildren().add(new VBox());
-		
-		final ClassFigure source4 = new ClassFigure();
-		source4.setlabel("Interaction1" + "Interaction2" + "Interaction3");
-		root.getChildren().add(source4.getRoot());
-		root.getChildren().add(new VBox());
-		
 		Scene scene = new Scene(root, 800, 800);
 		//scene.getStylesheets().addAll(ClassFigure.class.getResource("ClassFigure.css").toExternalForm());
 		
