@@ -8,6 +8,7 @@ import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.VBox
 import ru.agentlab.jfxed.IFigure
 import org.eclipse.core.runtime.IConfigurationElement
+import javafx.scene.Node
 
 class DiagramEditorPane extends ru.agentlab.jfxed.editors.BasePane {
 	
@@ -25,8 +26,9 @@ class DiagramEditorPane extends ru.agentlab.jfxed.editors.BasePane {
 					text = figureText
 					
 					onMouseClicked = [ MouseEvent event |
-						var o = figuresTable.get(figureText).createExecutableExtension("class")
-						(diagramPane.root as AnchorPane).children += (o as IFigure).root
+						var o = figuresTable.get(text).createExecutableExtension("class")
+						val Node n = (o as IFigure).getRoot()
+						(diagramPane.root as AnchorPane).children += n
 					]
 				]
 			}

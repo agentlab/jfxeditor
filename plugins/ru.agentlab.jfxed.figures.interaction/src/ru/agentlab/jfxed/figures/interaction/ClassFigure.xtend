@@ -68,6 +68,8 @@ class ClassFigure extends BaseFigure {
 		]
 
 		initHandlers()
+		
+		setlabel("Interaction")
 
 	}
 }

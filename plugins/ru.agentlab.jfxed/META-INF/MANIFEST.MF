@@ -45,7 +45,7 @@ Import-Package: javafx.animation,
  javafx.scene.web,
  javafx.stage,
  javafx.util
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: ru.agentlab.jfxed,
  ru.agentlab.jfxed.actions,

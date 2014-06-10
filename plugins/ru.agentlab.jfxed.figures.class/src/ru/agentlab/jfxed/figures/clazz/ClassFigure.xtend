@@ -11,9 +11,17 @@ class ClassFigure extends XNode implements IFigure {
 	
 	val nameTextBox = new Text
 	val methodsCompartment = new VBox
+	var String name
 	
 	new(String name) {
 		super(name)
+		this.name = name
+	}
+	
+	new() {
+		super("Class")
+		
+		name = "Class"
 		
 		node = new VBox  => [
 			stylesheets += ClassFigure.getResource("ClassFigure.css").toExternalForm()
