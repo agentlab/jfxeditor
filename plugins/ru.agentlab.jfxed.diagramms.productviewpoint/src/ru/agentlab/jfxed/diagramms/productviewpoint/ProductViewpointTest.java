@@ -213,6 +213,6 @@ public class ProductViewpointTest {
 		trigBusProcBusEvent.addProperty(propTo, businessEventIndividual);
 		trigBusProcBusEvent.addProperty(propFrom, businessProcessIndividual);
 		
-		m.write(System.out);//и в консоль
+		m.write(System.out, "N3");//и в консоль
 		}
 	}
