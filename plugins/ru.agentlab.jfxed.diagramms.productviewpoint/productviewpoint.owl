@@ -1,0 +1,483 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ontology "http://www.agentlab.ru/jfxed/onto/productviewpoint#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/productviewpoint#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/productviewpoint"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="http://www.agentlab.ru/jfxed/onto/productviewpoint#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/productviewpoint"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#fromAssignment -->
+
+    <owl:ObjectProperty rdf:about="&ontology;fromAssignment">
+        <rdfs:range rdf:resource="&ontology;Association"/>
+        <rdfs:domain rdf:resource="&ontology;Value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#toAssignment -->
+
+    <owl:ObjectProperty rdf:about="&ontology;toAssignment">
+        <rdfs:domain rdf:resource="&ontology;Association"/>
+        <rdfs:range rdf:resource="&ontology;Value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Agregation -->
+
+    <owl:Class rdf:about="&ontology;Agregation">
+        <rdfs:subClassOf rdf:resource="&ontology;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#ApplicationComponent -->
+
+    <owl:Class rdf:about="&ontology;ApplicationComponent">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#ApplicationInterface -->
+
+    <owl:Class rdf:about="&ontology;ApplicationInterface">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#ApplicationService -->
+
+    <owl:Class rdf:about="&ontology;ApplicationService">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Assigment -->
+
+    <owl:Class rdf:about="&ontology;Assigment">
+        <rdfs:subClassOf rdf:resource="&ontology;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Association -->
+
+    <owl:Class rdf:about="&ontology;Association"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#BusinessActor -->
+
+    <owl:Class rdf:about="&ontology;BusinessActor">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#BusinessEvent -->
+
+    <owl:Class rdf:about="&ontology;BusinessEvent">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#BusinessInterface -->
+
+    <owl:Class rdf:about="&ontology;BusinessInterface">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#BusinessProcess -->
+
+    <owl:Class rdf:about="&ontology;BusinessProcess">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#BusinessRole -->
+
+    <owl:Class rdf:about="&ontology;BusinessRole">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#BusinessService -->
+
+    <owl:Class rdf:about="&ontology;BusinessService">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Composition -->
+
+    <owl:Class rdf:about="&ontology;Composition">
+        <rdfs:subClassOf rdf:resource="&ontology;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Concept -->
+
+    <owl:Class rdf:about="&ontology;Concept"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Contract -->
+
+    <owl:Class rdf:about="&ontology;Contract">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Product -->
+
+    <owl:Class rdf:about="&ontology;Product">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Realization -->
+
+    <owl:Class rdf:about="&ontology;Realization">
+        <rdfs:subClassOf rdf:resource="&ontology;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Triggering -->
+
+    <owl:Class rdf:about="&ontology;Triggering">
+        <rdfs:subClassOf rdf:resource="&ontology;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#UsedBy -->
+
+    <owl:Class rdf:about="&ontology;UsedBy">
+        <rdfs:subClassOf rdf:resource="&ontology;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Value -->
+
+    <owl:Class rdf:about="&ontology;Value">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#accessBusProc -->
+
+    <owl:NamedIndividual rdf:about="&ontology;accessBusProc">
+        <rdf:type rdf:resource="&ontology;Composition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#aggToProd_FromCo_BS_AS -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggToProd_FromCo_BS_AS">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#applicationComponent -->
+
+    <owl:NamedIndividual rdf:about="&ontology;applicationComponent">
+        <rdf:type rdf:resource="&ontology;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#applicationInterface -->
+
+    <owl:NamedIndividual rdf:about="&ontology;applicationInterface">
+        <rdf:type rdf:resource="&ontology;ApplicationInterface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#applicationService -->
+
+    <owl:NamedIndividual rdf:about="&ontology;applicationService">
+        <rdf:type rdf:resource="&ontology;ApplicationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#assigAppCompBusProc -->
+
+    <owl:NamedIndividual rdf:about="&ontology;assigAppCompBusProc">
+        <rdf:type rdf:resource="&ontology;Assigment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#assigAppServAppInt -->
+
+    <owl:NamedIndividual rdf:about="&ontology;assigAppServAppInt">
+        <rdf:type rdf:resource="&ontology;Assigment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#assigBusServAppInt -->
+
+    <owl:NamedIndividual rdf:about="&ontology;assigBusServAppInt">
+        <rdf:type rdf:resource="&ontology;Assigment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#assigBusServBusInt -->
+
+    <owl:NamedIndividual rdf:about="&ontology;assigBusServBusInt">
+        <rdf:type rdf:resource="&ontology;Assigment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#assigmBusRoleBusProc -->
+
+    <owl:NamedIndividual rdf:about="&ontology;assigmBusRoleBusProc">
+        <rdf:type rdf:resource="&ontology;Assigment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#assigmentBusinessRole_BusinessActor -->
+
+    <owl:NamedIndividual rdf:about="&ontology;assigmentBusinessRole_BusinessActor">
+        <rdf:type rdf:resource="&ontology;Assigment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#assocValueProduct -->
+
+    <owl:NamedIndividual rdf:about="&ontology;assocValueProduct">
+        <rdf:type rdf:resource="&ontology;Association"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#businessActor -->
+
+    <owl:NamedIndividual rdf:about="&ontology;businessActor">
+        <rdf:type rdf:resource="&ontology;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#businessEvent -->
+
+    <owl:NamedIndividual rdf:about="&ontology;businessEvent">
+        <rdf:type rdf:resource="&ontology;BusinessEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#businessInterface -->
+
+    <owl:NamedIndividual rdf:about="&ontology;businessInterface">
+        <rdf:type rdf:resource="&ontology;BusinessInterface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#businessProcess -->
+
+    <owl:NamedIndividual rdf:about="&ontology;businessProcess">
+        <rdf:type rdf:resource="&ontology;BusinessProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#businessRole -->
+
+    <owl:NamedIndividual rdf:about="&ontology;businessRole">
+        <rdf:type rdf:resource="&ontology;BusinessRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#businessService -->
+
+    <owl:NamedIndividual rdf:about="&ontology;businessService">
+        <rdf:type rdf:resource="&ontology;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#composAppCompAppInt -->
+
+    <owl:NamedIndividual rdf:about="&ontology;composAppCompAppInt">
+        <rdf:type rdf:resource="&ontology;Composition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#composBusRoleBusInt -->
+
+    <owl:NamedIndividual rdf:about="&ontology;composBusRoleBusInt">
+        <rdf:type rdf:resource="&ontology;Composition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#contract -->
+
+    <owl:NamedIndividual rdf:about="&ontology;contract">
+        <rdf:type rdf:resource="&ontology;Contract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#product -->
+
+    <owl:NamedIndividual rdf:about="&ontology;product">
+        <rdf:type rdf:resource="&ontology;Product"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#realizAppCompAppInt -->
+
+    <owl:NamedIndividual rdf:about="&ontology;realizAppCompAppInt">
+        <rdf:type rdf:resource="&ontology;Realization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#realizBusRoleBusInt -->
+
+    <owl:NamedIndividual rdf:about="&ontology;realizBusRoleBusInt">
+        <rdf:type rdf:resource="&ontology;Realization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#realizBusServAppInt -->
+
+    <owl:NamedIndividual rdf:about="&ontology;realizBusServAppInt">
+        <rdf:type rdf:resource="&ontology;Realization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#trigBusEventBusProc -->
+
+    <owl:NamedIndividual rdf:about="&ontology;trigBusEventBusProc">
+        <rdf:type rdf:resource="&ontology;Triggering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#trigBusProc -->
+
+    <owl:NamedIndividual rdf:about="&ontology;trigBusProc">
+        <rdf:type rdf:resource="&ontology;Triggering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#trigBusProcBusEvent -->
+
+    <owl:NamedIndividual rdf:about="&ontology;trigBusProcBusEvent">
+        <rdf:type rdf:resource="&ontology;Triggering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#usedbyAppIntBusRole -->
+
+    <owl:NamedIndividual rdf:about="&ontology;usedbyAppIntBusRole">
+        <rdf:type rdf:resource="&ontology;UsedBy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#usedbyBusProcBusServt -->
+
+    <owl:NamedIndividual rdf:about="&ontology;usedbyBusProcBusServt">
+        <rdf:type rdf:resource="&ontology;UsedBy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#value -->
+
+    <owl:NamedIndividual rdf:about="&ontology;value">
+        <rdf:type rdf:resource="&ontology;Value"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
