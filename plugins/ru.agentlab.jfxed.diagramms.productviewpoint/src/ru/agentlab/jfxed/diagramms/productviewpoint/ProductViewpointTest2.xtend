@@ -34,7 +34,56 @@ class ProductViewpointTest2 {
 		]
 	}
 	
+	
+
+	
 	def testQuery1(){
+		//шаблон из статических строк и значений переменных с автоматической подстановкой
+		//в духе php
+		val queryString ='''
+		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+		select ?uri 
+		where { 
+			?uri rdf:type <«SOURCE»#Agregation> 
+		} 
+		'''
+	    val query = QueryFactory.create(queryString);
+		// Execute the query and obtain results
+		val qe = QueryExecutionFactory.create(query, m);
+		val results =  qe.execSelect();
+		
+		println( " Zapros 1" );
+		println( queryString );
+		
+		// Output query results    
+		ResultSetFormatter.out(System.out, results, query);
+		qe.close();
+	}
+	
+	def testQuery2(){
+		//шаблон из статических строк и значений переменных с автоматической подстановкой
+		//в духе php
+		val queryString ='''
+		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+		select ?uri 
+		where { 
+			?uri rdf:type <«SOURCE»#Concept> 
+		} 
+		'''
+	    val query = QueryFactory.create(queryString);
+		// Execute the query and obtain results
+		val qe = QueryExecutionFactory.create(query, m);
+		val results =  qe.execSelect();
+		
+		println( " Zapros 2" );
+		println( queryString );
+		
+		// Output query results    
+		ResultSetFormatter.out(System.out, results, query);
+		qe.close();
+	}
+	
+	def testQuery3(){
 		//шаблон из статических строк и значений переменных с автоматической подстановкой
 		//в духе php
 		val queryString ='''
@@ -49,31 +98,11 @@ class ProductViewpointTest2 {
 		val qe = QueryExecutionFactory.create(query, m);
 		val results =  qe.execSelect();
 		
-		// Output query results    
-		ResultSetFormatter.out(System.out, results, query);
-		qe.close();
-	}
-	
-	def testQuery2(){
-		//шаблон из статических строк и значений переменных с автоматической подстановкой
-		//в духе php
-		val queryString ='''
-		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-		select ?uri 
-		where { 
-			?uri rdf:type <«SOURCE»#Product> 
-		} 
-		'''
-	    val query = QueryFactory.create(queryString);
-		// Execute the query and obtain results
-		val qe = QueryExecutionFactory.create(query, m);
-		val results =  qe.execSelect();
+		println( " Zapros 3" );
+		println( queryString );
 		
 		// Output query results    
 		ResultSetFormatter.out(System.out, results, query);
 		qe.close();
-	}
-	
-	def testQuery3(){
 	}
 }

@@ -349,7 +349,7 @@
 
     <owl:NamedIndividual rdf:about="&ontology;Car_Insurance">
         <rdf:type rdf:resource="&ontology;Product"/>
-        <toAggregation rdf:resource="&ontology;aggregation_CarIns_InsideIt"/>
+        <toAggregation rdf:resource="&ontology;aggregation_CarIns_DamageAsses"/>
     </owl:NamedIndividual>
     
 
@@ -406,7 +406,7 @@
 
     <owl:NamedIndividual rdf:about="&ontology;Insurance">
         <rdf:type rdf:resource="&ontology;Product"/>
-        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_InsideIt"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_InsApp"/>
         <toUsedBy rdf:resource="&ontology;usedBy_Customer_Insurance"/>
     </owl:NamedIndividual>
     
@@ -436,25 +436,73 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_CarIns_InsideIt -->
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_CarIns_DamageAsses -->
 
-    <owl:NamedIndividual rdf:about="&ontology;aggregation_CarIns_InsideIt">
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_CarIns_DamageAsses">
         <rdf:type rdf:resource="&ontology;Agregation"/>
         <fromAggregation rdf:resource="&ontology;DamageAssessment"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_InsideIt -->
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_ClaimPay -->
 
-    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_InsideIt">
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_ClaimPay">
         <rdf:type rdf:resource="&ontology;Agregation"/>
         <fromAggregation rdf:resource="&ontology;ClaimPayment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_ClaimReg -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_ClaimReg">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
         <fromAggregation rdf:resource="&ontology;ClaimRegistration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_CustDataMod -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_CustDataMod">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
         <fromAggregation rdf:resource="&ontology;CustomerDataModification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_CustInfo -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_CustInfo">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
         <fromAggregation rdf:resource="&ontology;CustomerInformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_InsApp -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_InsApp">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
         <fromAggregation rdf:resource="&ontology;InsuranceApplication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_InsPolicy -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_InsPolicy">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
         <fromAggregation rdf:resource="&ontology;InsurancePolicy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_PremPay -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_PremPay">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
         <fromAggregation rdf:resource="&ontology;PremiumPayment"/>
     </owl:NamedIndividual>
     
