@@ -265,6 +265,7 @@
 
     <owl:NamedIndividual rdf:about="&ontology;Insurance">
         <rdf:type rdf:resource="&ontology;Product"/>
+        <toUsedBy rdf:resource="&ontology;usedBy_Customer_Insurance"/>
     </owl:NamedIndividual>
     
 
@@ -289,8 +290,7 @@
 
     <owl:NamedIndividual rdf:about="&ontology;usedBy_Customer_Insurance">
         <rdf:type rdf:resource="&ontology;UsedBy"/>
-        <toUsedBy rdf:resource="&ontology;Customer"/>
-        <fromUsedBy rdf:resource="&ontology;Insurance"/>
+        <fromUsedBy rdf:resource="&ontology;Customer"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
