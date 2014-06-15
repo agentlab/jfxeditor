@@ -24,24 +24,24 @@ class ProductViewpointTest2 {
 	}
 	
 	def loadModel() {
-		//создается пустая база знаний
+		//СЃРѕР·РґР°РµС‚СЃСЏ РїСѓСЃС‚Р°СЏ Р±Р°Р·Р° Р·РЅР°РЅРёР№
 		m = ModelFactory.createOntologyModel() => [
-			// внутри блока можно обращаться к методам объкта m без m.
+			// РІРЅСѓС‚СЂРё Р±Р»РѕРєР° РјРѕР¶РЅРѕ РѕР±СЂР°С‰Р°С‚СЊСЃСЏ Рє РјРµС‚РѕРґР°Рј РѕР±СЉРєС‚Р° m Р±РµР· m.
 			
 			val inputStream = new FileInputStream("productviewpoint.owl")
 			read(inputStream, NS, "RDF/XML");
-			write(System.out, "RDF/XML");//и в консоль
+			write(System.out, "RDF/XML");//Рё РІ РєРѕРЅСЃРѕР»СЊ
 		]
 	}
 	
 	def testQuery1(){
-		//шаблон из статических строк и значений переменных с автоматической подстановкой
-		//в духе php
+		//С€Р°Р±Р»РѕРЅ РёР· СЃС‚Р°С‚РёС‡РµСЃРєРёС… СЃС‚СЂРѕРє Рё Р·РЅР°С‡РµРЅРёР№ РїРµСЂРµРјРµРЅРЅС‹С… СЃ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕР№ РїРѕРґСЃС‚Р°РЅРѕРІРєРѕР№
+		//РІ РґСѓС…Рµ php
 		val queryString ='''
 		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 		select ?uri 
 		where { 
-			?uri rdf:type <«SOURCE»#Assigment> 
+			?uri rdf:type <В«SOURCEВ»#UsedBy> 
 		} 
 		'''
 	    val query = QueryFactory.create(queryString);
@@ -55,13 +55,13 @@ class ProductViewpointTest2 {
 	}
 	
 	def testQuery2(){
-		//шаблон из статических строк и значений переменных с автоматической подстановкой
-		//в духе php
+		//С€Р°Р±Р»РѕРЅ РёР· СЃС‚Р°С‚РёС‡РµСЃРєРёС… СЃС‚СЂРѕРє Рё Р·РЅР°С‡РµРЅРёР№ РїРµСЂРµРјРµРЅРЅС‹С… СЃ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕР№ РїРѕРґСЃС‚Р°РЅРѕРІРєРѕР№
+		//РІ РґСѓС…Рµ php
 		val queryString ='''
 		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 		select ?uri 
 		where { 
-			?uri rdf:type <«SOURCE»#Product> 
+			?uri rdf:type <В«SOURCEВ»#Product> 
 		} 
 		'''
 	    val query = QueryFactory.create(queryString);
