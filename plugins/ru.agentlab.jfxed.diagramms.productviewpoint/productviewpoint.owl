@@ -350,6 +350,7 @@
     <owl:NamedIndividual rdf:about="&ontology;Car_Insurance">
         <rdf:type rdf:resource="&ontology;Product"/>
         <toAggregation rdf:resource="&ontology;aggregation_CarIns_DamageAsses"/>
+        <toRealization rdf:resource="&ontology;realiz_Insur_CarIns"/>
     </owl:NamedIndividual>
     
 
@@ -406,7 +407,13 @@
 
     <owl:NamedIndividual rdf:about="&ontology;Insurance">
         <rdf:type rdf:resource="&ontology;Product"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_ClaimPay"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_ClaimReg"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_CustDataMod"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_CustInfo"/>
         <toAggregation rdf:resource="&ontology;aggregation_Insuranse_InsApp"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_InsPolicy"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_PremPay"/>
         <toUsedBy rdf:resource="&ontology;usedBy_Customer_Insurance"/>
     </owl:NamedIndividual>
     
