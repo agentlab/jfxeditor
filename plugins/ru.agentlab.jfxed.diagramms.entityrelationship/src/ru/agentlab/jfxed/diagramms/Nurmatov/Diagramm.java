@@ -12,32 +12,34 @@ public class Diagramm {
 	
 	//test from source tree
 	public static void main (String[] args){
-		OntModel m = ModelFactory.createOntologyModel();//создается пустая база знаний
-		OntClass characterClass = m.createClass(NS + "Character");//создаем отдельные triple
+		OntModel m = ModelFactory.createOntologyModel();//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+		OntClass characterClass = m.createClass(NS + "Character");//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ triple
 		OntClass itemInstantionClass = m.createClass(NS + "ItemInstantion");
 		OntClass creepInstantionClass = m.createClass(NS + "CreepInstantion");
 		
-		OntClass aggregationClass = m.createClass(NS + "Agregation");//связь
-		aggregationClass.addSuperClass(associationClass);//родительская связь
+		OntClass aggregationClass = m.createClass(NS + "Agregation");//пїЅпїЅпїЅпїЅпїЅ
+		aggregationClass.addSuperClass(associationClass);//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 		
-		ObjectProperty propTo = m.createObjectProperty(NS + "To");//объекты - свойства
+		ObjectProperty propTo = m.createObjectProperty(NS + "To");//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		ObjectProperty propFrom = m.createObjectProperty(NS + "From");
 		
-		propTo.addDomain(aggregationClass);//свойства у aggregation
+		propTo.addDomain(aggregationClass);//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ aggregation
 		propFrom.addDomain(aggregationClass);
 		
-		propTo.addRange(contractClass);//то что могут принимать
+		propTo.addRange(contractClass);//пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		propFrom.addRange(productClass);
 		
-		//наполнение базы 
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ 
 		Individual accountIndividual = m.createIndividual(NS + "account's individuals", characterClass);
 		Individual regionIndividual = m.createIndividual(NS + "region's individuals", characterClass);
 		Individual itemIndividual = m.createIndividual(NS + "item's individuals", itemInstantionClass);
 		Individual creepIndividual = m.createIndividual(NS + "creep's individuals", creepInstantionClass);
 		
 		Individual aggregationIndividual = m.createIndividual(NS + "jkljklj1", aggregationClass);
-		aggregationIndividual.addProperty(propTo, contractIndividual);//от продукта к контракту
+		aggregationIndividual.addProperty(propTo, contractIndividual);//пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		aggregationIndividual.addProperty(propFrom, productIndividual);
-		m.write(System.out);//и в консоль
+		m.write(System.out);//пїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	}
 }
+
+Is it works?
