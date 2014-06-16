@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>docs/lab3-Nurmatov.docx</name>
-			<type>1</type>
-			<location>C:/Users/Admin/Desktop/lab3-Nurmatov.docx</location>
-		</link>
-	</linkedResources>
 </projectDescription>
