@@ -1,33 +1,12 @@
-.ClassFigure{
-	-fx-background-color: #d0f0c0;
-    -fx-background-radius: 0;
-    -fx-border-color: black;
-    -fx-border-width: 2;
-    -fx-border-radius: 0; 
-       
-    
-    -fx-alignment: center ;
-	-fx-padding: 30 50 30 50;
-}
 
-.ClassFigure-Rect{
-	-fx-fill: CYAN;
-    -fx-stroke: #FFFFFF;
-    -fx-stroke-type: outside ;
-     
-    -fx-border-radius: 5;
-    -fx-background-radius: 0;
-    -fx-arc-height: 5;
-    -fx-arc-width: 5;
-    -fx-padding: 5;
-}
-
-  .ClassFigure-Name-Section{
+ .ClassFigure-Name-Section{
+ 	
+ 	-fx-fill:  #d0f0c0;
 	-fx-alignment: center;
-    -fx-padding: 5;
+   -fx-padding: 0;
     -fx-border-color: black;
     -fx-border-width: 0 0 0 0;
-    -fx-border-radius: 5 5 0 0;
+   -fx-border-radius: 0 0 0 0;
 }
 
 
@@ -40,7 +19,7 @@
  .ClassFigure-Text{
     -fx-font: norm 15pt "Arial";
     -fx-stroke-type: outside;
-    -fx-stroke-width: 0;
+    -fx-stroke-width: 5;
   
     
     
