@@ -12,11 +12,11 @@
     -fx-stroke: #FFFFFF;
     -fx-stroke-type: outside;
      
-    -fx-border-radius: 5;
+    -fx-border-radius: 0;
     -fx-background-radius: 0;
-    -fx-arc-height: 5;
-    -fx-arc-width: 5;
-    -fx-padding: 5;
+    -fx-arc-height: 0;
+    -fx-arc-width: 0;
+    -fx-padding: 0;
 }
 
 /*  .ClassFigure-Name-Section{
