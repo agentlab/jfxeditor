@@ -8,9 +8,10 @@ import javafx.scene.shape.ArcType
 import javafx.scene.shape.Line
 import javafx.scene.text.Text
 import ru.agentlab.jfxed.IFigure
+import de.fxdiagram.core.XNode
 
-class ClassFigure implements IFigure {
-
+class ClassFigure extends XNode implements IFigure  {
+	
 	public String name = "Interaction1";
 	public Text textStr;
 	
@@ -20,7 +21,11 @@ class ClassFigure implements IFigure {
 		textStr.text = str1
 	}
 
+	
 	new() {
+		
+		super("Class")
+		
 		root = new VBox => [
 			stylesheets += ClassFigure.getResource("ClassFigure.css").toExternalForm()
 			styleClass += "ClassFigure";
@@ -74,7 +79,7 @@ class ClassFigure implements IFigure {
 	}
 	
 	override getRoot() {
-		return root
+		return this
 	}
 	
 }
