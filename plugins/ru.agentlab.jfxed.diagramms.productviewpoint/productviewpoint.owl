@@ -414,6 +414,7 @@
 
     <owl:NamedIndividual rdf:about="&ontology;Insurance">
         <rdf:type rdf:resource="&ontology;Product"/>
+        <fromRealization rdf:resource="&ontology;Car_Insurance"/>
         <toAggregation rdf:resource="&ontology;ClaimPayment"/>
         <toAggregation rdf:resource="&ontology;ClaimRegistration"/>
         <toUsedBy rdf:resource="&ontology;Customer"/>
