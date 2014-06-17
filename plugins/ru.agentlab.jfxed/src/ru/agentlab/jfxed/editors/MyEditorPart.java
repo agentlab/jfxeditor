@@ -112,6 +112,9 @@ public class MyEditorPart extends FXEditorPart {
 		if(input == null)
 			return;
 		
+		if(input instanceof DiagramEditorInput)
+			return;
+		
 		setPartName(input.getName());
 			
 		IFile f = ((FileEditorInput)input).getFile();
