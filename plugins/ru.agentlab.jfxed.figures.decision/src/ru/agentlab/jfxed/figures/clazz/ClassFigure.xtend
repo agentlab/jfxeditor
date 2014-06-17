@@ -59,20 +59,6 @@ class ClassFigure extends BaseFigure {
 			]
 		]
 		
-	/*	root.children += new VBox => [
-			styleClass += "ClassFigure-Methods-List"
-			
-			children += new Text => [
-				text = "method 1 lalalala"
-			]
-			
-			children += new Text => [
-				text = "method 2 lalalala"
-			]
-			
-			children += new Text => [
-				text = "method 3 lalalala"
-			]
-		]*/
+	
 	}
 }
