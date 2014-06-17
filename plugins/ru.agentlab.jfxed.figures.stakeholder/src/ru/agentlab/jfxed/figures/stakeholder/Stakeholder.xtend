@@ -11,6 +11,7 @@ import javafx.scene.text.Text
 
 class Stakeholder extends XNode implements IFigure {
 	var String name
+	var Text boxy
 	
 	new(String name) {
 		super(name)
@@ -19,7 +20,7 @@ class Stakeholder extends XNode implements IFigure {
 	
 	new() {
 		super("Class")
-		name = "Class"
+		name = "Class111"
 		
 		node = new VBox  => [
 			val s = Stakeholder.getResource("Stakeholder.css").toExternalForm()
@@ -27,41 +28,43 @@ class Stakeholder extends XNode implements IFigure {
 			
 			children += new Group => [
 			children += new Polyline => [
-					points +=  60d 
-					points +=  40d 
-					points +=  40d
-					points +=  60d
-		            points += 40d
-		            points += 120d                      
-		            points += 60d
-		            points += 140d	            	            
-		            points += 200d
-		            points += 140d	            
-		            points += 220d
-		            points += 120d	            
-		            points += 220d
+					points +=  30d 
+					points +=  20d 
+					points +=  20d
+					points +=  30d
+		            points += 20d
+		            points += 60d                      
+		            points += 30d
+		            points += 70d	            	            
+		            points += 100d
+		            points += 70d	            
+		            points += 110d
 		            points += 60d	            
-		            points += 200d
-		            points += 40d             
-		            points += 60d 
-		            points += 40d
+		            points += 110d
+		            points += 30d	            
+		            points += 100d
+		            points += 20d             
+		            points += 30d 
+		            points += 20d
 		            
 		            styleClass.clear
 		            styleClass += "Vasya"
 				] 
 							
 				children += new Circle => [
-					 centerX = 160 
-					 centerY = 70
-					 radius = 10
+					 centerX = 80 
+					 centerY = 35
+					 radius = 5
 				]
-	
-				children += new Text => [
+				
+				boxy = new Text => [
 					text = name
 					styleClass += "ClassFigure-Text"
-					layoutX = 85
-					layoutY = 95
+					layoutX = 43
+					layoutY = 48
 				]
+	
+				children += boxy
 			]
 		]
 	}
@@ -72,5 +75,10 @@ class Stakeholder extends XNode implements IFigure {
 
 	override getRoot() {
 		return this
+	}
+	
+	def setName(String name) {
+		this.name = name
+		boxy.text = name
 	}
 }
