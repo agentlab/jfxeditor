@@ -1,0 +1,557 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.eswc2006.org/technologies/ontology#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.eswc2006.org/technologies/ontology#">
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Attribution-From -->
+
+    <ObjectProperty rdf:about="&j.0;Attribution-From">
+        <rdfs:range rdf:resource="&j.0;Attribute-Relationship"/>
+        <rdfs:domain rdf:resource="&j.0;Entity-Concept"/>
+        <rdfs:domain rdf:resource="&j.0;Relationship"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Attribution-To -->
+
+    <ObjectProperty rdf:about="&j.0;Attribution-To">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:range rdf:resource="&j.0;Attribute-Concept"/>
+        <rdfs:domain rdf:resource="&j.0;Attribute-Relationship"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#From -->
+
+    <ObjectProperty rdf:about="&j.0;From">
+        <rdfs:domain rdf:resource="&j.0;Entity-Concept"/>
+        <rdfs:range rdf:resource="&j.0;Relationship"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#To -->
+
+    <ObjectProperty rdf:about="&j.0;To">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:range rdf:resource="&j.0;Entity-Concept"/>
+        <rdfs:domain rdf:resource="&j.0;Relationship"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Attribute-Concept -->
+
+    <Class rdf:about="&j.0;Attribute-Concept">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Attribute-Relationship -->
+
+    <Class rdf:about="&j.0;Attribute-Relationship">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Concept -->
+
+    <Class rdf:about="&j.0;Concept"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Entity-Concept -->
+
+    <Class rdf:about="&j.0;Entity-Concept">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Relation -->
+
+    <Class rdf:about="&j.0;Relation"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Relationship -->
+
+    <Class rdf:about="&j.0;Relationship">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Account-Created-On -->
+
+    <NamedIndividual rdf:about="&j.0;Account-Created-On">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-To rdf:resource="&j.0;account"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Account-name -->
+
+    <NamedIndividual rdf:about="&j.0;Account-name">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-To rdf:resource="&j.0;account"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Carrying -->
+
+    <NamedIndividual rdf:about="&j.0;Carrying">
+        <rdf:type rdf:resource="&j.0;Relationship"/>
+        <j.0:To rdf:resource="&j.0;character"/>
+        <j.0:To rdf:resource="&j.0;creep-instantiation"/>
+        <j.0:To rdf:resource="&j.0;item-instantiation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Character-Current-Hit-Points -->
+
+    <NamedIndividual rdf:about="&j.0;Character-Current-Hit-Points">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;character"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Character-Current-Mana -->
+
+    <NamedIndividual rdf:about="&j.0;Character-Current-Mana">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;character"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Character-Level -->
+
+    <NamedIndividual rdf:about="&j.0;Character-Level">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;character"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Character-Max-Hit-Points -->
+
+    <NamedIndividual rdf:about="&j.0;Character-Max-Hit-Points">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;character"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Character-Max-Mana -->
+
+    <NamedIndividual rdf:about="&j.0;Character-Max-Mana">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;character"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Character-exp-Points -->
+
+    <NamedIndividual rdf:about="&j.0;Character-exp-Points">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;character"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Character-name -->
+
+    <NamedIndividual rdf:about="&j.0;Character-name">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;character"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Character-type -->
+
+    <NamedIndividual rdf:about="&j.0;Character-type">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;character"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Contains -->
+
+    <NamedIndividual rdf:about="&j.0;Contains">
+        <rdf:type rdf:resource="&j.0;Relationship"/>
+        <j.0:To rdf:resource="&j.0;character"/>
+        <j.0:To rdf:resource="&j.0;creep-instantiation"/>
+        <j.0:To rdf:resource="&j.0;region"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Created-On -->
+
+    <NamedIndividual rdf:about="&j.0;Created-On">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;Has"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Creep-Attack -->
+
+    <NamedIndividual rdf:about="&j.0;Creep-Attack">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;creep"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Creep-Hit-Points -->
+
+    <NamedIndividual rdf:about="&j.0;Creep-Hit-Points">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;creep"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Creep-IDNum -->
+
+    <NamedIndividual rdf:about="&j.0;Creep-IDNum">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;creep-instantiation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Creep-Mana -->
+
+    <NamedIndividual rdf:about="&j.0;Creep-Mana">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;creep"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Creep-Name -->
+
+    <NamedIndividual rdf:about="&j.0;Creep-Name">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;creep"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Has -->
+
+    <NamedIndividual rdf:about="&j.0;Has">
+        <rdf:type rdf:resource="&j.0;Relationship"/>
+        <j.0:To rdf:resource="&j.0;account"/>
+        <j.0:To rdf:resource="&j.0;character"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Is-Type -->
+
+    <NamedIndividual rdf:about="&j.0;Is-Type">
+        <rdf:type rdf:resource="&j.0;Relationship"/>
+        <j.0:To rdf:resource="&j.0;creep"/>
+        <j.0:To rdf:resource="&j.0;creep-instantiation"/>
+        <j.0:To rdf:resource="&j.0;item"/>
+        <j.0:To rdf:resource="&j.0;item-instantiation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Item-Damage -->
+
+    <NamedIndividual rdf:about="&j.0;Item-Damage">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;item"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Item-IDNum -->
+
+    <NamedIndividual rdf:about="&j.0;Item-IDNum">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;item-instantiation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Item-Modifier -->
+
+    <NamedIndividual rdf:about="&j.0;Item-Modifier">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;item-instantiation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Item-Name -->
+
+    <NamedIndividual rdf:about="&j.0;Item-Name">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;item"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Item-Type -->
+
+    <NamedIndividual rdf:about="&j.0;Item-Type">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;item"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Last-Signed-On -->
+
+    <NamedIndividual rdf:about="&j.0;Last-Signed-On">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-To rdf:resource="&j.0;account"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Last-played -->
+
+    <NamedIndividual rdf:about="&j.0;Last-played">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;Has"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Password -->
+
+    <NamedIndividual rdf:about="&j.0;Password">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-To rdf:resource="&j.0;account"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Ran-Into -->
+
+    <NamedIndividual rdf:about="&j.0;Ran-Into">
+        <rdf:type rdf:resource="&j.0;Relationship"/>
+        <j.0:To rdf:resource="&j.0;character"/>
+        <j.0:To rdf:resource="&j.0;creep"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Region-Climate -->
+
+    <NamedIndividual rdf:about="&j.0;Region-Climate">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;region"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Region-Foliage -->
+
+    <NamedIndividual rdf:about="&j.0;Region-Foliage">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;region"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Region-Playersln -->
+
+    <NamedIndividual rdf:about="&j.0;Region-Playersln">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;region"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Region-Precipitation -->
+
+    <NamedIndividual rdf:about="&j.0;Region-Precipitation">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;region"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Region-name -->
+
+    <NamedIndividual rdf:about="&j.0;Region-name">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;region"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Subscriber-Addres -->
+
+    <NamedIndividual rdf:about="&j.0;Subscriber-Addres">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-To rdf:resource="&j.0;account"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Subscriber-EMail -->
+
+    <NamedIndividual rdf:about="&j.0;Subscriber-EMail">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-To rdf:resource="&j.0;account"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Subscriber-name -->
+
+    <NamedIndividual rdf:about="&j.0;Subscriber-name">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-To rdf:resource="&j.0;account"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Subscribert-Phone -->
+
+    <NamedIndividual rdf:about="&j.0;Subscribert-Phone">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-To rdf:resource="&j.0;account"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#When-Created -->
+
+    <NamedIndividual rdf:about="&j.0;When-Created">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <j.0:Attribution-From rdf:resource="&j.0;Is-Type"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#account -->
+
+    <NamedIndividual rdf:about="&j.0;account">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#character -->
+
+    <NamedIndividual rdf:about="&j.0;character">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#creep -->
+
+    <NamedIndividual rdf:about="&j.0;creep">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#creep-instantiation -->
+
+    <NamedIndividual rdf:about="&j.0;creep-instantiation">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#item -->
+
+    <NamedIndividual rdf:about="&j.0;item">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#item-instantiation -->
+
+    <NamedIndividual rdf:about="&j.0;item-instantiation">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#region -->
+
+    <NamedIndividual rdf:about="&j.0;region">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

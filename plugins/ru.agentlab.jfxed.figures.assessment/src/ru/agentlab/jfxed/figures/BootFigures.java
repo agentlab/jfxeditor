@@ -1,7 +1,9 @@
+
 package ru.agentlab.jfxed.figures;
 
+import com.sun.prism.paint.Color;
+
 import ru.agentlab.jfxed.figures.clazz.ClassFigure;
-import ru.agentlab.jfxed.figures.clazz.ClassPass;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
@@ -9,10 +11,13 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.shape.Polyline;
 import javafx.stage.Stage;
+import javafx.scene.Group;
+
 
 public class BootFigures extends Application {
-	
+	Group root = new Group();
 	ClassFigure sourceToMove;
 	
 	double sceneStartX;
@@ -32,9 +37,7 @@ public class BootFigures extends Application {
 		primaryStage.setTitle("Hello World!");
 
 		AnchorPane root = new AnchorPane();
-		
 		final ClassFigure source = new ClassFigure();
-		
 		root.getChildren().add(source.getRoot());
 		root.getChildren().add(new VBox());
 		

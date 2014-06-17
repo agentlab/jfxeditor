@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.diagramms.productviewpoint
+package ru.agentlab.jfxed.diagramms.statemachine
 
 import com.hp.hpl.jena.query.QueryExecutionFactory
 import com.hp.hpl.jena.query.QueryFactory
@@ -21,8 +21,6 @@ class ProductViewpointTest2 {
 		me.testQuery1()
 		me.testQuery2()
 		me.testQuery3()
-		me.testQuery4()
-		me.testQuery5()
 	}
 	
 	def loadModel() {
@@ -92,7 +90,7 @@ class ProductViewpointTest2 {
 		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 		select ?uri 
 		where { 
-			?uri rdf:type <«SOURCE»#Product> 
+			?uri rdf:type <«SOURCE»#UsedBy> 
 		} 
 		'''
 	    val query = QueryFactory.create(queryString);
@@ -107,53 +105,4 @@ class ProductViewpointTest2 {
 		ResultSetFormatter.out(System.out, results, query);
 		qe.close();
 	}
-	
-		def testQuery4(){
-		//шаблон из статических строк и значений переменных с автоматической подстановкой
-		//в духе php
-		val queryString ='''
-		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-		select ?uri 
-		where { 
-			?uri rdf:type <«SOURCE»#UsedBy> 
-		} 
-		'''
-	    val query = QueryFactory.create(queryString);
-		// Execute the query and obtain results
-		val qe = QueryExecutionFactory.create(query, m);
-		val results =  qe.execSelect();
-		
-		println( " Zapros 4" );
-		println( queryString );
-		
-		// Output query results    
-		ResultSetFormatter.out(System.out, results, query);
-		qe.close();
-	}
-	
-		def testQuery5(){
-		//шаблон из статических строк и значений переменных с автоматической подстановкой
-		//в духе php
-		val queryString ='''
-		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-		select ?uri 
-		where { 
-			?uri rdf:type <«SOURCE»#BusinessActor> 
-		} 
-		'''
-	    val query = QueryFactory.create(queryString);
-		// Execute the query and obtain results
-		val qe = QueryExecutionFactory.create(query, m);
-		val results =  qe.execSelect();
-		
-		println( " Zapros 5" );
-		println( queryString );
-		
-		// Output query results    
-		ResultSetFormatter.out(System.out, results, query);
-		qe.close();
-	}
-	
-	
-	
 }

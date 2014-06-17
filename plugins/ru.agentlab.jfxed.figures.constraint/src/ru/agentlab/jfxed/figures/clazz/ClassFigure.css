@@ -1,18 +1,37 @@
 .ClassFigure{
-	-fx-background-color: CCCCFF;
+	-fx-background-color: #ccccff;
     -fx-background-radius: 0;
-    -fx-border-color: #000;
-    -fx-border-width: 1;
-    -fx-border-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-radius: 0;    
+    
     -fx-alignment: CENTER;
-	-fx-padding: 20 30 20 30;
+	-fx-padding: 5 8 50 8;
 }
 
 .ClassFigure-Rect{
-	-fx-fill: CYAN;
-    -fx-stroke: #FFFFFF;
+	-fx-fill: #ccccff;
+    -fx-stroke: #ccccff;
     -fx-stroke-type: outside;
      
+    -fx-border-radius: 5;
+    -fx-background-radius: 0;
+    -fx-arc-height: 5;
+    -fx-arc-width: 5;
+    -fx-padding: 5;
+}
+
+.Prem {
+	-fx-fill: #ccccff;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+	
+}
+
+.Krug {
+	-fx-fill: #000000;
+    -fx-stroke: #000000;
     -fx-border-radius: 5;
     -fx-background-radius: 0;
     -fx-arc-height: 5;
@@ -33,11 +52,9 @@
 }
 
  .ClassFigure-Text{
-    -fx-font: norm 15pt "Arial";
-    -fx-stroke-type: outside;
-    -fx-stroke-width: 0;
-
-    
+    -fx-font: 16pt "Arial";
+    -fx-stroke-type: centered;
+    -fx-stroke-width: 0;      
 }
 
 .ClassFigure-Methods-List{
