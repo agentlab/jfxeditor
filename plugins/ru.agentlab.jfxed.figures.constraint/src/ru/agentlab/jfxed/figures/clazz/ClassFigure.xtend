@@ -13,7 +13,7 @@ class ClassFigure extends BaseFigure {
 	String name = "Constraint";
 	
 	new (){
-		root = new VBox
+		root = new VBox 
 		
 		initHandlers()
 		
