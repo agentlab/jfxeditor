@@ -249,7 +249,7 @@ public class AirlineSecurity
 		Individual linkGlobal1 = m.createIndividual(NS + "linkGlobal1", globalClass);
 		linkGlobal1.addProperty(propGlobal1, beSafe);
 		linkGlobal1.addProperty(propGlobal1To, safetyStandard);
-		/*
+		
 		for(StmtIterator it = linkGlobal.listProperties(); it.hasNext();)
 		{
 			System.out.println(it.nextStatement());
@@ -265,15 +265,15 @@ public class AirlineSecurity
 		for(StmtIterator it = m.listStatements(s); it.hasNext();)
 		{
 			System.out.println(it.nextStatement());
-		}*/
+		}
 		
 		//UMLUseCase.run();
 		
-		try {
+		/*try {
 			m.write(new FileWriter("mmmm.owl"), "RDF/XML");
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		} */
 	}
 
 }
