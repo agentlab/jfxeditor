@@ -16,7 +16,7 @@ public class MyHandler extends AbstractHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-    	IEditorInput editorInput = new DiagramEditorInput();
+    	IEditorInput editorInput = null;//new DiagramEditorInput();
     	
     	IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
         try {

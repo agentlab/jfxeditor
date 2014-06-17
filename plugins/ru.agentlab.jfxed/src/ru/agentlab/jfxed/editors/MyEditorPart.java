@@ -106,15 +106,19 @@ public class MyEditorPart extends FXEditorPart {
 	public void init(IEditorSite site, IEditorInput input) throws PartInitException {
 		super.setSite(site);
 		super.setInput(input);
-		setPartName(input.getName());
 		
+		if(input == null)
+			return;
+		
+		setPartName(input.getName());
+			
 		IFile f = ((FileEditorInput)input).getFile();
 		try {
 			InputStream inputStream = f.getContents();
 			jenaModel = ModelFactory.createOntologyModel();
 			jenaModel.read(inputStream, NS, "RDF/XML");
 			jenaModel.write(System.out, "RDF/XML");//и в консоль
-			
+				
 			ontoUri = jenaModel.getNsPrefixURI("").replace("#", "");
 			System.out.println(ontoUri);
 		} catch (CoreException e) {
@@ -124,12 +128,20 @@ public class MyEditorPart extends FXEditorPart {
 
 	private IDiagram findDiagram(String ontoUri) {
 		try {
-			Object o = diagramsTable.get(ontoUri).createExecutableExtension("class");
+			IConfigurationElement icfe = diagramsTable.get(ontoUri);
+			if(icfe == null) {
+				System.out.println("Cannot find plug-in with diagram with URI=" + ontoUri);
+				return null;
+			}
+			
+			Object o = icfe.createExecutableExtension("class");
 			if(o instanceof IDiagram)
 				return (IDiagram)o;
 		} catch (CoreException e) {
 			e.printStackTrace();
 		}
+		
+		System.out.println("Cannot create diagram with URI=" + ontoUri);
 		return null;
 	}
 
