@@ -90,7 +90,7 @@ class ProductViewpointTest2 {
 		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 		select ?uri 
 		where { 
-			?uri rdf:type <«SOURCE»#UsedBy> 
+			?uri rdf:type <«SOURCE»#Realization> 
 		} 
 		'''
 	    val query = QueryFactory.create(queryString);
