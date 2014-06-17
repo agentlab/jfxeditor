@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.figures
+package ru.agentlab.jfxed.figures.stakeholder.tests
 
 import javafx.scene.Node
 import javafx.scene.layout.Pane

@@ -1,5 +1,7 @@
 package ru.agentlab.jfxed.diagramms.productviewpoint;
 
+import java.io.FileWriter;
+
 import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.ontology.ObjectProperty;
 import com.hp.hpl.jena.ontology.OntClass;
@@ -46,31 +48,31 @@ public class ProductViewpointTest {
 				
 		//наполнение базы 
 		//сначала жёлтые чуваки
-		Individual counterStaff = m.createIndividual(NS + "Counter Staff", someoneClass);
+		Individual counterStaff = m.createIndividual(NS + "CounterStaff", someoneClass);
 		Individual qMatic = m.createIndividual(NS + "Q-Matic", someoneClass);
 		Individual customer = m.createIndividual(NS + "Customer", someoneClass);
-		Individual poManagement = m.createIndividual(NS + "Post Office Managemenet", someoneClass);
-		Individual anotherCustomer = m.createIndividual(NS + "Another Customer", someoneClass);
+		Individual poManagement = m.createIndividual(NS + "PostOfficeManagemenet", someoneClass);
+		Individual anotherCustomer = m.createIndividual(NS + "AnotherCustomer", someoneClass);
 		//теперь зелёные
-		Individual reachCounter = m.createIndividual(NS + "Reach counter", greenClass);
-		Individual stateTheRequest = m.createIndividual(NS + "State the request", greenClass);
-		Individual pushButton = m.createIndividual(NS + "Push \"next Customer\" button", greenClass);
-		Individual checkTicket = m.createIndividual(NS + "Check ticket validity", greenClass);
-		Individual getTicket = m.createIndividual(NS + "Get ticket", greenClass);
-		Individual reachTheCounter = m.createIndividual(NS + "Reach the counter", greenClass);
+		Individual reachCounter = m.createIndividual(NS + "Reachcounter", greenClass);
+		Individual stateTheRequest = m.createIndividual(NS + "Statetherequest", greenClass);
+		Individual pushButton = m.createIndividual(NS + "Push_nextCustomer_button", greenClass);
+		Individual checkTicket = m.createIndividual(NS + "Check_ticket_validity", greenClass);
+		Individual getTicket = m.createIndividual(NS + "Get_ticket", greenClass);
+		Individual reachTheCounter = m.createIndividual(NS + "Reach_the_counter", greenClass);
 		//единственный голубой
 		Individual ticket = m.createIndividual(NS + "ticket", blueClass);
 		
 		//красненькие
-		Individual askQuestions = m.createIndividual(NS + "To ask queue-specific questions", redClass);
-		Individual giveGoodService = m.createIndividual(NS + "Give customer a good service", redClass);
-		Individual respectSystem = m.createIndividual(NS + "respect queuing system", redClass);
+		Individual askQuestions = m.createIndividual(NS + "To_ask_queue-specific_questions", redClass);
+		Individual giveGoodService = m.createIndividual(NS + "Give_customer_a_good_service", redClass);
+		Individual respectSystem = m.createIndividual(NS + "respect_queuing_system", redClass);
 		
 		//рыженькие
-		Individual getService = m.createIndividual(NS + "Get the right service", orangeClass);
-		Individual workCorrectly = m.createIndividual(NS + "Work correctly", orangeClass);
-		Individual fuckOff = m.createIndividual(NS + "To f**k off when done", orangeClass);
-		Individual neededService = m.createIndividual(NS + "Needed service decided", orangeClass);
+		Individual getService = m.createIndividual(NS + "Get_the_right_service", orangeClass);
+		Individual workCorrectly = m.createIndividual(NS + "Work_correctly", orangeClass);
+		Individual fuckOff = m.createIndividual(NS + "To_f**k_off_when_done", orangeClass);
+		Individual neededService = m.createIndividual(NS + "Needed_service_decided", orangeClass);
 		
 		
 		
@@ -80,7 +82,7 @@ public class ProductViewpointTest {
 		toGiveService.addProperty(propTo, giveGoodService);
 		toGiveService.addProperty(propFrom, poManagement);
 		
-		Individual toServiceDecide = m.createIndividual(NS + "needed Service", aggregationClass);
+		Individual toServiceDecide = m.createIndividual(NS + "needed_Service", aggregationClass);
 		toServiceDecide.addProperty(propTo, neededService);
 		toServiceDecide.addProperty(propFrom, poManagement);
 		
@@ -205,7 +207,12 @@ public class ProductViewpointTest {
 		
 		
 	
-		
-		m.write(System.out);//и в консоль
+		try {
+			m.write(new FileWriter("D:/bom2.owl"));
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 }
