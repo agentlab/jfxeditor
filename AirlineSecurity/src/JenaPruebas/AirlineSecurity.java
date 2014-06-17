@@ -17,23 +17,35 @@ import com.hp.hpl.jena.vocabulary.VCARD;
 
 public class AirlineSecurity
  {
-	static final String SCHEMA = "http://www.w3.org/2002/07/owl";
+	static final String SCHEMA = "http://www.agentlab.ru/jfxed/onto/strategicrationale";
 	static final String NS = SCHEMA + "#";
 	
 	public static void main (String[] args) {
 		OntModel m = ModelFactory.createOntologyModel();
 		
+		OntClass concept = m.createClass(NS + "Concept");
+		OntClass relation = m.createClass(NS + "Relation");
+		
 		OntClass taskClass = m.createClass(NS + "Task");
+		taskClass.addSuperClass(concept);
 		OntClass goalClass = m.createClass(NS + "Goal");
+		goalClass.addSuperClass(concept);
 		OntClass softGoalClass = m.createClass(NS + "softGoal");
+		softGoalClass.addSuperClass(concept);
 		OntClass resourceClass = m.createClass(NS + "resource");
+		resourceClass.addSuperClass(concept);
 		
 		
 		OntClass elementClass = m.createClass(NS + "element");
+		elementClass.addSuperClass(relation);
 		OntClass contributesPClass = m.createClass(NS + "contributesP");
+		contributesPClass.addSuperClass(relation);
 		OntClass contributesMClass = m.createClass(NS + "contributesM");
+		contributesMClass.addSuperClass(relation);
 		OntClass meansEndClass = m.createClass(NS + "meansEnd");
+		meansEndClass.addSuperClass(relation);
 		OntClass globalClass = m.createClass(NS + "global");
+		globalClass.addSuperClass(relation);
 		
 		
 		
@@ -45,8 +57,8 @@ public class AirlineSecurity
 		propMeansEndTo.addRange(taskClass);
 		
 		ObjectProperty propMeansEnd1 = m.createObjectProperty(NS + "MeansEnd1");
-		propMeansEnd.addDomain(resourceClass);
-		propMeansEnd.addRange(taskClass);
+		propMeansEnd1.addDomain(resourceClass);
+		propMeansEnd1.addRange(taskClass);
 		ObjectProperty propMeansEnd1To = m.createObjectProperty(NS + "MeansEnd1To");
 		propMeansEnd1To.addDomain(resourceClass);
 		propMeansEnd1To.addRange(taskClass);
@@ -55,8 +67,8 @@ public class AirlineSecurity
 		propMeansEnd21To.addRange(taskClass);
 		
 		ObjectProperty propMeansEnd2 = m.createObjectProperty(NS + "MeansEnd2");
-		propMeansEnd.addDomain(softGoalClass);
-		propMeansEnd.addRange(taskClass);
+		propMeansEnd2.addDomain(softGoalClass);
+		propMeansEnd2.addRange(taskClass);
 		//ObjectProperty name = m.createObjectProperty(NS + "name");
 		//propContributesP.addDomain(Classfrom);
 		//propContributesP.addRange(Classto);
@@ -132,16 +144,16 @@ public class AirlineSecurity
 		propGlobal.addRange(taskClass);
 		
 		ObjectProperty propGlobalTo = m.createObjectProperty(NS + "propGlobalTo");
-		propGlobal.addDomain(taskClass);
-		propGlobal.addRange(taskClass);
+		propGlobalTo.addDomain(taskClass);
+		propGlobalTo.addRange(taskClass);
 		
 		ObjectProperty propGlobal1 = m.createObjectProperty(NS + "propGlobal1");
 		propGlobal1.addDomain(softGoalClass);
 		propGlobal1.addRange(goalClass);
 		
 		ObjectProperty propGlobal1To = m.createObjectProperty(NS + "propGlobal1To");
-		propGlobal1.addDomain(softGoalClass);
-		propGlobal1.addRange(goalClass);
+		propGlobal1To.addDomain(softGoalClass);
+		propGlobal1To.addRange(goalClass);
 		
 		
 		Individual passThroughSecurely = m.createIndividual(NS + "passThroughSecurely", softGoalClass);
@@ -149,8 +161,8 @@ public class AirlineSecurity
 		Individual checkSec = m.createIndividual(NS + "checkSecurely", softGoalClass);
 		Individual checkReliab = m.createIndividual(NS + "checkReliab", softGoalClass);
 		Individual checkRobust = m.createIndividual(NS + "checkReliab", softGoalClass);
-		Individual passCheck = m.createIndividual(NS + "passCheck ", goalClass);
-		Individual passThrough = m.createIndividual(NS + "passThrough ", softGoalClass);
+		Individual passThrough = m.createIndividual(NS + "passThrough", softGoalClass);
+		Individual passCheck = m.createIndividual(NS + "passCheck", goalClass);
 		Individual qualityEquip = m.createIndividual(NS+"qualityEquip", resourceClass);
 		Individual enoughStaff = m.createIndividual(NS+"enoughStaff", resourceClass);
 		Individual maintainWeek = m.createIndividual(NS+"maintainWeek", taskClass);
@@ -169,8 +181,6 @@ public class AirlineSecurity
 		linkContributesP.addProperty(propContributesP, passThroughSecurely);
 		linkContributesP.addProperty(propContributesP, passThroughEasily);
 		linkContributesP.addProperty(propContributesPTo, passSec);
-		
-		
 		
 		
 		Individual linkContributesP1 = m.createIndividual(NS + "checkReliab", contributesPClass);
@@ -239,7 +249,7 @@ public class AirlineSecurity
 		Individual linkGlobal1 = m.createIndividual(NS + "linkGlobal1", globalClass);
 		linkGlobal1.addProperty(propGlobal1, beSafe);
 		linkGlobal1.addProperty(propGlobal1To, safetyStandard);
-	
+		/*
 		for(StmtIterator it = linkGlobal.listProperties(); it.hasNext();)
 		{
 			System.out.println(it.nextStatement());
@@ -255,12 +265,12 @@ public class AirlineSecurity
 		for(StmtIterator it = m.listStatements(s); it.hasNext();)
 		{
 			System.out.println(it.nextStatement());
-		}
+		}*/
 		
 		//UMLUseCase.run();
 		
 		try {
-			m.write(new FileWriter("mmmm.xml"));
+			m.write(new FileWriter("mmmm.owl"), "RDF/XML");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
