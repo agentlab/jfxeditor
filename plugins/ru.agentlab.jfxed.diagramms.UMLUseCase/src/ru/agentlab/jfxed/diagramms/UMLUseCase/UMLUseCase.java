@@ -49,7 +49,6 @@ public class UMLUseCase {
 		OntClass systemClass = m.createClass(NS + "ATM");// блок System
 		systemClass.addSuperClass(concept);
 		
-		
 		// связь actor - use case
 		ObjectProperty assocPropTo = m.createObjectProperty(NS + "AssociationTo");
 		assocPropTo.addRange(usecaseClass);
