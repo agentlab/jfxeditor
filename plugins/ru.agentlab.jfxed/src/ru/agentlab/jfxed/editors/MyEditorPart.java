@@ -107,6 +107,8 @@ public class MyEditorPart extends FXEditorPart {
 		super.setSite(site);
 		super.setInput(input);
 		
+		jenaModel = ModelFactory.createOntologyModel();
+		
 		if(input == null)
 			return;
 		
@@ -115,7 +117,6 @@ public class MyEditorPart extends FXEditorPart {
 		IFile f = ((FileEditorInput)input).getFile();
 		try {
 			InputStream inputStream = f.getContents();
-			jenaModel = ModelFactory.createOntologyModel();
 			jenaModel.read(inputStream, NS, "RDF/XML");
 			jenaModel.write(System.out, "RDF/XML");//и в консоль
 				
