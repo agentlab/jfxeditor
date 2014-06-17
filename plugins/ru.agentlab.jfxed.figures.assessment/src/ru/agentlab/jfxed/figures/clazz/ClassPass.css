@@ -19,12 +19,20 @@
     -fx-padding: 5;
 }
 
+/*  .ClassFigure-Name-Section{
+	-fx-alignment: center;
+    -fx-padding: 5;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius: 5 5 0 0;
+}
 
+*/
 .ClassFigure-Line{
 }
 
  .ClassFigure-Text{
-    -fx-font: norm 32pt "Arial";
+    -fx-font: norm 15pt "Arial";
     -fx-stroke-type: outside;
     -fx-stroke-width: 0;
     
@@ -33,4 +41,14 @@
 .ClassFigure-Methods-List{
     -fx-padding: 5;
 	-fx-spacing: 5;
-	}
+	
+}
+
+/* .ClassShape{
+  shape-inside: 0;
+  width: 350px;
+  height: 300px;
+  text-align: justify;
+  overflow: hidden;
+  margin: 0 auto;
+}*/

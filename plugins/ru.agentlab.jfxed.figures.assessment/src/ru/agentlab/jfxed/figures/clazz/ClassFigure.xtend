@@ -10,7 +10,7 @@ import javafx.scene.shape.Circle
 
 class ClassFigure extends BaseFigure {
 	
-	String name = "Constraint";
+	String name = "Assessment";
 	
 	new (){
 		root = new VBox
@@ -45,33 +45,23 @@ class ClassFigure extends BaseFigure {
 
         
 			] 
-						
-		children += new Polyline => [
 			
+				children += new Polyline => [
 				points +=  185d 
-				points +=  50d 
-				
-				points +=  180d 
-				points +=  50d 
-				
-				points +=  175d
+				points +=  80d 
+				points +=  200d
 				points +=  60d
-				
-	            points += 180d
-	            points += 60d  
-	                                
-	            points +=  185d 
-				points +=  50d 	
-	                        	            
-	            points += 200d
-	            points += 50d	
-	                        
-	            points += 195d
-	            points += 60d	
-	                        
-				points +=  175d
-				points +=  60d
+        
+			] 
+			
+			
+						
+		children += new Circle => [
+				 centerX = 200 
+				 centerY = 60
+				 radius = 8
 				 
+				 styleClass += "Krug"
 			]
 			
 
@@ -81,10 +71,10 @@ class ClassFigure extends BaseFigure {
 			
 			children += new Text => [
 				text = name
-				
 				layoutX = 75
 				layoutY = 95
 				styleClass += "ClassFigure-Text"
+				
 			]
 		
 		]
