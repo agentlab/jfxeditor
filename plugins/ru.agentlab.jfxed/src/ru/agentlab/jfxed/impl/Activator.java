@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed;
+package ru.agentlab.jfxed.impl;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
@@ -13,6 +13,7 @@ public class Activator extends AbstractUIPlugin {
 	public static final String PLUGIN_ID = "ru.agentlab.jfxed"; //$NON-NLS-1$
 
 	public static final String FIGURE_ID = "ru.agentlab.jfxed.figure";
+	public static final String DIAGRAM_ID = "ru.agentlab.jfxed.diagram";
 
 	// The shared instance
 	protected static Activator plugin;
@@ -69,20 +70,4 @@ public class Activator extends AbstractUIPlugin {
 	public static ImageDescriptor getImageDescriptor(String path) {
 		return imageDescriptorFromPlugin(PLUGIN_ID, path);
 	}
-
-/*	protected void searchFigures(IExtensionRegistry registry) {
-		IConfigurationElement[] config = registry.getConfigurationElementsFor(FIGURE_ID);
-		try {
-			for (IConfigurationElement e : config) {
-				System.out.println("Evaluating extension");
-				final Object o = e.createExecutableExtension("class");
-				if (o instanceof Node) {
-					figures.add((Node) o);
-				}
-			}
-		} catch (CoreException ex) {
-			System.out.println(ex.getMessage());
-			ex.printStackTrace();
-		}
-	}*/
 }

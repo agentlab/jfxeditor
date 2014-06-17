@@ -2,15 +2,17 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension-point id="ru.agentlab.jfxed.figure" name="JfxEditor Figure" schema="schema/ru.agentlab.jfxed.figure.exsd"/>
+   
+   <extension-point id="ru.agentlab.jfxed.diagram" name="JfxEditor Diagram" schema="schema/ru.agentlab.jfxed.diagram.exsd"/>
 
    <extension
          point="org.eclipse.ui.editors">
       <editor
-            class="ru.agentlab.jfxed.editors.MyEditorPart"
-            default="false"
+            name="JFXEd Diagram Editor"
             icon="icons/sample.gif"
-            id="ru.agentlab.jfxed.editors.MyEditorPartId"
-            name="My FX Editor">
+            extensions="owl"
+            class="ru.agentlab.jfxed.editors.MyEditorPart"
+            id="ru.agentlab.jfxed.editors.MyEditorPartId">
       </editor>
    </extension>
    

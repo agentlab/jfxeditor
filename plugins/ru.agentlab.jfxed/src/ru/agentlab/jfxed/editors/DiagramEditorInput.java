@@ -14,10 +14,8 @@ import org.eclipse.ui.IPersistableElement;
 /**
  * Editor Input for a Diagram Editor
  * 
- * @author Phillip Beauvoir
  */
-public class DiagramEditorInput 
-implements IEditorInput, IPersistableElement {
+public class DiagramEditorInput implements IEditorInput, IPersistableElement {
     
     /**
      * Model
