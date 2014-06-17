@@ -1,5 +1,5 @@
 .ClassFigure{
-	-fx-background-color: #f984e5;
+	-fx-background-color: #ccccff;
     -fx-background-radius: 0;
     -fx-border-color: black;
     -fx-border-width: 2;
@@ -11,8 +11,8 @@
 }
 
 .ClassFigure-Rect{
-	-fx-fill: CRYMSON;
-    -fx-stroke: #ffccff;
+	-fx-fill: #ccccff;
+    -fx-stroke: #ccccff;
     -fx-stroke-type: outside;
      
     -fx-border-radius: 5;
@@ -23,7 +23,7 @@
 }
 
 .Prem {
-	-fx-fill: #ffccff;
+	-fx-fill: #ccccff;
     -fx-background-radius: 0;
     -fx-border-color: black;
     -fx-border-width: 1;
@@ -53,7 +53,7 @@
 }
 
  .ClassFigure-Text{
-    -fx-font: norm 18pt "Arial";
+    -fx-font: 16pt "Arial";
     -fx-stroke-type: centered;
     -fx-stroke-width: 0;      
 }
