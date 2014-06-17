@@ -16,7 +16,7 @@
       </editor>
    </extension>
    
-   <extension
+<!--   <extension
          point="org.eclipse.ui.commands">
       <command
             defaultHandler="ru.agentlab.jfxed.actions.MyHandler"
@@ -41,5 +41,5 @@
             </command>
          </menu>
       </menuContribution>
-   </extension>
+   </extension>-->
 </plugin>
