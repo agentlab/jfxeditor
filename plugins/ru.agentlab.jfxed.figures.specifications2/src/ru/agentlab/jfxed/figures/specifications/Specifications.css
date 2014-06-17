@@ -1,4 +1,4 @@
-.ClassFigure{
+Specifications{
 	-fx-background-color: rgb(250, 242, 227);
     -fx-background-radius: 0;
     -fx-border-color: black;
@@ -10,7 +10,7 @@
 	-fx-effect: dropshadow(gaussian, rgb(0, 0, 0, 0.3), 0, 0, 3, 3) ;
 }
 
-.ClassFigure-Rect{
+.Specifications-Rect{
 	-fx-effect: dropshadow(gaussian, rgb(0, 0, 0, 0.3), 0, 0, 3, 3) ;
 	-fx-background-color: rgb(250, 242, 227);
     -fx-background-radius: 0;
@@ -20,11 +20,11 @@
 	-fx-alignment: CENTER;
 }
 
-.ClassFigure-Foot {
+.Specifications-Foot {
 	-fx-padding: 0 20 0 20;
 }
 
-.ClassFigure-Arc{
+.Specifications-Arc{
 	-fx-background-color: rgb(250, 242, 227);
     -fx-background-radius: 0;
     -fx-border-color: black;
@@ -37,7 +37,7 @@
            m-1025, -1000 l 0 1000";
 }
 
-.ClassFigure-Name-Section{
+.Specifications-Name-Section{
 	-fx-alignment: center;
     -fx-padding: 5;
     -fx-border-color: black;
@@ -45,16 +45,16 @@
     -fx-border-radius: 5 5 0 0;
 }
 
-.ClassFigure-Line{
+.Specifications-Line{
 }
 
-.ClassFigure-Text{
+.Specifications-Text{
     -fx-font: 12pt "Arial";
     -fx-stroke-type: outside;
     -fx-stroke-width: 0;
 }
 
-.ClassFigure-Methods-List{
+.Specifications-Methods-List{
     -fx-padding: 5;
 	-fx-spacing: 5;
 }
