@@ -35,9 +35,7 @@
     -fx-background-radius: 0;
     -fx-border-color: #99ccff;
     -fx-border-width: 2;
-    -fx-border-radius: 0;    
-    
-    
+    -fx-border-radius: 0;   
 	-fx-padding: 5 8 100 8;
 }
 
@@ -50,23 +48,22 @@
 
 .ClassFigure-Methods-List{
     -fx-padding: 5;
-	-fx-spacing: 5;
-	
+	-fx-spacing: 5;	
 }
 
-.Polygon{
-    -fx-width: 0;
-    -fx-height: 0;
-    -fx-border-left: 100px solid transparent;
-    -fx-border-right: 100px solid transparent;
-    -fx-border-bottom: 150px solid #00B2FF;
-    -fx-position: relative;
-    
-    -fx-padding: 5 100 50 3;
+.Polygon{    
+    -fx-padding: 5 5 100 50;
 	-fx-spacing: 5;
-	-fx-background-color: #00008b;
+	-fx-background-color: #FFFFFFb;
 	-fx-border-color: #99ccff;
     -fx-border-width: 2;
-    -fx-border-radius: 0;    
+    -fx-border-radius: 9;    
     
+}
+.Line{
+	-fx-background-color: #000000;
+    -fx-background-radius: 0;
+    -fx-border-color: #000000;
+    -fx-height: 2px; 
+	-fx-padding: 5 8 100 8;
 }
