@@ -1,7 +1,5 @@
-package ru.agentlab.jfxed.figures;
+package ru.agentlab.jfxed.figures.stakeholder.tests;
 
-import ru.agentlab.jfxed.figures.clazz.Stakeholder;
-import ru.agentlab.jfxed.figures.clazz.ClassPass;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
@@ -10,6 +8,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import ru.agentlab.jfxed.figures.stakeholder.Stakeholder;
 
 public class BootFigures extends Application {
 	
