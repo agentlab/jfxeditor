@@ -1,15 +1,15 @@
-package ru.agentlab.jfxed.figures;
+package ru.agentlab.jfxed.figures.specifications.tests;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import ru.agentlab.jfxed.figures.specifications.ClassFigure;
+import ru.agentlab.jfxed.figures.specifications.Specifications;
 
 public class BootFigures extends Application {
 	
-	ClassFigure sourceToMove;
+	Specifications sourceToMove;
 	
 	double sceneStartX;
 	double sceneStartY;
@@ -29,7 +29,7 @@ public class BootFigures extends Application {
 
 		AnchorPane root = new AnchorPane();
 		
-		final ClassFigure source = new ClassFigure();
+		final Specifications source = new Specifications();
 //		final ClassFigure2 source2 = new ClassFigure2();
 //		root.getChildren().add(source2.getRoot());
 		root.getChildren().add(new VBox());

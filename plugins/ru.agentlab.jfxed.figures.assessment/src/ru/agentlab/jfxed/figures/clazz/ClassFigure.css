@@ -1,9 +1,10 @@
+
 .ClassFigure{
 	-fx-background-color: #f984e5;
     -fx-background-radius: 0;
-    -fx-border-color: black;
+    -fx-border-color: #ff0000;
     -fx-border-width: 2;
-    -fx-border-radius: 0;    
+    -fx-border-radius: 5;    
     
     
     -fx-alignment: CENTER;
@@ -31,7 +32,7 @@
 }
 
 .Krug {
-	-fx-fill: #000000;
+	-fx-fill: #ffccff;
     -fx-stroke: #000000;
     -fx-border-radius: 5;
     -fx-background-radius: 0;
@@ -53,9 +54,10 @@
 }
 
  .ClassFigure-Text{
-    -fx-font: norm 18pt "Arial";
+    -fx-font:  18px "Arial";
     -fx-stroke-type: centered;
-    -fx-stroke-width: 0;      
+    -fx-stroke-width: 0;     
+    -fx-color: #ffffff;
 }
 
 .ClassFigure-Methods-List{
