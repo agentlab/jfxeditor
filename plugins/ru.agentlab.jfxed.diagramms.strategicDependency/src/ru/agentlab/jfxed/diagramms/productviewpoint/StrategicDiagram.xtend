@@ -21,7 +21,7 @@ public class StrategicDiagram implements IDiagram {
 		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 		select ?uri 
 		where { 
-			?uri a <«SOURCE»#Someone> 
+			?uri a <Â«NSÂ»Someone> 
 		} 
 		'''
 	    val query = QueryFactory.create(queryString)
