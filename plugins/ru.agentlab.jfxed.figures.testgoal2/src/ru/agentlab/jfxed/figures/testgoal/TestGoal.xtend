@@ -28,25 +28,25 @@ class TestGoal extends XNode implements IFigure {
 			children += new Polyline => [
 				styleClass += "ClassFigure-Line"
 				
-				points += 10d
+				points += 20d
 				points += 110d
-				points += 12d
+				points += 24d
 				points += 110d
-				points += 18d
+				points += 36d
 				points += 140d
-				points += 42d
+				points += 84d
 				points += 140d
-				points += 48d
+				points += 96d
 				points += 110d
-				points += 50d
+				points += 100d
 				points += 110d
-				points += 48d
+				points += 96d
 				points += 110d
-				points += 42d
+				points += 84d
 				points += 80d
-				points += 18d
+				points += 36d
 				points += 80d
-				points += 12d
+				points += 24d
 				points += 110d
 				
 			]
@@ -54,8 +54,8 @@ class TestGoal extends XNode implements IFigure {
 			textBox =  new Text => [
 				text = name
 				styleClass += "ClassFigure-Text"
-				setTranslateX(175);
-				setTranslateY(-80);
+				setTranslateX(25);
+				setTranslateY(-40);
 			]
 			children += textBox
 		]
