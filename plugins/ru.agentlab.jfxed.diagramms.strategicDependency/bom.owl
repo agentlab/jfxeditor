@@ -1,0 +1,563 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY j.0 "http://test/#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/strategicdependency#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/strategicdependency"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://test/#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/strategicdependency"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://test/#From -->
+
+    <owl:ObjectProperty rdf:about="&j.0;From">
+        <rdfs:domain rdf:resource="&j.0;Agregation"/>
+        <rdfs:range rdf:resource="&j.0;Blue"/>
+        <rdfs:range rdf:resource="&j.0;Green"/>
+        <rdfs:range rdf:resource="&j.0;Orange"/>
+        <rdfs:range rdf:resource="&j.0;Red"/>
+        <rdfs:range rdf:resource="&j.0;Someone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://test/#To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;To">
+        <rdfs:domain rdf:resource="&j.0;Agregation"/>
+        <rdfs:range rdf:resource="&j.0;Blue"/>
+        <rdfs:range rdf:resource="&j.0;Green"/>
+        <rdfs:range rdf:resource="&j.0;Orange"/>
+        <rdfs:range rdf:resource="&j.0;Red"/>
+        <rdfs:range rdf:resource="&j.0;Someone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://test/#Agregation -->
+
+    <owl:Class rdf:about="&j.0;Agregation">
+        <rdfs:subClassOf rdf:resource="&j.0;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://test/#Association -->
+
+    <owl:Class rdf:about="&j.0;Association"/>
+    
+
+
+    <!-- http://test/#Blue -->
+
+    <owl:Class rdf:about="&j.0;Blue"/>
+    
+
+
+    <!-- http://test/#Green -->
+
+    <owl:Class rdf:about="&j.0;Green"/>
+    
+
+
+    <!-- http://test/#Orange -->
+
+    <owl:Class rdf:about="&j.0;Orange"/>
+    
+
+
+    <!-- http://test/#Red -->
+
+    <owl:Class rdf:about="&j.0;Red"/>
+    
+
+
+    <!-- http://test/#Someone -->
+
+    <owl:Class rdf:about="&j.0;Someone"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://test/#AnotherCustomer -->
+
+    <owl:NamedIndividual rdf:about="&j.0;AnotherCustomer">
+        <rdf:type rdf:resource="&j.0;Someone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#Check_ticket_validity -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Check_ticket_validity">
+        <rdf:type rdf:resource="&j.0;Green"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#CounterStaff -->
+
+    <owl:NamedIndividual rdf:about="&j.0;CounterStaff">
+        <rdf:type rdf:resource="&j.0;Someone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#Customer -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Customer">
+        <rdf:type rdf:resource="&j.0;Someone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#Get_the_right_service -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Get_the_right_service">
+        <rdf:type rdf:resource="&j.0;Orange"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#Get_ticket -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Get_ticket">
+        <rdf:type rdf:resource="&j.0;Green"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#Give_customer_a_good_service -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Give_customer_a_good_service">
+        <rdf:type rdf:resource="&j.0;Red"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#Needed_service_decided -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Needed_service_decided">
+        <rdf:type rdf:resource="&j.0;Orange"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#PostOfficeManagemenet -->
+
+    <owl:NamedIndividual rdf:about="&j.0;PostOfficeManagemenet">
+        <rdf:type rdf:resource="&j.0;Someone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#Push_nextCustomer_button -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Push_nextCustomer_button">
+        <rdf:type rdf:resource="&j.0;Green"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#Q-Matic -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Q-Matic">
+        <rdf:type rdf:resource="&j.0;Someone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#Reach_the_counter -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Reach_the_counter">
+        <rdf:type rdf:resource="&j.0;Green"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#Reachcounter -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Reachcounter">
+        <rdf:type rdf:resource="&j.0;Green"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#Statetherequest -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Statetherequest">
+        <rdf:type rdf:resource="&j.0;Green"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#To_ask_queue-specific_questions -->
+
+    <owl:NamedIndividual rdf:about="&j.0;To_ask_queue-specific_questions">
+        <rdf:type rdf:resource="&j.0;Red"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#Work_correctly -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Work_correctly">
+        <rdf:type rdf:resource="&j.0;Orange"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#fromAskQuestions -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fromAskQuestions">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;Customer"/>
+        <j.0:From rdf:resource="&j.0;To_ask_queue-specific_questions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#fromCheckTicket -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fromCheckTicket">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;Check_ticket_validity"/>
+        <j.0:To rdf:resource="&j.0;CounterStaff"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#fromGetService -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fromGetService">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;CounterStaff"/>
+        <j.0:From rdf:resource="&j.0;Get_the_right_service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#fromGetTicket -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fromGetTicket">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;Get_ticket"/>
+        <j.0:To rdf:resource="&j.0;Q-Matic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#fromGiveService -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fromGiveService">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;CounterStaff"/>
+        <j.0:From rdf:resource="&j.0;Give_customer_a_good_service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#fromPushButton -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fromPushButton">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;CounterStaff"/>
+        <j.0:From rdf:resource="&j.0;Push_nextCustomer_button"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#fromReachCounter -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fromReachCounter">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;Customer"/>
+        <j.0:From rdf:resource="&j.0;Reachcounter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#fromReachTheCounter -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fromReachTheCounter">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;Q-Matic"/>
+        <j.0:From rdf:resource="&j.0;Reach_the_counter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#fromRespectSystem -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fromRespectSystem">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;AnotherCustomer"/>
+        <j.0:From rdf:resource="&j.0;respect_queuing_system"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#fromService -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fromService">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;Customer"/>
+        <j.0:From rdf:resource="&j.0;Needed_service_decided"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#fromStateRequest -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fromStateRequest">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;AnotherCustomer"/>
+        <j.0:To rdf:resource="&j.0;Customer"/>
+        <j.0:From rdf:resource="&j.0;Statetherequest"/>
+        <j.0:From rdf:resource="&j.0;To_f**k_off_when_done"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#fromTicket -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fromTicket">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;Q-Matic"/>
+        <j.0:From rdf:resource="&j.0;ticket"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#fromWorkCorrectly -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fromWorkCorrectly">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;Q-Matic"/>
+        <j.0:From rdf:resource="&j.0;Work_correctly"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#needed_Service -->
+
+    <owl:NamedIndividual rdf:about="&j.0;needed_Service">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;Needed_service_decided"/>
+        <j.0:From rdf:resource="&j.0;PostOfficeManagemenet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#respect_queuing_system -->
+
+    <owl:NamedIndividual rdf:about="&j.0;respect_queuing_system">
+        <rdf:type rdf:resource="&j.0;Red"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#ticket -->
+
+    <owl:NamedIndividual rdf:about="&j.0;ticket">
+        <rdf:type rdf:resource="&j.0;Blue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toAskQuestions -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toAskQuestions">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;CounterStaff"/>
+        <j.0:To rdf:resource="&j.0;To_ask_queue-specific_questions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toCheckValidity -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toCheckValidity">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;Check_ticket_validity"/>
+        <j.0:From rdf:resource="&j.0;Q-Matic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toFuckOff -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toFuckOff">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;Customer"/>
+        <j.0:To rdf:resource="&j.0;To_f**k_off_when_done"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toGetService -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toGetService">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;Customer"/>
+        <j.0:To rdf:resource="&j.0;Get_the_right_service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toGetTicket -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toGetTicket">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;Customer"/>
+        <j.0:To rdf:resource="&j.0;Get_ticket"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toGiveService -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toGiveService">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;Give_customer_a_good_service"/>
+        <j.0:From rdf:resource="&j.0;PostOfficeManagemenet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toOwnTicket -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toOwnTicket">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;Customer"/>
+        <j.0:To rdf:resource="&j.0;ticket"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toPushButton -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toPushButton">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:To rdf:resource="&j.0;Push_nextCustomer_button"/>
+        <j.0:From rdf:resource="&j.0;Q-Matic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toReachCounter -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toReachCounter">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;CounterStaff"/>
+        <j.0:To rdf:resource="&j.0;Reachcounter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toReachTheCounter -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toReachTheCounter">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;Customer"/>
+        <j.0:To rdf:resource="&j.0;Reach_the_counter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toRespect -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toRespect">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;Customer"/>
+        <j.0:To rdf:resource="&j.0;respect_queuing_system"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toStateRequest -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toStateRequest">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;CounterStaff"/>
+        <j.0:To rdf:resource="&j.0;Statetherequest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toWorkCorrectly -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toWorkCorrectly">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;CounterStaff"/>
+        <j.0:To rdf:resource="&j.0;Work_correctly"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#toWorkCorrectly2 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;toWorkCorrectly2">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;Customer"/>
+        <j.0:To rdf:resource="&j.0;Work_correctly"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test/#To_f**k_off_when_done -->
+
+    <owl:NamedIndividual rdf:about="&j.0;To_f**k_off_when_done">
+        <rdf:type rdf:resource="&j.0;Orange"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

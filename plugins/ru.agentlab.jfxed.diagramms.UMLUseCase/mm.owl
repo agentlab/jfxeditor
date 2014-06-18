@@ -1,0 +1,36 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Actor">
+    <rdfs:subClassOf rdf:resource="http://www.eswc2006.org/technologies/ontology#concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Association">
+    <rdfs:subClassOf rdf:resource="http://www.eswc2006.org/technologies/ontology#relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#concept">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#ATM">
+    <rdfs:subClassOf rdf:resource="http://www.eswc2006.org/technologies/ontology#relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Use Case">
+    <rdfs:subClassOf rdf:resource="http://www.eswc2006.org/technologies/ontology#concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Include">
+    <rdfs:subClassOf rdf:resource="http://www.eswc2006.org/technologies/ontology#relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Extend">
+    <rdfs:subClassOf rdf:resource="http://www.eswc2006.org/technologies/ontology#relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#relation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

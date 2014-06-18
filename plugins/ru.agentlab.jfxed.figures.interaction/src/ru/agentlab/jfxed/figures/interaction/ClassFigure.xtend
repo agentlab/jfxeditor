@@ -1,6 +1,6 @@
 package ru.agentlab.jfxed.figures.interaction
 
-import javafx.scene.Node
+import de.fxdiagram.core.XNode
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.scene.shape.Arc
@@ -9,19 +9,21 @@ import javafx.scene.shape.Line
 import javafx.scene.text.Text
 import ru.agentlab.jfxed.IFigure
 
-class ClassFigure implements IFigure {
-
+class ClassFigure extends XNode implements IFigure  {
+	
 	public String name = "Interaction1";
 	public Text textStr;
-	
-	private Node root
 
 	public def setlabel(String str1) {
 		textStr.text = str1
 	}
 
+	
 	new() {
-		root = new VBox => [
+		
+		super("Class")
+		
+		node = new VBox => [
 			stylesheets += ClassFigure.getResource("ClassFigure.css").toExternalForm()
 			styleClass += "ClassFigure";
 			//setMaxSize(10, 10)
@@ -74,7 +76,7 @@ class ClassFigure implements IFigure {
 	}
 	
 	override getRoot() {
-		return root
+		return this
 	}
 	
 }

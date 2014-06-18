@@ -1,0 +1,138 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.eswc2006.org/technologies/ontology#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#ExtensionFrom">
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Extend"/>
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#AssociationTo">
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Association"/>
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Actor">
+    <rdfs:subClassOf rdf:resource="http://www.eswc2006.org/technologies/ontology#concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#User">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Association">
+    <rdfs:subClassOf rdf:resource="http://www.eswc2006.org/technologies/ontology#relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#UseCase">
+    <rdfs:subClassOf rdf:resource="http://www.eswc2006.org/technologies/ontology#concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Checkbalance">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Extend">
+    <rdfs:subClassOf rdf:resource="http://www.eswc2006.org/technologies/ontology#relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#InclusionFrom">
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Include"/>
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#agg4">
+    <j.0:ExtensionFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#HandleAbort"/>
+    <j.0:ExtensionTo rdf:resource="http://www.eswc2006.org/technologies/ontology#ExtensionPoits.InvalidPasswordEntered.AbortTriggered"/>
+    <j.0:ExtensionFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#HandleInvalidPassword"/>
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Extend"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#DonateMoneyToCharity">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#WithdrawCash">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#InclusionTo">
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Include"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#concept">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#HandleInvalidPassword">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#agg2">
+    <j.0:AssociationTo rdf:resource="http://www.eswc2006.org/technologies/ontology#PayBills"/>
+    <j.0:AssociationTo rdf:resource="http://www.eswc2006.org/technologies/ontology#TransferMoney"/>
+    <j.0:AssociationTo rdf:resource="http://www.eswc2006.org/technologies/ontology#DonateMoneyToCharity"/>
+    <j.0:AssociationTo rdf:resource="http://www.eswc2006.org/technologies/ontology#Checkbalance"/>
+    <j.0:AssociationTo rdf:resource="http://www.eswc2006.org/technologies/ontology#WithdrawCash"/>
+    <j.0:AssociationFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#User"/>
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Association"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#ExtensionTo">
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Extend"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#SystemTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#AssociationFrom">
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Actor"/>
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Association"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#TransferMoney">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#SystemFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Include">
+    <rdfs:subClassOf rdf:resource="http://www.eswc2006.org/technologies/ontology#relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#relation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#PayBills">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#HandleAbort">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#ATM">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#ATM"/>
+    <rdfs:subClassOf rdf:resource="http://www.eswc2006.org/technologies/ontology#concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#agg3">
+    <j.0:InclusionFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#PayBills"/>
+    <j.0:InclusionFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#TransferMoney"/>
+    <j.0:InclusionFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#DonateMoneyToCharity"/>
+    <j.0:InclusionFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#Checkbalance"/>
+    <j.0:InclusionTo rdf:resource="http://www.eswc2006.org/technologies/ontology#ExtensionPoits.InvalidPasswordEntered.AbortTriggered"/>
+    <j.0:InclusionFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#WithdrawCash"/>
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Include"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#agg1">
+    <j.0:SystemFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#DonateMoneyToCharity"/>
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Association"/>
+    <j.0:SystemFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#ExtensionPoits.InvalidPasswordEntered.AbortTriggered"/>
+    <j.0:SystemFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#Checkbalance"/>
+    <j.0:SystemTo rdf:resource="http://www.eswc2006.org/technologies/ontology#ATM"/>
+    <j.0:SystemFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#TransferMoney"/>
+    <j.0:SystemFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#PayBills"/>
+    <j.0:SystemFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#HandleInvalidPassword"/>
+    <j.0:SystemFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#WithdrawCash"/>
+    <j.0:SystemFrom rdf:resource="http://www.eswc2006.org/technologies/ontology#HandleAbort"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#ExtensionPoits.InvalidPasswordEntered.AbortTriggered">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#UseCase"/>
+  </rdf:Description>
+</rdf:RDF>

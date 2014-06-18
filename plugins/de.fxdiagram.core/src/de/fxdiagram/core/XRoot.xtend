@@ -113,7 +113,7 @@ class XRoot extends Parent implements XActivatable {
 	def	doActivate() {
 		diagram?.activate
 		diagramCanvas => [
-			prefWidthProperty.bind(scene.widthProperty)
+//			prefWidthProperty.bind(scene.widthProperty)
 			prefHeightProperty.bind(scene.heightProperty)
 		]
 		setCurrentTool(defaultTool)
