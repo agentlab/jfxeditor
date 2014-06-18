@@ -1,0 +1,32 @@
+
+ .ClassFigure-Name-Section{
+ 	
+ 	-fx-fill:  #d0f0c0;
+	-fx-alignment: center;
+   -fx-padding: 0;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 0 0;
+   -fx-border-radius: 0 0 0 0;
+}
+
+
+.ClassFigure-Line{
+}
+
+.ClassFigure-Pass{
+	
+}
+ .ClassFigure-Text{
+    -fx-font: norm 15pt "Arial";
+    -fx-stroke-type: outside;
+    -fx-stroke-width: 5;
+  
+    
+    
+}
+
+.ClassFigure-Methods-List{
+    -fx-padding: 5;
+	-fx-spacing: 5;
+	
+}
