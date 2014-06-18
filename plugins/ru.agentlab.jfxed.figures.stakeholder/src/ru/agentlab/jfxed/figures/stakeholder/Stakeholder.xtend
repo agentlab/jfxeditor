@@ -12,6 +12,9 @@ import javafx.scene.text.Text
 class Stakeholder extends XNode implements IFigure {
 	var String name
 	var Text boxy
+
+	var Polyline polyline
+
 	
 	new(String name) {
 		super(name)
@@ -21,13 +24,15 @@ class Stakeholder extends XNode implements IFigure {
 	new() {
 		super("Class")
 		name = "Class111"
+ 
 		
 		node = new VBox  => [
 			val s = Stakeholder.getResource("Stakeholder.css").toExternalForm()
 			stylesheets += s
 			
 			children += new Group => [
-			children += new Polyline => [
+			
+			polyline = new Polyline => [
 					points +=  30d 
 					points +=  20d 
 					points +=  20d
@@ -47,9 +52,15 @@ class Stakeholder extends XNode implements IFigure {
 		            points += 30d 
 		            points += 20d
 		            
-		            styleClass.clear
+		    //        styleClass.clear
 		            styleClass += "Vasya"
+
+		            
+		            
+		        
 				] 
+				
+				children += polyline
 							
 				children += new Circle => [
 					 centerX = 80 
@@ -79,6 +90,23 @@ class Stakeholder extends XNode implements IFigure {
 	
 	def setName(String name) {
 		this.name = name
-		boxy.text = name
+		boxy.text = name		
 	}
+	
+	def setColor(String className) {	
+		
+		if (className.equals("Orange")){
+			polyline.setStyle(" -fx-fill: #ff8000")
+		}
+		
+		if (className.equals("Red")) {
+			polyline.setStyle(" -fx-fill: #EE2C2C")
+		}
+		
+		
+		
+		
+	}
+
+	
 }
