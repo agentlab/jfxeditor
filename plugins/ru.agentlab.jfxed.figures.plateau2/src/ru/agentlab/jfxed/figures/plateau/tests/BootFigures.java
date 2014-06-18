@@ -37,7 +37,7 @@ public class BootFigures extends Application {
 		root.getChildren().add(source.getRoot());
 		root.getChildren().add(new VBox());
 		
-		Scene scene = new Scene(root, 400, 200);
+		Scene scene = new Scene(root, 80, 80);
 		//scene.getStylesheets().addAll(ClassFigure.class.getResource("ClassFigure.css").toExternalForm());
 		
 		primaryStage.setScene(scene);

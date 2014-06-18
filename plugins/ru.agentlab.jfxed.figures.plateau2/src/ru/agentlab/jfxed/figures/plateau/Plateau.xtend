@@ -10,7 +10,7 @@ import ru.agentlab.jfxed.IFigure
 import de.fxdiagram.lib.anchors.RoundedRectangleAnchors
 
 class Plateau extends XNode implements IFigure {
-	
+	var Text textBox
 	String name = "Plateau";
 	new(String name) {
 		super(name)
@@ -74,13 +74,14 @@ class Plateau extends XNode implements IFigure {
 				
 			
 			]
-			children += new Text => [
+			textBox =  new Text => [
 				text = name
 				styleClass += "ClassFigure-Text"
 				setTranslateX (-70)
 				setTranslateY (30)
 
 			]
+			children += textBox
 			
 			children += new Line => [
 				
@@ -122,5 +123,8 @@ class Plateau extends XNode implements IFigure {
 		new RoundedRectangleAnchors(this, 12, 12)
 	}
 
+	def setName(String name) {
+		textBox.text = name
+	}
 
 }
