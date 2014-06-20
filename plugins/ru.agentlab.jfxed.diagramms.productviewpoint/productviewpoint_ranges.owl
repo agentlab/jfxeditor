@@ -1,0 +1,591 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ontology "http://www.agentlab.ru/jfxed/onto/productviewpoint#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/productviewpoint#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/productviewpoint"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="http://www.agentlab.ru/jfxed/onto/productviewpoint#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/productviewpoint"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#fromAggregation -->
+
+    <owl:ObjectProperty rdf:about="&ontology;fromAggregation">
+        <rdfs:domain rdf:resource="&ontology;Agregation"/>
+        <rdfs:range rdf:resource="&ontology;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#fromAssignment -->
+
+    <owl:ObjectProperty rdf:about="&ontology;fromAssignment">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;ApplicationComponent"/>
+                    <rdf:Description rdf:about="&ontology;ApplicationInterface"/>
+                    <rdf:Description rdf:about="&ontology;ApplicationService"/>
+                    <rdf:Description rdf:about="&ontology;BusinessActor"/>
+                    <rdf:Description rdf:about="&ontology;BusinessInterface"/>
+                    <rdf:Description rdf:about="&ontology;BusinessProcess"/>
+                    <rdf:Description rdf:about="&ontology;BusinessRole"/>
+                    <rdf:Description rdf:about="&ontology;BusinessService"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#fromComposition -->
+
+    <owl:ObjectProperty rdf:about="&ontology;fromComposition">
+        <rdfs:domain rdf:resource="&ontology;Composition"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;ApplicationComponent"/>
+                    <rdf:Description rdf:about="&ontology;BusinessRole"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#fromRealization -->
+
+    <owl:ObjectProperty rdf:about="&ontology;fromRealization">
+        <rdfs:range rdf:resource="&ontology;BusinessService"/>
+        <rdfs:domain rdf:resource="&ontology;Realization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#fromTriggering -->
+
+    <owl:ObjectProperty rdf:about="&ontology;fromTriggering">
+        <rdfs:domain rdf:resource="&ontology;Triggering"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;BusinessEvent"/>
+                    <rdf:Description rdf:about="&ontology;BusinessProcess"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#fromUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&ontology;fromUsedBy">
+        <rdfs:domain rdf:resource="&ontology;UsedBy"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;ApplicationComponent"/>
+                    <rdf:Description rdf:about="&ontology;BusinessProcess"/>
+                    <rdf:Description rdf:about="&ontology;BusinessRole"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#toAggregation -->
+
+    <owl:ObjectProperty rdf:about="&ontology;toAggregation">
+        <rdfs:domain rdf:resource="&ontology;Agregation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;ApplicationService"/>
+                    <rdf:Description rdf:about="&ontology;BusinessService"/>
+                    <rdf:Description rdf:about="&ontology;Contract"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#toAssignment -->
+
+    <owl:ObjectProperty rdf:about="&ontology;toAssignment">
+        <rdfs:domain rdf:resource="&ontology;Assigment"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;ApplicationComponent"/>
+                    <rdf:Description rdf:about="&ontology;ApplicationInterface"/>
+                    <rdf:Description rdf:about="&ontology;ApplicationService"/>
+                    <rdf:Description rdf:about="&ontology;BusinessActor"/>
+                    <rdf:Description rdf:about="&ontology;BusinessInterface"/>
+                    <rdf:Description rdf:about="&ontology;BusinessProcess"/>
+                    <rdf:Description rdf:about="&ontology;BusinessRole"/>
+                    <rdf:Description rdf:about="&ontology;BusinessService"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#toComposition -->
+
+    <owl:ObjectProperty rdf:about="&ontology;toComposition">
+        <rdfs:domain rdf:resource="&ontology;Composition"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;ApplicationInterface"/>
+                    <rdf:Description rdf:about="&ontology;BusinessInterface"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#toRealization -->
+
+    <owl:ObjectProperty rdf:about="&ontology;toRealization">
+        <rdfs:range rdf:resource="&ontology;BusinessProcess"/>
+        <rdfs:domain rdf:resource="&ontology;Realization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#toTriggering -->
+
+    <owl:ObjectProperty rdf:about="&ontology;toTriggering">
+        <rdfs:domain rdf:resource="&ontology;Triggering"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;BusinessEvent"/>
+                    <rdf:Description rdf:about="&ontology;BusinessProcess"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#toUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&ontology;toUsedBy">
+        <rdfs:domain rdf:resource="&ontology;UsedBy"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;ApplicationInterface"/>
+                    <rdf:Description rdf:about="&ontology;ApplicationService"/>
+                    <rdf:Description rdf:about="&ontology;BusinessInterface"/>
+                    <rdf:Description rdf:about="&ontology;BusinessService"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#Agregation -->
+
+    <owl:Class rdf:about="&ontology;Agregation">
+        <rdfs:subClassOf rdf:resource="&ontology;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#ApplicationComponent -->
+
+    <owl:Class rdf:about="&ontology;ApplicationComponent">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#ApplicationInterface -->
+
+    <owl:Class rdf:about="&ontology;ApplicationInterface">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#ApplicationService -->
+
+    <owl:Class rdf:about="&ontology;ApplicationService">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#Assigment -->
+
+    <owl:Class rdf:about="&ontology;Assigment">
+        <rdfs:subClassOf rdf:resource="&ontology;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#Association -->
+
+    <owl:Class rdf:about="&ontology;Association"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#BusinessActor -->
+
+    <owl:Class rdf:about="&ontology;BusinessActor">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#BusinessEvent -->
+
+    <owl:Class rdf:about="&ontology;BusinessEvent">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#BusinessInterface -->
+
+    <owl:Class rdf:about="&ontology;BusinessInterface">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#BusinessProcess -->
+
+    <owl:Class rdf:about="&ontology;BusinessProcess">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#BusinessRole -->
+
+    <owl:Class rdf:about="&ontology;BusinessRole">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#BusinessService -->
+
+    <owl:Class rdf:about="&ontology;BusinessService">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#Composition -->
+
+    <owl:Class rdf:about="&ontology;Composition">
+        <rdfs:subClassOf rdf:resource="&ontology;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#Concept -->
+
+    <owl:Class rdf:about="&ontology;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#Contract -->
+
+    <owl:Class rdf:about="&ontology;Contract">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#Product -->
+
+    <owl:Class rdf:about="&ontology;Product">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#Realization -->
+
+    <owl:Class rdf:about="&ontology;Realization">
+        <rdfs:subClassOf rdf:resource="&ontology;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#Triggering -->
+
+    <owl:Class rdf:about="&ontology;Triggering">
+        <rdfs:subClassOf rdf:resource="&ontology;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#UsedBy -->
+
+    <owl:Class rdf:about="&ontology;UsedBy">
+        <rdfs:subClassOf rdf:resource="&ontology;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#Value -->
+
+    <owl:Class rdf:about="&ontology;Value">
+        <rdfs:subClassOf rdf:resource="&ontology;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#Car_Insurance -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Car_Insurance">
+        <rdf:type rdf:resource="&ontology;Product"/>
+        <toAggregation rdf:resource="&ontology;aggregation_CarIns_DamageAsses"/>
+        <toRealization rdf:resource="&ontology;realiz_Insur_CarIns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#ClaimPayment -->
+
+    <owl:NamedIndividual rdf:about="&ontology;ClaimPayment">
+        <rdf:type rdf:resource="&ontology;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#ClaimRegistration -->
+
+    <owl:NamedIndividual rdf:about="&ontology;ClaimRegistration">
+        <rdf:type rdf:resource="&ontology;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#Customer -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Customer">
+        <rdf:type rdf:resource="&ontology;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#CustomerDataModification -->
+
+    <owl:NamedIndividual rdf:about="&ontology;CustomerDataModification">
+        <rdf:type rdf:resource="&ontology;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#CustomerInformation -->
+
+    <owl:NamedIndividual rdf:about="&ontology;CustomerInformation">
+        <rdf:type rdf:resource="&ontology;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#DamageAssessment -->
+
+    <owl:NamedIndividual rdf:about="&ontology;DamageAssessment">
+        <rdf:type rdf:resource="&ontology;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#Insurance -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Insurance">
+        <rdf:type rdf:resource="&ontology;Product"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_ClaimPay"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_ClaimReg"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_CustDataMod"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_CustInfo"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_InsApp"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_InsPolicy"/>
+        <toAggregation rdf:resource="&ontology;aggregation_Insuranse_PremPay"/>
+        <toUsedBy rdf:resource="&ontology;usedBy_Customer_Insurance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#InsuranceApplication -->
+
+    <owl:NamedIndividual rdf:about="&ontology;InsuranceApplication">
+        <rdf:type rdf:resource="&ontology;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#InsurancePolicy -->
+
+    <owl:NamedIndividual rdf:about="&ontology;InsurancePolicy">
+        <rdf:type rdf:resource="&ontology;Contract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#PremiumPayment -->
+
+    <owl:NamedIndividual rdf:about="&ontology;PremiumPayment">
+        <rdf:type rdf:resource="&ontology;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_CarIns_DamageAsses -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_CarIns_DamageAsses">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
+        <fromAggregation rdf:resource="&ontology;DamageAssessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_ClaimPay -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_ClaimPay">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
+        <fromAggregation rdf:resource="&ontology;ClaimPayment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_ClaimReg -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_ClaimReg">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
+        <fromAggregation rdf:resource="&ontology;ClaimRegistration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_CustDataMod -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_CustDataMod">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
+        <fromAggregation rdf:resource="&ontology;CustomerDataModification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_CustInfo -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_CustInfo">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
+        <fromAggregation rdf:resource="&ontology;CustomerInformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_InsApp -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_InsApp">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
+        <fromAggregation rdf:resource="&ontology;InsuranceApplication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_InsPolicy -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_InsPolicy">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
+        <fromAggregation rdf:resource="&ontology;InsurancePolicy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#aggregation_Insuranse_PremPay -->
+
+    <owl:NamedIndividual rdf:about="&ontology;aggregation_Insuranse_PremPay">
+        <rdf:type rdf:resource="&ontology;Agregation"/>
+        <fromAggregation rdf:resource="&ontology;PremiumPayment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#realiz_Insur_CarIns -->
+
+    <owl:NamedIndividual rdf:about="&ontology;realiz_Insur_CarIns">
+        <rdf:type rdf:resource="&ontology;Realization"/>
+        <fromRealization rdf:resource="&ontology;Insurance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/productviewpoint#usedBy_Customer_Insurance -->
+
+    <owl:NamedIndividual rdf:about="&ontology;usedBy_Customer_Insurance">
+        <rdf:type rdf:resource="&ontology;UsedBy"/>
+        <fromUsedBy rdf:resource="&ontology;Customer"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
