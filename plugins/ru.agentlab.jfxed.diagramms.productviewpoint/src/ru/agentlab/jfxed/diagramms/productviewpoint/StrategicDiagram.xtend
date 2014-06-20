@@ -1,24 +1,20 @@
 package ru.agentlab.jfxed.diagramms.productviewpoint
 
 import com.hp.hpl.jena.ontology.OntModel
+import com.hp.hpl.jena.query.Query
+import com.hp.hpl.jena.query.QueryExecution
 import com.hp.hpl.jena.query.QueryExecutionFactory
 import com.hp.hpl.jena.query.QueryFactory
 import com.hp.hpl.jena.query.QuerySolution
+import com.hp.hpl.jena.query.ResultSet
 import com.hp.hpl.jena.rdf.model.Resource
 import de.fxdiagram.core.XDiagram
-import ru.agentlab.jfxed.IDiagram
-import de.fxdiagram.core.XConnection
-import de.fxdiagram.core.XConnectionKind
-import de.fxdiagram.core.XConnectionLabel
-import ru.agentlab.jfxed.figures.clazz.ClassFigure
-import com.hp.hpl.jena.query.Query
-import com.hp.hpl.jena.query.QueryExecution
-import com.hp.hpl.jena.query.ResultSet
 import de.fxdiagram.core.XNode
+import ru.agentlab.jfxed.IDiagram
+import ru.agentlab.jfxed.figures.clazz.ClassFigure
 
 public class StrategicDiagram implements IDiagram {
 	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/productviewpoint"
-	static String NS = SOURCE + "#"
 	
 	Query query
 	
@@ -36,11 +32,9 @@ public class StrategicDiagram implements IDiagram {
 	
 	override createJfx(OntModel jenaModel, XDiagram jfxDiagram) {
 		
-		makeQuery(jenaModel, jfxDiagram, "Someone")
-		makeQuery(jenaModel, jfxDiagram, "Blue")
-		makeQuery(jenaModel, jfxDiagram, "Green")
-		makeQuery(jenaModel, jfxDiagram, "Red")
-		makeQuery(jenaModel, jfxDiagram, "Orange")
+		makeQuery(jenaModel, jfxDiagram, "BusinessActor")
+		//makeQuery(jenaModel, jfxDiagram, "Blue")
+
 		}
 		
 	
@@ -68,7 +62,7 @@ public class StrategicDiagram implements IDiagram {
 	     
 		jfxDiagram => [
 			
-			if (className.equals("Customer")) {
+			if (className.equals("BusinessActor")) {
 			target = new ClassFigure() => [
 				layoutX = 280
 				layoutY = 280
