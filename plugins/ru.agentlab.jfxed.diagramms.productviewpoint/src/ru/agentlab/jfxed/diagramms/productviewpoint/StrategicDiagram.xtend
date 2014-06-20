@@ -62,22 +62,21 @@ public class StrategicDiagram implements IDiagram {
 	     
 		jfxDiagram => [
 			
-			if (className.equals("BusinessActor")) {
+			className.equals("BusinessActor")
 			target = new ClassFigure() => [
 				layoutX = 280
 				layoutY = 280
 				name = x.localName
 			]
-			}
+
 			
-			if (className.equals("Product")) {
 			target = new ClassFigure() => [
 				layoutX = 280
 				layoutY = 280
 				name = x.localName
 				
 			]
-			}
+			
 			
 			
 			nodes += target
