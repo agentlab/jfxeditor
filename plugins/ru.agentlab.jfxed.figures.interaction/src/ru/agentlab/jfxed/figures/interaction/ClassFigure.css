@@ -10,7 +10,6 @@
 .ClassFigure-Rect{
 	-fx-fill: #FFFF66;
     -fx-stroke: #FFFFFF;
-    -fx-stroke-type: centred;
     -fx-border-radius: 5.0;
     -fx-background-radius: 5.0;
     -fx-arc-height: 50.0;
@@ -60,7 +59,6 @@
 
 	-fx-alignment: center;
     -fx-font: bold 20.0pt "Arial";
-    -fx-stroke-type: centred;
     -fx-stroke-width: 0.0;
 }
 

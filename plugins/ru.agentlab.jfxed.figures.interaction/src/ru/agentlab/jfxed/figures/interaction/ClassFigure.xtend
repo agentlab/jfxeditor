@@ -11,7 +11,7 @@ import ru.agentlab.jfxed.IFigure
 
 class ClassFigure extends XNode implements IFigure  {
 	
-	public String name = "Interaction1";
+	public String name = "Interaction";
 	public Text textStr;
 
 	public def setlabel(String str1) {

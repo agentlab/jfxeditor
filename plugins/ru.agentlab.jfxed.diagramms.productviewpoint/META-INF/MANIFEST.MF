@@ -1,22 +1,30 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Tests
+Bundle-Name: StrategicDependency
 Bundle-SymbolicName: ru.agentlab.jfxed.diagramms.productviewpoint;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Require-Bundle: org.apache.jena.core;bundle-version="2.11.0",
- org.apache.jena.iri;bundle-version="0.9.5",
- org.apache.jena.sdb;bundle-version="1.4.0",
- org.apache.jena.tdb;bundle-version="1.0.0",
- org.slf4j.api;bundle-version="1.6.4",
- org.slf4j.ext;bundle-version="1.6.4",
- org.slf4j.jcl;bundle-version="1.6.4",
+Require-Bundle: org.apache.jena.core,
+ org.apache.jena.iri,
+ org.apache.jena.sdb,
+ org.apache.jena.tdb,
+ org.slf4j.api,
+ org.slf4j.ext,
+ org.slf4j.log4j,
  org.apache.xerces;bundle-version="2.11.0",
- org.eclipse.xtend.lib,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.xtext.xbase.lib;visibility:=reexport,
+ com.google.guava,
  org.eclipse.fx.core,
  org.eclipse.fx.javafx,
  org.eclipse.fx.osgi.util,
  de.fxdiagram.lib,
  de.fxdiagram.core,
- de.fxdiagram.annotations
-Export-Package: ru.agentlab.jfxed.diagramms.productviewpoint
+ de.fxdiagram.annotations,
+ ru.agentlab.jfxed,
+ ru.agentlab.jfxed.figures.class,
+ ru.agentlab.jfxed.figures.interaction,
+ org.apache.jena.core;bundle-version="2.11.0",
+ org.apache.jena.iri;bundle-version="0.9.5"
+Import-Package: com.hp.hpl.jena.ontology
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
