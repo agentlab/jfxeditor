@@ -33,7 +33,8 @@ public class StrategicDiagram implements IDiagram {
 	override createJfx(OntModel jenaModel, XDiagram jfxDiagram) {
 		
 		makeQuery(jenaModel, jfxDiagram, "BusinessActor")
-		//makeQuery(jenaModel, jfxDiagram, "Blue")
+		makeQuery(jenaModel, jfxDiagram, "Product")
+		makeQuery(jenaModel, jfxDiagram, "BusinessService")
 
 		}
 		
@@ -62,20 +63,12 @@ public class StrategicDiagram implements IDiagram {
 	     
 		jfxDiagram => [
 			
-			className.equals("BusinessActor")
 			target = new ClassFigure() => [
 				layoutX = 280
 				layoutY = 280
 				name = x.localName
 			]
 
-			
-			target = new ClassFigure() => [
-				layoutX = 280
-				layoutY = 280
-				name = x.localName
-				
-			]
 			
 			
 			
