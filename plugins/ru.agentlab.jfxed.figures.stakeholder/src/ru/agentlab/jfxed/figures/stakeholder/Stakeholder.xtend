@@ -8,12 +8,17 @@ import javafx.scene.Group
 import javafx.scene.shape.Polyline
 import javafx.scene.shape.Circle
 import javafx.scene.text.Text
+import javafx.scene.shape.Path
+import javafx.scene.shape.Arc
 
 class Stakeholder extends XNode implements IFigure {
 	var String name
 	var Text boxy
 
 	var Polyline polyline
+	var Circle wurst
+	var Arc wurstArc
+	
 
 	
 	new(String name) {
@@ -53,7 +58,7 @@ class Stakeholder extends XNode implements IFigure {
 		            points += 20d
 		            
 		    //        styleClass.clear
-		            styleClass += "Vasya"
+		            styleClass += "Stakeholder"
 
 		            
 		            
@@ -61,17 +66,51 @@ class Stakeholder extends XNode implements IFigure {
 				] 
 				
 				children += polyline
-							
-				children += new Circle => [
-					 centerX = 80 
-					 centerY = 35
-					 radius = 5
+				
+				wurst = new Circle => [
+					 centerX = 100 
+					 centerY = 30
+					 radius = 3
+					 styleClass += "Wurst"
 				]
+							
+				children += wurst
+				
+				children += new Polyline => [
+					points += 100d
+					points += 27d
+					points += 90d
+					points += 27d
+				]
+				
+				children += new Polyline => [										
+					points += 90d
+					points += 33d
+					points += 100d
+					points += 33d									
+				]
+				
+				wurstArc = new Arc() => [
+					centerX = 90.0f
+					centerY = 30.0f
+					radiusX = 3.0f
+					radiusY = 3.0f
+					startAngle = 90.0f
+					length = 180.0f
+				//	type = ArcType.ROUND
+					styleClass += "Wurst"
+				]
+				
+				children += wurstArc
+				
+				
+				
+								
 				
 				boxy = new Text => [
 					text = name
-					styleClass += "ClassFigure-Text"
-					layoutX = 43
+					styleClass += "Text"
+					layoutX = 35
 					layoutY = 48
 				]
 	
@@ -97,10 +136,14 @@ class Stakeholder extends XNode implements IFigure {
 		
 		if (className.equals("Orange")){
 			polyline.setStyle(" -fx-fill: #ff8000")
+			wurst.setStyle(" -fx-fill: #ff8000")
+			wurstArc.setStyle(" -fx-fill: #ff8000")
 		}
 		
 		if (className.equals("Red")) {
 			polyline.setStyle(" -fx-fill: #EE2C2C")
+			wurst.setStyle(" -fx-fill: #EE2C2C")
+			wurstArc.setStyle(" -fx-fill: #EE2C2C")
 		}
 		
 		
