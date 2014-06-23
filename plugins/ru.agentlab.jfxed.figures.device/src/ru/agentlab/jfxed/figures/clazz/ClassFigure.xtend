@@ -2,18 +2,17 @@ package ru.agentlab.jfxed.figures.clazz
 
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
-import javafx.scene.text.Text
 import ru.agentlab.jfxed.figures.BaseFigure
+import javafx.scene.Group;
+import javafx.scene.shape.Polygon
+import javafx.scene.paint.Color;
 
 class ClassFigure extends BaseFigure {
 	
-	String name = "Device";
 	
 	new (){
 		root = new VBox
-		
-		initHandlers()
-		
+				
 		val s = ClassFigure.getResource("ClassFigure.css").toExternalForm()
 		root.stylesheets += s
 		
@@ -21,18 +20,12 @@ class ClassFigure extends BaseFigure {
 		
 		root.children += new HBox => [
 			styleClass += "ClassFigure-Name-Section"
-			
-			children += new Text => [
-				text = name
-				styleClass += "ClassFigure-Text"
 			]
-		]
 		
-		root.children += new VBox => [
-			styleClass += "ClassFigure-Methods-List"
+		root.translateX = 200
+		root.translateY = 51.5	
 			
-			]
-			
+				
 		
 	}
 }
