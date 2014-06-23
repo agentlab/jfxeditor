@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.diagramms.productviewpoint
+package ru.agentlab.jfxed.diagramms.strategicdependency
 
 import com.hp.hpl.jena.ontology.OntModel
 import com.hp.hpl.jena.query.QueryExecutionFactory
@@ -39,11 +39,11 @@ public class StrategicDiagram implements IDiagram {
 	
 	override createJfx(OntModel jenaModel, XDiagram jfxDiagram) {
 		
-		makeQuery(jenaModel, jfxDiagram, "Someone")
+//		makeQuery(jenaModel, jfxDiagram, "Someone")
 		makeQuery(jenaModel, jfxDiagram, "Blue")
-		makeQuery(jenaModel, jfxDiagram, "Green")
+//		makeQuery(jenaModel, jfxDiagram, "Green")
 		makeQuery(jenaModel, jfxDiagram, "Red")
-		makeQuery(jenaModel, jfxDiagram, "Orange")
+//		makeQuery(jenaModel, jfxDiagram, "Orange")
 		}
 		
 
@@ -122,10 +122,10 @@ public class StrategicDiagram implements IDiagram {
 			
 			nodes += target
 			
-			/*val source = new Stakeholder() => [
+			val source = new Stakeholder() => [
 				layoutX = 280
 				layoutY = 280
-				name = x.localName
+				name = "Stakeholder"
 			]
 			nodes += source
 			
@@ -135,7 +135,7 @@ public class StrategicDiagram implements IDiagram {
 					text.text = 'quadratic'
 				]
 			]
-			connections += conn*/
+		//	connections += conn
 		]
 		
 		}

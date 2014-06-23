@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.diagramms.productviewpoint;
+package ru.agentlab.jfxed.diagramms.strategicdependency;
 
 import java.io.FileWriter;
 
@@ -8,9 +8,9 @@ import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 
-public class ProductViewpointTest {
+public class StrategicDependencyTest {
 
-	static String SOURCE = "http://test/";
+	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/strategicdependency";
 	static String NS = 
 			SOURCE + "#";
 	
@@ -23,6 +23,15 @@ public class ProductViewpointTest {
 		OntClass redClass = m.createClass(NS + "Red");//красненький
 		OntClass orangeClass = m.createClass(NS + "Orange");
 		
+		OntClass conceptClass = m.createClass (NS + "Concept");
+		
+		someoneClass.addSuperClass(conceptClass);
+		greenClass.addSuperClass(conceptClass);
+		blueClass.addSuperClass(conceptClass);
+		redClass.addSuperClass(conceptClass);
+		orangeClass.addSuperClass(conceptClass);
+		
+		
 		OntClass associationClass = m.createClass(NS + "Association");
 		
 		OntClass aggregationClass = m.createClass(NS + "Agregation");//связь
@@ -34,16 +43,9 @@ public class ProductViewpointTest {
 		propTo.addDomain(aggregationClass);//свойства у aggregation
 		propFrom.addDomain(aggregationClass);
 		
-		propTo.addRange(greenClass);
-		propFrom.addRange(greenClass);
-		propTo.addRange(someoneClass);
-		propFrom.addRange(someoneClass);
-		propTo.addRange(redClass);
-		propFrom.addRange(redClass);
-		propTo.addRange(blueClass);
-		propFrom.addRange(blueClass);
-		propTo.addRange(orangeClass);
-		propFrom.addRange(orangeClass);
+		propTo.addRange(conceptClass);
+		propFrom.addRange(conceptClass);
+
 		
 				
 		//наполнение базы 
@@ -167,8 +169,7 @@ public class ProductViewpointTest {
 		fromFuckOff.addProperty(propTo, anotherCustomer);
 		fromFuckOff.addProperty(propFrom, fuckOff);
 		
-		//к Q-Maticу
-		
+		//к Q-Maticу		
 		Individual fromReachTheCounter = m.createIndividual(NS + "fromReachTheCounter", aggregationClass);
 		fromReachTheCounter.addProperty(propTo, qMatic);
 		fromReachTheCounter.addProperty(propFrom, reachTheCounter);
@@ -202,13 +203,8 @@ public class ProductViewpointTest {
 		fromCheckTicket.addProperty(propTo, counterStaff);
 		fromCheckTicket.addProperty(propFrom, checkTicket);
 		
-		
-		
-		
-		
-	
 		try {
-			m.write(new FileWriter("D:/bom2.owl"));
+			m.write(new FileWriter("D:/bom.owl"));
 		}
 		catch(Exception e)
 		{
