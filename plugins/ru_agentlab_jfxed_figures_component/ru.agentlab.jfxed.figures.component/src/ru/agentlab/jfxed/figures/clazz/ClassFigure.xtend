@@ -33,8 +33,8 @@ public class ClassFigure extends XNode implements IFigure {
 			children += nameTextBox => [
 				styleClass += "ClassFigure-Text"
 				text = name			
-				translateX = 70;
-				translateY = 90;			
+				translateX = 60;
+				translateY = 95;			
 			]
 			
 			children += new Group => [
@@ -62,6 +62,9 @@ public class ClassFigure extends XNode implements IFigure {
 				]
 			]
 		]
+		
+		node.setScaleX(0.4);
+		node.setScaleY(0.4);
 	}
 	
 	def setName(String name) {
