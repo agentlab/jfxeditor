@@ -3,6 +3,6 @@
 <plugin>
    <extension
    		point="ru.agentlab.jfxed.diagram">
-         <diagram name="ProductViewPoint" class="ru.agentlab.jfxed.diagramms.productviewpoint.StrategicDiagram" ontoUri="http://www.agentlab.ru/jfxed/onto/productviewpoint"/>
+         <diagram name="Nastya`s Diagramm" class="ru.agentlab.jfxed.diagrammssafetycasemodeldiagramm.SafetyCaseModelDiagramm" ontoUri="http://www.agentlab.ru/jfxed/onto/safetycasemodel"/>
    </extension>
 </plugin>

@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.diagramms.productviewpoint
+package ru.agentlab.jfxed.diagrammssafetycasemodeldiagramm
 
 import com.hp.hpl.jena.query.QueryExecutionFactory
 import com.hp.hpl.jena.query.QueryFactory

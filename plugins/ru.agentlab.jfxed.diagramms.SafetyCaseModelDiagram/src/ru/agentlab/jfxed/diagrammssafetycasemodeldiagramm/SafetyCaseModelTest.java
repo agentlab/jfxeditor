@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.diagramms.productviewpoint;
+package ru.agentlab.jfxed.diagrammssafetycasemodeldiagramm;
 import java.io.FileWriter;
 
 import com.hp.hpl.jena.ontology.Individual;
@@ -14,9 +14,9 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 
-public class ProductViewpointTest {
-
-	static String SOURCE = "http://www.eswc2006.org/technologies/ontology";
+public class SafetyCaseModelTest {
+	
+	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/safetycasemodel";
 	static String NS = SOURCE + "#";
 	
 	//test from sourcetree
@@ -134,7 +134,7 @@ public class ProductViewpointTest {
 		
 	
 		try {
-			m.write(new FileWriter("D:/eclipse-standard/qwe.owl"));
+			m.write(new FileWriter("D:/krain.owl"));
 		}
 		catch(Exception e)
 		{

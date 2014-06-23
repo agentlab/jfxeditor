@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.diagramms.productviewpoint
+package ru.agentlab.jfxed.diagrammssafetycasemodeldiagramm
 
 import com.hp.hpl.jena.ontology.OntModel
 import com.hp.hpl.jena.query.Query
@@ -12,9 +12,10 @@ import de.fxdiagram.core.XDiagram
 import de.fxdiagram.core.XNode
 import ru.agentlab.jfxed.IDiagram
 import ru.agentlab.jfxed.figures.clazz.ClassFigure
+import ru.agentlab.jfxed.figures.plateau.Plateau
 
-public class StrategicDiagram implements IDiagram {
-	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/productviewpoint"
+public class SafetyCaseModelDiagramm implements IDiagram {
+	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/safetycasemodel"
 	
 	Query query
 	
@@ -32,9 +33,8 @@ public class StrategicDiagram implements IDiagram {
 	
 	override createJfx(OntModel jenaModel, XDiagram jfxDiagram) {
 		
-		makeQuery(jenaModel, jfxDiagram, "BusinessActor")
-		makeQuery(jenaModel, jfxDiagram, "Product")
-		makeQuery(jenaModel, jfxDiagram, "BusinessService")
+		makeQuery(jenaModel, jfxDiagram, "Goal")
+
 
 		}
 		
@@ -63,14 +63,12 @@ public class StrategicDiagram implements IDiagram {
 	     
 		jfxDiagram => [
 			
-			target = new ClassFigure() => [
+			target = new Plateau() => [
 				layoutX = 280
 				layoutY = 280
 				name = x.localName
 			]
-
-			
-			
+				
 			
 			nodes += target
 			
