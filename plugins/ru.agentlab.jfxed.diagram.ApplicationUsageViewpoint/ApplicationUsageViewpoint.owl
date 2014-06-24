@@ -1,0 +1,662 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY www2 "http://www.goodlink.ru#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY www "http://www.goodlink.ru/Ilya/AppUsageViewpoint#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.goodlink.ru/Ilya/AppUsageViewpoint#"
+     xml:base="http://www.goodlink.ru/Ilya/AppUsageViewpoint"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:www="http://www.goodlink.ru/Ilya/AppUsageViewpoint#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:www2="http://www.goodlink.ru#">
+    <owl:Ontology rdf:about="http://www.goodlink.ru/Ilya/AppUsageViewpoint"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.goodlink.ru#fromAccess -->
+
+    <owl:ObjectProperty rdf:about="&www2;fromAccess">
+        <rdfs:domain rdf:resource="&www2;Access"/>
+        <rdfs:range rdf:resource="&www2;BusinessObject"/>
+        <rdfs:range rdf:resource="&www2;DataObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#fromAggregation -->
+
+    <owl:ObjectProperty rdf:about="&www2;fromAggregation">
+        <rdfs:domain rdf:resource="&www2;Aggregation"/>
+        <rdfs:range rdf:resource="&www2;ApplicationCollaboration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#fromAssignment -->
+
+    <owl:ObjectProperty rdf:about="&www2;fromAssignment">
+        <rdfs:range rdf:resource="&www2;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&www2;ApplicationInterface"/>
+        <rdfs:range rdf:resource="&www2;ApplicationService"/>
+        <rdfs:domain rdf:resource="&www2;Assignment"/>
+        <rdfs:range rdf:resource="&www2;BusinessProcess"/>
+        <rdfs:range rdf:resource="&www2;BusinessRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#fromComposition -->
+
+    <owl:ObjectProperty rdf:about="&www2;fromComposition">
+        <rdfs:range rdf:resource="&www2;ApplicationComponent"/>
+        <rdfs:domain rdf:resource="&www2;Composition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#fromRealization -->
+
+    <owl:ObjectProperty rdf:about="&www2;fromRealization">
+        <rdfs:range rdf:resource="&www2;ApplicationService"/>
+        <rdfs:range rdf:resource="&www2;BusinessObject"/>
+        <rdfs:domain rdf:resource="&www2;Realization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#fromSpecialization -->
+
+    <owl:ObjectProperty rdf:about="&www2;fromSpecialization">
+        <rdfs:range rdf:resource="&www2;ApplicationComponent"/>
+        <rdfs:domain rdf:resource="&www2;Specialization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#fromTriggering -->
+
+    <owl:ObjectProperty rdf:about="&www2;fromTriggering">
+        <rdfs:range rdf:resource="&www2;BusinessEvent"/>
+        <rdfs:range rdf:resource="&www2;BusinessProcess"/>
+        <rdfs:domain rdf:resource="&www2;Triggering"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#fromUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&www2;fromUsedBy">
+        <rdfs:range rdf:resource="&www2;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&www2;BusinessProcess"/>
+        <rdfs:range rdf:resource="&www2;BusinessRole"/>
+        <rdfs:domain rdf:resource="&www2;UsedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#toAccess -->
+
+    <owl:ObjectProperty rdf:about="&www2;toAccess">
+        <rdfs:domain rdf:resource="&www2;Access"/>
+        <rdfs:range rdf:resource="&www2;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&www2;ApplicationService"/>
+        <rdfs:range rdf:resource="&www2;BusinessProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#toAggregation -->
+
+    <owl:ObjectProperty rdf:about="&www2;toAggregation">
+        <rdfs:domain rdf:resource="&www2;Aggregation"/>
+        <rdfs:range rdf:resource="&www2;ApplicationComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#toAssignment -->
+
+    <owl:ObjectProperty rdf:about="&www2;toAssignment">
+        <rdfs:range rdf:resource="&www2;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&www2;ApplicationInterface"/>
+        <rdfs:range rdf:resource="&www2;ApplicationService"/>
+        <rdfs:domain rdf:resource="&www2;Assignment"/>
+        <rdfs:range rdf:resource="&www2;BusinessProcess"/>
+        <rdfs:range rdf:resource="&www2;BusinessRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#toComposition -->
+
+    <owl:ObjectProperty rdf:about="&www2;toComposition">
+        <rdfs:range rdf:resource="&www2;ApplicationInterface"/>
+        <rdfs:domain rdf:resource="&www2;Composition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#toRealization -->
+
+    <owl:ObjectProperty rdf:about="&www2;toRealization">
+        <rdfs:range rdf:resource="&www2;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&www2;BusinessObject"/>
+        <rdfs:domain rdf:resource="&www2;Realization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#toSpecialization -->
+
+    <owl:ObjectProperty rdf:about="&www2;toSpecialization">
+        <rdfs:range rdf:resource="&www2;ApplicationCollaboration"/>
+        <rdfs:domain rdf:resource="&www2;Specialization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#toTriggering -->
+
+    <owl:ObjectProperty rdf:about="&www2;toTriggering">
+        <rdfs:range rdf:resource="&www2;BusinessProcess"/>
+        <rdfs:domain rdf:resource="&www2;Triggering"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.goodlink.ru#toUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&www2;toUsedBy">
+        <rdfs:range rdf:resource="&www2;ApplicationInterface"/>
+        <rdfs:range rdf:resource="&www2;ApplicationService"/>
+        <rdfs:domain rdf:resource="&www2;UsedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.goodlink.ru#Access -->
+
+    <owl:Class rdf:about="&www2;Access">
+        <rdfs:subClassOf rdf:resource="&www2;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#Aggregation -->
+
+    <owl:Class rdf:about="&www2;Aggregation">
+        <rdfs:subClassOf rdf:resource="&www2;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#ApplicationCollaboration -->
+
+    <owl:Class rdf:about="&www2;ApplicationCollaboration">
+        <rdfs:subClassOf rdf:resource="&www2;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#ApplicationComponent -->
+
+    <owl:Class rdf:about="&www2;ApplicationComponent">
+        <rdfs:subClassOf rdf:resource="&www2;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#ApplicationInterface -->
+
+    <owl:Class rdf:about="&www2;ApplicationInterface">
+        <rdfs:subClassOf rdf:resource="&www2;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#ApplicationService -->
+
+    <owl:Class rdf:about="&www2;ApplicationService">
+        <rdfs:subClassOf rdf:resource="&www2;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#Assignment -->
+
+    <owl:Class rdf:about="&www2;Assignment">
+        <rdfs:subClassOf rdf:resource="&www2;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#Association -->
+
+    <owl:Class rdf:about="&www2;Association"/>
+    
+
+
+    <!-- http://www.goodlink.ru#BusinessEvent -->
+
+    <owl:Class rdf:about="&www2;BusinessEvent">
+        <rdfs:subClassOf rdf:resource="&www2;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#BusinessObject -->
+
+    <owl:Class rdf:about="&www2;BusinessObject">
+        <rdfs:subClassOf rdf:resource="&www2;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#BusinessProcess -->
+
+    <owl:Class rdf:about="&www2;BusinessProcess">
+        <rdfs:subClassOf rdf:resource="&www2;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#BusinessRole -->
+
+    <owl:Class rdf:about="&www2;BusinessRole">
+        <rdfs:subClassOf rdf:resource="&www2;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#Composition -->
+
+    <owl:Class rdf:about="&www2;Composition">
+        <rdfs:subClassOf rdf:resource="&www2;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#Concept -->
+
+    <owl:Class rdf:about="&www2;Concept"/>
+    
+
+
+    <!-- http://www.goodlink.ru#DataObject -->
+
+    <owl:Class rdf:about="&www2;DataObject">
+        <rdfs:subClassOf rdf:resource="&www2;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#Realization -->
+
+    <owl:Class rdf:about="&www2;Realization">
+        <rdfs:subClassOf rdf:resource="&www2;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#Specialization -->
+
+    <owl:Class rdf:about="&www2;Specialization">
+        <rdfs:subClassOf rdf:resource="&www2;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#Triggering -->
+
+    <owl:Class rdf:about="&www2;Triggering">
+        <rdfs:subClassOf rdf:resource="&www2;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.goodlink.ru#UsedBy -->
+
+    <owl:Class rdf:about="&www2;UsedBy">
+        <rdfs:subClassOf rdf:resource="&www2;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.goodlink.ru#Accept -->
+
+    <owl:NamedIndividual rdf:about="&www2;Accept">
+        <rdf:type rdf:resource="&www2;BusinessProcess"/>
+        <www2:fromAggregation rdf:resource="&www2;HandleClaim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Aggregation_Accept_HandleClaim -->
+
+    <owl:NamedIndividual rdf:about="&www2;Aggregation_Accept_HandleClaim">
+        <rdf:type rdf:resource="&www2;Aggregation"/>
+        <www2:toAggregation rdf:resource="&www2;Accept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Aggregation_Pay_HandleClaim -->
+
+    <owl:NamedIndividual rdf:about="&www2;Aggregation_Pay_HandleClaim">
+        <rdf:type rdf:resource="&www2;Aggregation"/>
+        <www2:fromAggregation rdf:resource="&www2;HandleClaim"/>
+        <www2:toAggregation rdf:resource="&www2;Pay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Aggregation_Register_HandleClaim -->
+
+    <owl:NamedIndividual rdf:about="&www2;Aggregation_Register_HandleClaim">
+        <rdf:type rdf:resource="&www2;Aggregation"/>
+        <www2:fromAggregation rdf:resource="&www2;HandleClaim"/>
+        <www2:toAggregation rdf:resource="&www2;Register"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Aggregation_Valuate_HandleClaim -->
+
+    <owl:NamedIndividual rdf:about="&www2;Aggregation_Valuate_HandleClaim">
+        <rdf:type rdf:resource="&www2;Aggregation"/>
+        <www2:fromAggregation rdf:resource="&www2;HandleClaim"/>
+        <www2:toAggregation rdf:resource="&www2;Valuate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#CRMSystem -->
+
+    <owl:NamedIndividual rdf:about="&www2;CRMSystem">
+        <rdf:type rdf:resource="&www2;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#ClaimsAdministrationService -->
+
+    <owl:NamedIndividual rdf:about="&www2;ClaimsAdministrationService">
+        <rdf:type rdf:resource="&www2;ApplicationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#CustomerAdministrationService -->
+
+    <owl:NamedIndividual rdf:about="&www2;CustomerAdministrationService">
+        <rdf:type rdf:resource="&www2;ApplicationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#DocumentManagmentSystem -->
+
+    <owl:NamedIndividual rdf:about="&www2;DocumentManagmentSystem">
+        <rdf:type rdf:resource="&www2;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#HandleClaim -->
+
+    <owl:NamedIndividual rdf:about="&www2;HandleClaim">
+        <rdf:type rdf:resource="&www2;BusinessProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#HomeAndAwayFinancialApplication -->
+
+    <owl:NamedIndividual rdf:about="&www2;HomeAndAwayFinancialApplication">
+        <rdf:type rdf:resource="&www2;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#HomeAndAwayPolicyAdministration -->
+
+    <owl:NamedIndividual rdf:about="&www2;HomeAndAwayPolicyAdministration">
+        <rdf:type rdf:resource="&www2;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Pay -->
+
+    <owl:NamedIndividual rdf:about="&www2;Pay">
+        <rdf:type rdf:resource="&www2;BusinessProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#PaymentService -->
+
+    <owl:NamedIndividual rdf:about="&www2;PaymentService">
+        <rdf:type rdf:resource="&www2;ApplicationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#PrintingService -->
+
+    <owl:NamedIndividual rdf:about="&www2;PrintingService">
+        <rdf:type rdf:resource="&www2;ApplicationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Realization_ClaimsAdministarationService_HomeAndAwayFinancialApplication -->
+
+    <owl:NamedIndividual rdf:about="&www2;Realization_ClaimsAdministarationService_HomeAndAwayFinancialApplication">
+        <rdf:type rdf:resource="&www2;Realization"/>
+        <www2:toRealization rdf:resource="&www2;ClaimsAdministrationService"/>
+        <www2:fromRealization rdf:resource="&www2;HomeAndAwayFinancialApplication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Realization_CustomerAdministrationService_CRMSystem -->
+
+    <owl:NamedIndividual rdf:about="&www2;Realization_CustomerAdministrationService_CRMSystem">
+        <rdf:type rdf:resource="&www2;Realization"/>
+        <www2:fromRealization rdf:resource="&www2;CRMSystem"/>
+        <www2:toRealization rdf:resource="&www2;CustomerAdministrationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Realization_PaymentService_HomeAndAwayPolicyAdministration -->
+
+    <owl:NamedIndividual rdf:about="&www2;Realization_PaymentService_HomeAndAwayPolicyAdministration">
+        <rdf:type rdf:resource="&www2;Realization"/>
+        <www2:fromRealization rdf:resource="&www2;HomeAndAwayPolicyAdministration"/>
+        <www2:toRealization rdf:resource="&www2;PaymentService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Realization_PrintingService_DocumentManagmentSystem -->
+
+    <owl:NamedIndividual rdf:about="&www2;Realization_PrintingService_DocumentManagmentSystem">
+        <rdf:type rdf:resource="&www2;Realization"/>
+        <www2:fromRealization rdf:resource="&www2;DocumentManagmentSystem"/>
+        <www2:toRealization rdf:resource="&www2;PrintingService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Realization_ScanningService_DocumentManagmentSystem -->
+
+    <owl:NamedIndividual rdf:about="&www2;Realization_ScanningService_DocumentManagmentSystem">
+        <rdf:type rdf:resource="&www2;Realization"/>
+        <www2:fromRealization rdf:resource="&www2;DocumentManagmentSystem"/>
+        <www2:toRealization rdf:resource="&www2;ScanningService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Register -->
+
+    <owl:NamedIndividual rdf:about="&www2;Register">
+        <rdf:type rdf:resource="&www2;BusinessProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#ScanningService -->
+
+    <owl:NamedIndividual rdf:about="&www2;ScanningService">
+        <rdf:type rdf:resource="&www2;ApplicationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Triggering_Accept_Register -->
+
+    <owl:NamedIndividual rdf:about="&www2;Triggering_Accept_Register">
+        <rdf:type rdf:resource="&www2;Triggering"/>
+        <www2:toTriggering rdf:resource="&www2;Accept"/>
+        <www2:fromTriggering rdf:resource="&www2;Register"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Triggering_Pay_Valuate -->
+
+    <owl:NamedIndividual rdf:about="&www2;Triggering_Pay_Valuate">
+        <rdf:type rdf:resource="&www2;Triggering"/>
+        <www2:toTriggering rdf:resource="&www2;Pay"/>
+        <www2:fromTriggering rdf:resource="&www2;Valuate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Triggering_Valuate_Accept -->
+
+    <owl:NamedIndividual rdf:about="&www2;Triggering_Valuate_Accept">
+        <rdf:type rdf:resource="&www2;Triggering"/>
+        <www2:fromTriggering rdf:resource="&www2;Accept"/>
+        <www2:toTriggering rdf:resource="&www2;Valuate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#UsedBy_Accept_ClaimsAdministrationService -->
+
+    <owl:NamedIndividual rdf:about="&www2;UsedBy_Accept_ClaimsAdministrationService">
+        <rdf:type rdf:resource="&www2;UsedBy"/>
+        <www2:toUsedBy rdf:resource="&www2;Accept"/>
+        <www2:fromUsedBy rdf:resource="&www2;ClaimsAdministrationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#UsedBy_Pay_PaymentService -->
+
+    <owl:NamedIndividual rdf:about="&www2;UsedBy_Pay_PaymentService">
+        <rdf:type rdf:resource="&www2;UsedBy"/>
+        <www2:toUsedBy rdf:resource="&www2;Pay"/>
+        <www2:fromUsedBy rdf:resource="&www2;PaymentService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#UsedBy_Pay_PrintingService -->
+
+    <owl:NamedIndividual rdf:about="&www2;UsedBy_Pay_PrintingService">
+        <rdf:type rdf:resource="&www2;UsedBy"/>
+        <www2:toUsedBy rdf:resource="&www2;Pay"/>
+        <www2:fromUsedBy rdf:resource="&www2;PrintingService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#UsedBy_Register_CustomerAdministrationService -->
+
+    <owl:NamedIndividual rdf:about="&www2;UsedBy_Register_CustomerAdministrationService">
+        <rdf:type rdf:resource="&www2;UsedBy"/>
+        <www2:fromUsedBy rdf:resource="&www2;CustomerAdministrationService"/>
+        <www2:toUsedBy rdf:resource="&www2;Register"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#UsedBy_Register_ScanningService -->
+
+    <owl:NamedIndividual rdf:about="&www2;UsedBy_Register_ScanningService">
+        <rdf:type rdf:resource="&www2;UsedBy"/>
+        <www2:toUsedBy rdf:resource="&www2;Register"/>
+        <www2:fromUsedBy rdf:resource="&www2;ScanningService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#UsedBy_Valuate_PrintingService -->
+
+    <owl:NamedIndividual rdf:about="&www2;UsedBy_Valuate_PrintingService">
+        <rdf:type rdf:resource="&www2;UsedBy"/>
+        <www2:fromUsedBy rdf:resource="&www2;PrintingService"/>
+        <www2:toUsedBy rdf:resource="&www2;Valuate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.goodlink.ru#Valuate -->
+
+    <owl:NamedIndividual rdf:about="&www2;Valuate">
+        <rdf:type rdf:resource="&www2;BusinessProcess"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

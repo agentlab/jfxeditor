@@ -2,6 +2,6 @@
 <?eclipse version="3.0"?>
 <plugin>
    <extension point="ru.agentlab.jfxed.figure">
-         <figure name="ClaimsApproval" class="ru.agentlab.jfxed.figures.app.ClassFigure"/>
+         <figure name="ClaimsApproval" class="ru.agentlab.jfxed.figures.CAfigure.ClaimsApproval"/>
    </extension>
 </plugin>

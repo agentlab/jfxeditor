@@ -1,0 +1,8 @@
+ .ClassFigure-Rect{
+	-fx-fill: CYAN;
+    -fx-stroke: BLACK;
+}
+ 
+.ClassFigure-Text{
+    -fx-font: 21pt "Arial";
+}
