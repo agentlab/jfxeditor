@@ -3,6 +3,6 @@
 <plugin>
    <extension
    		point="ru.agentlab.jfxed.diagram">
-         <diagram name="Диаграмма Nurmatov" class="ru.agentlab.jfxed.diagramms.clazz.ClazzDiagram" ontoUri="http://www.agentlab.ru/jfxed/onto/entityrelationship"/>
+         <diagram name="Диаграмма Nurmatov" class="ru.agentlab.jfxed.diagramms.entityrelationship.ERdiagramm" ontoUri="http://www.agentlab.ru/jfxed/onto/entityrelationship"/>
    </extension>
 </plugin>

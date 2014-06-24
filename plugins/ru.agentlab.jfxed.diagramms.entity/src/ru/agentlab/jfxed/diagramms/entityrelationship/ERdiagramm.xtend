@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.diagramms.clazz
+package ru.agentlab.jfxed.diagramms.entityrelationship
 
 import com.hp.hpl.jena.ontology.OntModel
 import com.hp.hpl.jena.query.QueryExecutionFactory
@@ -7,9 +7,9 @@ import com.hp.hpl.jena.query.QuerySolution
 import com.hp.hpl.jena.rdf.model.Resource
 import de.fxdiagram.core.XDiagram
 import ru.agentlab.jfxed.IDiagram
-import ru.agentlab.jfxed.figures.app.ClassFigure
+import ru.agentlab.jfxed.figures.CAfigure.ClaimsApproval
 
-public class ClazzDiagram implements IDiagram {
+public class ERdiagramm implements IDiagram {
 	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/entityrelationship"
 	static String NS = SOURCE + "#"
 	
@@ -31,7 +31,7 @@ public class ClazzDiagram implements IDiagram {
 	      val QuerySolution soln = results.nextSolution() 
 	      val Resource x = soln.getResource("uri")       // Get a result variable by name.
 	     
-	     val target = new ClassFigure() => [
+	     val target = new ClaimsApproval() => [
 				layoutX = 100
 				layoutY = 100
 				name = x.localName
