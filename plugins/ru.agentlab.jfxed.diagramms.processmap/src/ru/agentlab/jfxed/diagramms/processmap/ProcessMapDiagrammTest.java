@@ -8,9 +8,9 @@ import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 
-public class ProcessMapDiagramm {
+public class ProcessMapDiagrammTest {
 
-	static String SOURCE = "http://www.eswc2006.org/technologies/ontology";
+	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/processmap";
 	static String NS = SOURCE + "#";
 	
 	//test from sourcetree
@@ -30,7 +30,7 @@ public class ProcessMapDiagramm {
 		OntClass receiveClass = m.createClass(NS + "Receive");
 		OntClass sendClass = m.createClass(NS + "Send");
 		
-		OntClass procLinkClass = m.createClass(NS + "Process Link");
+		OntClass procLinkClass = m.createClass(NS + "ProcessLink");
 		
 		// связи
 		
@@ -44,10 +44,10 @@ public class ProcessMapDiagramm {
 		procFrom.addRange(receiveClass);
 		
 		// наполнение базы
-		Individual order = m.createIndividual(sendClass);
-		Individual procOther = m.createIndividual(processClass);
-		Individual shipOther = m.createIndividual(processClass);
-		Individual goods = m.createIndividual(receiveClass);
+		Individual order = m.createIndividual(NS + "order",sendClass);
+		Individual procOther = m.createIndividual(NS + "procOther",processClass);
+		Individual shipOther = m.createIndividual(NS + "shipOther",processClass);
+		Individual goods = m.createIndividual(NS + "goods",receiveClass);
 		
 		Individual procLinkIndividual = m.createIndividual(procLinkClass);
 		procLinkIndividual.addProperty(procFrom, order);
@@ -59,7 +59,7 @@ public class ProcessMapDiagramm {
 		
 		FileOutputStream out;
         try {
-            out = new FileOutputStream("model.xml");
+            out = new FileOutputStream("model.owl");
             m.write(out, "RDF/XML");
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block

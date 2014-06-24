@@ -8,7 +8,7 @@ import java.io.FileInputStream
 import com.hp.hpl.jena.ontology.OntModel
 
 class ProcessMapTest {
-	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/epc"
+	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/processmap"
 	static String NS = SOURCE + "#"
 	
 	protected var OntModel m
