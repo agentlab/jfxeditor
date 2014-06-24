@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/processmap#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/processmap#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/processmap"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/processmap#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/processmap"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#ProcessFrom -->
+
+    <owl:ObjectProperty rdf:about="&j.0;ProcessFrom">
+        <rdfs:range rdf:resource="&j.0;Process"/>
+        <rdfs:domain rdf:resource="&j.0;ProcessLink"/>
+        <rdfs:range rdf:resource="&j.0;Receive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#ProcessTo -->
+
+    <owl:ObjectProperty rdf:about="&j.0;ProcessTo">
+        <rdfs:range rdf:resource="&j.0;Process"/>
+        <rdfs:domain rdf:resource="&j.0;ProcessLink"/>
+        <rdfs:range rdf:resource="&j.0;Send"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#Concept -->
+
+    <owl:Class rdf:about="&j.0;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#Process -->
+
+    <owl:Class rdf:about="&j.0;Process">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#ProcessLink -->
+
+    <owl:Class rdf:about="&j.0;ProcessLink">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#Receive -->
+
+    <owl:Class rdf:about="&j.0;Receive">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#Relation -->
+
+    <owl:Class rdf:about="&j.0;Relation"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#Send -->
+
+    <owl:Class rdf:about="&j.0;Send">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#ProcessorderByShiporder -->
+
+    <owl:NamedIndividual rdf:about="&j.0;ProcessorderByShiporder">
+        <rdf:type rdf:resource="&j.0;ProcessLink"/>
+        <ProcessFrom rdf:resource="&j.0;procOther"/>
+        <ProcessTo rdf:resource="&j.0;shipOther"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#ShiporderByGoodDeliv -->
+
+    <owl:NamedIndividual rdf:about="&j.0;ShiporderByGoodDeliv">
+        <rdf:type rdf:resource="&j.0;ProcessLink"/>
+        <ProcessTo rdf:resource="&j.0;goods"/>
+        <ProcessFrom rdf:resource="&j.0;shipOther"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#goods -->
+
+    <owl:NamedIndividual rdf:about="&j.0;goods">
+        <rdf:type rdf:resource="&j.0;Receive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#order -->
+
+    <owl:NamedIndividual rdf:about="&j.0;order">
+        <rdf:type rdf:resource="&j.0;Send"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#orderRecByProcOrder -->
+
+    <owl:NamedIndividual rdf:about="&j.0;orderRecByProcOrder">
+        <rdf:type rdf:resource="&j.0;ProcessLink"/>
+        <ProcessFrom rdf:resource="&j.0;order"/>
+        <ProcessTo rdf:resource="&j.0;procOther"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#procOther -->
+
+    <owl:NamedIndividual rdf:about="&j.0;procOther">
+        <rdf:type rdf:resource="&j.0;Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/processmap#shipOther -->
+
+    <owl:NamedIndividual rdf:about="&j.0;shipOther">
+        <rdf:type rdf:resource="&j.0;Process"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="&j.0;ProcessLink"/>
+        <ProcessFrom rdf:resource="&j.0;goods"/>
+        <ProcessFrom rdf:resource="&j.0;order"/>
+        <ProcessTo rdf:resource="&j.0;procOther"/>
+        <ProcessFrom rdf:resource="&j.0;procOther"/>
+        <ProcessTo rdf:resource="&j.0;shipOther"/>
+        <ProcessFrom rdf:resource="&j.0;shipOther"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
