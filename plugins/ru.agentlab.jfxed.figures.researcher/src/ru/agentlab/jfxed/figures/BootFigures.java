@@ -1,27 +1,15 @@
 package ru.agentlab.jfxed.figures;
 
-import ru.agentlab.jfxed.figures.clazz.ClassFigure;
 import javafx.application.Application;
-import javafx.event.EventHandler;
-import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.application.Application;
-
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.scene.Group;
-import javafx.scene.Node;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Polygon;
+import ru.agentlab.jfxed.figures.clazz.Researcher;
 
 public class BootFigures extends Application {
 	
-	ClassFigure sourceToMove;
+	Researcher sourceToMove;
 	
 	double sceneStartX;
 	double sceneStartY;
@@ -41,7 +29,7 @@ public class BootFigures extends Application {
 
 		AnchorPane root = new AnchorPane();
 		
-		final ClassFigure source = new ClassFigure();
+		final Researcher source = new Researcher();
 		root.getChildren().add(source.getRoot());
 		root.getChildren().add(new VBox());
 		

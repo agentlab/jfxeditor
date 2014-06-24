@@ -1,9 +1,9 @@
 package ru.agentlab.jfxed.figures.clazz
 
+import de.fxdiagram.core.XNode;
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.scene.text.Text
-import ru.agentlab.jfxed.figures.BaseFigure
 import javafx.scene.shape.Polyline;
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -14,41 +14,57 @@ import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.layout.GridPane;
+import ru.agentlab.jfxed.IFigure;
 
-class ClassFigure extends BaseFigure {
+
+class Researcher extends XNode implements IFigure  {
 	
-	String name = "Researcher";
+	var GridPane gp 
 	
-	new (){
-		root = new GridPane;
+	val nameTextBox = new Text
+	var String name
+
+	new(String name) {
+		super(name)
+		this.name = name
+	}
+	new() {
+		
+		super("Class");
+		
+		name = "Class";	
+		
+		gp = new GridPane
+		
+		node = gp
+		
+		val s = Researcher.getResource("ClassFigure.css").toExternalForm()
+		gp.stylesheets += s
 		
 		
-		initHandlers()
-		
-		
-		val s = ClassFigure.getResource("ClassFigure.css").toExternalForm()
-		root.stylesheets += s
-		
-		//root.styleClass += "ClassFigure"; //figure
-		
-		root.children += new HBox => [
+		gp.children += new HBox => [
 			styleClass += "Polygon"//ClassFigure-Name-Section			
 		]
 		
-		/*val p = new Polyline => [
+		/**val p = new Polyline => [
 			points += 50d;
 			 points += 0d;
 			 points += 50d;
 			 points += 104d;
 			styleClass += "Line"//ClassFigure-Name-Section			
 			
-			]	*/		
+			]**/		
 			
-		root.children += new Text => [
+		gp.children += nameTextBox => [
 				text = name
 				styleClass += "ClassFigure-Text"
 			]
-		
+			/*
+			children += nameTextBox => [
+					text = name
+					styleClass += "ClassFigure-Text"
+				]
+		*/
 	
 	/*	root.children += new VBox => [
 			styleClass += "ClassFigure-Methods-List"
@@ -65,5 +81,16 @@ class ClassFigure extends BaseFigure {
 				text = "method 3 lalalala"
 			]
 		]*/
+	}
+	
+	def setName(String name) {
+		nameTextBox.text = name
+	}
+
+	def getName() {
+		nameTextBox.text
+	}
+	override getRoot() {
+		this
 	}
 }
