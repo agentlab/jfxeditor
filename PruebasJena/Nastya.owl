@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.agentlab.ru/jfxed/onto/strategicrationale#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#blueSmallRectClass">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#OneWayBlackArrow">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#lBlueSmallRect"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#lBlueSmallRect"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#InsuranceRequestData">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#blueSmallRectClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#backgroundConnect">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#lBlueBigRect"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#lBlueSmallRect"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#lBlueSmallRect">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#blueOval">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#backgroundConnect1">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#blueBigRectClass"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#lBlueBigRect"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreationService">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#blueOval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#CalculatePremium">
+    <j.0:OneWayBlackArrow rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#CreatePolicy"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayBlackArrow"/>
+    <j.0:backgroundConnect rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreation"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#backgroundConnect"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#lBlueSmallRect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#lBlueBigRect">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#CreatePolicy">
+    <j.0:OneWayDotsArrow rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#InsurancePolicyData"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayDotsArrow"/>
+    <j.0:OneWayBlackArrow rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#StorePolicy"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayBlackArrow"/>
+    <j.0:backgroundConnect rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreation"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#backgroundConnect"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#lBlueSmallRect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#InsurancePolicyData">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#blueSmallRectClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayDotsArrow">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#blueBigRectClass">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#StorePolicy">
+    <j.0:OneWayDotsArrow rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#CustomerFileData"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayDotsArrow"/>
+    <j.0:backgroundConnect rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreation"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#backgroundConnect"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#lBlueSmallRect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#OneWayWhiteArrow">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#blueOval"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#blueBigRectClass"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#OneWayDotsArrow">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#blueSmallRectClass"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#lBlueSmallRect"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreation">
+    <j.0:backgroundConnect1 rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#HomeAndAwayPolicyAdministration"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#backgroundConnect"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#lBlueBigRect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#HomeAndAwayPolicyAdministration">
+    <j.0:OneWayWhiteArrow rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreationService"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayWhiteArrow"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#blueBigRectClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#CustomerFileData">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#blueSmallRectClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#CalculateRisk">
+    <j.0:OneWayDotsArrow rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#InsuranceRequestData"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayDotsArrow"/>
+    <j.0:OneWayBlackArrow rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#CalculatePremium"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayBlackArrow"/>
+    <j.0:backgroundConnect rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreation"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#backgroundConnect"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#lBlueSmallRect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayWhiteArrow">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayBlackArrow">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>
