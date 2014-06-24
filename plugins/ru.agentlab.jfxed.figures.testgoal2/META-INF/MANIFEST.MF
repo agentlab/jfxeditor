@@ -18,6 +18,5 @@ Require-Bundle: org.eclipse.core.runtime,
  de.fxdiagram.annotations,
  ru.agentlab.jfxed
 Bundle-ActivationPolicy: lazy
-Export-Package: ru.agentlab.jfxed.figures,
- ru.agentlab.jfxed.figures.testgoal
+Export-Package: ru.agentlab.jfxed.figures.testgoal
 
