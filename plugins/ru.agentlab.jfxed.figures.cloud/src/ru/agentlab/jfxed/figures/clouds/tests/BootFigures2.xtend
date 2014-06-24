@@ -10,7 +10,7 @@ import de.fxdiagram.core.XConnection
 import de.fxdiagram.lib.simple.SimpleNode
 import de.fxdiagram.core.XConnectionKind
 import de.fxdiagram.core.XConnectionLabel
-import ru.agentlab.jfxed.figures.clouds.ClassFigure
+import ru.agentlab.jfxed.figures.clouds.CloudFigure
 
 class BootFigures2 extends Application {
 	
@@ -41,7 +41,7 @@ class BootFigures2 extends Application {
 			]
 			nodes += source
 
-			val target = new ClassFigure('MyClass') => [
+			val target = new CloudFigure('MyClass') => [
 				layoutX = 280
 				layoutY = 280
 				width = 80

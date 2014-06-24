@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Blockandarrow
-Bundle-SymbolicName: ru.agentlab.jfxed.diagramms.entity;singleton:=true
+Bundle-SymbolicName: ru.agentlab.jfxed.diagramms.ERdiagramm;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: AgentLab
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

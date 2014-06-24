@@ -2,6 +2,6 @@
 <?eclipse version="3.0"?>
 <plugin>
    <extension point="ru.agentlab.jfxed.figure">
-         <figure name="Cloud" class="ru.agentlab.jfxed.figures.clouds.ClassFigure"/>
+         <figure name="Cloud" class="ru.agentlab.jfxed.figures.clouds.CloudFigure"/>
    </extension>
 </plugin>
