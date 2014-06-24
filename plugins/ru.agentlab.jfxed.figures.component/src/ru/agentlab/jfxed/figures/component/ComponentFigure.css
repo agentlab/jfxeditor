@@ -1,0 +1,8 @@
+ .component-Rect{
+	-fx-fill: CYAN;
+    -fx-stroke: BLACK;
+}
+ 
+.component-Text{
+    -fx-font: 21pt "Arial";
+}
