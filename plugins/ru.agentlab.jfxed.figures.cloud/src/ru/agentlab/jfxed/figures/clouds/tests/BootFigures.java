@@ -5,11 +5,11 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import ru.agentlab.jfxed.figures.clouds.ClassFigure;
+import ru.agentlab.jfxed.figures.clouds.CloudFigure;
 
 public class BootFigures extends Application {
 	
-	ClassFigure sourceToMove;
+	CloudFigure sourceToMove;
 	
 	double sceneStartX;
 	double sceneStartY;
@@ -28,7 +28,7 @@ public class BootFigures extends Application {
 
 		AnchorPane root = new AnchorPane();
 		
-		final ClassFigure source = new ClassFigure("sdfsf");
+		final CloudFigure source = new CloudFigure("sdfsf");
 		root.getChildren().add(source.getRoot());
 		root.getChildren().add(new VBox());
 		
