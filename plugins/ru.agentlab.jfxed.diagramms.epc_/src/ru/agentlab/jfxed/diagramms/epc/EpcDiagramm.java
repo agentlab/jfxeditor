@@ -11,7 +11,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 
 public class EpcDiagramm {
 
-	static String SOURCE = "http://www.eswc2006.org/technologies/ontology";
+	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/epc";
 	static String NS = SOURCE + "#";
 	
 	//test from sourcetree
@@ -27,8 +27,8 @@ public class EpcDiagramm {
 		 * Вершины графа
 		 */
 		
-		OntClass unitClass = m.createClass(NS + "Organization Unit");
-		OntClass resourceClass = m.createClass(NS + "Information Resource");
+		OntClass unitClass = m.createClass(NS + "OrganizationUnit");
+		OntClass resourceClass = m.createClass(NS + "InformationResource");
 		OntClass functionClass = m.createClass(NS + "Function");
 		OntClass eventClass = m.createClass(NS + "Event");
 		
@@ -64,15 +64,15 @@ public class EpcDiagramm {
 		eventFuncFrom.addRange(functionClass);
 		
 		// наполнение базы
-		Individual customer = m.createIndividual(orgClass);
-		Individual genClerk = m.createIndividual(orgClass);
-		Individual cash = m.createIndividual(resourceClass);
-		Individual billInf = m.createIndividual(resourceClass);
-		Individual receipt = m.createIndividual(resourceClass);
-		Individual billSetted = m.createIndividual(eventClass);
-		Individual billRec = m.createIndividual(eventClass);
-		Individual procBill = m.createIndividual(functionClass);
-		Individual reqBill = m.createIndividual(functionClass);
+		Individual customer = m.createIndividual(NS + "customer", orgClass);
+		Individual genClerk = m.createIndividual(NS + "genClerk",orgClass);
+		Individual cash = m.createIndividual(NS + "cach",resourceClass);
+		Individual billInf = m.createIndividual(NS + "billInf", resourceClass);
+		Individual receipt = m.createIndividual(NS + "receipt",resourceClass);
+		Individual billSetted = m.createIndividual(NS + "billSetted",eventClass);
+		Individual billRec = m.createIndividual(NS + "billRec",eventClass);
+		Individual procBill = m.createIndividual(NS + "procBill",functionClass);
+		Individual reqBill = m.createIndividual(NS + "reqBill", functionClass);
 		
 		Individual orgIndividual = m.createIndividual(orgClass);
 		orgIndividual.addProperty(unitFuncFrom, customer);
@@ -98,7 +98,7 @@ public class EpcDiagramm {
 		
 		OutputStream out;
         try {
-            out = new FileOutputStream("model.xml");
+            out = new FileOutputStream("Mir.owl");
             m.write(out, "RDF/XML");
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
