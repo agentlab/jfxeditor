@@ -23,6 +23,7 @@ class ProductViewpointTest2 {
 		me.testQuery3()
 		me.testQuery4()
 		me.testQuery5()
+		me.testQuery6()
 	}
 	
 	def loadModel() {
@@ -30,7 +31,7 @@ class ProductViewpointTest2 {
 		m = ModelFactory.createOntologyModel() => [
 			// внутри блока можно обращаться к методам объкта m без m.
 			
-			val inputStream = new FileInputStream("productviewpoint.owl")
+			val inputStream = new FileInputStream("productviewpoint_ranges.owl")
 			read(inputStream, NS, "RDF/XML");
 			write(System.out, "RDF/XML");//и в консоль
 		]
@@ -154,6 +155,27 @@ class ProductViewpointTest2 {
 		qe.close();
 	}
 	
-	
+	def testQuery6(){
+		//шаблон из статических строк и значений переменных с автоматической подстановкой
+		//в духе php
+		val queryString ='''
+		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+		select ?uri 
+		where { 
+			?uri rdf:type <«SOURCE»#Contract> 
+		} 
+		'''
+	    val query = QueryFactory.create(queryString);
+		// Execute the query and obtain results
+		val qe = QueryExecutionFactory.create(query, m);
+		val results =  qe.execSelect();
+		
+		println( " Zapros 6" );
+		println( queryString );
+		
+		// Output query results    
+		ResultSetFormatter.out(System.out, results, query);
+		qe.close();
+	}
 	
 }

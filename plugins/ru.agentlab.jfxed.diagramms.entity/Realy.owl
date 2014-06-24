@@ -1,0 +1,542 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/entityrelationship#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/entityrelationship#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/entityrelationship"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/entityrelationship#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/entityrelationship"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Attribution-From -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Attribution-From">
+        <rdfs:range rdf:resource="&j.0;Attribute-Relationship"/>
+        <rdfs:domain rdf:resource="&j.0;Entity-Concept"/>
+        <rdfs:domain rdf:resource="&j.0;Relationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Attribution-To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Attribution-To">
+        <rdfs:range rdf:resource="&j.0;Attribute-Concept"/>
+        <rdfs:domain rdf:resource="&j.0;Attribute-Relationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#From -->
+
+    <owl:ObjectProperty rdf:about="&j.0;From">
+        <rdfs:domain rdf:resource="&j.0;Entity-Concept"/>
+        <rdfs:range rdf:resource="&j.0;Relationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;To">
+        <rdfs:range rdf:resource="&j.0;Entity-Concept"/>
+        <rdfs:domain rdf:resource="&j.0;Relationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Attribute-Concept -->
+
+    <owl:Class rdf:about="&j.0;Attribute-Concept">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Attribute-Relationship -->
+
+    <owl:Class rdf:about="&j.0;Attribute-Relationship">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Concept -->
+
+    <owl:Class rdf:about="&j.0;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Entity-Concept -->
+
+    <owl:Class rdf:about="&j.0;Entity-Concept">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Relation -->
+
+    <owl:Class rdf:about="&j.0;Relation"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Relationship -->
+
+    <owl:Class rdf:about="&j.0;Relationship">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Account-Created-On -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Account-Created-On">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-To rdf:resource="&j.0;account"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Account-name -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Account-name">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-To rdf:resource="&j.0;account"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Carrying -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Carrying">
+        <rdf:type rdf:resource="&j.0;Relationship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Character-Current-Hit-Points -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Character-Current-Hit-Points">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Character-Current-Mana -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Character-Current-Mana">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Character-Level -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Character-Level">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Character-Max-Hit-Points -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Character-Max-Hit-Points">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Character-Max-Mana -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Character-Max-Mana">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Character-exp-Points -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Character-exp-Points">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Character-name -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Character-name">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Character-type -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Character-type">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Contains -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Contains">
+        <rdf:type rdf:resource="&j.0;Relationship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Created-On -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Created-On">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;Has"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Creep-Attack -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Creep-Attack">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;creep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Creep-Hit-Points -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Creep-Hit-Points">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;creep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Creep-IDNum -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Creep-IDNum">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;creep-instantiation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Creep-Mana -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Creep-Mana">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;creep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Creep-Name -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Creep-Name">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;creep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Has -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Has">
+        <rdf:type rdf:resource="&j.0;Relationship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Is-Type -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Is-Type">
+        <rdf:type rdf:resource="&j.0;Relationship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Item-Damage -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Item-Damage">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;item"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Item-IDNum -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Item-IDNum">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;item-instantiation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Item-Modifier -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Item-Modifier">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;item-instantiation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Item-Name -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Item-Name">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;item"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Item-Type -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Item-Type">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;item"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Last-Signed-On -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Last-Signed-On">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-To rdf:resource="&j.0;account"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Last-played -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Last-played">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;Has"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Password -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Password">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-To rdf:resource="&j.0;account"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Ran-Into -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Ran-Into">
+        <rdf:type rdf:resource="&j.0;Relationship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Region-Climate -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Region-Climate">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Region-Foliage -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Region-Foliage">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Region-Playersln -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Region-Playersln">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Region-Precipitation -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Region-Precipitation">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Region-name -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Region-name">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Subscriber-Addres -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Subscriber-Addres">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-To rdf:resource="&j.0;account"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Subscriber-EMail -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Subscriber-EMail">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-To rdf:resource="&j.0;account"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Subscriber-name -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Subscriber-name">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-To rdf:resource="&j.0;account"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#Subscribert-Phone -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Subscribert-Phone">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-To rdf:resource="&j.0;account"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#When-Created -->
+
+    <owl:NamedIndividual rdf:about="&j.0;When-Created">
+        <rdf:type rdf:resource="&j.0;Attribute-Concept"/>
+        <Attribution-From rdf:resource="&j.0;Is-Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#account -->
+
+    <owl:NamedIndividual rdf:about="&j.0;account">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#character -->
+
+    <owl:NamedIndividual rdf:about="&j.0;character">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#creep -->
+
+    <owl:NamedIndividual rdf:about="&j.0;creep">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#creep-instantiation -->
+
+    <owl:NamedIndividual rdf:about="&j.0;creep-instantiation">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#item -->
+
+    <owl:NamedIndividual rdf:about="&j.0;item">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#item-instantiation -->
+
+    <owl:NamedIndividual rdf:about="&j.0;item-instantiation">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/entityrelationship#region -->
+
+    <owl:NamedIndividual rdf:about="&j.0;region">
+        <rdf:type rdf:resource="&j.0;Entity-Concept"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

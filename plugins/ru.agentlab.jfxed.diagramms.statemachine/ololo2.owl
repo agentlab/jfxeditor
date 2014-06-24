@@ -1,0 +1,463 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/statemachime#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/statemachime#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/statemachime"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/statemachime#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#Con_Name -->
+
+    <owl:AnnotationProperty rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Con_Name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#Con_Name -->
+
+    <owl:ObjectProperty rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Con_Name">
+        <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#From -->
+
+    <owl:ObjectProperty rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#From">
+        <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#To -->
+
+    <owl:ObjectProperty rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#To">
+        <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#holdIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#holdIn">
+        <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#holds -->
+
+    <owl:ObjectProperty rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#holds">
+        <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#Aggregation -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Aggregation">
+        <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Connection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#Association -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Association">
+        <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Connection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#Concept -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#Connection -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Connection"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#Container -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Container">
+        <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#EndPoint -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#EndPoint">
+        <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#StartPoint -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#StartPoint">
+        <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#State -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#State">
+        <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#Enrollment -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Enrollment">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Container"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#Open_For_Enrollment -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#OpenForEnrollment">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#Proposed -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Proposed">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#Scheduled -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Scheduled">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#being_taught -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#BeingTaught">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#cancelled -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#cancelled">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <Con_Name>cancelled</Con_Name>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Enrollment"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#end_point"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#closed -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#closed">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <Con_Name>closed</Con_Name>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#end_point"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#final_exams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#closed_to_enrollment -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#ClosedToEnrollment">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#end_point -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Endpoint">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#EndPoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#final_exams -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Final_Exams">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#full -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Full">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#holdCloseEnrollment -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#holdCloseEnrollment">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Aggregation"/>
+        <holdIn rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Enrollment"/>
+        <holds rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#closed_to_enrollment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#holdFull -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#holdFull">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Aggregation"/>
+        <holdIn rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Enrollment"/>
+        <holds rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#full"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#holdOpenEnrollment -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#holdOpenEnrollment">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Aggregation"/>
+        <holdIn rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Enrollment"/>
+        <holds rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Open_For_Enrollment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#holdProposed -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#holdProposed">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Aggregation"/>
+        <holdIn rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Enrollment"/>
+        <holds rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Proposed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#holdScheduled -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#holdScheduled">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Aggregation"/>
+        <holdIn rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Enrollment"/>
+        <holds rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Scheduled"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#start_point -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#Startpoint">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#StartPoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#studentDropped -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#studentDropped">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <Con_Name>studentDropped(seminar_size&gt;0)</Con_Name>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#being_taught"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#being_taught"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#studentDroppedFin -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#studentDroppedFin">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <Con_Name>studentDropped(seminar_size=0)</Con_Name>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#being_taught"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#being_taught"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#termStarted -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#termStarted">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <Con_Name>termStarted</Con_Name>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#being_taught"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#closed_to_enrollment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#toBeProposed -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#toBeProposed">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Proposed"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#start_point"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#toBeScheduled -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#toBeScheduled">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Proposed"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Scheduled"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#toCloseEnrollment1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#toCloseEnrollment1">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#closed_to_enrollment"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#full"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#toCloseEnrollment2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#toCloseEnrollment2">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Open_For_Enrollment"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#closed_to_enrollment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#toEnrollment1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#toEnrollment1">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Open_For_Enrollment"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Scheduled"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#toEnrollment2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#toEnrollment2">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Open_For_Enrollment"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#full"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#toEnrollment3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#toEnrollment3">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Open_For_Enrollment"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Open_For_Enrollment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#toEnrollment4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#toEnrollment4">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Open_For_Enrollment"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#full"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#toFull1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#toFull1">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Open_For_Enrollment"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#full"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/statemachime#toFull2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/statemachime#toFull2">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#Association"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#full"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/statemachime#full"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
