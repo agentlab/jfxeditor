@@ -59,14 +59,18 @@ class AuxiliaryLinesCache {
 	}
 
 	def watchNode(XNode node) {
-		val ChangeListener<Number> scalarListener = [ 
-			ObservableValue<Number> scalar, Number oldValue, Number newValue | 
-			updateNode(node)
-		]
-		val ChangeListener<Bounds> boundsListener = [ 
-			ObservableValue<Bounds> scalar, Bounds oldValue, Bounds newValue | 
-			updateNode(node)
-		]
+		val ChangeListener<Number> scalarListener = new ChangeListener<Number> {
+			override changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+				updateNode(node)
+			}
+		}
+		
+		val ChangeListener<Bounds> boundsListener = new ChangeListener<Bounds> {
+			override changed(ObservableValue<? extends Bounds> observable, Bounds oldValue, Bounds newValue) {
+				updateNode(node)
+			}
+		}
+		
 		node.layoutXProperty.addListener(scalarListener)
 		node.layoutYProperty.addListener(scalarListener)
 		node.boundsInLocalProperty.addListener(boundsListener)

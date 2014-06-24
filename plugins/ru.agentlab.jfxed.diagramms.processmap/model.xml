@@ -1,0 +1,53 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.eswc2006.org/technologies/ontology#"
+    xmlns:j.1="http://www.eswc2006.org/technologies/ontology#Process "
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Process">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <j.0:ProcessFrom rdf:nodeID="A1"/>
+    <j.0:ProcessFrom rdf:nodeID="A2"/>
+    <j.0:ProcessTo rdf:nodeID="A2"/>
+    <j.0:ProcessFrom rdf:nodeID="A3"/>
+    <j.0:ProcessTo rdf:nodeID="A3"/>
+    <j.0:ProcessFrom rdf:nodeID="A4"/>
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Process Link"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Send"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#ProcessTo">
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Send"/>
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Process"/>
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Process Link"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Receive">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Process"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Process"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Process Link">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Send">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Receive"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#ProcessFrom">
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Receive"/>
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Process"/>
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Process Link"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+</rdf:RDF>

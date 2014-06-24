@@ -33,6 +33,7 @@ public class BootFigures extends Application {
 		AnchorPane root = new AnchorPane();
 		
 		final ClassFigure source = new ClassFigure();
+		source.setlabel("Interaction1\n");
 		root.getChildren().add(source.getRoot());
 		root.getChildren().add(new VBox());
 		

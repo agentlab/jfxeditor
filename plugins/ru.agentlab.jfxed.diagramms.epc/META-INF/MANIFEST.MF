@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tests
+Bundle-SymbolicName: ru.agentlab.jfxed.diagramms.epc
+Bundle-Version: 1.0.0.qualifier
+Export-Package: ru.agentlab.jfxed.diagramms.epc

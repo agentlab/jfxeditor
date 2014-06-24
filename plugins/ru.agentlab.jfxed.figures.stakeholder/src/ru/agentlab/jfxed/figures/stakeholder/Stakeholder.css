@@ -1,0 +1,21 @@
+.Stakeholder {
+	-fx-fill: #f984e5;
+    -fx-background-radius: 0;
+    -fx-border-color: black;	
+}
+
+.Wurst{
+	-fx-fill: #f984e5;
+    -fx-stroke: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 0;
+    -fx-arc-height: 5;
+    -fx-arc-width: 5;
+    -fx-padding: 5;
+}
+
+ Text{
+    -fx-font: norm 18pt "Arial";
+    -fx-stroke-type: centered;
+    -fx-stroke-width: 0;      
+}

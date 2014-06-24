@@ -1,0 +1,114 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.eswc2006.org/technologies/ontology#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.1="http://www.eswc2006.org/technologies/ontology#Information "
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#ControlFrom">
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Function"/>
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Event"/>
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Control"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <j.0:ControlTo rdf:nodeID="A1"/>
+    <j.0:ControlFrom rdf:nodeID="A2"/>
+    <j.0:ControlTo rdf:nodeID="A2"/>
+    <j.0:ControlFrom rdf:nodeID="A3"/>
+    <j.0:ControlTo rdf:nodeID="A3"/>
+    <j.0:ControlFrom rdf:nodeID="A4"/>
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Control"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <j.0:OrganizationTo rdf:nodeID="A2"/>
+    <j.0:OrganizationFrom rdf:nodeID="A6"/>
+    <j.0:OrganizationTo rdf:nodeID="A4"/>
+    <j.0:OrganizationFrom rdf:nodeID="A7"/>
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Function"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#OrganizationFrom">
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Function"/>
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Information Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#InformationFrom">
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Information Resource"/>
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Function"/>
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Information"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Control">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Information">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Function">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#OrganizationTo">
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Organization Unit"/>
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Organization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Event">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <j.0:InformationTo rdf:nodeID="A10"/>
+    <j.0:InformationFrom rdf:nodeID="A2"/>
+    <j.0:InformationFrom rdf:nodeID="A8"/>
+    <j.0:InformationTo rdf:nodeID="A2"/>
+    <j.0:InformationFrom rdf:nodeID="A11"/>
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Function"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Information Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Information Resource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#InformationTo">
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Information Resource"/>
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Function"/>
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Information"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Information Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:type rdf:resource="http://www.eswc2006.org/technologies/ontology#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#ControlTo">
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Function"/>
+    <rdfs:range rdf:resource="http://www.eswc2006.org/technologies/ontology#Event"/>
+    <rdfs:domain rdf:resource="http://www.eswc2006.org/technologies/ontology#Control"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.eswc2006.org/technologies/ontology#Organization Unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -80,7 +80,7 @@ class XConnection extends XShape {
 		]
 		controlPoints.addListener [ 
 			Change<? extends XControlPoint> it | 
-			val points = list
+			val points = it.getList()
 			updateShapes
 			while(next) 
 				addedSubList.forEach [

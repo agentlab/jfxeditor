@@ -27,7 +27,6 @@ class ClassFigure extends BaseFigure {
 		val s = ClassFigure.getResource("ClassFigure.css").toExternalForm()
 		root.stylesheets += s
 		
-	
 	root.children += new Group => [
  		children += new Polyline => [
  				points +=  30d 
@@ -59,20 +58,6 @@ class ClassFigure extends BaseFigure {
 			]
 		]
 		
-	/*	root.children += new VBox => [
-			styleClass += "ClassFigure-Methods-List"
-			
-			children += new Text => [
-				text = "method 1 lalalala"
-			]
-			
-			children += new Text => [
-				text = "method 2 lalalala"
-			]
-			
-			children += new Text => [
-				text = "method 3 lalalala"
-			]
-		]*/
+	
 	}
 }

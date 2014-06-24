@@ -5,7 +5,7 @@ Bundle-SymbolicName: ru.agentlab.jfxed.figures.class;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: AgentLab
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
@@ -16,8 +16,7 @@ Require-Bundle: org.eclipse.core.runtime,
  de.fxdiagram.lib,
  de.fxdiagram.core,
  de.fxdiagram.annotations,
- ru.agentlab.jfxed,
- ru.agentlab.jfxed.figures
+ ru.agentlab.jfxed
 Bundle-ActivationPolicy: lazy
 Export-Package: ru.agentlab.jfxed.figures.clazz,
  ru.agentlab.jfxed.figures.clazz.tests

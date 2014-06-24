@@ -45,12 +45,23 @@ class ClassFigure extends BaseFigure {
 
         
 			] 
+			
+				children += new Polyline => [
+				points +=  185d 
+				points +=  80d 
+				points +=  200d
+				points +=  60d
+        
+			] 
+			
+			
 						
 		children += new Circle => [
 				 centerX = 200 
 				 centerY = 60
 				 radius = 8
 				 
+				 styleClass += "Krug"
 			]
 			
 
@@ -60,9 +71,10 @@ class ClassFigure extends BaseFigure {
 			
 			children += new Text => [
 				text = name
-				styleClass += "ClassFigure-Text"
-				layoutX = 85
+				layoutX = 75
 				layoutY = 95
+				styleClass += "ClassFigure-Text"
+				
 			]
 		
 		]

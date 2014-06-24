@@ -1,7 +1,7 @@
 package ru.agentlab.jfxed;
 
-import javafx.scene.Node;
+import de.fxdiagram.core.XNode;
 
 public interface IFigure {
-	public Node getRoot();
+	public XNode getRoot();
 }

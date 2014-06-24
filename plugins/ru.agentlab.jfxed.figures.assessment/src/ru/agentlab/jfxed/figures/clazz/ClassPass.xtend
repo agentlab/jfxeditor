@@ -23,13 +23,12 @@ new (){
 		
 			children += new Text => [
 				text = name
-				styleClass += "ClassFigure-Text"					
+				styleClass += "ClassFigure-Text"
+				
+		
 			]
-					
 		]
 		}
 		}
-		
-		
 		
 				
