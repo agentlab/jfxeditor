@@ -7,7 +7,6 @@ import com.hp.hpl.jena.query.QuerySolution
 import com.hp.hpl.jena.rdf.model.Resource
 import de.fxdiagram.core.XDiagram
 import ru.agentlab.jfxed.IDiagram
-import ru.agentlab.jfxed.figures.stakeholder.Stakeholder
 import de.fxdiagram.core.XConnection
 import de.fxdiagram.core.XConnectionKind
 import de.fxdiagram.core.XConnectionLabel
