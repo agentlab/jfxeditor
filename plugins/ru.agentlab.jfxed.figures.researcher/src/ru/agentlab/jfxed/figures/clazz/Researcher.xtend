@@ -83,7 +83,7 @@ class Researcher extends XNode implements IFigure  {
 		]*/
 	}
 	
-	def setName(String name) {
+	override setName(String name) {
 		nameTextBox.text = name
 	}
 
