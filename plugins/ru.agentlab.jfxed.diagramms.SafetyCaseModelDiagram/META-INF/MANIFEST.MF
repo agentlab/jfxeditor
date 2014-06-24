@@ -1,9 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: StrategicDependency
-Bundle-SymbolicName: ru.agentlab.jfxed.diagramms.strategicDependency;singleton:=true
+Bundle-Name: SafetyCaseModelDiagramm
+Bundle-SymbolicName: ru.agentlab.jfxed.diagramms.safetyCaseModelDiagramm;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Export-Package: ru.agentlab.jfxed.diagramms.strategicdependency
 Require-Bundle: org.apache.jena.core,
  org.apache.jena.iri,
  org.apache.jena.sdb,
@@ -23,11 +22,10 @@ Require-Bundle: org.apache.jena.core,
  de.fxdiagram.core,
  de.fxdiagram.annotations,
  ru.agentlab.jfxed,
- ru.agentlab.jfxed.figures.stakeholder,
  ru.agentlab.jfxed.figures.class,
- ru.agentlab.jfxed.figures.testgoal2,
  ru.agentlab.jfxed.figures.plateau2,
  org.apache.jena.core;bundle-version="2.11.0",
  org.apache.jena.iri;bundle-version="0.9.5"
 Import-Package: com.hp.hpl.jena.ontology
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: ru.agentlab.jfxed.diagrammssafetycasemodeldiagramm

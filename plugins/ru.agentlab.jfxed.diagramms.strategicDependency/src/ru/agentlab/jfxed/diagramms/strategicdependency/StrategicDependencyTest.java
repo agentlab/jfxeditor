@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.diagramms.productviewpoint;
+package ru.agentlab.jfxed.diagramms.strategicdependency;
 
 import java.io.FileWriter;
 
@@ -8,9 +8,9 @@ import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 
-public class ProductViewpointTest {
+public class StrategicDependencyTest {
 
-	static String SOURCE = "http://test/";
+	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/strategicdependency";
 	static String NS = 
 			SOURCE + "#";
 	
@@ -23,27 +23,29 @@ public class ProductViewpointTest {
 		OntClass redClass = m.createClass(NS + "Red");//красненький
 		OntClass orangeClass = m.createClass(NS + "Orange");
 		
+		OntClass conceptClass = m.createClass (NS + "Concept");
+		
+		someoneClass.addSuperClass(conceptClass);
+		greenClass.addSuperClass(conceptClass);
+		blueClass.addSuperClass(conceptClass);
+		redClass.addSuperClass(conceptClass);
+		orangeClass.addSuperClass(conceptClass);
+		
+		
 		OntClass associationClass = m.createClass(NS + "Association");
 		
-		OntClass aggregationClass = m.createClass(NS + "Agregation");//связь
-		aggregationClass.addSuperClass(associationClass);//родительская связь
+		OntClass connectionClass = m.createClass(NS + "Connection");//связь
+		connectionClass.addSuperClass(associationClass);//родительская связь
 		
 		ObjectProperty propTo = m.createObjectProperty(NS + "To");//объекты - свойства
 		ObjectProperty propFrom = m.createObjectProperty(NS + "From");
 		
-		propTo.addDomain(aggregationClass);//свойства у aggregation
-		propFrom.addDomain(aggregationClass);
+		propTo.addDomain(connectionClass);//свойства у connection
+		propFrom.addDomain(connectionClass);
 		
-		propTo.addRange(greenClass);
-		propFrom.addRange(greenClass);
-		propTo.addRange(someoneClass);
-		propFrom.addRange(someoneClass);
-		propTo.addRange(redClass);
-		propFrom.addRange(redClass);
-		propTo.addRange(blueClass);
-		propFrom.addRange(blueClass);
-		propTo.addRange(orangeClass);
-		propFrom.addRange(orangeClass);
+		propTo.addRange(conceptClass);
+		propFrom.addRange(conceptClass);
+
 		
 				
 		//наполнение базы 
@@ -78,137 +80,131 @@ public class ProductViewpointTest {
 		
 		//от пост офисс менеджмента
 		
-		Individual toGiveService = m.createIndividual(NS + "toGiveService", aggregationClass);
+		Individual toGiveService = m.createIndividual(NS + "toGiveService", connectionClass);
 		toGiveService.addProperty(propTo, giveGoodService);
 		toGiveService.addProperty(propFrom, poManagement);
 		
-		Individual toServiceDecide = m.createIndividual(NS + "needed_Service", aggregationClass);
+		Individual toServiceDecide = m.createIndividual(NS + "needed_Service", connectionClass);
 		toServiceDecide.addProperty(propTo, neededService);
 		toServiceDecide.addProperty(propFrom, poManagement);
 		
 		//от counter staffa
-		Individual toReachCounter = m.createIndividual(NS + "toReachCounter", aggregationClass);
+		Individual toReachCounter = m.createIndividual(NS + "toReachCounter", connectionClass);
 		toReachCounter.addProperty(propTo, reachCounter);
 		toReachCounter.addProperty(propFrom, counterStaff);
 		
-		Individual toAskQuestions = m.createIndividual(NS + "toAskQuestions", aggregationClass);
+		Individual toAskQuestions = m.createIndividual(NS + "toAskQuestions", connectionClass);
 		toAskQuestions.addProperty(propTo, askQuestions);
 		toAskQuestions.addProperty(propFrom, counterStaff);
 		
-		Individual toStateRequest = m.createIndividual(NS + "toStateRequest", aggregationClass);
+		Individual toStateRequest = m.createIndividual(NS + "toStateRequest", connectionClass);
 		toStateRequest.addProperty(propTo, stateTheRequest);
 		toStateRequest.addProperty(propFrom, counterStaff);
 		
-		Individual toWorkCorrectly = m.createIndividual(NS + "toWorkCorrectly", aggregationClass);
+		Individual toWorkCorrectly = m.createIndividual(NS + "toWorkCorrectly", connectionClass);
 		toWorkCorrectly.addProperty(propTo, workCorrectly);
 		toWorkCorrectly.addProperty(propFrom, counterStaff);
 		
 		//ot Q-Magic
-		Individual toCheckValidity = m.createIndividual(NS + "toCheckValidity", aggregationClass);
+		Individual toCheckValidity = m.createIndividual(NS + "toCheckValidity", connectionClass);
 		toCheckValidity.addProperty(propTo, checkTicket);
 		toCheckValidity.addProperty(propFrom, qMatic);
 		
-		Individual toPushButton = m.createIndividual(NS + "toPushButton", aggregationClass);
+		Individual toPushButton = m.createIndividual(NS + "toPushButton", connectionClass);
 		toPushButton.addProperty(propTo, pushButton);
 		toPushButton.addProperty(propFrom, qMatic);
 		
 		//от customera
-		Individual toRespect = m.createIndividual(NS + "toRespect", aggregationClass);
+		Individual toRespect = m.createIndividual(NS + "toRespect", connectionClass);
 		toRespect.addProperty(propTo, respectSystem);
 		toRespect.addProperty(propFrom, customer);
 		
-		Individual toFuckOff = m.createIndividual(NS + "toFuckOff", aggregationClass);
+		Individual toFuckOff = m.createIndividual(NS + "toFuckOff", connectionClass);
 		toFuckOff.addProperty(propTo, fuckOff);
 		toFuckOff.addProperty(propFrom, customer);
 		
-		Individual toReachTheCounter = m.createIndividual(NS + "toReachTheCounter", aggregationClass);
+		Individual toReachTheCounter = m.createIndividual(NS + "toReachTheCounter", connectionClass);
 		toReachTheCounter.addProperty(propTo, reachTheCounter);
 		toReachTheCounter.addProperty(propFrom, customer);
 		
-		Individual toGetTicket = m.createIndividual(NS + "toGetTicket", aggregationClass);
+		Individual toGetTicket = m.createIndividual(NS + "toGetTicket", connectionClass);
 		toGetTicket.addProperty(propTo, getTicket);
 		toGetTicket.addProperty(propFrom, customer);
 		
-		Individual toOwnTicket = m.createIndividual(NS + "toOwnTicket", aggregationClass);
+		Individual toOwnTicket = m.createIndividual(NS + "toOwnTicket", connectionClass);
 		toOwnTicket.addProperty(propTo, ticket);
 		toOwnTicket.addProperty(propFrom, customer);
 		
-		Individual toWorkCorrectly2 = m.createIndividual(NS + "toWorkCorrectly2", aggregationClass);
+		Individual toWorkCorrectly2 = m.createIndividual(NS + "toWorkCorrectly2", connectionClass);
 		toWorkCorrectly2.addProperty(propTo, workCorrectly);
 		toWorkCorrectly2.addProperty(propFrom, customer);
 		
-		Individual toGetService = m.createIndividual(NS + "toGetService", aggregationClass);
+		Individual toGetService = m.createIndividual(NS + "toGetService", connectionClass);
 		toGetService.addProperty(propTo, getService);
 		toGetService.addProperty(propFrom, customer);
 		
 		//к customerу
-		Individual fromService = m.createIndividual(NS + "fromService", aggregationClass);
+		Individual fromService = m.createIndividual(NS + "fromService", connectionClass);
 		fromService.addProperty(propTo, customer);
 		fromService.addProperty(propFrom, neededService);
 		
-		Individual fromAskQuestions = m.createIndividual(NS + "fromAskQuestions", aggregationClass);
+		Individual fromAskQuestions = m.createIndividual(NS + "fromAskQuestions", connectionClass);
 		fromAskQuestions.addProperty(propTo, customer);
 		fromAskQuestions.addProperty(propFrom, askQuestions);
 		
-		Individual fromReachCounter = m.createIndividual(NS + "fromReachCounter", aggregationClass);
+		Individual fromReachCounter = m.createIndividual(NS + "fromReachCounter", connectionClass);
 		fromReachCounter.addProperty(propTo, customer);
 		fromReachCounter.addProperty(propFrom, reachCounter);
 		
-		Individual fromStateRequest = m.createIndividual(NS + "fromStateRequest", aggregationClass);
+		Individual fromStateRequest = m.createIndividual(NS + "fromStateRequest", connectionClass);
 		fromStateRequest.addProperty(propTo, customer);
 		fromStateRequest.addProperty(propFrom, stateTheRequest);
 		
 		//к another customerу
-		Individual fromRespectSystem = m.createIndividual(NS + "fromRespectSystem", aggregationClass);
+		Individual fromRespectSystem = m.createIndividual(NS + "fromRespectSystem", connectionClass);
 		fromRespectSystem.addProperty(propTo, anotherCustomer);
 		fromRespectSystem.addProperty(propFrom, respectSystem);
 		
-		Individual fromFuckOff = m.createIndividual(NS + "fromStateRequest", aggregationClass);
+		Individual fromFuckOff = m.createIndividual(NS + "fromStateRequest", connectionClass);
 		fromFuckOff.addProperty(propTo, anotherCustomer);
 		fromFuckOff.addProperty(propFrom, fuckOff);
 		
-		//к Q-Maticу
-		
-		Individual fromReachTheCounter = m.createIndividual(NS + "fromReachTheCounter", aggregationClass);
+		//к Q-Maticу		
+		Individual fromReachTheCounter = m.createIndividual(NS + "fromReachTheCounter", connectionClass);
 		fromReachTheCounter.addProperty(propTo, qMatic);
 		fromReachTheCounter.addProperty(propFrom, reachTheCounter);
 		
-		Individual fromGetTicket = m.createIndividual(NS + "fromGetTicket", aggregationClass);
+		Individual fromGetTicket = m.createIndividual(NS + "fromGetTicket", connectionClass);
 		fromGetTicket.addProperty(propTo, qMatic);
 		fromGetTicket.addProperty(propFrom, getTicket);
 		
-		Individual fromTicket = m.createIndividual(NS + "fromTicket", aggregationClass);
+		Individual fromTicket = m.createIndividual(NS + "fromTicket", connectionClass);
 		fromTicket.addProperty(propTo, qMatic);
 		fromTicket.addProperty(propFrom, ticket);
 		
-		Individual fromWorkCorrectly = m.createIndividual(NS + "fromWorkCorrectly", aggregationClass);
+		Individual fromWorkCorrectly = m.createIndividual(NS + "fromWorkCorrectly", connectionClass);
 		fromWorkCorrectly.addProperty(propTo, qMatic);
 		fromWorkCorrectly.addProperty(propFrom, workCorrectly);
 		
 		//к CounterStuffy
-		Individual fromGiveService = m.createIndividual(NS + "fromGiveService", aggregationClass);
+		Individual fromGiveService = m.createIndividual(NS + "fromGiveService", connectionClass);
 		fromGiveService.addProperty(propTo, counterStaff);
 		fromGiveService.addProperty(propFrom, giveGoodService);
 		
-		Individual fromGetService = m.createIndividual(NS + "fromGetService", aggregationClass);
+		Individual fromGetService = m.createIndividual(NS + "fromGetService", connectionClass);
 		fromGetService.addProperty(propTo, counterStaff);
 		fromGetService.addProperty(propFrom, getService);
 		
-		Individual fromPushButton = m.createIndividual(NS + "fromPushButton", aggregationClass);
+		Individual fromPushButton = m.createIndividual(NS + "fromPushButton", connectionClass);
 		fromPushButton.addProperty(propTo, counterStaff);
 		fromPushButton.addProperty(propFrom, pushButton);
 		
-		Individual fromCheckTicket = m.createIndividual(NS + "fromCheckTicket", aggregationClass);
+		Individual fromCheckTicket = m.createIndividual(NS + "fromCheckTicket", connectionClass);
 		fromCheckTicket.addProperty(propTo, counterStaff);
 		fromCheckTicket.addProperty(propFrom, checkTicket);
 		
-		
-		
-		
-		
-	
 		try {
-			m.write(new FileWriter("D:/bom2.owl"));
+			m.write(new FileWriter("D:/bom.owl"));
 		}
 		catch(Exception e)
 		{
