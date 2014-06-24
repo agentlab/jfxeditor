@@ -1,99 +1,59 @@
 package ru.agentlab.jfxed.diagramms.epc
 
+import com.hp.hpl.jena.ontology.OntModel
 import com.hp.hpl.jena.query.QueryExecutionFactory
 import com.hp.hpl.jena.query.QueryFactory
-import com.hp.hpl.jena.query.ResultSetFormatter
-import com.hp.hpl.jena.rdf.model.ModelFactory
-import java.io.FileInputStream
-import com.hp.hpl.jena.ontology.OntModel
+import com.hp.hpl.jena.query.QuerySolution
+import com.hp.hpl.jena.rdf.model.Resource
+//import ru.agentlab.jfxed.figures.gap2.Gap2
+import ru.agentlab.jfxed.figures.specifications.Specifications
+import ru.agentlab.jfxed.IDiagram
+import de.fxdiagram.core.XDiagram
 
-class EpcDiagrammTest {
+
+public class EpcDiagrammTest implements IDiagram {
 	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/epc"
 	static String NS = SOURCE + "#"
 	
-	protected var OntModel m
 	
-	static def void main(String[] args){
-		val me = new EpcDiagrammTest()
+	override createJfx(OntModel jenaModel, XDiagram jfxDiagram) {
+		val queryString ='''
+		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+		select ?uri 
+		where { 
+			?uri rdf:type <«SOURCE»#Function>
+		} 
+		'''
+		/*val queryString ='''
+		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+		select ?uri 
+		where { 
+			?uri rdf:type <«SOURCE»#Control>
+		} 
+		'''*/
+	    val query = QueryFactory.create(queryString)
+		// Execute the query and obtain results
+		val qe = QueryExecutionFactory.create(query, jenaModel)
+		val results =  qe.execSelect()		
 		
-		me.loadModel()
-		
-		me.testQuery1()
-		me.testQuery2()
-		me.testQuery3()
-	}
-	
-	def loadModel() {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		m = ModelFactory.createOntologyModel() => [
-			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ m ï¿½ï¿½ï¿½ m.
-			
-			val inputStream = new FileInputStream("model.xml")
-			read(inputStream, NS, "RDF/XML");
-			write(System.out, "RDF/XML");//ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		for ( ; results.hasNext() ; )
+	    {
+	      val QuerySolution soln = results.nextSolution() 
+	      val Resource x = soln.getResource("uri")       // Get a result variable by name.
+	     
+	     val target = new Specifications() => [
+				layoutX = 280
+				layoutY = 280
+				name = x.localName
 		]
-	}
-	
-	def testQuery1(){
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		//ï¿½ ï¿½ï¿½ï¿½ï¿½ php
-		val queryString ='''
-		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-		PREFIX src: <http://www.eswc2006.org/technologies/ontology#> 
-		select ?uri 
-		where { 
-			?uri rdf:type src:Information
-		} 
-		'''
-	    val query = QueryFactory.create(queryString);
-		// Execute the query and obtain results
-		val qe = QueryExecutionFactory.create(query, m);
-		val results =  qe.execSelect();
 		
-		// Output query results    
-		ResultSetFormatter.out(System.out, results, query);
-		qe.close();
-	}
-	
-	def testQuery2(){
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		//ï¿½ ï¿½ï¿½ï¿½ï¿½ php
-		val queryString ='''
-		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-		PREFIX src: <http://www.eswc2006.org/technologies/ontology#> 
-		select ?uri 
-		where { 
-			?uri rdf:type src:Function 
-		} 
-		'''
-	    val query = QueryFactory.create(queryString);
-		// Execute the query and obtain results
-		val qe = QueryExecutionFactory.create(query, m);
-		val results =  qe.execSelect();
+		jfxDiagram => [
+			nodes += target
+		]
+	  }
 		
-		// Output query results    
-		ResultSetFormatter.out(System.out, results, query);
-		qe.close();
+		qe.close()
 	}
+
 	
-	def testQuery3(){
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		//ï¿½ ï¿½ï¿½ï¿½ï¿½ php
-		val queryString ='''
-		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-		PREFIX src: <http://www.eswc2006.org/technologies/ontology#> 
-		select ?uri 
-		where { 
-			?uri rdf:type src:ControlTo 
-		} 
-		'''
-	    val query = QueryFactory.create(queryString);
-		// Execute the query and obtain results
-		val qe = QueryExecutionFactory.create(query, m);
-		val results =  qe.execSelect();
-		
-		// Output query results    
-		ResultSetFormatter.out(System.out, results, query);
-		qe.close();
-	}
 }
