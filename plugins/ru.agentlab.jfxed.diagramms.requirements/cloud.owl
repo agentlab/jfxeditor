@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ontology "http://www.agentlab.ru/jfxed/onto/cloud#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/cloud#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/cloud"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="http://www.agentlab.ru/jfxed/onto/cloud#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/cloud"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#from -->
+
+    <owl:ObjectProperty rdf:about="&ontology;from">
+        <rdfs:domain rdf:resource="&ontology;ConceptClass"/>
+        <rdfs:range rdf:resource="&ontology;ConceptClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#to -->
+
+    <owl:ObjectProperty rdf:about="&ontology;to">
+        <rdfs:range rdf:resource="&ontology;ConceptClass"/>
+        <rdfs:domain rdf:resource="&ontology;ConceptClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+   <!-- http://www.agentlab.ru/jfxed/onto/cloud#ConceptClass -->
+
+    <owl:Class rdf:about="&ontology;ConceptClass"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#Containment -->
+
+    <owl:Class rdf:about="&ontology;Containment">
+        <rdfs:subClassOf rdf:resource="&ontology;RelationClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#CriticalRequirement -->
+
+    <owl:Class rdf:about="&ontology;CriticalRequirement">
+        <rdfs:subClassOf rdf:resource="&ontology;ConceptClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#NotCriticalRequirement -->
+
+    <owl:Class rdf:about="&ontology;NotCriticalRequirement">
+        <rdfs:subClassOf rdf:resource="&ontology;ConceptClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#RelationClass -->
+
+    <owl:Class rdf:about="&ontology;RelationClass"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#REQ011ManageUserAccounts -->
+
+    <owl:NamedIndividual rdf:about="&ontology;REQ011ManageUserAccounts">
+        <rdf:type rdf:resource="&ontology;CriticalRequirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#REQ016AddUsers -->
+
+    <owl:NamedIndividual rdf:about="&ontology;REQ016AddUsers">
+        <rdf:type rdf:resource="&ontology;CriticalRequirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#REQ017RemoteUser -->
+
+    <owl:NamedIndividual rdf:about="&ontology;REQ017RemoteUser">
+        <rdf:type rdf:resource="&ontology;CriticalRequirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#REQ018ReportOnUserAccount -->
+
+    <owl:NamedIndividual rdf:about="&ontology;REQ018ReportOnUserAccount">
+        <rdf:type rdf:resource="&ontology;NotCriticalRequirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#REQ024SecureAccess -->
+
+    <owl:NamedIndividual rdf:about="&ontology;REQ024SecureAccess">
+        <rdf:type rdf:resource="&ontology;NotCriticalRequirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#REQ025StoreUserDetails -->
+
+    <owl:NamedIndividual rdf:about="&ontology;REQ025StoreUserDetails">
+        <rdf:type rdf:resource="&ontology;CriticalRequirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#REQ026ValidateUser -->
+
+    <owl:NamedIndividual rdf:about="&ontology;REQ026ValidateUser">
+        <rdf:type rdf:resource="&ontology;NotCriticalRequirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#fromAddUsersToManageUserAccount -->
+
+    <owl:NamedIndividual rdf:about="&ontology;fromAddUsersToManageUserAccount">
+        <rdf:type rdf:resource="&ontology;Containment"/>
+        <rdf:to rdf:resource="&ontology;REQ011ManageUserAccounts"/>
+        <rdf:from rdf:resource="&ontology;REQ016AddUsers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#fromRemoteUserToManageUserAccount -->
+
+    <owl:NamedIndividual rdf:about="&ontology;fromRemoteUserToManageUserAccount">
+        <rdf:type rdf:resource="&ontology;Containment"/>
+        <rdf:to rdf:resource="&ontology;REQ011ManageUserAccounts"/>
+        <rdf:from rdf:resource="&ontology;REQ017RemoteUser"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#fromReportOnUserAccountToManageUserAccount -->
+
+    <owl:NamedIndividual rdf:about="&ontology;fromReportOnUserAccountToManageUserAccount">
+        <rdf:type rdf:resource="&ontology;Containment"/>
+        <rdf:to rdf:resource="&ontology;REQ011ManageUserAccounts"/>
+        <rdf:from rdf:resource="&ontology;REQ018ReportOnUserAccount"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#fromSecureAccessToManageUserAccount -->
+
+    <owl:NamedIndividual rdf:about="&ontology;fromSecureAccessToManageUserAccount">
+        <rdf:type rdf:resource="&ontology;Containment"/>
+        <rdf:to rdf:resource="&ontology;REQ011ManageUserAccounts"/>
+        <rdf:from rdf:resource="&ontology;REQ024SecureAccess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#fromStoreUserDetailsToAddUsers -->
+
+    <owl:NamedIndividual rdf:about="&ontology;fromStoreUserDetailsToAddUsers">
+        <rdf:type rdf:resource="&ontology;Containment"/>
+        <rdf:to rdf:resource="&ontology;REQ016AddUsers"/>
+        <rdf:from rdf:resource="&ontology;REQ025StoreUserDetails"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#fromStoreUserDetailsToRemoteUser -->
+
+    <owl:NamedIndividual rdf:about="&ontology;fromStoreUserDetailsToRemoteUser">
+        <rdf:type rdf:resource="&ontology;Containment"/>
+        <rdf:to rdf:resource="&ontology;REQ017RemoteUser"/>
+        <rdf:from rdf:resource="&ontology;REQ025StoreUserDetails"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#fromStoreUserDetailsToReportOnUserAccount -->
+
+    <owl:NamedIndividual rdf:about="&ontology;fromStoreUserDetailsToReportOnUserAccount">
+        <rdf:type rdf:resource="&ontology;Containment"/>
+        <rdf:to rdf:resource="&ontology;REQ018ReportOnUserAccount"/>
+        <rdf:from rdf:resource="&ontology;REQ025StoreUserDetails"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/cloud#fromValidateUserToSecureAccess -->
+
+    <owl:NamedIndividual rdf:about="&ontology;fromValidateUserToSecureAccess">
+        <rdf:type rdf:resource="&ontology;Containment"/>
+        <rdf:to rdf:resource="&ontology;REQ024SecureAccess"/>
+        <rdf:from rdf:resource="&ontology;REQ026ValidateUser"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
