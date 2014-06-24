@@ -34,6 +34,9 @@ public class SafetyCaseModelDiagramm implements IDiagram {
 	override createJfx(OntModel jenaModel, XDiagram jfxDiagram) {
 		
 		makeQuery(jenaModel, jfxDiagram, "Goal")
+		makeQuery(jenaModel, jfxDiagram, "Strategy")
+		makeQuery(jenaModel, jfxDiagram, "J")
+		makeQuery(jenaModel, jfxDiagram, "Solution")
 
 
 		}
