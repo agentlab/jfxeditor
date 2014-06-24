@@ -8,10 +8,9 @@ import javafx.scene.shape.MoveTo
 import de.fxdiagram.core.XNode
 import javafx.scene.shape.LineTo
 import javafx.scene.Group
-import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 
-class ClassFigure extends XNode implements IFigure {
+class CloudFigure extends XNode implements IFigure {
 	
 	private Path path	
 	val nameTextBox = new Text
