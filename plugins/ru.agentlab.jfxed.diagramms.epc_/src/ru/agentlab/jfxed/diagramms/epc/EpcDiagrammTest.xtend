@@ -5,7 +5,6 @@ import com.hp.hpl.jena.query.QueryExecutionFactory
 import com.hp.hpl.jena.query.QueryFactory
 import com.hp.hpl.jena.query.QuerySolution
 import com.hp.hpl.jena.rdf.model.Resource
-//import ru.agentlab.jfxed.figures.gap2.Gap2
 import ru.agentlab.jfxed.figures.specifications.Specifications
 import ru.agentlab.jfxed.IDiagram
 import de.fxdiagram.core.XDiagram
