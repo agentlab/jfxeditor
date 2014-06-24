@@ -3,6 +3,6 @@
 <plugin>
    <extension
    		point="ru.agentlab.jfxed.diagram">
-         <diagram name="Диаграмма Блоки и стрелки1" class="ru.agentlab.jfxed.diagramms.cloud.ClazzDiagram" ontoUri="http://www.agentlab.ru/jfxed/onto/cloud"/>
+         <diagram name="RequirementsDiagram" class="ru.agentlab.jfxed.diagramms.cloud.CloudDiagram" ontoUri="http://www.agentlab.ru/jfxed/onto/cloud"/>
    </extension>
 </plugin>
