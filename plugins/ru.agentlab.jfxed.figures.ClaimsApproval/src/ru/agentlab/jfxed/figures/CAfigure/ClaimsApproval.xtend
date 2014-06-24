@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.figures.app
+package ru.agentlab.jfxed.figures.CAfigure
 
 import javafx.scene.text.Text
 import ru.agentlab.jfxed.IFigure
@@ -13,7 +13,7 @@ import javafx.scene.layout.VBox
 import javafx.scene.shape.HLineTo
 import javafx.scene.shape.CubicCurveTo
 
-class ClassFigure extends XNode implements IFigure {
+class ClaimsApproval extends XNode implements IFigure {
 
 	private Path path	
 	val nameTextBox = new Text
@@ -25,11 +25,11 @@ class ClassFigure extends XNode implements IFigure {
 	}
 
 	new() {
-		super("                 Fast[Claims \n       Approval]")
-		name = "                Fast[Claims \n       Approval]"
+		super("Fast[Claims \n Approval]")
+		name = "Fast[Claims \n Approval]"
 
 		path = new Path => [
-			styleClass += "ClassFigure"
+			styleClass += "ClaimsApproval"
 			
         	elements += new MoveTo(-35, -3)
 			elements += new HLineTo(-15)
