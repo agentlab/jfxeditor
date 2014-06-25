@@ -1,0 +1,14 @@
+.ClassFigure-Rect{
+	-fx-background-color: CYAN;
+	-fx-border-color: black;
+    -fx-stroke-type: inside;
+    -fx-arc-height: 5;
+    -fx-arc-width: 5;
+    -fx-padding: 15 80;
+}
+
+.ClassFigure-Text{
+    -fx-font: bold 14pt "Arial";
+    -fx-stroke-type: inside;
+    -fx-stroke-width: 0;
+}
