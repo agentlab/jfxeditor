@@ -3,6 +3,5 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Tests
 Bundle-SymbolicName: ru.agentlab.jfxed.diagramms.ImplementationandDeploymentViewpoint
 Bundle-Version: 1.0.0.1
-Require-Bundle: org.loadui.testfx;bundle-version="1.0.0",
- ru.agentlab.jfxed.figures.interaction;bundle-version="1.0.0"
+Require-Bundle: ru.agentlab.jfxed.figures.interaction;bundle-version="1.0.0"
 Export-Package: ru.agentlab.jfxed.diagramms.productviewpoint
