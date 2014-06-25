@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://www.agentlab.ru/jfxed/onto/strategicrationale#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreationService">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationserviceClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#InsuranceRequestData">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#dataobjectClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#HomeAndAwayPolicyAdministration">
+    <j.0:realizationealization rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreationService"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#realization"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationcomponentClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#realizationealization">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationserviceClass"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationcomponentClass"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#triggering">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationfunctionClass"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationfunctionClass"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#composition">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationfunctionClass"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationfunctionClass"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#InsurancePolicyData">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#dataobjectClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#CalculateRisk">
+    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#InsuranceRequestData"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#access"/>
+    <j.0:triggering rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#CalculatePremium"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#triggering"/>
+    <j.0:composition rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreation"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#composition"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationfunctionClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationcomponentClass">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreation">
+    <j.0:composition rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#HomeAndAwayPolicyAdministration"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#composition"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationfunctionClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#CustomerFileData">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#dataobjectClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#StorePolicy">
+    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#CustomerFileData"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#access"/>
+    <j.0:composition rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreation"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#composition"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationfunctionClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#access">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#dataobjectClass"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationfunctionClass"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationserviceClass">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationfunctionClass">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#dataobjectClass">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#CreatePolicy">
+    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#InsurancePolicyData"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#access"/>
+    <j.0:triggering rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#StorePolicy"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#triggering"/>
+    <j.0:composition rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreation"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#composition"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationfunctionClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#realization">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#CalculatePremium">
+    <j.0:triggering rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#CreatePolicy"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#triggering"/>
+    <j.0:composition rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#PolicyCreation"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#composition"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationfunctionClass"/>
+  </rdf:Description>
+</rdf:RDF>
