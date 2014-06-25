@@ -14,7 +14,7 @@ import com.hp.hpl.jena.rdf.model.SimpleSelector;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 public class UMLClassDiagram {
-	static final String SCHEMA = "http://www.visual-paradigm.com/VPGallery/diagrams/Class.html";
+	static final String SCHEMA = "http://www.agentlab.ru/jfxed/onto/UMLClassDiagram";
 	static final String NS = SCHEMA + "#";
 	
 	public static void main (String[] args) {
