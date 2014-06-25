@@ -1,0 +1,707 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/strategicrationale#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/strategicrationale#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/strategicrationale"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/strategicrationale#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#MeansEnd -->
+
+    <owl:ObjectProperty rdf:about="&j.0;MeansEnd">
+        <rdfs:domain rdf:resource="&j.0;Goal"/>
+        <rdfs:range rdf:resource="&j.0;Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#MeansEnd1 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;MeansEnd1">
+        <rdfs:range rdf:resource="&j.0;Task"/>
+        <rdfs:domain rdf:resource="&j.0;resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#MeansEnd1To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;MeansEnd1To">
+        <rdfs:range rdf:resource="&j.0;Task"/>
+        <rdfs:domain rdf:resource="&j.0;resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#MeansEnd2 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;MeansEnd2">
+        <rdfs:range rdf:resource="&j.0;Task"/>
+        <rdfs:domain rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#MeansEnd21To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;MeansEnd21To">
+        <rdfs:range rdf:resource="&j.0;Task"/>
+        <rdfs:domain rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#MeansEndTo -->
+
+    <owl:ObjectProperty rdf:about="&j.0;MeansEndTo">
+        <rdfs:domain rdf:resource="&j.0;Goal"/>
+        <rdfs:range rdf:resource="&j.0;Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesM -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesM">
+        <rdfs:domain rdf:resource="&j.0;softGoal"/>
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesM11To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesM11To">
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+        <rdfs:domain rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesM2To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesM2To">
+        <rdfs:domain rdf:resource="&j.0;softGoal"/>
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesMTo -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesMTo">
+        <rdfs:domain rdf:resource="&j.0;softGoal"/>
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesP -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesP">
+        <rdfs:range rdf:resource="&j.0;Task"/>
+        <rdfs:domain rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesP1 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesP1">
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+        <rdfs:domain rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesP1To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesP1To">
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+        <rdfs:domain rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesP2 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesP2">
+        <rdfs:domain rdf:resource="&j.0;resource"/>
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesP21To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesP21To">
+        <rdfs:domain rdf:resource="&j.0;softGoal"/>
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesP22To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesP22To">
+        <rdfs:domain rdf:resource="&j.0;resource"/>
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesP2To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesP2To">
+        <rdfs:domain rdf:resource="&j.0;Task"/>
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesP3 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesP3">
+        <rdfs:domain rdf:resource="&j.0;Task"/>
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesP3To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesP3To">
+        <rdfs:domain rdf:resource="&j.0;Task"/>
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesP4 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesP4">
+        <rdfs:domain rdf:resource="&j.0;Goal"/>
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesP43To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesP43To">
+        <rdfs:domain rdf:resource="&j.0;Goal"/>
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesP4To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesP4To">
+        <rdfs:domain rdf:resource="&j.0;Goal"/>
+        <rdfs:range rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propContributesPTo -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propContributesPTo">
+        <rdfs:range rdf:resource="&j.0;Task"/>
+        <rdfs:domain rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propElement -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propElement">
+        <rdfs:range rdf:resource="&j.0;Goal"/>
+        <rdfs:domain rdf:resource="&j.0;Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propElementTo -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propElementTo">
+        <rdfs:range rdf:resource="&j.0;Goal"/>
+        <rdfs:domain rdf:resource="&j.0;Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propGlobal -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propGlobal">
+        <rdfs:domain rdf:resource="&j.0;Task"/>
+        <rdfs:range rdf:resource="&j.0;Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propGlobal1 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propGlobal1">
+        <rdfs:range rdf:resource="&j.0;Goal"/>
+        <rdfs:domain rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propGlobal1To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propGlobal1To">
+        <rdfs:range rdf:resource="&j.0;Goal"/>
+        <rdfs:domain rdf:resource="&j.0;softGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#propGlobalTo -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propGlobalTo">
+        <rdfs:range rdf:resource="&j.0;Task"/>
+        <rdfs:domain rdf:resource="&j.0;Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept -->
+
+    <owl:Class rdf:about="&j.0;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#Goal -->
+
+    <owl:Class rdf:about="&j.0;Goal">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation -->
+
+    <owl:Class rdf:about="&j.0;Relation"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#Task -->
+
+    <owl:Class rdf:about="&j.0;Task">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#contributesM -->
+
+    <owl:Class rdf:about="&j.0;contributesM">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#contributesP -->
+
+    <owl:Class rdf:about="&j.0;contributesP">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#element -->
+
+    <owl:Class rdf:about="&j.0;element">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#global -->
+
+    <owl:Class rdf:about="&j.0;global">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#meansEnd -->
+
+    <owl:Class rdf:about="&j.0;meansEnd">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#resource -->
+
+    <owl:Class rdf:about="&j.0;resource">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#softGoal -->
+
+    <owl:Class rdf:about="&j.0;softGoal">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#beSafe -->
+
+    <owl:NamedIndividual rdf:about="&j.0;beSafe">
+        <rdf:type rdf:resource="&j.0;softGoal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#checkEachPass -->
+
+    <owl:NamedIndividual rdf:about="&j.0;checkEachPass">
+        <rdf:type rdf:resource="&j.0;Task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#checkRaliab -->
+
+    <owl:NamedIndividual rdf:about="&j.0;checkRaliab">
+        <rdf:type rdf:resource="&j.0;contributesP"/>
+        <propContributesP21To rdf:resource="&j.0;checkReliab"/>
+        <propContributesP2 rdf:resource="&j.0;staffTrain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#checkReliab -->
+
+    <owl:NamedIndividual rdf:about="&j.0;checkReliab">
+        <rdf:type rdf:resource="&j.0;contributesP"/>
+        <rdf:type rdf:resource="&j.0;softGoal"/>
+        <propContributesP1 rdf:resource="&j.0;checkReliab"/>
+        <propContributesP1To rdf:resource="&j.0;checkSecurely"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#checkRobust -->
+
+    <owl:NamedIndividual rdf:about="&j.0;checkRobust">
+        <rdf:type rdf:resource="&j.0;contributesP"/>
+        <propContributesP43To rdf:resource="&j.0;checkReliab"/>
+        <propContributesP4 rdf:resource="&j.0;repair20"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#checkSec -->
+
+    <owl:NamedIndividual rdf:about="&j.0;checkSec">
+        <rdf:type rdf:resource="&j.0;element"/>
+        <propElementTo rdf:resource="&j.0;checkSecurely"/>
+        <propElement rdf:resource="&j.0;searchPerson"/>
+        <propElement rdf:resource="&j.0;useDetector"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#checkSecurely -->
+
+    <owl:NamedIndividual rdf:about="&j.0;checkSecurely">
+        <rdf:type rdf:resource="&j.0;softGoal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#checkeach -->
+
+    <owl:NamedIndividual rdf:about="&j.0;checkeach">
+        <rdf:type rdf:resource="&j.0;meansEnd"/>
+        <MeansEnd21To rdf:resource="&j.0;checkEachPass"/>
+        <MeansEnd2 rdf:resource="&j.0;checkSecurely"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#checkreliab -->
+
+    <owl:NamedIndividual rdf:about="&j.0;checkreliab">
+        <rdf:type rdf:resource="&j.0;contributesP"/>
+        <propContributesP2To rdf:resource="&j.0;checkReliab"/>
+        <propContributesP3To rdf:resource="&j.0;checkReliab"/>
+        <propContributesP3 rdf:resource="&j.0;maintainWeek"/>
+        <propContributesP2 rdf:resource="&j.0;qualityEquip"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#checksec -->
+
+    <owl:NamedIndividual rdf:about="&j.0;checksec">
+        <rdf:type rdf:resource="&j.0;contributesM"/>
+        <propContributesMTo rdf:resource="&j.0;checkSecurely"/>
+        <propContributesM rdf:resource="&j.0;passThrough"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#easily -->
+
+    <owl:NamedIndividual rdf:about="&j.0;easily">
+        <rdf:type rdf:resource="&j.0;contributesM"/>
+        <propContributesM11To rdf:resource="&j.0;passThroughEasily"/>
+        <propContributesM rdf:resource="&j.0;passThroughSecurely"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#enoughStaff -->
+
+    <owl:NamedIndividual rdf:about="&j.0;enoughStaff">
+        <rdf:type rdf:resource="&j.0;resource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#linkGlobal -->
+
+    <owl:NamedIndividual rdf:about="&j.0;linkGlobal">
+        <rdf:type rdf:resource="&j.0;global"/>
+        <propGlobalTo rdf:resource="&j.0;checkEachPass"/>
+        <propGlobal rdf:resource="&j.0;passSec"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#linkGlobal1 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;linkGlobal1">
+        <rdf:type rdf:resource="&j.0;global"/>
+        <propGlobal1 rdf:resource="&j.0;beSafe"/>
+        <propGlobal1To rdf:resource="&j.0;safetyStandard"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#maintainWeek -->
+
+    <owl:NamedIndividual rdf:about="&j.0;maintainWeek">
+        <rdf:type rdf:resource="&j.0;Task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#metalDetected -->
+
+    <owl:NamedIndividual rdf:about="&j.0;metalDetected">
+        <rdf:type rdf:resource="&j.0;Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#passCheck -->
+
+    <owl:NamedIndividual rdf:about="&j.0;passCheck">
+        <rdf:type rdf:resource="&j.0;Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#passSec -->
+
+    <owl:NamedIndividual rdf:about="&j.0;passSec">
+        <rdf:type rdf:resource="&j.0;Task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#passThrough -->
+
+    <owl:NamedIndividual rdf:about="&j.0;passThrough">
+        <rdf:type rdf:resource="&j.0;softGoal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#passThroughEasily -->
+
+    <owl:NamedIndividual rdf:about="&j.0;passThroughEasily">
+        <rdf:type rdf:resource="&j.0;contributesP"/>
+        <rdf:type rdf:resource="&j.0;softGoal"/>
+        <propContributesPTo rdf:resource="&j.0;passSec"/>
+        <propContributesP rdf:resource="&j.0;passThroughEasily"/>
+        <propContributesP rdf:resource="&j.0;passThroughSecurely"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#passThroughSecurely -->
+
+    <owl:NamedIndividual rdf:about="&j.0;passThroughSecurely">
+        <rdf:type rdf:resource="&j.0;softGoal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#passcheck -->
+
+    <owl:NamedIndividual rdf:about="&j.0;passcheck">
+        <rdf:type rdf:resource="&j.0;contributesP"/>
+        <propContributesP4To rdf:resource="&j.0;checkSecurely"/>
+        <propContributesP4 rdf:resource="&j.0;passCheck"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#passthrough -->
+
+    <owl:NamedIndividual rdf:about="&j.0;passthrough">
+        <rdf:type rdf:resource="&j.0;contributesP"/>
+        <propContributesP2 rdf:resource="&j.0;enoughStaff"/>
+        <propContributesP22To rdf:resource="&j.0;passThrough"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#powerSupply -->
+
+    <owl:NamedIndividual rdf:about="&j.0;powerSupply">
+        <rdf:type rdf:resource="&j.0;resource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#qualityEquip -->
+
+    <owl:NamedIndividual rdf:about="&j.0;qualityEquip">
+        <rdf:type rdf:resource="&j.0;resource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#repair20 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;repair20">
+        <rdf:type rdf:resource="&j.0;Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#safetyStandard -->
+
+    <owl:NamedIndividual rdf:about="&j.0;safetyStandard">
+        <rdf:type rdf:resource="&j.0;Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#searchPerson -->
+
+    <owl:NamedIndividual rdf:about="&j.0;searchPerson">
+        <rdf:type rdf:resource="&j.0;Task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#securely -->
+
+    <owl:NamedIndividual rdf:about="&j.0;securely">
+        <rdf:type rdf:resource="&j.0;contributesM"/>
+        <propContributesM rdf:resource="&j.0;passThroughEasily"/>
+        <propContributesM2To rdf:resource="&j.0;passThroughSecurely"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#staffTrain -->
+
+    <owl:NamedIndividual rdf:about="&j.0;staffTrain">
+        <rdf:type rdf:resource="&j.0;softGoal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#useDetector -->
+
+    <owl:NamedIndividual rdf:about="&j.0;useDetector">
+        <rdf:type rdf:resource="&j.0;Task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#usedetect -->
+
+    <owl:NamedIndividual rdf:about="&j.0;usedetect">
+        <rdf:type rdf:resource="&j.0;meansEnd"/>
+        <MeansEnd rdf:resource="&j.0;metalDetected"/>
+        <MeansEnd rdf:resource="&j.0;safetyStandard"/>
+        <MeansEndTo rdf:resource="&j.0;useDetector"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#usedetector -->
+
+    <owl:NamedIndividual rdf:about="&j.0;usedetector">
+        <rdf:type rdf:resource="&j.0;meansEnd"/>
+        <MeansEnd1 rdf:resource="&j.0;powerSupply"/>
+        <MeansEnd1To rdf:resource="&j.0;useDetector"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

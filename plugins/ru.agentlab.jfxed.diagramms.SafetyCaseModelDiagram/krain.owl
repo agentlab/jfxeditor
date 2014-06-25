@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/safetycasemodel#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/safetycasemodel#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/safetycasemodel"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/safetycasemodel#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#From -->
+
+    <owl:ObjectProperty rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#From">
+        <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation"/>
+        <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#To -->
+
+    <owl:ObjectProperty rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#To">
+        <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation"/>
+        <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation">
+        <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Connection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#Association -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Association">
+        <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Connection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#Concept -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#Connection -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Connection"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#Goal -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Goal">
+        <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#J -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#J">
+        <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#Solution -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Solution">
+        <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#Strategy -->
+
+    <owl:Class rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Strategy">
+        <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#DataAnalysis -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#DataAnalysis">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Strategy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#DataCollectionAndAnalysis -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#DataCollectionAndAnalysis">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#DistributeArchitecture -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#DistributeArchitecture">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#FalseAlarms -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#FalseAlarms">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#ImproveTrackside -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#ImproveTrackside">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#LatestData -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#LatestData">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#J"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#NoExtraHazard -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#NoExtraHazard">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#PredictFailurer -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#PredictFailurer">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#RailwiseSafe -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#RailwiseSafe">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#SafetyMeasures -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#SafetyMeasures">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Strategy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#TheSolution -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#TheSolution">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Solution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#TheSolution1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#TheSolution1">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Solution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#TracksideWork -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#TracksideWork">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Solution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#toDataAnalysis -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#toDataAnalysis">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#DataAnalysis"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#PredictFailurer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#toDataCollectionAndAnalysis -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#toDataCollectionAndAnalysis">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#DataAnalysis"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#DataCollectionAndAnalysis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#toDistributeArchitecture -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#toDistributeArchitecture">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#DataAnalysis"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#DistributeArchitecture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#toFalseAlarms -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#toFalseAlarms">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#FalseAlarms"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#SafetyMeasures"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#toImproveTrackside -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#toImproveTrackside">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#ImproveTrackside"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#SafetyMeasures"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#toLatestData -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#toLatestData">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Association"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#LatestData"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#PredictFailurer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#toNoExtraHazard -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#toNoExtraHazard">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#NoExtraHazard"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#SafetyMeasures"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#toPredictFailurer -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#toPredictFailurer">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#PredictFailurer"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#SafetyMeasures"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#toSafetyMeasures -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#toSafetyMeasures">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#RailwiseSafe"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#SafetyMeasures"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#toTheSolution -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#toTheSolution">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#NoExtraHazard"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#TheSolution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#toTheSolution1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#toTheSolution1">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#FalseAlarms"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#TheSolution1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/safetycasemodel#toTracksideWork -->
+
+    <owl:NamedIndividual rdf:about="http://www.agentlab.ru/jfxed/onto/safetycasemodel#toTracksideWork">
+        <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#Agregation"/>
+        <From rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#ImproveTrackside"/>
+        <To rdf:resource="http://www.agentlab.ru/jfxed/onto/safetycasemodel#TracksideWork"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

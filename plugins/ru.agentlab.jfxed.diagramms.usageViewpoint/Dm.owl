@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://www.agentlab.ru/jfxed/onto/strategicrationale#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#lan1">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayLink"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#unixServerFarm3">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayLink"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#firewall1">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayArrow"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#unixServerFarm1">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayLink"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#AdminServer">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenComputer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#bigGreenRect">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#NetworkService">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenOval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#firewall">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#redRect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#OneWayArrow2">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenOval"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#redRect"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenComputer">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#UNIXServerfarm">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#bigGreenRect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayArrow">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayLink">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#redRect">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#DatabaseServer">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenOval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#unixServerFarm4">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayLink"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#OneWayLink">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#redRect"/>
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenComputer"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenRect"/>
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenRect"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#bigGreenRect"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenOval">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#unixServerFarm2">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayLink"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#OneWayArrow">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenOval"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#bigGreenRect"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#unixServerFarm">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayLink"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#mainframe">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayArrow"/>
+    <j.0:OneWayArrow2 rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#NetworkService"/>
+    <j.0:OneWayArrow2 rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#internet"/>
+    <j.0:OneWayArrow rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#DatabaseServer"/>
+    <j.0:OneWayArrow2 rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#firewall"/>
+    <j.0:OneWayArrow rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#NASFileServer"/>
+    <j.0:OneWayArrow1 rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#NASFileServer"/>
+    <j.0:OneWayArrow1 rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#FileService"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#bigGreenRect"/>
+    <j.0:OneWayArrow1 rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#AdminServer"/>
+    <j.0:OneWayArrow rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#LAN"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#mainframe1">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayLink"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#OneWayArrow1">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenOval"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenComputer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#internet">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenRect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#NASFileServer">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#oneWayArrow"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenComputer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenRect">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#LAN">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenRect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#FileService">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#greenOval"/>
+  </rdf:Description>
+</rdf:RDF>
