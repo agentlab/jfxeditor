@@ -39,7 +39,6 @@ public class ProductViewpointTest {
 		/*
 		 * Объявление связей
 		 * */
-		
 		OntClass associationClass = m.createClass(NS + "Association");
 		OntClass assignmentClass = m.createClass(NS + "Assignment");//линия с точками
 		OntClass specializationClass = m.createClass(NS + "Specialization");//связь треугольник, линия целая
@@ -55,8 +54,7 @@ public class ProductViewpointTest {
 		
 		/*
 		 * end
-		 * */		
-		
+		 * */				
 		//свойства
 		propTo.addDomain(aggregationClass);
 		propFrom.addDomain(aggregationClass);
@@ -161,7 +159,7 @@ public class ProductViewpointTest {
 		
 		//m.write(System.out);//и в консоль
 		try {
-			m.write(new FileWriter("C:\\Users\\Smosia\\Desktop\\Smosia.owl"), "RDF/XML");
+			m.write(new FileWriter("Smosia.owl"), "RDF/XML");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
