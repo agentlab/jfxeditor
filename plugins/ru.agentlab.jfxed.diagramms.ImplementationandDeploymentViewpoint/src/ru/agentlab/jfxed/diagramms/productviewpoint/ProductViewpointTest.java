@@ -1,4 +1,7 @@
 package ru.agentlab.jfxed.diagramms.productviewpoint;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.ontology.ObjectProperty;
 import com.hp.hpl.jena.ontology.OntClass;
@@ -19,16 +22,16 @@ public class ProductViewpointTest {
 		/*
 		 * Вершины графа
 		 * */
-		OntClass applicationCollaborationClass = m.createClass(NS + "Application collaboration");
-		OntClass applicationComponentClass = m.createClass(NS + "Application component");		
-		OntClass dataObjectClass = m.createClass(NS + "Data object");
+		OntClass applicationCollaborationClass = m.createClass(NS + "Application_collaboration");
+		OntClass applicationComponentClass = m.createClass(NS + "Application_component");		
+		OntClass dataObjectClass = m.createClass(NS + "Data_object");
 		OntClass artifactClass = m.createClass(NS + "Artifact");
-		OntClass infrastructureServiceClass = m.createClass(NS + "Infrastructure service");
+		OntClass infrastructureServiceClass = m.createClass(NS + "Infrastructure_service");
 		OntClass nodeClass = m.createClass(NS + "Node");
-		OntClass communicationPathClass = m.createClass(NS + "Communication path");
+		OntClass communicationPathClass = m.createClass(NS + "Communication_path");
 		OntClass networkClass = m.createClass(NS + "Network");
 		OntClass deviceClass = m.createClass(NS + "Device");
-		OntClass systemSoftwareClass = m.createClass(NS + "System software");
+		OntClass systemSoftwareClass = m.createClass(NS + "System_software");
 		/*
 		 * end
 		 * */
@@ -48,10 +51,10 @@ public class ProductViewpointTest {
 		specializationClass.addSuperClass(associationClass);//родительская связь
 		realizationClass.addSuperClass(associationClass);//родительская связь
 		accessClass.addSuperClass(associationClass);
+		
 		/*
 		 * end
-		 * */		
-		
+		 * */				
 		//свойства
 		propTo.addDomain(aggregationClass);
 		propFrom.addDomain(aggregationClass);
@@ -75,7 +78,7 @@ public class ProductViewpointTest {
 		propTo.addRange(nodeClass);
 		propTo.addRange(communicationPathClass);
 		propTo.addRange(systemSoftwareClass);
-		
+	
 		
 		//создание экземпляров
 		Individual applicationCollaborationIndividual = m.createIndividual(NS + "appCollab", applicationCollaborationClass);
@@ -154,6 +157,11 @@ public class ProductViewpointTest {
 		sysSoftToNode.addProperty(propTo, nodeIndividual);
 		sysSoftToNode.addProperty(propFrom, systemSoftwareIndividual);		
 		
-		m.write(System.out);//и в консоль
+		//m.write(System.out);//и в консоль
+		try {
+			m.write(new FileWriter("Smosia.owl"), "RDF/XML");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		}
 	}
