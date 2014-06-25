@@ -1,9 +1,9 @@
-package ru.agentlab.jfxed.figures.clazz
+package ru.agentlab.jfxed.figures.decision
 
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.scene.text.Text
-import ru.agentlab.jfxed.figures.BaseFigure
+
 
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -14,20 +14,31 @@ import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Polyline
+import de.fxdiagram.core.XNode
+import ru.agentlab.jfxed.IFigure
 
-class ClassFigure extends BaseFigure {
+class ClassFigure extends XNode implements IFigure {
 	
 	String name = "Ѕыть или не быть?";
 	
-	new (){
-		root = new VBox
+		val tekst = new Text
+		val vbox = new VBox
 		
-		initHandlers()
+		new(String name) {
+		super(name)
+		this.name = name
+	}
+
+	new() {
+		super("Class")
+
+		name = "Class"
+		node = vbox
 		
 		val s = ClassFigure.getResource("ClassFigure.css").toExternalForm()
 		root.stylesheets += s
 		
-	root.children += new Group => [
+	node = new Group => [
  		children += new Polyline => [
  				points +=  30d 
  				points +=  60d 
@@ -50,7 +61,7 @@ class ClassFigure extends BaseFigure {
 		
 		
 		
-			children += new Text => [
+			children += tekst => [
 				text = name
 				styleClass += "Text"
 				layoutX = 70
@@ -59,5 +70,15 @@ class ClassFigure extends BaseFigure {
 		]
 		
 	
+	}
+	override setName(String name) {
+		tekst.text = name
+	}
+	
+	def getName() {
+		tekst.text
+	}
+	override getRoot() {
+		return this
 	}
 }

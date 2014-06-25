@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.figures.clazz
+package ru.agentlab.jfxed.figures.decision
 
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
