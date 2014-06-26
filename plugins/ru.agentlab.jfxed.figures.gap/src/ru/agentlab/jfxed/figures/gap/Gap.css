@@ -1,0 +1,92 @@
+.Gap{
+	-fx-background-color: rgb(224, 255, 224);
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-radius: 0;
+	-fx-alignment: top-center ;
+	-fx-padding: 2 30 2 2;
+	
+	-fx-shape: "M0, 100
+           l 0 -100
+           l 100 0
+           l 0 100
+           M 0 100
+           ";
+}
+
+.Gap-Circle{
+	-fx-fill: rgb(224, 255, 224);
+	-fx-stroke: black;
+	-fx-stroke-width: 2;
+}
+
+.Gap-Line {
+	-fx-border-color: black;
+	-fx-border-width: 2;
+	-fx-stroke-width: 2;
+}
+
+.Gap-Arc {
+	-fx-background-color: rgb(224, 255, 224);
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-radius: 0;
+	-fx-alignment: CENTER;
+	-fx-padding: 2 30 2 2;
+	
+	-fx-shape: "M 0 0
+           a70,200 0 0,0 50,0
+           ";
+}
+
+.Gap-Arc2 {
+	-fx-background-color: rgb(255, 255, 255);
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-radius: 0;
+	-fx-alignment: CENTER;
+	-fx-padding: 2 30 2 2;
+	
+	-fx-shape: "M 0 0
+           a70,200 0 0,1 51,0
+           ";
+}
+
+.Gap-Rect{
+	-fx-effect: dropshadow(gaussian, rgb(0, 0, 0, 0.3), 0, 0, 3, 3) ;
+	-fx-background-color: rgb(250, 242, 227);
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 0;
+	-fx-alignment: CENTER;
+}
+
+.Gap-Foot {
+	-fx-padding: 0 20 0 20;
+}
+
+.Gap-Name-Section{
+	-fx-alignment: center;
+    -fx-padding: 5;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-radius: 5 5 0 0;
+}
+
+.Gap-Line{
+}
+
+.Gap-Text{
+    -fx-font: 18pt "Arial";
+    -fx-stroke-type: outside;
+    -fx-stroke-width: 0;
+}
+
+.Gap-Methods-List{
+    -fx-padding: 5;
+	-fx-spacing: 5;
+}

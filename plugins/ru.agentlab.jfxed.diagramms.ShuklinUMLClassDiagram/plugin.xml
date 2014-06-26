@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+   		point="ru.agentlab.jfxed.diagram">
+         <diagram name="Диаграмма Блоки и стрелки" class="ru.agentlab.jfxed.diagramms.clazz.ClazzDiagram" ontoUri="http://www.agentlab.ru/jfxed/onto/umldi"/>
+   </extension>
+</plugin>

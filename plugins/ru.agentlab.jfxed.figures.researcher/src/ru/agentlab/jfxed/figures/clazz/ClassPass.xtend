@@ -14,7 +14,7 @@ new (){
 		
 		initHandlers()
 		
-		val s = ClassFigure.getResource("ClassPass.css").toExternalForm()
+		val s = Researcher.getResource("ClassPass.css").toExternalForm()
 		root.stylesheets += s
 				root.styleClass += "ClassPass";
 		

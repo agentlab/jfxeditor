@@ -32,7 +32,7 @@
 
 .ClassFigure-Name-Section{
 	-fx-alignment: center;
-    -fx-padding: -50;
+    -fx-padding: -25;
     -fx-border-color: cyan;
     -fx-border-width: 0 0 1 0;
     -fx-border-radius: 5 5 0 0;
@@ -47,14 +47,13 @@
 
 .ClassFigure-Line{
 }
-.trap{
-	-fx-padding: 50
-}
+
 .ClassFigure-Text{
     -fx-font: bold 10pt "Arial";
     -fx-stroke-type: outside;
     -fx-stroke-width: 5;
     -fx-padding: 150;
+    -fx-spacing: 5;
 
 }
 
@@ -62,4 +61,3 @@
     -fx-padding: 50;
 	-fx-spacing: 5;
 }
-

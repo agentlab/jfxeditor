@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/sh5#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/sh5#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/sh5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/sh5#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/sh5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#AssociationFrom -->
+
+    <owl:ObjectProperty rdf:about="&j.0;AssociationFrom">
+        <rdfs:range rdf:resource="&j.0;Actor"/>
+        <rdfs:domain rdf:resource="&j.0;Association"/>
+        <rdfs:range rdf:resource="&j.0;UseCase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#AssociationTo -->
+
+    <owl:ObjectProperty rdf:about="&j.0;AssociationTo">
+        <rdfs:domain rdf:resource="&j.0;Association"/>
+        <rdfs:range rdf:resource="&j.0;UseCase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#ExtensionFrom -->
+
+    <owl:ObjectProperty rdf:about="&j.0;ExtensionFrom">
+        <rdfs:domain rdf:resource="&j.0;Extend"/>
+        <rdfs:range rdf:resource="&j.0;UseCase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#ExtensionTo -->
+
+    <owl:ObjectProperty rdf:about="&j.0;ExtensionTo">
+        <rdfs:domain rdf:resource="&j.0;Extend"/>
+        <rdfs:range rdf:resource="&j.0;UseCase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#InclusionFrom -->
+
+    <owl:ObjectProperty rdf:about="&j.0;InclusionFrom">
+        <rdfs:domain rdf:resource="&j.0;Include"/>
+        <rdfs:range rdf:resource="&j.0;UseCase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#InclusionTo -->
+
+    <owl:ObjectProperty rdf:about="&j.0;InclusionTo">
+        <rdfs:domain rdf:resource="&j.0;Include"/>
+        <rdfs:range rdf:resource="&j.0;UseCase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#SystemFrom -->
+
+    <owl:ObjectProperty rdf:about="&j.0;SystemFrom"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#SystemTo -->
+
+    <owl:ObjectProperty rdf:about="&j.0;SystemTo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#ATM -->
+
+    <owl:Class rdf:about="&j.0;ATM">
+        <rdfs:subClassOf rdf:resource="&j.0;concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#Actor -->
+
+    <owl:Class rdf:about="&j.0;Actor">
+        <rdfs:subClassOf rdf:resource="&j.0;concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#Association -->
+
+    <owl:Class rdf:about="&j.0;Association">
+        <rdfs:subClassOf rdf:resource="&j.0;relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#Extend -->
+
+    <owl:Class rdf:about="&j.0;Extend">
+        <rdfs:subClassOf rdf:resource="&j.0;relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#Include -->
+
+    <owl:Class rdf:about="&j.0;Include">
+        <rdfs:subClassOf rdf:resource="&j.0;relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#UseCase -->
+
+    <owl:Class rdf:about="&j.0;UseCase">
+        <rdfs:subClassOf rdf:resource="&j.0;concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#concept -->
+
+    <owl:Class rdf:about="&j.0;concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#relation -->
+
+    <owl:Class rdf:about="&j.0;relation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#ATM -->
+
+    <owl:NamedIndividual rdf:about="&j.0;ATM">
+        <rdf:type rdf:resource="&j.0;ATM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#Checkbalance -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Checkbalance">
+        <rdf:type rdf:resource="&j.0;UseCase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#DonateMoneyToCharity -->
+
+    <owl:NamedIndividual rdf:about="&j.0;DonateMoneyToCharity">
+        <rdf:type rdf:resource="&j.0;UseCase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#ExtensionPoits.InvalidPasswordEntered.AbortTriggered -->
+
+    <owl:NamedIndividual rdf:about="&j.0;ExtensionPoits.InvalidPasswordEntered.AbortTriggered">
+        <rdf:type rdf:resource="&j.0;UseCase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#HandleAbort -->
+
+    <owl:NamedIndividual rdf:about="&j.0;HandleAbort">
+        <rdf:type rdf:resource="&j.0;UseCase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#HandleInvalidPassword -->
+
+    <owl:NamedIndividual rdf:about="&j.0;HandleInvalidPassword">
+        <rdf:type rdf:resource="&j.0;UseCase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#PayBills -->
+
+    <owl:NamedIndividual rdf:about="&j.0;PayBills">
+        <rdf:type rdf:resource="&j.0;UseCase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#TransferMoney -->
+
+    <owl:NamedIndividual rdf:about="&j.0;TransferMoney">
+        <rdf:type rdf:resource="&j.0;UseCase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#User -->
+
+    <owl:NamedIndividual rdf:about="&j.0;User">
+        <rdf:type rdf:resource="&j.0;Actor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#WithdrawCash -->
+
+    <owl:NamedIndividual rdf:about="&j.0;WithdrawCash">
+        <rdf:type rdf:resource="&j.0;UseCase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#agg1 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;agg1">
+        <rdf:type rdf:resource="&j.0;Association"/>
+        <j.0:SystemTo rdf:resource="&j.0;ATM"/>
+        <j.0:SystemFrom rdf:resource="&j.0;Checkbalance"/>
+        <j.0:SystemFrom rdf:resource="&j.0;DonateMoneyToCharity"/>
+        <j.0:SystemFrom rdf:resource="&j.0;ExtensionPoits.InvalidPasswordEntered.AbortTriggered"/>
+        <j.0:SystemFrom rdf:resource="&j.0;HandleAbort"/>
+        <j.0:SystemFrom rdf:resource="&j.0;HandleInvalidPassword"/>
+        <j.0:SystemFrom rdf:resource="&j.0;PayBills"/>
+        <j.0:SystemFrom rdf:resource="&j.0;TransferMoney"/>
+        <j.0:SystemFrom rdf:resource="&j.0;WithdrawCash"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#agg2 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;agg2">
+        <rdf:type rdf:resource="&j.0;Association"/>
+        <j.0:AssociationTo rdf:resource="&j.0;Checkbalance"/>
+        <j.0:AssociationTo rdf:resource="&j.0;DonateMoneyToCharity"/>
+        <j.0:AssociationTo rdf:resource="&j.0;PayBills"/>
+        <j.0:AssociationTo rdf:resource="&j.0;TransferMoney"/>
+        <j.0:AssociationFrom rdf:resource="&j.0;User"/>
+        <j.0:AssociationTo rdf:resource="&j.0;WithdrawCash"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#agg3 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;agg3">
+        <rdf:type rdf:resource="&j.0;Include"/>
+        <j.0:InclusionFrom rdf:resource="&j.0;Checkbalance"/>
+        <j.0:InclusionFrom rdf:resource="&j.0;DonateMoneyToCharity"/>
+        <j.0:InclusionTo rdf:resource="&j.0;ExtensionPoits.InvalidPasswordEntered.AbortTriggered"/>
+        <j.0:InclusionFrom rdf:resource="&j.0;PayBills"/>
+        <j.0:InclusionFrom rdf:resource="&j.0;TransferMoney"/>
+        <j.0:InclusionFrom rdf:resource="&j.0;WithdrawCash"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/sh5#agg4 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;agg4">
+        <rdf:type rdf:resource="&j.0;Extend"/>
+        <j.0:ExtensionTo rdf:resource="&j.0;ExtensionPoits.InvalidPasswordEntered.AbortTriggered"/>
+        <j.0:ExtensionFrom rdf:resource="&j.0;HandleAbort"/>
+        <j.0:ExtensionFrom rdf:resource="&j.0;HandleInvalidPassword"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

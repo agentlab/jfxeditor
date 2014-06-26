@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/dma#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/dma#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/dma"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/dma#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/dma"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#OneWayArrow -->
+
+    <owl:ObjectProperty rdf:about="&j.0;OneWayArrow">
+        <rdfs:domain rdf:resource="&j.0;bigGreenRect"/>
+        <rdfs:range rdf:resource="&j.0;greenOval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#OneWayArrow1 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;OneWayArrow1">
+        <rdfs:domain rdf:resource="&j.0;greenComputer"/>
+        <rdfs:range rdf:resource="&j.0;greenOval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#OneWayArrow2 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;OneWayArrow2">
+        <rdfs:range rdf:resource="&j.0;greenOval"/>
+        <rdfs:domain rdf:resource="&j.0;redRect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#OneWayLink -->
+
+    <owl:ObjectProperty rdf:about="&j.0;OneWayLink">
+        <rdfs:domain rdf:resource="&j.0;bigGreenRect"/>
+        <rdfs:range rdf:resource="&j.0;greenComputer"/>
+        <rdfs:domain rdf:resource="&j.0;greenRect"/>
+        <rdfs:range rdf:resource="&j.0;greenRect"/>
+        <rdfs:range rdf:resource="&j.0;redRect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#Concept -->
+
+    <owl:Class rdf:about="&j.0;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#Relation -->
+
+    <owl:Class rdf:about="&j.0;Relation"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#bigGreenRect -->
+
+    <owl:Class rdf:about="&j.0;bigGreenRect">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#greenComputer -->
+
+    <owl:Class rdf:about="&j.0;greenComputer">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#greenOval -->
+
+    <owl:Class rdf:about="&j.0;greenOval">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#greenRect -->
+
+    <owl:Class rdf:about="&j.0;greenRect">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#oneWayArrow -->
+
+    <owl:Class rdf:about="&j.0;oneWayArrow">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#oneWayLink -->
+
+    <owl:Class rdf:about="&j.0;oneWayLink">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#redRect -->
+
+    <owl:Class rdf:about="&j.0;redRect">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#AdminServer -->
+
+    <owl:NamedIndividual rdf:about="&j.0;AdminServer">
+        <rdf:type rdf:resource="&j.0;greenComputer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#DatabaseServer -->
+
+    <owl:NamedIndividual rdf:about="&j.0;DatabaseServer">
+        <rdf:type rdf:resource="&j.0;greenOval"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#FileService -->
+
+    <owl:NamedIndividual rdf:about="&j.0;FileService">
+        <rdf:type rdf:resource="&j.0;greenOval"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#LAN -->
+
+    <owl:NamedIndividual rdf:about="&j.0;LAN">
+        <rdf:type rdf:resource="&j.0;greenRect"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#NASFileServer -->
+
+    <owl:NamedIndividual rdf:about="&j.0;NASFileServer">
+        <rdf:type rdf:resource="&j.0;greenComputer"/>
+        <rdf:type rdf:resource="&j.0;oneWayArrow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#NetworkService -->
+
+    <owl:NamedIndividual rdf:about="&j.0;NetworkService">
+        <rdf:type rdf:resource="&j.0;greenOval"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#UNIXServerfarm -->
+
+    <owl:NamedIndividual rdf:about="&j.0;UNIXServerfarm">
+        <rdf:type rdf:resource="&j.0;bigGreenRect"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#firewall -->
+
+    <owl:NamedIndividual rdf:about="&j.0;firewall">
+        <rdf:type rdf:resource="&j.0;redRect"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#firewall1 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;firewall1">
+        <rdf:type rdf:resource="&j.0;oneWayArrow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#internet -->
+
+    <owl:NamedIndividual rdf:about="&j.0;internet">
+        <rdf:type rdf:resource="&j.0;greenRect"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#lan1 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;lan1">
+        <rdf:type rdf:resource="&j.0;oneWayLink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#mainframe -->
+
+    <owl:NamedIndividual rdf:about="&j.0;mainframe">
+        <rdf:type rdf:resource="&j.0;bigGreenRect"/>
+        <rdf:type rdf:resource="&j.0;oneWayArrow"/>
+        <j.0:OneWayArrow1 rdf:resource="&j.0;AdminServer"/>
+        <j.0:OneWayArrow rdf:resource="&j.0;DatabaseServer"/>
+        <j.0:OneWayArrow1 rdf:resource="&j.0;FileService"/>
+        <j.0:OneWayArrow rdf:resource="&j.0;LAN"/>
+        <j.0:OneWayArrow1 rdf:resource="&j.0;NASFileServer"/>
+        <j.0:OneWayArrow rdf:resource="&j.0;NASFileServer"/>
+        <j.0:OneWayArrow2 rdf:resource="&j.0;NetworkService"/>
+        <j.0:OneWayArrow2 rdf:resource="&j.0;firewall"/>
+        <j.0:OneWayArrow2 rdf:resource="&j.0;internet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#mainframe1 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;mainframe1">
+        <rdf:type rdf:resource="&j.0;oneWayLink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#unixServerFarm -->
+
+    <owl:NamedIndividual rdf:about="&j.0;unixServerFarm">
+        <rdf:type rdf:resource="&j.0;oneWayLink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#unixServerFarm1 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;unixServerFarm1">
+        <rdf:type rdf:resource="&j.0;oneWayLink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#unixServerFarm2 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;unixServerFarm2">
+        <rdf:type rdf:resource="&j.0;oneWayLink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#unixServerFarm3 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;unixServerFarm3">
+        <rdf:type rdf:resource="&j.0;oneWayLink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/dma#unixServerFarm4 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;unixServerFarm4">
+        <rdf:type rdf:resource="&j.0;oneWayLink"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
