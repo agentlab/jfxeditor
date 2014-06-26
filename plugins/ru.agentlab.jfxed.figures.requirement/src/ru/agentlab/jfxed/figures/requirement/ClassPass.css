@@ -1,0 +1,64 @@
+.ClassPass{
+	-fx-background-color: #ffdead;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 0;    
+    -fx-alignment: CENTER;
+	-fx-padding: 0;
+	}
+	
+	.ClassFigure-Rect{
+	-fx-fill: CYAN;
+    -fx-stroke: #FFFFFF;
+    -fx-stroke-type: outside;
+    -fx-border-color: black;
+    -fx-border-width: 4;
+    -fx-border-radius: 5;
+    -fx-background-radius: 0;
+    -fx-arc-height: 5;
+    -fx-arc-width: 5;
+    -fx-padding: 5;
+}
+
+
+ .ClassFigure-Text{
+    -fx-font: norm 15pt "Arial";
+    -fx-stroke-type: outside;
+    -fx-stroke-width: 0;
+    
+}
+
+ .ClassFigure-Text2{
+    -fx-font: norm 15pt "Arial";
+    -fx-stroke-type: outside;
+    -fx-stroke-width: 0;
+    -fx-text-origin: bottom;
+}
+
+.ClassPolyline{
+	
+	-fx-stroke-width: 25;
+	-fx-stroke: #adff2f;
+}
+.ClassPolyline2{
+	
+	-fx-stroke-width: 5;
+	-fx-stroke: black;
+}
+.ClassPolyline3{
+	
+	-fx-stroke-width: 3;
+	-fx-stroke:  #ffdead;
+}
+.ClassPolyline4{
+	
+	-fx-stroke-width: 2;
+	-fx-stroke: black;
+}
+
+.ClassFigure-Methods-List{
+    -fx-padding: 5;
+	-fx-spacing: 5;
+	
+}
