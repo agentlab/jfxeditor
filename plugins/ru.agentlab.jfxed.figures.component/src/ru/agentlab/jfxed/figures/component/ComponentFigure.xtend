@@ -67,9 +67,9 @@ public class ComponentFigure extends XNode implements IFigure {
 		node.setScaleY(0.4);
 	}
 	
-	def setName(String name) {
+	def override setName(String name) {
 		nameTextBox.text = name
-	}
+	} 
 	
 	def getName() {
 		nameTextBox.text
