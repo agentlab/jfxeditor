@@ -1,10 +1,10 @@
 .ClassFigure{
 	-fx-background-color: yellow;
-    -fx-background-radius: 5;
+    -fx-background-radius: 15;
     -fx-border-color: black;
     -fx-border-width: 1;
-    -fx-border-radius: 5;
-	/*-fx-alignment: CENTER;*/
+    -fx-border-radius: 15;
+	-fx-alignment: CENTER;
 	-fx-padding: 0;
 }
 
@@ -12,10 +12,10 @@
 	-fx-fill: CYAN;
     -fx-stroke: #FFFFFF;
     -fx-stroke-type: inside;
-    -fx-border-radius: 5;
-    -fx-background-radius: 5;
-    -fx-arc-height: 5;
-    -fx-arc-width: 5;
+    -fx-border-radius: 15; /*ttt */
+    -fx-background-radius: 100;/*5ttt */
+    -fx-arc-height: 15;
+    -fx-arc-width: 15;
     -fx-padding: 5;
 }
 
@@ -37,13 +37,18 @@
     -fx-stroke-width: 0;
 }
 
+/* .ClassFigure-Methods-List{
+    -fx-padding: 20;
+	-fx-spacing: 15;
+}*/
+
+.ClassFigurePol {
+	-fx-background-color: none;
+	-fx-alignment: CENTER;
+	-fx-padding: 10 -70 0 0;
+	-fx-background-radius: 16;
+}
 .ClassFigure-Methods-List{
     -fx-padding: 20;
 	-fx-spacing: 15;
-}
-
-.ClassFigurePol {
-	-fx-background-color: yellow;
-	-fx-alignment: CENTER;
-	-fx-padding: 0 -80 0 0;
 }
