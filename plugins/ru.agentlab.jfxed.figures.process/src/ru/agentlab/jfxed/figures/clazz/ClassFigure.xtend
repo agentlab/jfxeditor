@@ -20,19 +20,20 @@ class ClassFigure extends BaseFigure {
 		root.styleClass += "ClassFigure";
 		
 		root.children += new HBox => [
-			styleClass += "ClassFigure-Array"
+			styleClass += "ClassFigure-Arrow"
 			
 			children += new Polyline => [
 				
 				points += #[
-					 0.0, 10.0,
-			        30.0, 10.0,
-			        30.0, 0.0,
-			        50.0, 20.0,
-			        30.0, 40.0,
-			        30.0, 30.0,
-			        0.0, 30.0,
-			        0.0, 10.0	
+					  0.0, 5.0,
+			        10.0, 5.0,
+			        10.0, 0.0,
+			        20.0, 7.5,
+			        10.0, 15.0,
+			        10.0, 10.0,
+			        0.0, 10.0,
+			        0.0, 5.0	
+	
 				]
 			]	
 		]

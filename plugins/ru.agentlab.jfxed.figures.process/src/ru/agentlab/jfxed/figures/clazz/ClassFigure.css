@@ -9,17 +9,6 @@
 	
 }
 
-.ClassFigure-Rect{
-	-fx-fill: CYAN;
-    -fx-stroke: #FFFFFF;
-    -fx-stroke-type: inside;
-    -fx-border-radius: 5;
-    -fx-background-radius: 5;
-    -fx-arc-height: 5;
-    -fx-arc-width: 5;
-    -fx-padding: 5;
-}
-
 .ClassFigure-Name-Section{
 	-fx-alignment: center;
     -fx-padding: 0;
@@ -28,21 +17,13 @@
     -fx-border-radius: 0 0 0 0;
 }
 
-.ClassFigure-Line{
-}
-
 .ClassFigure-Text{
     -fx-font: bold 18pt "Arial";
     -fx-stroke-type: outside;
     -fx-stroke-width: 0;
 }
 
-.ClassFigure-Methods-List{
-    -fx-padding: 5;
-	-fx-spacing: 5;
-}
-
-.ClassFigure-Array {
+.ClassFigure-Arrow {
 	-fx-alignment: CENTER;
-	-fx-padding: -15 -70 10 0;
+	-fx-padding: -15 -120 10 0;
 }

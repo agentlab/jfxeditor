@@ -1,5 +1,6 @@
 package ru.agentlab.jfxed.figures;
 
+import ru.agentlab.jfxed.figures.clazz.ClassArrow;
 import ru.agentlab.jfxed.figures.clazz.ClassFigure;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -27,10 +28,10 @@ public class BootFigures extends Application {
 		AnchorPane root = new AnchorPane();
 		
 		final ClassFigure source = new ClassFigure();
+		final ClassArrow arrow = new ClassArrow();
 				
 		root.getChildren().add(source.getRoot());
-		root.getChildren().add(new VBox());
-		root.getChildren().add(new VBox());
+		root.getChildren().add(arrow.getRoot());
 		
 		Scene scene = new Scene(root, 1000, 600);
 		
