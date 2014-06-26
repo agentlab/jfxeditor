@@ -9,8 +9,8 @@ import de.fxdiagram.core.XDiagram
 import ru.agentlab.jfxed.IDiagram
 import ru.agentlab.jfxed.figures.requirement.ClassFigure
 
-public class ASdiagramm implements IDiagram {
-	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/strategicrationale"
+public class iStarStrategicRationaleModelling implements IDiagram {
+	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/UMLUseCase"
 	static String NS = SOURCE + "#"
 	
 	override createJfx(OntModel jenaModel, XDiagram jfxDiagram) {
@@ -18,7 +18,7 @@ public class ASdiagramm implements IDiagram {
 		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 		select ?uri 
 		where { 
-			?uri rdf:type <«SOURCE»#Concept> 
+			?uri rdf:type <«SOURCE»#concept> 
 		} 
 		'''
 	    val query = QueryFactory.create(queryString)
