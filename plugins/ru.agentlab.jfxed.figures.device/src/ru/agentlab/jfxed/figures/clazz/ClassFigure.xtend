@@ -23,7 +23,7 @@ class ClassFigure extends BaseFigure {
 			]
 		
 		root.translateX = 200
-		root.translateY = 25
+		root.translateY = 10
 			
 				
 		
