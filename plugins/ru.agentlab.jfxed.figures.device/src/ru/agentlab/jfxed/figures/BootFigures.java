@@ -2,10 +2,6 @@ package ru.agentlab.jfxed.figures;
 
 import ru.agentlab.jfxed.figures.clazz.ClassFigure;
 import ru.agentlab.jfxed.figures.clazz.Coub;
-import ru.agentlab.jfxed.figures.clazz.LineFig;
-import ru.agentlab.jfxed.figures.clazz.trap;
-import ru.agentlab.jfxed.figures.clazz.miniTrap;
-import ru.agentlab.jfxed.figures.clazz.text;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
@@ -39,17 +35,10 @@ public class BootFigures extends Application {
 		
 		final ClassFigure source = new ClassFigure();
 		final Coub coub = new Coub();
-		final LineFig line = new LineFig();
-		final trap trap = new trap();
-		final text text= new text();
-		final miniTrap miniTrap= new miniTrap();
+	
 		root.getChildren().add(source.getRoot());
 		root.getChildren().add(coub.getRoot());
 		root.getChildren().add(new VBox());
-		root.getChildren().add(line.getRoot());
-		root.getChildren().add(trap.getRoot());
-		root.getChildren().add(text.getRoot());
-		root.getChildren().add(miniTrap.getRoot());
 		Scene scene = new Scene(root, 800, 600);
 			
 		primaryStage.setScene(scene);

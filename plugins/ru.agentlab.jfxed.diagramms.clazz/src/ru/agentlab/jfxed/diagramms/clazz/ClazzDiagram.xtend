@@ -11,7 +11,6 @@ import ru.agentlab.jfxed.figures.clazz.ClassFigure
 
 public class ClazzDiagram implements IDiagram {
 	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/classviewpoint"
-	static String NS = SOURCE + "#"
 	
 	override createJfx(OntModel jenaModel, XDiagram jfxDiagram) {
 		val queryString ='''
