@@ -123,7 +123,7 @@ class Plateau extends XNode implements IFigure {
 		new RoundedRectangleAnchors(this, 12, 12)
 	}
 
-	def setName(String name) {
+	override setName(String name) {
 		textBox.text = name
 	}
 

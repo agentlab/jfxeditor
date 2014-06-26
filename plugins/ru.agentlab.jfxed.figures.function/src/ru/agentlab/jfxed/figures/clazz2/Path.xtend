@@ -29,7 +29,7 @@ class Path extends BaseFigure {
 		])
 		pligon.setFill(Color.YELLOW)
 		pligon.setStroke(Color.BLACK)
-		pligon.setStrokeWidth(0.8)
+		pligon.setStrokeWidth(1.0)
 		var group = new Group(pligon)
 		 	root.children +=group
 		
