@@ -13,6 +13,8 @@ class Coub extends BaseFigure {
 	new (){
 		root = new VBox
 		
+		initHandlers()
+		
 		var pligon = new Polygon()
 		pligon.getPoints().addAll(#[
 			10.0, 0.0,
@@ -55,19 +57,10 @@ class Coub extends BaseFigure {
 			80.0, 18.0
 			
 		])
-		var poligon = new Polygon()
-		poligon.getPoints().addAll(#[
-			200.0, 62.0,
-			215.0, 51.5,
-			270.0, 51.5,
-			285.0, 62.0 
-		])
-		poligon.setFill(Color.CYAN)
-		poligon.setStroke(Color.BLACK)
-		poligon.setStrokeWidth(0.8)
 		
 		
-		var group = new Group(pligon ,line,line1, line2, poligon)
+		
+		var group = new Group(pligon ,line,line1, line2)
 		val s = ClassFigure.getResource("ClassFigure.css").toExternalForm()
 		root.stylesheets += s
 		root.children += group
