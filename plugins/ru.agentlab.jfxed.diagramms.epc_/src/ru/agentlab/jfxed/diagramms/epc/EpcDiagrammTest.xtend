@@ -5,7 +5,8 @@ import com.hp.hpl.jena.query.QueryExecutionFactory
 import com.hp.hpl.jena.query.QueryFactory
 import com.hp.hpl.jena.query.QuerySolution
 import com.hp.hpl.jena.rdf.model.Resource
-import ru.agentlab.jfxed.figures.specifications.Specifications
+//import ru.agentlab.jfxed.figures.specifications.Specifications
+import ru.agentlab.jfxed.figures.gap.Gap
 import ru.agentlab.jfxed.IDiagram
 import de.fxdiagram.core.XDiagram
 
@@ -40,7 +41,7 @@ public class EpcDiagrammTest implements IDiagram {
 	      val QuerySolution soln = results.nextSolution() 
 	      val Resource x = soln.getResource("uri")       // Get a result variable by name.
 	     
-	     val target = new Specifications() => [
+	     val target = new Gap() => [
 				layoutX = 280
 				layoutY = 280
 				name = x.localName
@@ -48,11 +49,12 @@ public class EpcDiagrammTest implements IDiagram {
 		
 		jfxDiagram => [
 			nodes += target
-		]
+	]
 	  }
 		
 		qe.close()
 	}
+	
 
 	
 }
