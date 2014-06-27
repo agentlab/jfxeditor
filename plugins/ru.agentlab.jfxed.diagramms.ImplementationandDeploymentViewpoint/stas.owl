@@ -1,0 +1,427 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.eswc2006.org/technologies/ontology#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/stas#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/stas"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:j.0="http://www.eswc2006.org/technologies/ontology#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/stas"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#From -->
+
+    <owl:ObjectProperty rdf:about="&j.0;From">
+        <rdfs:domain rdf:resource="&j.0;Agregation"/>
+        <rdfs:range rdf:resource="&j.0;Application_collaboration"/>
+        <rdfs:range rdf:resource="&j.0;Application_component"/>
+        <rdfs:range rdf:resource="&j.0;Artifact"/>
+        <rdfs:range rdf:resource="&j.0;Communication_path"/>
+        <rdfs:range rdf:resource="&j.0;Data_object"/>
+        <rdfs:range rdf:resource="&j.0;Device"/>
+        <rdfs:range rdf:resource="&j.0;Network"/>
+        <rdfs:range rdf:resource="&j.0;Node"/>
+        <rdfs:range rdf:resource="&j.0;System_software"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#To -->
+
+    <owl:ObjectProperty rdf:about="&j.0;To">
+        <rdfs:domain rdf:resource="&j.0;Agregation"/>
+        <rdfs:range rdf:resource="&j.0;Application_collaboration"/>
+        <rdfs:range rdf:resource="&j.0;Application_component"/>
+        <rdfs:range rdf:resource="&j.0;Artifact"/>
+        <rdfs:range rdf:resource="&j.0;Communication_path"/>
+        <rdfs:range rdf:resource="&j.0;Device"/>
+        <rdfs:range rdf:resource="&j.0;Infrastructure_service"/>
+        <rdfs:range rdf:resource="&j.0;Network"/>
+        <rdfs:range rdf:resource="&j.0;Node"/>
+        <rdfs:range rdf:resource="&j.0;System_software"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Access -->
+
+    <owl:Class rdf:about="&j.0;Access">
+        <rdfs:subClassOf rdf:resource="&j.0;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Agregation -->
+
+    <owl:Class rdf:about="&j.0;Agregation">
+        <rdfs:subClassOf rdf:resource="&j.0;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Application_collaboration -->
+
+    <owl:Class rdf:about="&j.0;Application_collaboration"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Application_component -->
+
+    <owl:Class rdf:about="&j.0;Application_component"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Artifact -->
+
+    <owl:Class rdf:about="&j.0;Artifact"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Assignment -->
+
+    <owl:Class rdf:about="&j.0;Assignment">
+        <rdfs:subClassOf rdf:resource="&j.0;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Association -->
+
+    <owl:Class rdf:about="&j.0;Association"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Communication_path -->
+
+    <owl:Class rdf:about="&j.0;Communication_path"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Data_object -->
+
+    <owl:Class rdf:about="&j.0;Data_object"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Device -->
+
+    <owl:Class rdf:about="&j.0;Device"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Infrastructure_service -->
+
+    <owl:Class rdf:about="&j.0;Infrastructure_service"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Network -->
+
+    <owl:Class rdf:about="&j.0;Network"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Node -->
+
+    <owl:Class rdf:about="&j.0;Node"/>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Realization -->
+
+    <owl:Class rdf:about="&j.0;Realization">
+        <rdfs:subClassOf rdf:resource="&j.0;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#Specialization -->
+
+    <owl:Class rdf:about="&j.0;Specialization">
+        <rdfs:subClassOf rdf:resource="&j.0;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#System_software -->
+
+    <owl:Class rdf:about="&j.0;System_software"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#ArtifAndNode -->
+
+    <owl:NamedIndividual rdf:about="&j.0;ArtifAndNode">
+        <rdf:type rdf:resource="&j.0;Assignment"/>
+        <j.0:To rdf:resource="&j.0;artif"/>
+        <j.0:From rdf:resource="&j.0;artif"/>
+        <j.0:From rdf:resource="&j.0;nod"/>
+        <j.0:To rdf:resource="&j.0;nod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#appCollab -->
+
+    <owl:NamedIndividual rdf:about="&j.0;appCollab">
+        <rdf:type rdf:resource="&j.0;Application_collaboration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#appCollabToAppComp -->
+
+    <owl:NamedIndividual rdf:about="&j.0;appCollabToAppComp">
+        <rdf:type rdf:resource="&j.0;Specialization"/>
+        <j.0:To rdf:resource="&j.0;appCollab"/>
+        <j.0:From rdf:resource="&j.0;appComp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#appComp -->
+
+    <owl:NamedIndividual rdf:about="&j.0;appComp">
+        <rdf:type rdf:resource="&j.0;Application_component"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#appCompToAppCollab -->
+
+    <owl:NamedIndividual rdf:about="&j.0;appCompToAppCollab">
+        <rdf:type rdf:resource="&j.0;Agregation"/>
+        <j.0:From rdf:resource="&j.0;appCollab"/>
+        <j.0:To rdf:resource="&j.0;appComp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#appCompToDataObj -->
+
+    <owl:NamedIndividual rdf:about="&j.0;appCompToDataObj">
+        <rdf:type rdf:resource="&j.0;Access"/>
+        <j.0:To rdf:resource="&j.0;appComp"/>
+        <j.0:From rdf:resource="&j.0;dataObj"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#artif -->
+
+    <owl:NamedIndividual rdf:about="&j.0;artif">
+        <rdf:type rdf:resource="&j.0;Artifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#artifToAppComp -->
+
+    <owl:NamedIndividual rdf:about="&j.0;artifToAppComp">
+        <rdf:type rdf:resource="&j.0;Realization"/>
+        <j.0:From rdf:resource="&j.0;appComp"/>
+        <j.0:To rdf:resource="&j.0;artif"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#artifToDataObj -->
+
+    <owl:NamedIndividual rdf:about="&j.0;artifToDataObj">
+        <rdf:type rdf:resource="&j.0;Realization"/>
+        <j.0:To rdf:resource="&j.0;artif"/>
+        <j.0:From rdf:resource="&j.0;dataObj"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#commun -->
+
+    <owl:NamedIndividual rdf:about="&j.0;commun">
+        <rdf:type rdf:resource="&j.0;Communication_path"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#dataObj -->
+
+    <owl:NamedIndividual rdf:about="&j.0;dataObj">
+        <rdf:type rdf:resource="&j.0;Data_object"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#dev -->
+
+    <owl:NamedIndividual rdf:about="&j.0;dev">
+        <rdf:type rdf:resource="&j.0;Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#devAndSysSoft -->
+
+    <owl:NamedIndividual rdf:about="&j.0;devAndSysSoft">
+        <rdf:type rdf:resource="&j.0;Assignment"/>
+        <j.0:To rdf:resource="&j.0;dev"/>
+        <j.0:From rdf:resource="&j.0;dev"/>
+        <j.0:From rdf:resource="&j.0;sysSoft"/>
+        <j.0:To rdf:resource="&j.0;sysSoft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#devToNode -->
+
+    <owl:NamedIndividual rdf:about="&j.0;devToNode">
+        <rdf:type rdf:resource="&j.0;Specialization"/>
+        <j.0:To rdf:resource="&j.0;dev"/>
+        <j.0:From rdf:resource="&j.0;nod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#infraServ -->
+
+    <owl:NamedIndividual rdf:about="&j.0;infraServ">
+        <rdf:type rdf:resource="&j.0;Infrastructure_service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#infraServToArtif -->
+
+    <owl:NamedIndividual rdf:about="&j.0;infraServToArtif">
+        <rdf:type rdf:resource="&j.0;Access"/>
+        <j.0:From rdf:resource="&j.0;artif"/>
+        <j.0:To rdf:resource="&j.0;infraServ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#net -->
+
+    <owl:NamedIndividual rdf:about="&j.0;net">
+        <rdf:type rdf:resource="&j.0;Network"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#netAndDev -->
+
+    <owl:NamedIndividual rdf:about="&j.0;netAndDev">
+        <rdf:type rdf:resource="&j.0;Association"/>
+        <j.0:To rdf:resource="&j.0;dev"/>
+        <j.0:From rdf:resource="&j.0;dev"/>
+        <j.0:From rdf:resource="&j.0;net"/>
+        <j.0:To rdf:resource="&j.0;net"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#netToCommPath -->
+
+    <owl:NamedIndividual rdf:about="&j.0;netToCommPath">
+        <rdf:type rdf:resource="&j.0;Realization"/>
+        <j.0:From rdf:resource="&j.0;commun"/>
+        <j.0:To rdf:resource="&j.0;net"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#netToNet -->
+
+    <owl:NamedIndividual rdf:about="&j.0;netToNet">
+        <rdf:type rdf:resource="&j.0;Association"/>
+        <j.0:From rdf:resource="&j.0;net"/>
+        <j.0:To rdf:resource="&j.0;net"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#nod -->
+
+    <owl:NamedIndividual rdf:about="&j.0;nod">
+        <rdf:type rdf:resource="&j.0;Node"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#nodeAndCommPath -->
+
+    <owl:NamedIndividual rdf:about="&j.0;nodeAndCommPath">
+        <rdf:type rdf:resource="&j.0;Association"/>
+        <j.0:To rdf:resource="&j.0;commun"/>
+        <j.0:From rdf:resource="&j.0;commun"/>
+        <j.0:To rdf:resource="&j.0;nod"/>
+        <j.0:From rdf:resource="&j.0;nod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#sysSoft -->
+
+    <owl:NamedIndividual rdf:about="&j.0;sysSoft">
+        <rdf:type rdf:resource="&j.0;System_software"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eswc2006.org/technologies/ontology#sysSoftToNode -->
+
+    <owl:NamedIndividual rdf:about="&j.0;sysSoftToNode">
+        <rdf:type rdf:resource="&j.0;Specialization"/>
+        <j.0:To rdf:resource="&j.0;nod"/>
+        <j.0:From rdf:resource="&j.0;sysSoft"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
