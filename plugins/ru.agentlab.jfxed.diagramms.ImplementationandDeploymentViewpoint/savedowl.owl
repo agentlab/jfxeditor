@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/savedowl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ontology "http://www.agentlab.ru/jfxed/onto/savedowl#" >
+    
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/savedowl#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/savedowl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/savedowl#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/savedowl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#propFrom -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propFrom">
+        <rdfs:domain rdf:resource="&j.0;BusinessActor"/>
+        <rdfs:range rdf:resource="&j.0;BusinessActor"/>
+        <rdfs:domain rdf:resource="&j.0;Composition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#propTo -->
+
+    <owl:ObjectProperty rdf:about="&j.0;propTo">
+        <rdfs:domain rdf:resource="&j.0;BusinessActor"/>
+        <rdfs:range rdf:resource="&j.0;BusinessActor"/>
+        <rdfs:domain rdf:resource="&j.0;Composition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#Association -->
+
+    <owl:Class rdf:about="&j.0;Association"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#BusinessActor -->
+
+    <owl:Class rdf:about="&j.0;BusinessActor"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#Composition -->
+
+    <owl:Class rdf:about="&j.0;Composition">
+        <rdfs:subClassOf rdf:resource="&j.0;Association"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#Archiusrance -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Archiusrance">
+        <rdf:type rdf:resource="&j.0;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&j.0;BackOffice">
+        <rdf:type rdf:resource="&j.0;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#Car -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Car">
+        <rdf:type rdf:resource="&j.0;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#CustomerRelations -->
+
+    <owl:NamedIndividual rdf:about="&j.0;CustomerRelations">
+        <rdf:type rdf:resource="&j.0;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#DocumentProcessingSsc -->
+
+    <owl:NamedIndividual rdf:about="&j.0;DocumentProcessingSsc">
+        <rdf:type rdf:resource="&j.0;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#Finance -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Finance">
+        <rdf:type rdf:resource="&j.0;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#FrontOffice -->
+
+    <owl:NamedIndividual rdf:about="&j.0;FrontOffice">
+        <rdf:type rdf:resource="&j.0;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#HRM -->
+
+    <owl:NamedIndividual rdf:about="&j.0;HRM">
+        <rdf:type rdf:resource="&j.0;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#HomeAway -->
+
+    <owl:NamedIndividual rdf:about="&j.0;HomeAway">
+        <rdf:type rdf:resource="&j.0;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#IntermediaryRelations -->
+
+    <owl:NamedIndividual rdf:about="&j.0;IntermediaryRelations">
+        <rdf:type rdf:resource="&j.0;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#LegalAid -->
+
+    <owl:NamedIndividual rdf:about="&j.0;LegalAid">
+        <rdf:type rdf:resource="&j.0;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#ProductDevelopment -->
+
+    <owl:NamedIndividual rdf:about="&j.0;ProductDevelopment">
+        <rdf:type rdf:resource="&j.0;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/savedowl#compositionIndividual -->
+
+    <owl:NamedIndividual rdf:about="&j.0;compositionIndividual">
+        <rdf:type rdf:resource="&j.0;Composition"/>
+        <propTo rdf:resource="&j.0;Archiusrance"/>
+        <propFrom rdf:resource="&j.0;BackOffice"/>
+        <propTo rdf:resource="&j.0;BackOffice"/>
+        <propFrom rdf:resource="&j.0;Car"/>
+        <propTo rdf:resource="&j.0;Car"/>
+        <propTo rdf:resource="&j.0;CustomerRelations"/>
+        <propFrom rdf:resource="&j.0;CustomerRelations"/>
+        <propFrom rdf:resource="&j.0;DocumentProcessingSsc"/>
+        <propFrom rdf:resource="&j.0;Finance"/>
+        <propTo rdf:resource="&j.0;FrontOffice"/>
+        <propFrom rdf:resource="&j.0;FrontOffice"/>
+        <propFrom rdf:resource="&j.0;HRM"/>
+        <propTo rdf:resource="&j.0;HomeAway"/>
+        <propFrom rdf:resource="&j.0;HomeAway"/>
+        <propTo rdf:resource="&j.0;IntermediaryRelations"/>
+        <propFrom rdf:resource="&j.0;IntermediaryRelations"/>
+        <propFrom rdf:resource="&j.0;LegalAid"/>
+        <propTo rdf:resource="&j.0;LegalAid"/>
+        <propFrom rdf:resource="&j.0;ProductDevelopment"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
