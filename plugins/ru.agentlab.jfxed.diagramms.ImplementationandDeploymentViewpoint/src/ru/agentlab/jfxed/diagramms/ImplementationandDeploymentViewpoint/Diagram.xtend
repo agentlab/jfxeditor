@@ -10,14 +10,14 @@ import ru.agentlab.jfxed.IDiagram
 import ru.agentlab.jfxed.figures.node.Rectangle
 
 public class Diagram implements IDiagram {
-	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/classviewpoint"
+	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/savedowl"
 	
 	override createJfx(OntModel jenaModel, XDiagram jfxDiagram) {
 		val queryString ='''
 		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 		select ?uri 
 		where { 
-			?uri rdf:type <ï¿½SOURCEï¿½#Clazz> 
+			?uri rdf:type <«SOURCE»#BusinessActor> 
 		} 
 		'''
 	    val query = QueryFactory.create(queryString)

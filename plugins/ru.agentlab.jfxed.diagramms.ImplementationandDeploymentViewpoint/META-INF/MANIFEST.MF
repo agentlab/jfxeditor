@@ -21,3 +21,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.apache.jena.core;bundle-version="2.11.0",
  org.apache.jena.iri;bundle-version="0.9.5"
 Import-Package: com.hp.hpl.jena.ontology
+
