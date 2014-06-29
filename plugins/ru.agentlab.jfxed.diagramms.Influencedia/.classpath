@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_05"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/пк/Downloads/apache-jena-2.11.2/apache-jena-2.11.2/lib/jena-arq-2.11.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/пк/Downloads/apache-jena-2.11.2/apache-jena-2.11.2/lib/jena-core-2.11.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/пк/Downloads/apache-jena-2.11.2/apache-jena-2.11.2/lib/jena-iri-1.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/пк/Downloads/apache-jena-2.11.2/apache-jena-2.11.2/lib/jena-sdb-1.4.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/пк/Downloads/apache-jena-2.11.2/apache-jena-2.11.2/lib/jena-tdb-1.0.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

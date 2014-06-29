@@ -1,23 +1,37 @@
-package ru.agentlab.jfxed.figures.clazz
+package ru.agentlab.jfxed.figures.ass
 
-import javafx.scene.layout.HBox
-import javafx.scene.layout.VBox
-import javafx.scene.text.Text
-import ru.agentlab.jfxed.figures.BaseFigure
-import javafx.scene.shape.Polyline
+import de.fxdiagram.core.XNode
 import javafx.scene.Group
+import javafx.scene.layout.GridPane
 import javafx.scene.shape.Circle
+import javafx.scene.shape.Polyline
+import javafx.scene.text.Text
+import ru.agentlab.jfxed.IFigure
 
-class ClassFigure extends BaseFigure {
+class Assessment extends XNode implements IFigure {
 	
-	String name = "Assessment";
+	var GridPane root
+	
+	val nameTextBox = new Text
+	var String name
+
+	new(String name) {
+		super(name)
+		this.name = name
+	}
+	
+	//String name = "Assessment";
 	
 	new (){
-		root = new VBox
+		super("Class");
 		
-		initHandlers()
+		name = "Class";	
 		
-		val s = ClassFigure.getResource("ClassFigure.css").toExternalForm()
+		root = new GridPane
+		
+		node = root
+		
+		val s = Assessment.getResource("ClassFigure.css").toExternalForm()
 		root.stylesheets += s
 		
 		root.children += new Group => [
@@ -69,7 +83,7 @@ class ClassFigure extends BaseFigure {
 		
 			
 			
-			children += new Text => [
+			children += nameTextBox => [
 				text = name
 				layoutX = 75
 				layoutY = 95
@@ -79,5 +93,16 @@ class ClassFigure extends BaseFigure {
 		
 		]
 		
+	}
+	
+	override setName(String name) {
+		nameTextBox.text = name
+	}
+
+	def getName() {
+		nameTextBox.text
+	}
+	override getRoot() {
+		this
 	}
 }
