@@ -20,5 +20,5 @@ Require-Bundle: org.eclipse.core.runtime,
  de.fxdiagram.lib;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: ru.agentlab.jfxed.figures,
- ru.agentlab.jfxed.figures.clazz
+ ru.agentlab.jfxed.figures.device
 
