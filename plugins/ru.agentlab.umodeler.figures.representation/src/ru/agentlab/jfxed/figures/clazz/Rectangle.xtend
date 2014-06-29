@@ -1,18 +1,42 @@
 package ru.agentlab.jfxed.figures.clazz
 
-import javafx.scene.layout.VBox
 import javafx.scene.shape.Path
-import ru.agentlab.jfxed.figures.BaseFigure
 import javafx.scene.shape.QuadCurveTo
 import javafx.scene.paint.Color
 import javafx.scene.shape.MoveTo
 import javafx.scene.shape.VLineTo
 import javafx.scene.shape.HLineTo
 
-class Rectangle extends BaseFigure {
 
+import de.fxdiagram.core.XNode;
+import javafx.scene.text.Text
+import javafx.scene.layout.GridPane;
+import ru.agentlab.jfxed.IFigure;
+
+
+class Rectangle extends XNode implements IFigure  {
+	
+	var GridPane gp 
+	
+	val nameTextBox = new Text
+	var String name
+
+	new(String name) {
+		super(name)
+		this.name = name
+	}
 	new() {
-		root = new VBox
+		
+		super("Class");
+		
+		name = "                 Class";	
+		
+		gp = new GridPane
+		
+		node = gp
+		val s = Rectangle.getResource("ClassFigure.css").toExternalForm()
+		gp.stylesheets += s
+		
 		var path = new Path()
 		path.getElements().addAll(
 			new MoveTo(0, 80),
@@ -27,9 +51,30 @@ class Rectangle extends BaseFigure {
 		path.setFill(Color.CYAN)
 
 		path.setStrokeWidth(2);
-		root.children += path
-		root.translateX = 10
-		root.translateY = 10
+		gp.children += path
+
+		
+
+		
+		
+			
+		gp.children += nameTextBox => [
+				text = name
+				styleClass += "ClassFigure-Text"
+						translateX = 20
+						translateY = -20
+			]
+	
+	}
+	
+	override setName(String name) {
+		nameTextBox.text = name
+	}
+
+	def getName() {
+		nameTextBox.text
+	}
+	override getRoot() {
+		this
 	}
 }
-

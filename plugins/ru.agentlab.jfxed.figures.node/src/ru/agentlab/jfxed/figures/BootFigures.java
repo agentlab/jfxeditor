@@ -1,8 +1,6 @@
 package ru.agentlab.jfxed.figures;
 
-import ru.agentlab.jfxed.figures.clazz.LineFig;
-import ru.agentlab.jfxed.figures.clazz.Rectangle;
-import ru.agentlab.jfxed.figures.clazz.Coub;
+import ru.agentlab.jfxed.figures.node.Rectangle;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -21,13 +19,9 @@ public class BootFigures extends Application {
 		AnchorPane root = new AnchorPane();
 		
 		final Rectangle rect = new Rectangle();
-		final Coub coub = new Coub();
-		final LineFig line = new LineFig();
 		root.getChildren().add(rect.getRoot());
-		root.getChildren().add(line.getRoot());
-		root.getChildren().add(coub.getRoot());
 		
-		Scene scene = new Scene(root, 250, 70);
+		Scene scene = new Scene(root, 200, 100);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

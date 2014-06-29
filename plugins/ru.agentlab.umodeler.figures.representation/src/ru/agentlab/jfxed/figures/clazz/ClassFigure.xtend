@@ -12,7 +12,7 @@ class ClassFigure extends BaseFigure {
 	new (){
 		root = new VBox
 		
-		initHandlers()
+		//initHandlers()
 		
 		val s = ClassFigure.getResource("ClassFigure.css").toExternalForm()
 		root.stylesheets += s
