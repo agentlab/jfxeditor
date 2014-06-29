@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/igorek#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/igorek#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/igorek"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/igorek#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/igorek"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#Aggregation -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Aggregation">
+        <rdfs:domain rdf:resource="&j.0;BusinessObject"/>
+        <rdfs:range rdf:resource="&j.0;BusinessObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#Composition -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Composition">
+        <rdfs:domain rdf:resource="&j.0;BusinessObject"/>
+        <rdfs:range rdf:resource="&j.0;BusinessObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#Realization -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Realization">
+        <rdfs:range rdf:resource="&j.0;BusinessObject"/>
+        <rdfs:domain rdf:resource="&j.0;DataObject"/>
+        <rdfs:domain rdf:resource="&j.0;Representation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#Specialization -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Specialization">
+        <rdfs:domain rdf:resource="&j.0;BusinessObject"/>
+        <rdfs:range rdf:resource="&j.0;BusinessObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#Aggregation -->
+
+    <owl:Class rdf:about="&j.0;Aggregation">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#BusinessObject -->
+
+    <owl:Class rdf:about="&j.0;BusinessObject">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#Composition -->
+
+    <owl:Class rdf:about="&j.0;Composition">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#Concept -->
+
+    <owl:Class rdf:about="&j.0;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#DataObject -->
+
+    <owl:Class rdf:about="&j.0;DataObject">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#Realization -->
+
+    <owl:Class rdf:about="&j.0;Realization">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#Relation -->
+
+    <owl:Class rdf:about="&j.0;Relation"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#Representation -->
+
+    <owl:Class rdf:about="&j.0;Representation">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#Specialization -->
+
+    <owl:Class rdf:about="&j.0;Specialization">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#carInsurancePolicy -->
+
+    <owl:NamedIndividual rdf:about="&j.0;carInsurancePolicy">
+        <rdf:type rdf:resource="&j.0;BusinessObject"/>
+        <rdf:type rdf:resource="&j.0;Specialization"/>
+        <j.0:Specialization rdf:resource="&j.0;insurancePolicy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#claimForm -->
+
+    <owl:NamedIndividual rdf:about="&j.0;claimForm">
+        <rdf:type rdf:resource="&j.0;Realization"/>
+        <rdf:type rdf:resource="&j.0;Representation"/>
+        <j.0:Realization rdf:resource="&j.0;damageClaim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#customer -->
+
+    <owl:NamedIndividual rdf:about="&j.0;customer">
+        <rdf:type rdf:resource="&j.0;BusinessObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#customerFile -->
+
+    <owl:NamedIndividual rdf:about="&j.0;customerFile">
+        <rdf:type rdf:resource="&j.0;Aggregation"/>
+        <rdf:type rdf:resource="&j.0;BusinessObject"/>
+        <j.0:Aggregation rdf:resource="&j.0;customer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#customerFileData -->
+
+    <owl:NamedIndividual rdf:about="&j.0;customerFileData">
+        <rdf:type rdf:resource="&j.0;DataObject"/>
+        <rdf:type rdf:resource="&j.0;Realization"/>
+        <j.0:Realization rdf:resource="&j.0;customerFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#damageClaim -->
+
+    <owl:NamedIndividual rdf:about="&j.0;damageClaim">
+        <rdf:type rdf:resource="&j.0;Aggregation"/>
+        <rdf:type rdf:resource="&j.0;BusinessObject"/>
+        <rdf:type rdf:resource="&j.0;Composition"/>
+        <j.0:Composition rdf:resource="&j.0;customerFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#damageClaimData -->
+
+    <owl:NamedIndividual rdf:about="&j.0;damageClaimData">
+        <rdf:type rdf:resource="&j.0;DataObject"/>
+        <rdf:type rdf:resource="&j.0;Realization"/>
+        <j.0:Realization rdf:resource="&j.0;damageClaim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#homeInsurancePolicy -->
+
+    <owl:NamedIndividual rdf:about="&j.0;homeInsurancePolicy">
+        <rdf:type rdf:resource="&j.0;BusinessObject"/>
+        <rdf:type rdf:resource="&j.0;Specialization"/>
+        <j.0:Specialization rdf:resource="&j.0;insurancePolicy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#insurancePolicy -->
+
+    <owl:NamedIndividual rdf:about="&j.0;insurancePolicy">
+        <rdf:type rdf:resource="&j.0;BusinessObject"/>
+        <rdf:type rdf:resource="&j.0;Composition"/>
+        <j.0:Composition rdf:resource="&j.0;customerFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#insurancePolicyData -->
+
+    <owl:NamedIndividual rdf:about="&j.0;insurancePolicyData">
+        <rdf:type rdf:resource="&j.0;DataObject"/>
+        <rdf:type rdf:resource="&j.0;Realization"/>
+        <j.0:Realization rdf:resource="&j.0;carInsurancePolicy"/>
+        <j.0:Realization rdf:resource="&j.0;homeInsurancePolicy"/>
+        <j.0:Realization rdf:resource="&j.0;legalAidInsurancePolicy"/>
+        <j.0:Realization rdf:resource="&j.0;liabilityInsurancePolicy"/>
+        <j.0:Realization rdf:resource="&j.0;travelInsurancePolicy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#insuranceRequest -->
+
+    <owl:NamedIndividual rdf:about="&j.0;insuranceRequest">
+        <rdf:type rdf:resource="&j.0;Aggregation"/>
+        <rdf:type rdf:resource="&j.0;BusinessObject"/>
+        <j.0:Aggregation rdf:resource="&j.0;insurancePolicy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#insuranceRequestData -->
+
+    <owl:NamedIndividual rdf:about="&j.0;insuranceRequestData">
+        <rdf:type rdf:resource="&j.0;DataObject"/>
+        <rdf:type rdf:resource="&j.0;Realization"/>
+        <j.0:Realization rdf:resource="&j.0;insuranceRequest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#legalAidInsurancePolicy -->
+
+    <owl:NamedIndividual rdf:about="&j.0;legalAidInsurancePolicy">
+        <rdf:type rdf:resource="&j.0;BusinessObject"/>
+        <rdf:type rdf:resource="&j.0;Specialization"/>
+        <j.0:Specialization rdf:resource="&j.0;insurancePolicy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#liabilityInsurancePolicy -->
+
+    <owl:NamedIndividual rdf:about="&j.0;liabilityInsurancePolicy">
+        <rdf:type rdf:resource="&j.0;BusinessObject"/>
+        <rdf:type rdf:resource="&j.0;Specialization"/>
+        <j.0:Specialization rdf:resource="&j.0;insurancePolicy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#premiumPayment -->
+
+    <owl:NamedIndividual rdf:about="&j.0;premiumPayment">
+        <rdf:type rdf:resource="&j.0;Composition"/>
+        <j.0:Composition rdf:resource="&j.0;customerFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/igorek#travelInsurancePolicy -->
+
+    <owl:NamedIndividual rdf:about="&j.0;travelInsurancePolicy">
+        <rdf:type rdf:resource="&j.0;BusinessObject"/>
+        <rdf:type rdf:resource="&j.0;Specialization"/>
+        <j.0:Specialization rdf:resource="&j.0;insurancePolicy"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
