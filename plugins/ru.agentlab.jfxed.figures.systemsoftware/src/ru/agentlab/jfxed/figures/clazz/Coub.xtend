@@ -11,7 +11,35 @@ import javafx.scene.shape.ArcTo
 import javafx.scene.shape.LineTo
 import javafx.scene.shape.MoveTo
 
-class Coub extends BaseFigure {
+import javafx.scene.text.Text
+
+import de.fxdiagram.core.XNode;
+import javafx.scene.layout.HBox
+import javafx.scene.layout.VBox
+import javafx.scene.text.Text
+import javafx.scene.shape.Polyline;
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.scene.Group;
+import javafx.scene.Node;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Polygon;
+import javafx.scene.layout.GridPane;
+import ru.agentlab.jfxed.IFigure;
+
+
+class Coub extends XNode implements IFigure {
+		var GridPane root 
+	
+	val nameTextBox = new Text
+	var String name
+
+	new(String name) {
+		super(name)
+		this.name = name
+	}
 	
 	Path path
 	ArcTo arcto
@@ -23,7 +51,15 @@ class Coub extends BaseFigure {
 	MoveTo move2
 
 	new (){
-		root = new VBox
+		
+	    super("Class");
+		
+		name = "Class";	
+		
+		root = new GridPane
+		
+		node = root
+		//root = new VBox
 		
 		path = new Path()
 		arcto = new ArcTo()
@@ -83,7 +119,21 @@ class Coub extends BaseFigure {
 		root.translateX = 260
 		root.translateY = 5
 		
+		root.children += nameTextBox => [
+			text = name
+		]
 		
-		initHandlers()
+	//	initHandlers()
 		}
+		
+		override setName(String name) {
+		nameTextBox.text = name
 	}
+
+	def getName() {
+		nameTextBox.text
+	}
+	override getRoot() {
+		this
+	}
+}
