@@ -1,0 +1,618 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/shalaev#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/shalaev#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/shalaev"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/shalaev#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/shalaev"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#assignment -->
+
+    <owl:ObjectProperty rdf:about="&j.0;assignment">
+        <rdfs:range rdf:resource="&j.0;businessActor"/>
+        <rdfs:domain rdf:resource="&j.0;businessRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#assignment1 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;assignment1">
+        <rdfs:domain rdf:resource="&j.0;businessProcess"/>
+        <rdfs:range rdf:resource="&j.0;businessRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#composition -->
+
+    <owl:ObjectProperty rdf:about="&j.0;composition">
+        <rdfs:range rdf:resource="&j.0;businessProcess"/>
+        <rdfs:domain rdf:resource="&j.0;businessProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#composition1 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;composition1">
+        <rdfs:domain rdf:resource="&j.0;node"/>
+        <rdfs:range rdf:resource="&j.0;systemSoftware"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#composition2 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;composition2">
+        <rdfs:range rdf:resource="&j.0;device"/>
+        <rdfs:domain rdf:resource="&j.0;node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#realization -->
+
+    <owl:ObjectProperty rdf:about="&j.0;realization">
+        <rdfs:domain rdf:resource="&j.0;applicationComponent"/>
+        <rdfs:range rdf:resource="&j.0;applicationService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#realization1 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;realization1">
+        <rdfs:domain rdf:resource="&j.0;businessProcess"/>
+        <rdfs:range rdf:resource="&j.0;businessService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#realization2 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;realization2">
+        <rdfs:range rdf:resource="&j.0;infrastructureService"/>
+        <rdfs:domain rdf:resource="&j.0;node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#realization3 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;realization3">
+        <rdfs:domain rdf:resource="&j.0;device"/>
+        <rdfs:range rdf:resource="&j.0;infrastructureService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#triggering -->
+
+    <owl:ObjectProperty rdf:about="&j.0;triggering">
+        <rdfs:domain rdf:resource="&j.0;businessProcess"/>
+        <rdfs:range rdf:resource="&j.0;businessProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#usedBy -->
+
+    <owl:ObjectProperty rdf:about="&j.0;usedBy">
+        <rdfs:range rdf:resource="&j.0;businessRole"/>
+        <rdfs:domain rdf:resource="&j.0;businessService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#usedBy1 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;usedBy1">
+        <rdfs:range rdf:resource="&j.0;applicationComponent"/>
+        <rdfs:domain rdf:resource="&j.0;infrastructureService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#usedBy2 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;usedBy2">
+        <rdfs:domain rdf:resource="&j.0;applicationService"/>
+        <rdfs:range rdf:resource="&j.0;businessProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#usedBy3 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;usedBy3">
+        <rdfs:range rdf:resource="&j.0;applicationComponent"/>
+        <rdfs:domain rdf:resource="&j.0;applicationService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#Concept -->
+
+    <owl:Class rdf:about="&j.0;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#Relation -->
+
+    <owl:Class rdf:about="&j.0;Relation"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#applicationComponent -->
+
+    <owl:Class rdf:about="&j.0;applicationComponent">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#applicationService -->
+
+    <owl:Class rdf:about="&j.0;applicationService">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#assignment -->
+
+    <owl:Class rdf:about="&j.0;assignment">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#businessActor -->
+
+    <owl:Class rdf:about="&j.0;businessActor">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#businessProcess -->
+
+    <owl:Class rdf:about="&j.0;businessProcess">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#businessRole -->
+
+    <owl:Class rdf:about="&j.0;businessRole">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#businessService -->
+
+    <owl:Class rdf:about="&j.0;businessService">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#composition -->
+
+    <owl:Class rdf:about="&j.0;composition">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#device -->
+
+    <owl:Class rdf:about="&j.0;device">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#infrastructureService -->
+
+    <owl:Class rdf:about="&j.0;infrastructureService">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#node -->
+
+    <owl:Class rdf:about="&j.0;node">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#realization -->
+
+    <owl:Class rdf:about="&j.0;realization">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#systemSoftware -->
+
+    <owl:Class rdf:about="&j.0;systemSoftware">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#triggering -->
+
+    <owl:Class rdf:about="&j.0;triggering">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#usedBy -->
+
+    <owl:Class rdf:about="&j.0;usedBy">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#CICS -->
+
+    <owl:NamedIndividual rdf:about="&j.0;CICS">
+        <rdf:type rdf:resource="&j.0;systemSoftware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#CIS -->
+
+    <owl:NamedIndividual rdf:about="&j.0;CIS">
+        <rdf:type rdf:resource="&j.0;applicationService"/>
+        <rdf:type rdf:resource="&j.0;usedBy"/>
+        <j.0:usedBy3 rdf:resource="&j.0;policyDataManagment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#ClaimsInfoServ -->
+
+    <owl:NamedIndividual rdf:about="&j.0;ClaimsInfoServ">
+        <rdf:type rdf:resource="&j.0;applicationService"/>
+        <rdf:type rdf:resource="&j.0;usedBy"/>
+        <j.0:usedBy3 rdf:resource="&j.0;FinantialApplication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#CliamFilesService -->
+
+    <owl:NamedIndividual rdf:about="&j.0;CliamFilesService">
+        <rdf:type rdf:resource="&j.0;infrastructureService"/>
+        <rdf:type rdf:resource="&j.0;usedBy"/>
+        <j.0:usedBy1 rdf:resource="&j.0;crmSystem"/>
+        <j.0:usedBy1 rdf:resource="&j.0;policyDataManagment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#CustomerFileService -->
+
+    <owl:NamedIndividual rdf:about="&j.0;CustomerFileService">
+        <rdf:type rdf:resource="&j.0;infrastructureService"/>
+        <rdf:type rdf:resource="&j.0;usedBy"/>
+        <j.0:usedBy1 rdf:resource="&j.0;FinantialApplication"/>
+        <j.0:usedBy1 rdf:resource="&j.0;policyDataManagment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#DBMS -->
+
+    <owl:NamedIndividual rdf:about="&j.0;DBMS">
+        <rdf:type rdf:resource="&j.0;systemSoftware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#FinantialApplication -->
+
+    <owl:NamedIndividual rdf:about="&j.0;FinantialApplication">
+        <rdf:type rdf:resource="&j.0;applicationComponent"/>
+        <rdf:type rdf:resource="&j.0;realization"/>
+        <j.0:realization1 rdf:resource="&j.0;premiumPayment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#HandleClaim -->
+
+    <owl:NamedIndividual rdf:about="&j.0;HandleClaim">
+        <rdf:type rdf:resource="&j.0;assignment"/>
+        <rdf:type rdf:resource="&j.0;businessProcess"/>
+        <rdf:type rdf:resource="&j.0;composition"/>
+        <j.0:composition rdf:resource="&j.0;accept"/>
+        <j.0:assignment1 rdf:resource="&j.0;insurer"/>
+        <j.0:composition rdf:resource="&j.0;pay"/>
+        <j.0:composition rdf:resource="&j.0;register"/>
+        <j.0:composition rdf:resource="&j.0;valuate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#Mainframe -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Mainframe">
+        <rdf:type rdf:resource="&j.0;composition"/>
+        <rdf:type rdf:resource="&j.0;node"/>
+        <j.0:composition1 rdf:resource="&j.0;CICS"/>
+        <j.0:composition1 rdf:resource="&j.0;DBMS"/>
+        <j.0:composition1 rdf:resource="&j.0;MessageQueuing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#MessageQueuing -->
+
+    <owl:NamedIndividual rdf:about="&j.0;MessageQueuing">
+        <rdf:type rdf:resource="&j.0;systemSoftware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#NASfileserver -->
+
+    <owl:NamedIndividual rdf:about="&j.0;NASfileserver">
+        <rdf:type rdf:resource="&j.0;device"/>
+        <rdf:type rdf:resource="&j.0;realization"/>
+        <j.0:realization3 rdf:resource="&j.0;CustomerFileService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#UNIXServer -->
+
+    <owl:NamedIndividual rdf:about="&j.0;UNIXServer">
+        <rdf:type rdf:resource="&j.0;device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#UnixServerFarm -->
+
+    <owl:NamedIndividual rdf:about="&j.0;UnixServerFarm">
+        <rdf:type rdf:resource="&j.0;composition"/>
+        <j.0:composition2 rdf:resource="&j.0;UNIXServer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#accept -->
+
+    <owl:NamedIndividual rdf:about="&j.0;accept">
+        <rdf:type rdf:resource="&j.0;businessProcess"/>
+        <rdf:type rdf:resource="&j.0;realization"/>
+        <rdf:type rdf:resource="&j.0;triggering"/>
+        <j.0:realization1 rdf:resource="&j.0;custominformation"/>
+        <j.0:triggering rdf:resource="&j.0;valuate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#archiSurance -->
+
+    <owl:NamedIndividual rdf:about="&j.0;archiSurance">
+        <rdf:type rdf:resource="&j.0;businessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#cliampayment -->
+
+    <owl:NamedIndividual rdf:about="&j.0;cliampayment">
+        <rdf:type rdf:resource="&j.0;businessService"/>
+        <rdf:type rdf:resource="&j.0;usedBy"/>
+        <j.0:usedBy rdf:resource="&j.0;insurant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#cliamregistration -->
+
+    <owl:NamedIndividual rdf:about="&j.0;cliamregistration">
+        <rdf:type rdf:resource="&j.0;businessService"/>
+        <rdf:type rdf:resource="&j.0;usedBy"/>
+        <j.0:usedBy rdf:resource="&j.0;insurant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#client -->
+
+    <owl:NamedIndividual rdf:about="&j.0;client">
+        <rdf:type rdf:resource="&j.0;businessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#crmSystem -->
+
+    <owl:NamedIndividual rdf:about="&j.0;crmSystem">
+        <rdf:type rdf:resource="&j.0;applicationComponent"/>
+        <rdf:type rdf:resource="&j.0;realization"/>
+        <j.0:realization rdf:resource="&j.0;CIS"/>
+        <j.0:realization rdf:resource="&j.0;insuranceApplication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#customerDataModfication -->
+
+    <owl:NamedIndividual rdf:about="&j.0;customerDataModfication">
+        <rdf:type rdf:resource="&j.0;applicationService"/>
+        <rdf:type rdf:resource="&j.0;usedBy"/>
+        <j.0:usedBy2 rdf:resource="&j.0;register"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#custominformation -->
+
+    <owl:NamedIndividual rdf:about="&j.0;custominformation">
+        <rdf:type rdf:resource="&j.0;businessService"/>
+        <rdf:type rdf:resource="&j.0;usedBy"/>
+        <j.0:usedBy rdf:resource="&j.0;insurant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#insuranceApplication -->
+
+    <owl:NamedIndividual rdf:about="&j.0;insuranceApplication">
+        <rdf:type rdf:resource="&j.0;applicationService"/>
+        <rdf:type rdf:resource="&j.0;usedBy"/>
+        <j.0:usedBy2 rdf:resource="&j.0;register"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#insurant -->
+
+    <owl:NamedIndividual rdf:about="&j.0;insurant">
+        <rdf:type rdf:resource="&j.0;assignment"/>
+        <rdf:type rdf:resource="&j.0;businessRole"/>
+        <j.0:assignment rdf:resource="&j.0;client"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#insurer -->
+
+    <owl:NamedIndividual rdf:about="&j.0;insurer">
+        <rdf:type rdf:resource="&j.0;assignment"/>
+        <rdf:type rdf:resource="&j.0;businessRole"/>
+        <j.0:assignment rdf:resource="&j.0;archiSurance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#mainframe -->
+
+    <owl:NamedIndividual rdf:about="&j.0;mainframe">
+        <rdf:type rdf:resource="&j.0;realization"/>
+        <j.0:realization2 rdf:resource="&j.0;CliamFilesService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#pay -->
+
+    <owl:NamedIndividual rdf:about="&j.0;pay">
+        <rdf:type rdf:resource="&j.0;businessProcess"/>
+        <rdf:type rdf:resource="&j.0;realization"/>
+        <j.0:realization1 rdf:resource="&j.0;cliampayment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#policyDataManagment -->
+
+    <owl:NamedIndividual rdf:about="&j.0;policyDataManagment">
+        <rdf:type rdf:resource="&j.0;applicationComponent"/>
+        <rdf:type rdf:resource="&j.0;realization"/>
+        <j.0:realization rdf:resource="&j.0;ClaimsInfoServ"/>
+        <j.0:realization rdf:resource="&j.0;customerDataModfication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#premiumPayment -->
+
+    <owl:NamedIndividual rdf:about="&j.0;premiumPayment">
+        <rdf:type rdf:resource="&j.0;applicationService"/>
+        <rdf:type rdf:resource="&j.0;usedBy"/>
+        <j.0:usedBy2 rdf:resource="&j.0;pay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#register -->
+
+    <owl:NamedIndividual rdf:about="&j.0;register">
+        <rdf:type rdf:resource="&j.0;businessProcess"/>
+        <rdf:type rdf:resource="&j.0;realization"/>
+        <rdf:type rdf:resource="&j.0;triggering"/>
+        <j.0:triggering rdf:resource="&j.0;accept"/>
+        <j.0:realization1 rdf:resource="&j.0;cliamregistration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#valuate -->
+
+    <owl:NamedIndividual rdf:about="&j.0;valuate">
+        <rdf:type rdf:resource="&j.0;businessProcess"/>
+        <rdf:type rdf:resource="&j.0;triggering"/>
+        <j.0:triggering rdf:resource="&j.0;pay"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
