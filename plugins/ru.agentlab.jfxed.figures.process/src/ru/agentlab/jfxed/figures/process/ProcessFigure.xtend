@@ -4,10 +4,10 @@ import de.fxdiagram.core.XNode
 import javafx.scene.layout.HBox
 import javafx.scene.text.Text
 import javafx.scene.shape.Polyline
-import ru.agentlab.jfxed.IFigureimport javafx.scene.layout.GridPane
+import ru.agentlab.jfxed.IFigure
 import javafx.scene.layout.VBox
 
-class ClassFigure extends XNode implements IFigure {
+class ProcessFigure extends XNode implements IFigure {
 	
 	val nameTextBox = new Text
 	var String name
@@ -25,7 +25,7 @@ class ClassFigure extends XNode implements IFigure {
 
 		node = new VBox => [
 			
-			stylesheets += ClassFigure.getResource("ClassFigure.css").toExternalForm()
+			stylesheets += ProcessFigure.getResource("ProcessFigure.css").toExternalForm()
 			styleClass += "ClassFigure";
 			
 			children += new HBox => [

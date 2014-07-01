@@ -1,16 +1,14 @@
 package ru.agentlab.jfxed.figures;
 
-import ru.agentlab.jfxed.figures.process.ClassArrow;
-import ru.agentlab.jfxed.figures.process.ClassFigure;
+import ru.agentlab.jfxed.figures.process.ProcessFigure;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class BootFigures extends Application {
 	
-	ClassFigure sourceToMove;
+	ProcessFigure sourceToMove;
 	
 	double sceneStartX;
 	double sceneStartY;
@@ -27,11 +25,9 @@ public class BootFigures extends Application {
 
 		AnchorPane root = new AnchorPane();
 		
-		final ClassFigure source = new ClassFigure();
-		final ClassArrow arrow = new ClassArrow();
+		final ProcessFigure source = new ProcessFigure();
 				
 		root.getChildren().add(source.getRoot());
-		root.getChildren().add(arrow.getRoot());
 		
 		Scene scene = new Scene(root, 1000, 600);
 		

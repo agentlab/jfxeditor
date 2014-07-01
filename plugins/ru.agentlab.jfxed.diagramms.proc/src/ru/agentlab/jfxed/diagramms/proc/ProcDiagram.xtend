@@ -7,7 +7,7 @@ import com.hp.hpl.jena.query.QuerySolution
 import com.hp.hpl.jena.rdf.model.Resource
 import de.fxdiagram.core.XDiagram
 import ru.agentlab.jfxed.IDiagram
-import ru.agentlab.jfxed.figures.process.ClassFigure
+import ru.agentlab.jfxed.figures.process.ProcessFigure
 
 public class ProcDiagram implements IDiagram {
 	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/proc"
@@ -30,7 +30,7 @@ public class ProcDiagram implements IDiagram {
 	      val QuerySolution soln = results.nextSolution() 
 	      val Resource x = soln.getResource("uri")       // Get a result variable by name.
 	     
-	     val target = new ClassFigure() => [
+	     val target = new ProcessFigure() => [
 				layoutX = 280
 				layoutY = 280
 				name = x.localName
