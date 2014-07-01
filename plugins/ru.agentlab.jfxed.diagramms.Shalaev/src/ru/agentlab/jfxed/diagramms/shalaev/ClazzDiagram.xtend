@@ -5,9 +5,10 @@ import com.hp.hpl.jena.query.QueryExecutionFactory
 import com.hp.hpl.jena.query.QueryFactory
 import com.hp.hpl.jena.query.QuerySolution
 import com.hp.hpl.jena.rdf.model.Resource
+import ru.agentlab.jfxed.figures.shalaev.Coub
 import de.fxdiagram.core.XDiagram
 import ru.agentlab.jfxed.IDiagram
-import ru.agentlab.jfxed.figures.clazz.Coub
+
 
 public class ClazzDiagram implements IDiagram {
 	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/shalaev"

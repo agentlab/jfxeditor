@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ru.agentlab.jfxed.diagramms.Shalaev</name>
+	<name>ru.agentlab.jfxed.diagramms.LayeredViewpoint</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -31,11 +31,4 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>umldi.owl</name>
-			<type>1</type>
-			<location>D:/Eclipse Kepler/umldi.owl</location>
-		</link>
-	</linkedResources>
 </projectDescription>

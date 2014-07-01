@@ -2,6 +2,6 @@
 <?eclipse version="3.0"?>
 <plugin>
    <extension point="ru.agentlab.jfxed.figure">
-         <figure name="Coub" class="ru.agentlab.jfxed.figures.clazz.Coub"/>
+         <figure name="SystemSoftware" class="ru.agentlab.jfxed.figures.shalaev.Coub"/>
    </extension>
 </plugin>
