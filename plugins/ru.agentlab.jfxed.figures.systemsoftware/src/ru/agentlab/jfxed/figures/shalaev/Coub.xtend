@@ -1,36 +1,20 @@
-package ru.agentlab.jfxed.figures.clazz
+package ru.agentlab.jfxed.figures.shalaev
 
-import javafx.scene.layout.VBox
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon
 import javafx.scene.shape.Polyline
 import javafx.scene.Group;
-import ru.agentlab.jfxed.figures.BaseFigure
 import javafx.scene.shape.Path
 import javafx.scene.shape.ArcTo
 import javafx.scene.shape.LineTo
 import javafx.scene.shape.MoveTo
-
 import javafx.scene.text.Text
-
 import de.fxdiagram.core.XNode;
-import javafx.scene.layout.HBox
-import javafx.scene.layout.VBox
-import javafx.scene.text.Text
-import javafx.scene.shape.Polyline;
-import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.scene.Group;
-import javafx.scene.Node;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Polygon;
 import javafx.scene.layout.GridPane;
 import ru.agentlab.jfxed.IFigure;
 
 
-class Coub extends XNode implements IFigure {
+public class Coub extends XNode implements IFigure {
 		var GridPane root 
 	
 	val nameTextBox = new Text
@@ -134,6 +118,6 @@ class Coub extends XNode implements IFigure {
 		nameTextBox.text
 	}
 	override getRoot() {
-		this
+		return this
 	}
 }

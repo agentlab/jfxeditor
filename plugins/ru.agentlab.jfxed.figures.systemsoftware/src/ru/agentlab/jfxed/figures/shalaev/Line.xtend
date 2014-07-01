@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.figures.clazz
+package ru.agentlab.jfxed.figures.shalaev
 
 import javafx.scene.layout.VBox
 import ru.agentlab.jfxed.figures.BaseFigure

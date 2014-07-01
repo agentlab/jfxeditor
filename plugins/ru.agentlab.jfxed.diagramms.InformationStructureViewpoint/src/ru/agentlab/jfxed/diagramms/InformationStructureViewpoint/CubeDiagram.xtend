@@ -1,17 +1,16 @@
-package ru.agentlab.jfxed.diagramms.shalaev
+package ru.agentlab.jfxed.diagramms.InformationStructureViewpoint
 
 import com.hp.hpl.jena.ontology.OntModel
 import com.hp.hpl.jena.query.QueryExecutionFactory
 import com.hp.hpl.jena.query.QueryFactory
 import com.hp.hpl.jena.query.QuerySolution
 import com.hp.hpl.jena.rdf.model.Resource
-import ru.agentlab.jfxed.figures.shalaev.Coub
 import de.fxdiagram.core.XDiagram
 import ru.agentlab.jfxed.IDiagram
+import ru.agentlab.jfxed.figures.device.Coub
 
-
-public class ClazzDiagram implements IDiagram {
-	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/shalaev"
+public class CubeDiagram implements IDiagram {
+	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/igorek"
 	static String NS = SOURCE + "#"
 	
 	override createJfx(OntModel jenaModel, XDiagram jfxDiagram) {
@@ -19,7 +18,7 @@ public class ClazzDiagram implements IDiagram {
 		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 		select ?uri 
 		where { 
-			?uri rdf:type <«SOURCE»#Concept> 
+			?uri rdf:type <«SOURCE»#BusinessObject> 
 		} 
 		'''
 	    val query = QueryFactory.create(queryString)

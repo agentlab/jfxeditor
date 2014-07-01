@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Blockandarrow
-Bundle-SymbolicName: ru.agentlab.jfxed.diagramms.LayeredViewpoint;singleton:=true
+Bundle-Name: InformationStructureViewpoint
+Bundle-SymbolicName: ru.agentlab.jfxed.diagramms.InformationStructureViewpoint;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: AgentLab
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
@@ -17,7 +17,8 @@ Require-Bundle: org.eclipse.core.runtime,
  de.fxdiagram.core,
  de.fxdiagram.annotations,
  ru.agentlab.jfxed,
- ru.agentlab.jfxed.figures.systemsoftware;bundle-version="1.0.0",
+ ru.agentlab.jfxed.figures.device;bundle-version="1.0.0",
  org.apache.jena.core;bundle-version="2.11.0",
  org.apache.jena.iri;bundle-version="0.9.5"
 Import-Package: com.hp.hpl.jena.ontology
+
