@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ApplicationBehaviorViewpoint
+Bundle-SymbolicName: ru.agentlab.jfxed.diagramms.ApplicationBehaviorViewpoint;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: AgentLab
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.xtext.xbase.lib;visibility:=reexport,
+ com.google.guava,
+ org.eclipse.fx.core,
+ org.eclipse.fx.javafx,
+ org.eclipse.fx.osgi.util,
+ de.fxdiagram.lib,
+ de.fxdiagram.core,
+ de.fxdiagram.annotations,
+ ru.agentlab.jfxed,
+ ru.agentlab.jfxed.figures.event;bundle-version="1.0.0",
+ org.apache.jena.core;bundle-version="2.11.0",
+ org.apache.jena.iri;bundle-version="0.9.5"
+Import-Package: com.hp.hpl.jena.ontology
+
