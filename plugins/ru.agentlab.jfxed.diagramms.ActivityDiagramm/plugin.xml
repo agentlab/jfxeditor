@@ -3,6 +3,6 @@
 <plugin>
    <extension
    		point="ru.agentlab.jfxed.diagram">
-         <diagram name="Диаграмма Анис" class="ru.agentlab.jfxed.diagramms.ActivityDiagramm.ClazzDiagram" ontoUri="http://www.agentlab.ru/jfxed/onto/anisik"/>
+         <diagram name="Диаграмма Анис" class="ru.agentlab.jfxed.diagramms.activitydiagramm.Activity" ontoUri="http://www.agentlab.ru/jfxed/onto/anisik"/>
    </extension>
 </plugin>

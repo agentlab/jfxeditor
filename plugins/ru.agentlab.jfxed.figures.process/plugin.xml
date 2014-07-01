@@ -2,6 +2,6 @@
 <?eclipse version="3.0"?>
 <plugin>
    <extension point="ru.agentlab.jfxed.figure">
-         <figure name="Process" class="ru.agentlab.jfxed.figures.process.ClassFigure"/>
+         <figure name="Process" class="ru.agentlab.jfxed.figures.process.ProcessFigure"/>
    </extension>
 </plugin>

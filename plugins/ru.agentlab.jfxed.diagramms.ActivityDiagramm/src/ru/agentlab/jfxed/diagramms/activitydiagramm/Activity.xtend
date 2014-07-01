@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.diagramms.clazz
+package ru.agentlab.jfxed.diagramms.activitydiagramm
 
 import com.hp.hpl.jena.ontology.OntModel
 import com.hp.hpl.jena.query.QueryExecutionFactory
@@ -9,7 +9,7 @@ import de.fxdiagram.core.XDiagram
 import ru.agentlab.jfxed.IDiagram
 import ru.agentlab.jfxed.figures.clazz.ClassFigure
 
-public class ClazzDiagram implements IDiagram {
+public class Activity implements IDiagram {
 	static String SOURCE = "http://www.agentlab.ru/jfxed/onto/anisik"
 	static String NS = SOURCE + "#"
 	
