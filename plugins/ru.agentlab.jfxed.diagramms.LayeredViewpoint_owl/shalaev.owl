@@ -6,7 +6,7 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/shalaev#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/strategicrationale#" >
 ]>
 
 
@@ -16,7 +16,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/shalaev#">
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/strategicrationale#">
     <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/shalaev"/>
     
 
@@ -32,7 +32,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#assignment -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#assignment -->
 
     <owl:ObjectProperty rdf:about="&j.0;assignment">
         <rdfs:range rdf:resource="&j.0;businessActor"/>
@@ -41,7 +41,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#assignment1 -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#assignment1 -->
 
     <owl:ObjectProperty rdf:about="&j.0;assignment1">
         <rdfs:domain rdf:resource="&j.0;businessProcess"/>
@@ -50,7 +50,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#composition -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#composition -->
 
     <owl:ObjectProperty rdf:about="&j.0;composition">
         <rdfs:range rdf:resource="&j.0;businessProcess"/>
@@ -59,7 +59,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#composition1 -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#composition1 -->
 
     <owl:ObjectProperty rdf:about="&j.0;composition1">
         <rdfs:domain rdf:resource="&j.0;node"/>
@@ -68,7 +68,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#composition2 -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#composition2 -->
 
     <owl:ObjectProperty rdf:about="&j.0;composition2">
         <rdfs:range rdf:resource="&j.0;device"/>
@@ -77,7 +77,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#realization -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#realization -->
 
     <owl:ObjectProperty rdf:about="&j.0;realization">
         <rdfs:domain rdf:resource="&j.0;applicationComponent"/>
@@ -86,7 +86,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#realization1 -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#realization1 -->
 
     <owl:ObjectProperty rdf:about="&j.0;realization1">
         <rdfs:domain rdf:resource="&j.0;businessProcess"/>
@@ -95,7 +95,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#realization2 -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#realization2 -->
 
     <owl:ObjectProperty rdf:about="&j.0;realization2">
         <rdfs:range rdf:resource="&j.0;infrastructureService"/>
@@ -104,7 +104,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#realization3 -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#realization3 -->
 
     <owl:ObjectProperty rdf:about="&j.0;realization3">
         <rdfs:domain rdf:resource="&j.0;device"/>
@@ -113,7 +113,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#triggering -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#triggering -->
 
     <owl:ObjectProperty rdf:about="&j.0;triggering">
         <rdfs:domain rdf:resource="&j.0;businessProcess"/>
@@ -122,7 +122,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#usedBy -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#usedBy -->
 
     <owl:ObjectProperty rdf:about="&j.0;usedBy">
         <rdfs:range rdf:resource="&j.0;businessRole"/>
@@ -131,7 +131,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#usedBy1 -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#usedBy1 -->
 
     <owl:ObjectProperty rdf:about="&j.0;usedBy1">
         <rdfs:range rdf:resource="&j.0;applicationComponent"/>
@@ -140,7 +140,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#usedBy2 -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#usedBy2 -->
 
     <owl:ObjectProperty rdf:about="&j.0;usedBy2">
         <rdfs:domain rdf:resource="&j.0;applicationService"/>
@@ -149,7 +149,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#usedBy3 -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#usedBy3 -->
 
     <owl:ObjectProperty rdf:about="&j.0;usedBy3">
         <rdfs:range rdf:resource="&j.0;applicationComponent"/>
@@ -169,19 +169,19 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#Concept -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept -->
 
     <owl:Class rdf:about="&j.0;Concept"/>
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#Relation -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation -->
 
     <owl:Class rdf:about="&j.0;Relation"/>
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#applicationComponent -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationComponent -->
 
     <owl:Class rdf:about="&j.0;applicationComponent">
         <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
@@ -189,7 +189,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#applicationService -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#applicationService -->
 
     <owl:Class rdf:about="&j.0;applicationService">
         <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
@@ -197,7 +197,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#assignment -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#assignment -->
 
     <owl:Class rdf:about="&j.0;assignment">
         <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
@@ -205,7 +205,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#businessActor -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#businessActor -->
 
     <owl:Class rdf:about="&j.0;businessActor">
         <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
@@ -213,7 +213,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#businessProcess -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#businessProcess -->
 
     <owl:Class rdf:about="&j.0;businessProcess">
         <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
@@ -221,7 +221,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#businessRole -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#businessRole -->
 
     <owl:Class rdf:about="&j.0;businessRole">
         <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
@@ -229,7 +229,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#businessService -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#businessService -->
 
     <owl:Class rdf:about="&j.0;businessService">
         <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
@@ -237,7 +237,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#composition -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#composition -->
 
     <owl:Class rdf:about="&j.0;composition">
         <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
@@ -245,7 +245,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#device -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#device -->
 
     <owl:Class rdf:about="&j.0;device">
         <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
@@ -253,7 +253,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#infrastructureService -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#infrastructureService -->
 
     <owl:Class rdf:about="&j.0;infrastructureService">
         <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
@@ -261,7 +261,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#node -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#node -->
 
     <owl:Class rdf:about="&j.0;node">
         <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
@@ -269,7 +269,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#realization -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#realization -->
 
     <owl:Class rdf:about="&j.0;realization">
         <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
@@ -277,7 +277,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#systemSoftware -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#systemSoftware -->
 
     <owl:Class rdf:about="&j.0;systemSoftware">
         <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
@@ -285,7 +285,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#triggering -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#triggering -->
 
     <owl:Class rdf:about="&j.0;triggering">
         <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
@@ -293,7 +293,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#usedBy -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#usedBy -->
 
     <owl:Class rdf:about="&j.0;usedBy">
         <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
@@ -312,7 +312,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#CICS -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#CICS -->
 
     <owl:NamedIndividual rdf:about="&j.0;CICS">
         <rdf:type rdf:resource="&j.0;systemSoftware"/>
@@ -320,7 +320,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#CIS -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#CIS -->
 
     <owl:NamedIndividual rdf:about="&j.0;CIS">
         <rdf:type rdf:resource="&j.0;applicationService"/>
@@ -330,7 +330,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#ClaimsInfoServ -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#ClaimsInfoServ -->
 
     <owl:NamedIndividual rdf:about="&j.0;ClaimsInfoServ">
         <rdf:type rdf:resource="&j.0;applicationService"/>
@@ -340,7 +340,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#CliamFilesService -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#CliamFilesService -->
 
     <owl:NamedIndividual rdf:about="&j.0;CliamFilesService">
         <rdf:type rdf:resource="&j.0;infrastructureService"/>
@@ -351,7 +351,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#CustomerFileService -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#CustomerFileService -->
 
     <owl:NamedIndividual rdf:about="&j.0;CustomerFileService">
         <rdf:type rdf:resource="&j.0;infrastructureService"/>
@@ -362,7 +362,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#DBMS -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#DBMS -->
 
     <owl:NamedIndividual rdf:about="&j.0;DBMS">
         <rdf:type rdf:resource="&j.0;systemSoftware"/>
@@ -370,7 +370,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#FinantialApplication -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#FinantialApplication -->
 
     <owl:NamedIndividual rdf:about="&j.0;FinantialApplication">
         <rdf:type rdf:resource="&j.0;applicationComponent"/>
@@ -380,7 +380,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#HandleClaim -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#HandleClaim -->
 
     <owl:NamedIndividual rdf:about="&j.0;HandleClaim">
         <rdf:type rdf:resource="&j.0;assignment"/>
@@ -395,7 +395,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#Mainframe -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#Mainframe -->
 
     <owl:NamedIndividual rdf:about="&j.0;Mainframe">
         <rdf:type rdf:resource="&j.0;composition"/>
@@ -407,7 +407,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#MessageQueuing -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#MessageQueuing -->
 
     <owl:NamedIndividual rdf:about="&j.0;MessageQueuing">
         <rdf:type rdf:resource="&j.0;systemSoftware"/>
@@ -415,7 +415,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#NASfileserver -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#NASfileserver -->
 
     <owl:NamedIndividual rdf:about="&j.0;NASfileserver">
         <rdf:type rdf:resource="&j.0;device"/>
@@ -425,7 +425,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#UNIXServer -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#UNIXServer -->
 
     <owl:NamedIndividual rdf:about="&j.0;UNIXServer">
         <rdf:type rdf:resource="&j.0;device"/>
@@ -433,7 +433,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#UnixServerFarm -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#UnixServerFarm -->
 
     <owl:NamedIndividual rdf:about="&j.0;UnixServerFarm">
         <rdf:type rdf:resource="&j.0;composition"/>
@@ -442,7 +442,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#accept -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#accept -->
 
     <owl:NamedIndividual rdf:about="&j.0;accept">
         <rdf:type rdf:resource="&j.0;businessProcess"/>
@@ -454,7 +454,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#archiSurance -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#archiSurance -->
 
     <owl:NamedIndividual rdf:about="&j.0;archiSurance">
         <rdf:type rdf:resource="&j.0;businessActor"/>
@@ -462,7 +462,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#cliampayment -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#cliampayment -->
 
     <owl:NamedIndividual rdf:about="&j.0;cliampayment">
         <rdf:type rdf:resource="&j.0;businessService"/>
@@ -472,7 +472,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#cliamregistration -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#cliamregistration -->
 
     <owl:NamedIndividual rdf:about="&j.0;cliamregistration">
         <rdf:type rdf:resource="&j.0;businessService"/>
@@ -482,7 +482,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#client -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#client -->
 
     <owl:NamedIndividual rdf:about="&j.0;client">
         <rdf:type rdf:resource="&j.0;businessActor"/>
@@ -490,7 +490,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#crmSystem -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#crmSystem -->
 
     <owl:NamedIndividual rdf:about="&j.0;crmSystem">
         <rdf:type rdf:resource="&j.0;applicationComponent"/>
@@ -501,7 +501,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#customerDataModfication -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#customerDataModfication -->
 
     <owl:NamedIndividual rdf:about="&j.0;customerDataModfication">
         <rdf:type rdf:resource="&j.0;applicationService"/>
@@ -511,7 +511,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#custominformation -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#custominformation -->
 
     <owl:NamedIndividual rdf:about="&j.0;custominformation">
         <rdf:type rdf:resource="&j.0;businessService"/>
@@ -521,7 +521,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#insuranceApplication -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#insuranceApplication -->
 
     <owl:NamedIndividual rdf:about="&j.0;insuranceApplication">
         <rdf:type rdf:resource="&j.0;applicationService"/>
@@ -531,7 +531,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#insurant -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#insurant -->
 
     <owl:NamedIndividual rdf:about="&j.0;insurant">
         <rdf:type rdf:resource="&j.0;assignment"/>
@@ -541,7 +541,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#insurer -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#insurer -->
 
     <owl:NamedIndividual rdf:about="&j.0;insurer">
         <rdf:type rdf:resource="&j.0;assignment"/>
@@ -551,7 +551,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#mainframe -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#mainframe -->
 
     <owl:NamedIndividual rdf:about="&j.0;mainframe">
         <rdf:type rdf:resource="&j.0;realization"/>
@@ -560,7 +560,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#pay -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#pay -->
 
     <owl:NamedIndividual rdf:about="&j.0;pay">
         <rdf:type rdf:resource="&j.0;businessProcess"/>
@@ -570,7 +570,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#policyDataManagment -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#policyDataManagment -->
 
     <owl:NamedIndividual rdf:about="&j.0;policyDataManagment">
         <rdf:type rdf:resource="&j.0;applicationComponent"/>
@@ -581,7 +581,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#premiumPayment -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#premiumPayment -->
 
     <owl:NamedIndividual rdf:about="&j.0;premiumPayment">
         <rdf:type rdf:resource="&j.0;applicationService"/>
@@ -591,7 +591,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#register -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#register -->
 
     <owl:NamedIndividual rdf:about="&j.0;register">
         <rdf:type rdf:resource="&j.0;businessProcess"/>
@@ -603,7 +603,7 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/shalaev#valuate -->
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#valuate -->
 
     <owl:NamedIndividual rdf:about="&j.0;valuate">
         <rdf:type rdf:resource="&j.0;businessProcess"/>
