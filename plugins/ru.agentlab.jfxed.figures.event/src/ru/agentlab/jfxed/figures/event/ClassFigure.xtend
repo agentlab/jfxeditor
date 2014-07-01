@@ -22,7 +22,7 @@ class ClassFigure extends XNode implements IFigure {
 	new (){
 		super("Class");
 		
-		name = "Class";	
+		name = "Event";	
 		
 		root = new GridPane
 		node = root

@@ -13,7 +13,7 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 public class BusinessProcessViewpoint {
 	
-	static final String SCHEMA = "http://www.agentlab.ru/jfxed/onto/strategicrationale";
+	static final String SCHEMA = "http://www.agentlab.ru/jfxed/onto/proc";
 	static final String NS = SCHEMA + "#";
 	
 	public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class BusinessProcessViewpoint {
 		OntModel m = ModelFactory.createOntologyModel();
 		
 		OntClass concept = m.createClass(NS + "Concept");
-		OntClass relation = m.createClass(NS + "Realation");
+		OntClass relation = m.createClass(NS + "Relation");
 		
 		// creating objects
 		OntClass buisnessProcessClass = m.createClass(NS + "buisnessProcess");
