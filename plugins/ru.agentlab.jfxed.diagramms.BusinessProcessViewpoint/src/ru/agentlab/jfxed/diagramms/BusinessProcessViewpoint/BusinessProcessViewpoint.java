@@ -21,7 +21,7 @@ public class BusinessProcessViewpoint {
 		OntModel m = ModelFactory.createOntologyModel();
 		
 		OntClass concept = m.createClass(NS + "Concept");
-		OntClass relation = m.createClass(NS + "Realation");
+		OntClass relation = m.createClass(NS + "Relation");
 		
 		// creating objects
 		OntClass buisnessProcessClass = m.createClass(NS + "buisnessProcess");

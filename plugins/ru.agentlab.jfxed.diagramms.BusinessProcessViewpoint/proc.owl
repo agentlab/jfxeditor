@@ -88,16 +88,16 @@
     
 
 
-    <!-- http://www.agentlab.ru/jfxed/onto/proc#Realation -->
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#Relation -->
 
-    <owl:Class rdf:about="&j.0;Realation"/>
+    <owl:Class rdf:about="&j.0;Relation"/>
     
 
 
     <!-- http://www.agentlab.ru/jfxed/onto/proc#access -->
 
     <owl:Class rdf:about="&j.0;access">
-        <rdfs:subClassOf rdf:resource="&j.0;Realation"/>
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
     </owl:Class>
     
 
@@ -129,7 +129,7 @@
     <!-- http://www.agentlab.ru/jfxed/onto/proc#composition -->
 
     <owl:Class rdf:about="&j.0;composition">
-        <rdfs:subClassOf rdf:resource="&j.0;Realation"/>
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
     </owl:Class>
     
 
@@ -137,7 +137,7 @@
     <!-- http://www.agentlab.ru/jfxed/onto/proc#realiztion -->
 
     <owl:Class rdf:about="&j.0;realiztion">
-        <rdfs:subClassOf rdf:resource="&j.0;Realation"/>
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
     </owl:Class>
     
 
@@ -153,7 +153,7 @@
     <!-- http://www.agentlab.ru/jfxed/onto/proc#triggering -->
 
     <owl:Class rdf:about="&j.0;triggering">
-        <rdfs:subClassOf rdf:resource="&j.0;Realation"/>
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
     </owl:Class>
     
 
