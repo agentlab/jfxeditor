@@ -17,7 +17,7 @@ public class ClazzDiagram implements IDiagram {
 		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 		select ?uri 
 		where { 
-			?uri rdf:type <«SOURCE»#Clazz> 
+			?uri rdf:type <«SOURCE»#buisnessObject> 
 		} 
 		'''
 	    val query = QueryFactory.create(queryString)
