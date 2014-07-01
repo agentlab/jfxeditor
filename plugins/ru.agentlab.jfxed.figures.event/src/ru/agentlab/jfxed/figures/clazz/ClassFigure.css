@@ -1,0 +1,103 @@
+.ClassFigure{
+	-fx-background-color: yellow ;
+    -fx-background-radius: 20;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 20;
+    
+	-fx-padding: 0;
+}
+
+
+.Figure{
+	
+	-fx-background-color: yellow ;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 0;
+    -fx-border-radius: 0;
+    
+	-fx-padding: 5 5 5 5;
+}
+
+.Figure2{
+	-fx-background-color: none ;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 0;
+    -fx-border-radius: 0;
+     -fx-padding: 0 0 0 0;
+     -fx-stroke-type: outside
+}
+
+.ClassFigure-Name-Section{
+    -fx-padding: 15 50 35 50;
+    -fx-border-color: black;
+    -fx-border-width: 0;
+}
+
+
+.Circle1 {
+	-fx-alignment: top-left;
+    -fx-padding: 0 0 0 -10;
+    -fx-background-color: none ;
+    -fx-background-radius: 100;
+    -fx-border-color: black;
+    -fx-border-width: 1 1 1 0;
+    -fx-border-radius: 100;
+    -fx-stroke-type: inside
+    }
+    
+   .Circle2 {
+	-fx-alignment: top-left;
+    -fx-padding: 5;
+    -fx-background-color: none ;
+    -fx-background-radius: 100;
+    -fx-border-color: black;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-radius: 200;
+    }
+	
+.Circle {
+	-fx-alignment: top-right;
+    -fx-padding: 5;
+    -fx-background-color: none;
+    -fx-background-radius: 100;
+    -fx-border-color: black;
+    -fx-border-width: 0;
+    -fx-border-radius: 100;
+    -fx-stroke-type: inside
+}
+
+.ClassCircle-Text{
+
+	-fx-alignment: center;
+    -fx-font: bold 1pt "Arial";
+    -fx-stroke-type: outside;
+    -fx-stroke-width: 0;
+}
+
+.ClassFigure-Text{
+
+	-fx-alignment: center;
+    -fx-font: bold 20pt "Arial";
+    -fx-stroke-type: outside;
+    -fx-stroke-width: 0;
+}
+
+.ClassFigure-Methods-List{
+    -fx-padding: 10;
+	-fx-spacing: 10;
+}
+
+
+.ClassFigure-Text{
+    -fx-font: bold 14pt "Arial";
+    -fx-stroke-type: outside;
+    -fx-stroke-width: 0;
+}
+
+.ClassFigure-Methods-List{
+    -fx-padding: 6;
+	-fx-spacing: 70;
+}

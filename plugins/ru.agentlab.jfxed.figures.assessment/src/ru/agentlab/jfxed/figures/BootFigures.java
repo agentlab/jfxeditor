@@ -3,7 +3,7 @@ package ru.agentlab.jfxed.figures;
 
 import com.sun.prism.paint.Color;
 
-import ru.agentlab.jfxed.figures.clazz.ClassFigure;
+import ru.agentlab.jfxed.figures.ass.Assessment;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
@@ -18,7 +18,7 @@ import javafx.scene.Group;
 
 public class BootFigures extends Application {
 	Group root = new Group();
-	ClassFigure sourceToMove;
+	Assessment sourceToMove;
 	
 	double sceneStartX;
 	double sceneStartY;
@@ -37,7 +37,7 @@ public class BootFigures extends Application {
 		primaryStage.setTitle("Hello World!");
 
 		AnchorPane root = new AnchorPane();
-		final ClassFigure source = new ClassFigure();
+		final Assessment source = new Assessment();
 		root.getChildren().add(source.getRoot());
 		root.getChildren().add(new VBox());
 		

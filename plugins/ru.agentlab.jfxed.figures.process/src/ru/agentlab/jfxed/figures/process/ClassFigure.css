@@ -1,0 +1,29 @@
+.ClassFigure{
+	-fx-background-color: YELLOW;
+    -fx-background-radius: 5;
+    -fx-border-color: BLACK;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+	-fx-alignment: CENTER;
+	-fx-padding: 20 50 20 50;
+	
+}
+
+.ClassFigure-Name-Section{
+	-fx-alignment: center;
+    -fx-padding: 0;
+    -fx-border-color: BLACK;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-radius: 0 0 0 0;
+}
+
+.ClassFigure-Text{
+    -fx-font: bold 18pt "Arial";
+    -fx-stroke-type: outside;
+    -fx-stroke-width: 0;
+}
+
+.ClassFigure-Arrow {
+	-fx-alignment: CENTER;
+	-fx-padding: -15 -120 10 0;
+}

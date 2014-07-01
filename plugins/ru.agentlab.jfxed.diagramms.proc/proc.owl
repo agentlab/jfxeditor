@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/proc#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/proc#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/proc"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/proc#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/proc"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#access -->
+
+    <owl:ObjectProperty rdf:about="&j.0;access">
+        <rdfs:domain rdf:resource="&j.0;buisnessObject"/>
+        <rdfs:range rdf:resource="&j.0;buisnessObject"/>
+        <rdfs:range rdf:resource="&j.0;buisnessProcess"/>
+        <rdfs:domain rdf:resource="&j.0;buisnessProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#composition -->
+
+    <owl:ObjectProperty rdf:about="&j.0;composition">
+        <rdfs:domain rdf:resource="&j.0;buisnessProcess"/>
+        <rdfs:range rdf:resource="&j.0;buisnessProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#realization -->
+
+    <owl:ObjectProperty rdf:about="&j.0;realization">
+        <rdfs:range rdf:resource="&j.0;buisnessObject"/>
+        <rdfs:domain rdf:resource="&j.0;representation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#triggering -->
+
+    <owl:ObjectProperty rdf:about="&j.0;triggering">
+        <rdfs:domain rdf:resource="&j.0;buisnessEvent"/>
+        <rdfs:domain rdf:resource="&j.0;buisnessProcess"/>
+        <rdfs:range rdf:resource="&j.0;buisnessProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#Concept -->
+
+    <owl:Class rdf:about="&j.0;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#Relation -->
+
+    <owl:Class rdf:about="&j.0;Relation"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#access -->
+
+    <owl:Class rdf:about="&j.0;access">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#buisnessEvent -->
+
+    <owl:Class rdf:about="&j.0;buisnessEvent">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#buisnessObject -->
+
+    <owl:Class rdf:about="&j.0;buisnessObject">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#buisnessProcess -->
+
+    <owl:Class rdf:about="&j.0;buisnessProcess">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#composition -->
+
+    <owl:Class rdf:about="&j.0;composition">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#realiztion -->
+
+    <owl:Class rdf:about="&j.0;realiztion">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#representation -->
+
+    <owl:Class rdf:about="&j.0;representation">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#triggering -->
+
+    <owl:Class rdf:about="&j.0;triggering">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#accept -->
+
+    <owl:NamedIndividual rdf:about="&j.0;accept">
+        <rdf:type rdf:resource="&j.0;buisnessProcess"/>
+        <rdf:type rdf:resource="&j.0;composition"/>
+        <rdf:type rdf:resource="&j.0;triggering"/>
+        <composition rdf:resource="&j.0;handleClaim"/>
+        <triggering rdf:resource="&j.0;valuate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#claimForm -->
+
+    <owl:NamedIndividual rdf:about="&j.0;claimForm">
+        <rdf:type rdf:resource="&j.0;realiztion"/>
+        <rdf:type rdf:resource="&j.0;representation"/>
+        <realization rdf:resource="&j.0;damageClaim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#customerFile -->
+
+    <owl:NamedIndividual rdf:about="&j.0;customerFile">
+        <rdf:type rdf:resource="&j.0;access"/>
+        <rdf:type rdf:resource="&j.0;buisnessObject"/>
+        <access rdf:resource="&j.0;accept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#damageClaim -->
+
+    <owl:NamedIndividual rdf:about="&j.0;damageClaim">
+        <rdf:type rdf:resource="&j.0;access"/>
+        <rdf:type rdf:resource="&j.0;buisnessObject"/>
+        <access rdf:resource="&j.0;accept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#damageOccured -->
+
+    <owl:NamedIndividual rdf:about="&j.0;damageOccured">
+        <rdf:type rdf:resource="&j.0;buisnessEvent"/>
+        <rdf:type rdf:resource="&j.0;triggering"/>
+        <triggering rdf:resource="&j.0;register"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#handleClaim -->
+
+    <owl:NamedIndividual rdf:about="&j.0;handleClaim">
+        <rdf:type rdf:resource="&j.0;buisnessProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#insurancePolicy -->
+
+    <owl:NamedIndividual rdf:about="&j.0;insurancePolicy">
+        <rdf:type rdf:resource="&j.0;access"/>
+        <access rdf:resource="&j.0;accept"/>
+        <access rdf:resource="&j.0;register"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#insuransePolicy -->
+
+    <owl:NamedIndividual rdf:about="&j.0;insuransePolicy">
+        <rdf:type rdf:resource="&j.0;buisnessObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#pay -->
+
+    <owl:NamedIndividual rdf:about="&j.0;pay">
+        <rdf:type rdf:resource="&j.0;access"/>
+        <rdf:type rdf:resource="&j.0;buisnessProcess"/>
+        <rdf:type rdf:resource="&j.0;composition"/>
+        <access rdf:resource="&j.0;customerFile"/>
+        <composition rdf:resource="&j.0;handleClaim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#register -->
+
+    <owl:NamedIndividual rdf:about="&j.0;register">
+        <rdf:type rdf:resource="&j.0;access"/>
+        <rdf:type rdf:resource="&j.0;buisnessProcess"/>
+        <rdf:type rdf:resource="&j.0;composition"/>
+        <rdf:type rdf:resource="&j.0;triggering"/>
+        <triggering rdf:resource="&j.0;accept"/>
+        <access rdf:resource="&j.0;customerFile"/>
+        <access rdf:resource="&j.0;damageClaim"/>
+        <composition rdf:resource="&j.0;handleClaim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/proc#valuate -->
+
+    <owl:NamedIndividual rdf:about="&j.0;valuate">
+        <rdf:type rdf:resource="&j.0;access"/>
+        <rdf:type rdf:resource="&j.0;buisnessProcess"/>
+        <rdf:type rdf:resource="&j.0;composition"/>
+        <rdf:type rdf:resource="&j.0;triggering"/>
+        <access rdf:resource="&j.0;damageClaim"/>
+        <composition rdf:resource="&j.0;handleClaim"/>
+        <triggering rdf:resource="&j.0;pay"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

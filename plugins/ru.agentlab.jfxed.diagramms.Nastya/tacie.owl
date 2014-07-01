@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/tacie#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/tacie#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/tacie"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/tacie#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/tacie"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#access -->
+
+    <owl:ObjectProperty rdf:about="&j.0;access">
+        <rdfs:domain rdf:resource="&j.0;applicationfunctionClass"/>
+        <rdfs:range rdf:resource="&j.0;dataobjectClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#assignment -->
+
+    <owl:ObjectProperty rdf:about="&j.0;assignment">
+        <rdfs:range rdf:resource="&j.0;applicationcomponentClass"/>
+        <rdfs:domain rdf:resource="&j.0;applicationfunctionClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#composition -->
+
+    <owl:ObjectProperty rdf:about="&j.0;composition">
+        <rdfs:range rdf:resource="&j.0;applicationfunctionClass"/>
+        <rdfs:domain rdf:resource="&j.0;applicationfunctionClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#realizationealization -->
+
+    <owl:ObjectProperty rdf:about="&j.0;realizationealization">
+        <rdfs:domain rdf:resource="&j.0;applicationcomponentClass"/>
+        <rdfs:range rdf:resource="&j.0;applicationserviceClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#triggering -->
+
+    <owl:ObjectProperty rdf:about="&j.0;triggering">
+        <rdfs:range rdf:resource="&j.0;applicationfunctionClass"/>
+        <rdfs:domain rdf:resource="&j.0;applicationfunctionClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#Concept -->
+
+    <owl:Class rdf:about="&j.0;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#Relation -->
+
+    <owl:Class rdf:about="&j.0;Relation"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#access -->
+
+    <owl:Class rdf:about="&j.0;access">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#applicationcomponentClass -->
+
+    <owl:Class rdf:about="&j.0;applicationcomponentClass">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#applicationfunctionClass -->
+
+    <owl:Class rdf:about="&j.0;applicationfunctionClass">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#applicationserviceClass -->
+
+    <owl:Class rdf:about="&j.0;applicationserviceClass">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#assignment -->
+
+    <owl:Class rdf:about="&j.0;assignment">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#composition -->
+
+    <owl:Class rdf:about="&j.0;composition">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#dataobjectClass -->
+
+    <owl:Class rdf:about="&j.0;dataobjectClass">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#realization -->
+
+    <owl:Class rdf:about="&j.0;realization">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#triggering -->
+
+    <owl:Class rdf:about="&j.0;triggering">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#CalculatePremium -->
+
+    <owl:NamedIndividual rdf:about="&j.0;CalculatePremium">
+        <rdf:type rdf:resource="&j.0;applicationfunctionClass"/>
+        <rdf:type rdf:resource="&j.0;composition"/>
+        <rdf:type rdf:resource="&j.0;triggering"/>
+        <j.0:triggering rdf:resource="&j.0;CreatePolicy"/>
+        <j.0:composition rdf:resource="&j.0;PolicyCreation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#CalculateRisk -->
+
+    <owl:NamedIndividual rdf:about="&j.0;CalculateRisk">
+        <rdf:type rdf:resource="&j.0;access"/>
+        <rdf:type rdf:resource="&j.0;applicationfunctionClass"/>
+        <rdf:type rdf:resource="&j.0;composition"/>
+        <rdf:type rdf:resource="&j.0;triggering"/>
+        <j.0:triggering rdf:resource="&j.0;CalculatePremium"/>
+        <j.0:access rdf:resource="&j.0;InsuranceRequestData"/>
+        <j.0:composition rdf:resource="&j.0;PolicyCreation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#CreatePolicy -->
+
+    <owl:NamedIndividual rdf:about="&j.0;CreatePolicy">
+        <rdf:type rdf:resource="&j.0;access"/>
+        <rdf:type rdf:resource="&j.0;applicationfunctionClass"/>
+        <rdf:type rdf:resource="&j.0;composition"/>
+        <rdf:type rdf:resource="&j.0;triggering"/>
+        <j.0:access rdf:resource="&j.0;InsurancePolicyData"/>
+        <j.0:composition rdf:resource="&j.0;PolicyCreation"/>
+        <j.0:triggering rdf:resource="&j.0;StorePolicy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#CustomerFileData -->
+
+    <owl:NamedIndividual rdf:about="&j.0;CustomerFileData">
+        <rdf:type rdf:resource="&j.0;dataobjectClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#HomeAndAwayPolicyAdministration -->
+
+    <owl:NamedIndividual rdf:about="&j.0;HomeAndAwayPolicyAdministration">
+        <rdf:type rdf:resource="&j.0;applicationcomponentClass"/>
+        <rdf:type rdf:resource="&j.0;realization"/>
+        <j.0:realizationealization rdf:resource="&j.0;PolicyCreationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#InsurancePolicyData -->
+
+    <owl:NamedIndividual rdf:about="&j.0;InsurancePolicyData">
+        <rdf:type rdf:resource="&j.0;dataobjectClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#InsuranceRequestData -->
+
+    <owl:NamedIndividual rdf:about="&j.0;InsuranceRequestData">
+        <rdf:type rdf:resource="&j.0;dataobjectClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#PolicyCreation -->
+
+    <owl:NamedIndividual rdf:about="&j.0;PolicyCreation">
+        <rdf:type rdf:resource="&j.0;applicationfunctionClass"/>
+        <rdf:type rdf:resource="&j.0;assignment"/>
+        <j.0:assignment rdf:resource="&j.0;HomeAndAwayPolicyAdministration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#PolicyCreationService -->
+
+    <owl:NamedIndividual rdf:about="&j.0;PolicyCreationService">
+        <rdf:type rdf:resource="&j.0;applicationserviceClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/tacie#StorePolicy -->
+
+    <owl:NamedIndividual rdf:about="&j.0;StorePolicy">
+        <rdf:type rdf:resource="&j.0;access"/>
+        <rdf:type rdf:resource="&j.0;applicationfunctionClass"/>
+        <rdf:type rdf:resource="&j.0;composition"/>
+        <j.0:access rdf:resource="&j.0;CustomerFileData"/>
+        <j.0:composition rdf:resource="&j.0;PolicyCreation"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

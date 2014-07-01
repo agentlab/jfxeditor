@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/influencediagram#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/influencediagram#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/influencediagram"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/influencediagram#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/influencediagram"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#proplink -->
+
+    <owl:ObjectProperty rdf:about="&j.0;proplink">
+        <rdfs:domain rdf:resource="&j.0;chanceVariable"/>
+        <rdfs:range rdf:resource="&j.0;generalVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#proplink1 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;proplink1">
+        <rdfs:domain rdf:resource="&j.0;generalVariable"/>
+        <rdfs:range rdf:resource="&j.0;generalVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#proplink2 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;proplink2">
+        <rdfs:domain rdf:resource="&j.0;generalVariable"/>
+        <rdfs:range rdf:resource="&j.0;objective"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#proplink3 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;proplink3">
+        <rdfs:domain rdf:resource="&j.0;decision"/>
+        <rdfs:range rdf:resource="&j.0;generalVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#Concept -->
+
+    <owl:Class rdf:about="&j.0;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#Relation -->
+
+    <owl:Class rdf:about="&j.0;Relation"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#chanceVariable -->
+
+    <owl:Class rdf:about="&j.0;chanceVariable">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#decision -->
+
+    <owl:Class rdf:about="&j.0;decision">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#generalVariable -->
+
+    <owl:Class rdf:about="&j.0;generalVariable">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#linkClass -->
+
+    <owl:Class rdf:about="&j.0;linkClass">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#objective -->
+
+    <owl:Class rdf:about="&j.0;objective">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#assemblyError -->
+
+    <owl:NamedIndividual rdf:about="&j.0;assemblyError">
+        <rdf:type rdf:resource="&j.0;chanceVariable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#brakePad -->
+
+    <owl:NamedIndividual rdf:about="&j.0;brakePad">
+        <rdf:type rdf:resource="&j.0;decision"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#brakingNoise -->
+
+    <owl:NamedIndividual rdf:about="&j.0;brakingNoise">
+        <rdf:type rdf:resource="&j.0;generalVariable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#brakingnoise -->
+
+    <owl:NamedIndividual rdf:about="&j.0;brakingnoise">
+        <rdf:type rdf:resource="&j.0;linkClass"/>
+        <proplink rdf:resource="&j.0;assemblyError"/>
+        <proplink3 rdf:resource="&j.0;brakePad"/>
+        <proplink3 rdf:resource="&j.0;brakingNoise"/>
+        <proplink rdf:resource="&j.0;brakingNoise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#cost -->
+
+    <owl:NamedIndividual rdf:about="&j.0;cost">
+        <rdf:type rdf:resource="&j.0;generalVariable"/>
+        <rdf:type rdf:resource="&j.0;linkClass"/>
+        <proplink1 rdf:resource="&j.0;cost"/>
+        <proplink1 rdf:resource="&j.0;manufacturingCost"/>
+        <proplink1 rdf:resource="&j.0;materialCost"/>
+        <proplink1 rdf:resource="&j.0;productLifespan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#drivingCond -->
+
+    <owl:NamedIndividual rdf:about="&j.0;drivingCond">
+        <rdf:type rdf:resource="&j.0;chanceVariable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#drivingStyl -->
+
+    <owl:NamedIndividual rdf:about="&j.0;drivingStyl">
+        <rdf:type rdf:resource="&j.0;chanceVariable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#factoryLocation -->
+
+    <owl:NamedIndividual rdf:about="&j.0;factoryLocation">
+        <rdf:type rdf:resource="&j.0;chanceVariable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#manufacturingCost -->
+
+    <owl:NamedIndividual rdf:about="&j.0;manufacturingCost">
+        <rdf:type rdf:resource="&j.0;generalVariable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#manufacturingcost -->
+
+    <owl:NamedIndividual rdf:about="&j.0;manufacturingcost">
+        <rdf:type rdf:resource="&j.0;linkClass"/>
+        <proplink3 rdf:resource="&j.0;brakePad"/>
+        <proplink rdf:resource="&j.0;factoryLocation"/>
+        <proplink rdf:resource="&j.0;manufacturingCost"/>
+        <proplink3 rdf:resource="&j.0;manufacturingCost"/>
+        <proplink rdf:resource="&j.0;suppliers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#materialCost -->
+
+    <owl:NamedIndividual rdf:about="&j.0;materialCost">
+        <rdf:type rdf:resource="&j.0;generalVariable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#materialcost -->
+
+    <owl:NamedIndividual rdf:about="&j.0;materialcost">
+        <rdf:type rdf:resource="&j.0;linkClass"/>
+        <proplink3 rdf:resource="&j.0;brakePad"/>
+        <proplink rdf:resource="&j.0;factoryLocation"/>
+        <proplink3 rdf:resource="&j.0;materialCost"/>
+        <proplink rdf:resource="&j.0;materialCost"/>
+        <proplink rdf:resource="&j.0;performance"/>
+        <proplink1 rdf:resource="&j.0;performance"/>
+        <proplink rdf:resource="&j.0;suppliers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#maximizeProfit -->
+
+    <owl:NamedIndividual rdf:about="&j.0;maximizeProfit">
+        <rdf:type rdf:resource="&j.0;objective"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#maximizeprofit -->
+
+    <owl:NamedIndividual rdf:about="&j.0;maximizeprofit">
+        <rdf:type rdf:resource="&j.0;linkClass"/>
+        <proplink2 rdf:resource="&j.0;cost"/>
+        <proplink2 rdf:resource="&j.0;maximizeProfit"/>
+        <proplink2 rdf:resource="&j.0;performance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#passWeight -->
+
+    <owl:NamedIndividual rdf:about="&j.0;passWeight">
+        <rdf:type rdf:resource="&j.0;chanceVariable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#performance -->
+
+    <owl:NamedIndividual rdf:about="&j.0;performance">
+        <rdf:type rdf:resource="&j.0;generalVariable"/>
+        <rdf:type rdf:resource="&j.0;linkClass"/>
+        <proplink1 rdf:resource="&j.0;brakingNoise"/>
+        <proplink rdf:resource="&j.0;drivingCond"/>
+        <proplink rdf:resource="&j.0;drivingStyl"/>
+        <proplink1 rdf:resource="&j.0;productLifespan"/>
+        <proplink1 rdf:resource="&j.0;stoppingDistance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#productLifespan -->
+
+    <owl:NamedIndividual rdf:about="&j.0;productLifespan">
+        <rdf:type rdf:resource="&j.0;generalVariable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#productlifespan -->
+
+    <owl:NamedIndividual rdf:about="&j.0;productlifespan">
+        <rdf:type rdf:resource="&j.0;linkClass"/>
+        <proplink rdf:resource="&j.0;assemblyError"/>
+        <proplink3 rdf:resource="&j.0;brakePad"/>
+        <proplink rdf:resource="&j.0;drivingCond"/>
+        <proplink rdf:resource="&j.0;drivingStyl"/>
+        <proplink rdf:resource="&j.0;passWeight"/>
+        <proplink3 rdf:resource="&j.0;productLifespan"/>
+        <proplink rdf:resource="&j.0;productLifespan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#stoppingDistance -->
+
+    <owl:NamedIndividual rdf:about="&j.0;stoppingDistance">
+        <rdf:type rdf:resource="&j.0;generalVariable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#stoppingdistance -->
+
+    <owl:NamedIndividual rdf:about="&j.0;stoppingdistance">
+        <rdf:type rdf:resource="&j.0;linkClass"/>
+        <proplink3 rdf:resource="&j.0;brakePad"/>
+        <proplink rdf:resource="&j.0;drivingCond"/>
+        <proplink rdf:resource="&j.0;drivingStyl"/>
+        <proplink rdf:resource="&j.0;passWeight"/>
+        <proplink rdf:resource="&j.0;stoppingDistance"/>
+        <proplink3 rdf:resource="&j.0;stoppingDistance"/>
+        <proplink rdf:resource="&j.0;weather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#suppliers -->
+
+    <owl:NamedIndividual rdf:about="&j.0;suppliers">
+        <rdf:type rdf:resource="&j.0;chanceVariable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/influencediagram#weather -->
+
+    <owl:NamedIndividual rdf:about="&j.0;weather">
+        <rdf:type rdf:resource="&j.0;chanceVariable"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

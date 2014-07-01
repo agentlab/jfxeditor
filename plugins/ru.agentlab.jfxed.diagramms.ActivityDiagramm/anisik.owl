@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/anisik#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/anisik#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/anisik"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/anisik#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/anisik"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#prop1 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;prop1">
+        <rdfs:domain rdf:resource="&j.0;Action"/>
+        <rdfs:range rdf:resource="&j.0;Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#prop10 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;prop10">
+        <rdfs:range rdf:resource="&j.0;Action"/>
+        <rdfs:domain rdf:resource="&j.0;requestedOrder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#prop2 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;prop2">
+        <rdfs:domain rdf:resource="&j.0;Action"/>
+        <rdfs:range rdf:resource="&j.0;mergeNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#prop3 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;prop3">
+        <rdfs:range rdf:resource="&j.0;Action"/>
+        <rdfs:domain rdf:resource="&j.0;mergeNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#prop4 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;prop4">
+        <rdfs:range rdf:resource="&j.0;Action"/>
+        <rdfs:domain rdf:resource="&j.0;forkAndJoin"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#prop5 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;prop5">
+        <rdfs:domain rdf:resource="&j.0;Action"/>
+        <rdfs:range rdf:resource="&j.0;forkAndJoin"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#prop6 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;prop6">
+        <rdfs:domain rdf:resource="&j.0;forkAndJoin"/>
+        <rdfs:range rdf:resource="&j.0;mergeNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#prop7 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;prop7">
+        <rdfs:range rdf:resource="&j.0;Action"/>
+        <rdfs:domain rdf:resource="&j.0;object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#prop8 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;prop8">
+        <rdfs:domain rdf:resource="&j.0;Action"/>
+        <rdfs:range rdf:resource="&j.0;object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#prop9 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;prop9">
+        <rdfs:range rdf:resource="&j.0;mergeNode"/>
+        <rdfs:domain rdf:resource="&j.0;orderRejected"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#Action -->
+
+    <owl:Class rdf:about="&j.0;Action">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#Concept -->
+
+    <owl:Class rdf:about="&j.0;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#Relation -->
+
+    <owl:Class rdf:about="&j.0;Relation"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#forkAndJoin -->
+
+    <owl:Class rdf:about="&j.0;forkAndJoin">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#link -->
+
+    <owl:Class rdf:about="&j.0;link">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#mergeNode -->
+
+    <owl:Class rdf:about="&j.0;mergeNode">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#object -->
+
+    <owl:Class rdf:about="&j.0;object">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#orderRejected -->
+
+    <owl:Class rdf:about="&j.0;orderRejected">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#requestedOrder -->
+
+    <owl:Class rdf:about="&j.0;requestedOrder">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#a1 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;a1">
+        <rdf:type rdf:resource="&j.0;link"/>
+        <rdf:type rdf:resource="&j.0;orderRejected"/>
+        <j.0:prop9 rdf:resource="&j.0;a1"/>
+        <j.0:prop9 rdf:resource="&j.0;mergeNode1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#a2 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;a2">
+        <rdf:type rdf:resource="&j.0;link"/>
+        <rdf:type rdf:resource="&j.0;orderRejected"/>
+        <j.0:prop9 rdf:resource="&j.0;a2"/>
+        <j.0:prop9 rdf:resource="&j.0;mergeNode2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#acceptPayment -->
+
+    <owl:NamedIndividual rdf:about="&j.0;acceptPayment">
+        <rdf:type rdf:resource="&j.0;Action"/>
+        <rdf:type rdf:resource="&j.0;link"/>
+        <j.0:prop6 rdf:resource="&j.0;acceptPayment"/>
+        <j.0:prop6 rdf:resource="&j.0;mergeNode2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#closeOrder -->
+
+    <owl:NamedIndividual rdf:about="&j.0;closeOrder">
+        <rdf:type rdf:resource="&j.0;Action"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#fillOrder -->
+
+    <owl:NamedIndividual rdf:about="&j.0;fillOrder">
+        <rdf:type rdf:resource="&j.0;Action"/>
+        <rdf:type rdf:resource="&j.0;link"/>
+        <j.0:prop5 rdf:resource="&j.0;fillOrder"/>
+        <j.0:prop5 rdf:resource="&j.0;forkAndJoin1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#forkAndJoin1 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;forkAndJoin1">
+        <rdf:type rdf:resource="&j.0;forkAndJoin"/>
+        <rdf:type rdf:resource="&j.0;link"/>
+        <j.0:prop4 rdf:resource="&j.0;forkAndJoin1"/>
+        <j.0:prop4 rdf:resource="&j.0;shipOrder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#forkAndJoin2 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;forkAndJoin2">
+        <rdf:type rdf:resource="&j.0;forkAndJoin"/>
+        <rdf:type rdf:resource="&j.0;link"/>
+        <j.0:prop6 rdf:resource="&j.0;forkAndJoin2"/>
+        <j.0:prop6 rdf:resource="&j.0;mergeNode2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#invoice -->
+
+    <owl:NamedIndividual rdf:about="&j.0;invoice">
+        <rdf:type rdf:resource="&j.0;link"/>
+        <rdf:type rdf:resource="&j.0;object"/>
+        <j.0:prop7 rdf:resource="&j.0;invoice"/>
+        <j.0:prop7 rdf:resource="&j.0;makePayment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#makePayment -->
+
+    <owl:NamedIndividual rdf:about="&j.0;makePayment">
+        <rdf:type rdf:resource="&j.0;Action"/>
+        <rdf:type rdf:resource="&j.0;link"/>
+        <j.0:prop1 rdf:resource="&j.0;acceptPayment"/>
+        <j.0:prop1 rdf:resource="&j.0;makePayment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#mergeNode1 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;mergeNode1">
+        <rdf:type rdf:resource="&j.0;link"/>
+        <rdf:type rdf:resource="&j.0;mergeNode"/>
+        <j.0:prop3 rdf:resource="&j.0;fillOrder"/>
+        <j.0:prop3 rdf:resource="&j.0;mergeNode1"/>
+        <j.0:prop3 rdf:resource="&j.0;sendInvoice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#mergeNode2 -->
+
+    <owl:NamedIndividual rdf:about="&j.0;mergeNode2">
+        <rdf:type rdf:resource="&j.0;link"/>
+        <rdf:type rdf:resource="&j.0;mergeNode"/>
+        <j.0:prop3 rdf:resource="&j.0;closeOrder"/>
+        <j.0:prop3 rdf:resource="&j.0;mergeNode2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#receiveOrder -->
+
+    <owl:NamedIndividual rdf:about="&j.0;receiveOrder">
+        <rdf:type rdf:resource="&j.0;Action"/>
+        <rdf:type rdf:resource="&j.0;link"/>
+        <j.0:prop2 rdf:resource="&j.0;mergeNode1"/>
+        <j.0:prop2 rdf:resource="&j.0;receiveOrder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#request -->
+
+    <owl:NamedIndividual rdf:about="&j.0;request">
+        <rdf:type rdf:resource="&j.0;link"/>
+        <rdf:type rdf:resource="&j.0;mergeNode"/>
+        <j.0:prop10 rdf:resource="&j.0;receiveOrder"/>
+        <j.0:prop10 rdf:resource="&j.0;request"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#sendInvoice -->
+
+    <owl:NamedIndividual rdf:about="&j.0;sendInvoice">
+        <rdf:type rdf:resource="&j.0;Action"/>
+        <rdf:type rdf:resource="&j.0;link"/>
+        <j.0:prop8 rdf:resource="&j.0;invoice"/>
+        <j.0:prop8 rdf:resource="&j.0;sendInvoice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/anisik#shipOrder -->
+
+    <owl:NamedIndividual rdf:about="&j.0;shipOrder">
+        <rdf:type rdf:resource="&j.0;Action"/>
+        <rdf:type rdf:resource="&j.0;link"/>
+        <j.0:prop5 rdf:resource="&j.0;forkAndJoin2"/>
+        <j.0:prop5 rdf:resource="&j.0;shipOrder"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

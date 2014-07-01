@@ -45,7 +45,8 @@ public class lab3N {
 		
 		OntClass compositionClass = m.createClass(NS + "composition");
 		compositionClass.addSuperClass(relation);
-		
+		OntClass assignmentClass = m.createClass(NS + "assignment");
+		assignmentClass.addSuperClass(relation);
 		
 		//create properties
 		//for onewaywhitearrow
@@ -67,9 +68,10 @@ public class lab3N {
 		ObjectProperty propcomposition = m.createObjectProperty(NS + "composition");
 		propcomposition.addDomain(applicationfunctionClass);
 		propcomposition.addRange(applicationfunctionClass);
-		 //ObjectPropertypropcomposition = m.createObjectProperty(NS + "composition");
-		 //propcomposition.addDomain(applicationfunctionClass);
-		// propcomposition.addRange(applicationcomponentClass);		
+		
+		ObjectProperty propassignment = m.createObjectProperty(NS + "assignment");
+		propassignment.addDomain(applicationfunctionClass);
+		propassignment.addRange(applicationcomponentClass);		
 
 		
 	
@@ -97,8 +99,8 @@ public class lab3N {
 		
 		 //create all backgroundconnection links
 		 //create 2 links
-		 Individual link21 = m.createIndividual(NS + "PolicyCreation", compositionClass);
-		link21.addProperty(propcomposition, homeAPolAdmin);
+		 Individual link21 = m.createIndividual(NS + "PolicyCreation", assignmentClass);
+		link21.addProperty(propassignment, homeAPolAdmin);
 		
 		 Individual link22 = m.createIndividual(NS + "CalculateRisk", compositionClass);
 		link22.addProperty(propcomposition, policCreat);

@@ -1,0 +1,553 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY BusinessFunctionViewpoint "http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:BusinessFunctionViewpoint="http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#fromAssignment -->
+
+    <owl:ObjectProperty rdf:about="&BusinessFunctionViewpoint;fromAssignment">
+        <rdfs:domain rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <rdfs:range rdf:resource="&BusinessFunctionViewpoint;BusinessActor"/>
+        <rdfs:range rdf:resource="&BusinessFunctionViewpoint;BusinessFunction"/>
+        <rdfs:range rdf:resource="&BusinessFunctionViewpoint;BusinessRole"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#fromFlow -->
+
+    <owl:ObjectProperty rdf:about="&BusinessFunctionViewpoint;fromFlow">
+        <rdfs:range rdf:resource="&BusinessFunctionViewpoint;BusinessFunction"/>
+        <rdfs:domain rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#fromTriggering -->
+
+    <owl:ObjectProperty rdf:about="&BusinessFunctionViewpoint;fromTriggering">
+        <rdfs:range rdf:resource="&BusinessFunctionViewpoint;BusinessFunction"/>
+        <rdfs:domain rdf:resource="&BusinessFunctionViewpoint;Triggering"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#toAssignment -->
+
+    <owl:ObjectProperty rdf:about="&BusinessFunctionViewpoint;toAssignment">
+        <rdfs:domain rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <rdfs:range rdf:resource="&BusinessFunctionViewpoint;BusinessActor"/>
+        <rdfs:range rdf:resource="&BusinessFunctionViewpoint;BusinessFunction"/>
+        <rdfs:range rdf:resource="&BusinessFunctionViewpoint;BusinessRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#toFlow -->
+
+    <owl:ObjectProperty rdf:about="&BusinessFunctionViewpoint;toFlow">
+        <rdfs:range rdf:resource="&BusinessFunctionViewpoint;BusinessFunction"/>
+        <rdfs:domain rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#toTriggering -->
+
+    <owl:ObjectProperty rdf:about="&BusinessFunctionViewpoint;toTriggering">
+        <rdfs:range rdf:resource="&BusinessFunctionViewpoint;BusinessFunction"/>
+        <rdfs:domain rdf:resource="&BusinessFunctionViewpoint;Triggering"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Assignment -->
+
+    <owl:Class rdf:about="&BusinessFunctionViewpoint;Assignment">
+        <rdfs:subClassOf rdf:resource="&BusinessFunctionViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#BusinessActor -->
+
+    <owl:Class rdf:about="&BusinessFunctionViewpoint;BusinessActor">
+        <rdfs:subClassOf rdf:resource="&BusinessFunctionViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#BusinessFunction -->
+
+    <owl:Class rdf:about="&BusinessFunctionViewpoint;BusinessFunction">
+        <rdfs:subClassOf rdf:resource="&BusinessFunctionViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#BusinessRole -->
+
+    <owl:Class rdf:about="&BusinessFunctionViewpoint;BusinessRole">
+        <rdfs:subClassOf rdf:resource="&BusinessFunctionViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Concept -->
+
+    <owl:Class rdf:about="&BusinessFunctionViewpoint;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow -->
+
+    <owl:Class rdf:about="&BusinessFunctionViewpoint;Flow">
+        <rdfs:subClassOf rdf:resource="&BusinessFunctionViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Relationship -->
+
+    <owl:Class rdf:about="&BusinessFunctionViewpoint;Relationship"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Triggering -->
+
+    <owl:Class rdf:about="&BusinessFunctionViewpoint;Triggering">
+        <rdfs:subClassOf rdf:resource="&BusinessFunctionViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#AssetManagement -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;AssetManagement">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;BusinessFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Assignment_AssetManagement_Insurer -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Assignment_AssetManagement_Insurer">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&BusinessFunctionViewpoint;AssetManagement"/>
+        <fromAssignment rdf:resource="&BusinessFunctionViewpoint;Insurer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Assignment_ClaimsHandling_Insurer -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Assignment_ClaimsHandling_Insurer">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&BusinessFunctionViewpoint;ClaimsHandling"/>
+        <fromAssignment rdf:resource="&BusinessFunctionViewpoint;Insurer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Assignment_Contracting_Insurer -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Assignment_Contracting_Insurer">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&BusinessFunctionViewpoint;Contracting"/>
+        <fromAssignment rdf:resource="&BusinessFunctionViewpoint;Insurer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Assignment_FinancialHandling_Insurer -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Assignment_FinancialHandling_Insurer">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&BusinessFunctionViewpoint;FinancialHandling"/>
+        <fromAssignment rdf:resource="&BusinessFunctionViewpoint;Insurer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Assignment_Insurer_AssetManagement -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Assignment_Insurer_AssetManagement">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&BusinessFunctionViewpoint;AssetManagement"/>
+        <toAssignment rdf:resource="&BusinessFunctionViewpoint;Insurer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Assignment_Insurer_ClaimsHandling -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Assignment_Insurer_ClaimsHandling">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&BusinessFunctionViewpoint;ClaimsHandling"/>
+        <toAssignment rdf:resource="&BusinessFunctionViewpoint;Insurer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Assignment_Insurer_Contracting -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Assignment_Insurer_Contracting">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&BusinessFunctionViewpoint;Contracting"/>
+        <toAssignment rdf:resource="&BusinessFunctionViewpoint;Insurer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Assignment_Insurer_FinancialHandling -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Assignment_Insurer_FinancialHandling">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&BusinessFunctionViewpoint;FinancialHandling"/>
+        <toAssignment rdf:resource="&BusinessFunctionViewpoint;Insurer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Assignment_Insurer_MaintainingCustomRel -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Assignment_Insurer_MaintainingCustomRel">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&BusinessFunctionViewpoint;Insurer"/>
+        <fromAssignment rdf:resource="&BusinessFunctionViewpoint;MaintainCustomRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Assignment_Insurer_MaintainingInterRel -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Assignment_Insurer_MaintainingInterRel">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&BusinessFunctionViewpoint;Insurer"/>
+        <fromAssignment rdf:resource="&BusinessFunctionViewpoint;MaintainInterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Assignment_MaintainingCustomRel_Insurer -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Assignment_MaintainingCustomRel_Insurer">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&BusinessFunctionViewpoint;Insurer"/>
+        <toAssignment rdf:resource="&BusinessFunctionViewpoint;MaintainCustomRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Assignment_MaintainingInterRel_Insurer -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Assignment_MaintainingInterRel_Insurer">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&BusinessFunctionViewpoint;Insurer"/>
+        <toAssignment rdf:resource="&BusinessFunctionViewpoint;MaintainInterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#ClaimsHandling -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;ClaimsHandling">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;BusinessFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Contracting -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Contracting">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;BusinessFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Customer -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Customer">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;BusinessRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#CustomersBank -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;CustomersBank">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;BusinessRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#FinancialHandling -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;FinancialHandling">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;BusinessFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_AssetManagement_FinancialHandling -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_AssetManagement_FinancialHandling">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;AssetManagement"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;FinancialHandling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_ClaimsHandling_FinancialHandling -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_ClaimsHandling_FinancialHandling">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;ClaimsHandling"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;FinancialHandling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_ClaimsHandling_MaintainingCustomRel -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_ClaimsHandling_MaintainingCustomRel">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;ClaimsHandling"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;MaintainCustomRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_Contracting_AssetManagement -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_Contracting_AssetManagement">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;AssetManagement"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;Contracting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_Contracting_MaintainingInterRel -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_Contracting_MaintainingInterRel">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;Contracting"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;MaintainInterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_CustomerBank_FinancialHandling -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_CustomerBank_FinancialHandling">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;CustomersBank"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;FinancialHandling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_Customer_ClaimsHandling -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_Customer_ClaimsHandling">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;ClaimsHandling"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;Customer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_Customer_Intermediary -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_Customer_Intermediary">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;Customer"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;Intermediary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_Customer_MaintainingCustomRel -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_Customer_MaintainingCustomRel">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;Customer"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;MaintainCustomRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_FinancialHandling_AssetManagement -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_FinancialHandling_AssetManagement">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;AssetManagement"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;FinancialHandling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_FinancialHandling_CustomerBank -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_FinancialHandling_CustomerBank">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;CustomersBank"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;FinancialHandling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_Intermediary_Customer -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_Intermediary_Customer">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;Customer"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;Intermediary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_Intermediary_MaintainingInterRel -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_Intermediary_MaintainingInterRel">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;Intermediary"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;MaintainInterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_MaintainingCustomRel_ClaimsHandling -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_MaintainingCustomRel_ClaimsHandling">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;ClaimsHandling"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;MaintainCustomRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_MaintainingCustomRel_Customer -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_MaintainingCustomRel_Customer">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;Customer"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;MaintainCustomRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_MaintainingInterRel_Contracting -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_MaintainingInterRel_Contracting">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;Contracting"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;MaintainInterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Flow_MaintainingInterRel_Intermediary -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Flow_MaintainingInterRel_Intermediary">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;Flow"/>
+        <fromFlow rdf:resource="&BusinessFunctionViewpoint;Intermediary"/>
+        <toFlow rdf:resource="&BusinessFunctionViewpoint;MaintainInterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Insurer -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Insurer">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;BusinessRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#Intermediary -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;Intermediary">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;BusinessRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#MaintainCustomRel -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;MaintainCustomRel">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;BusinessFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessFunctionViewpoint#MaintainInterRel -->
+
+    <owl:NamedIndividual rdf:about="&BusinessFunctionViewpoint;MaintainInterRel">
+        <rdf:type rdf:resource="&BusinessFunctionViewpoint;BusinessFunction"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

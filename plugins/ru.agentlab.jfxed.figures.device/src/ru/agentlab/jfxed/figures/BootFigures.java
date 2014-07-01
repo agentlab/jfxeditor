@@ -1,7 +1,7 @@
 package ru.agentlab.jfxed.figures;
 
-import ru.agentlab.jfxed.figures.clazz.ClassFigure;
-import ru.agentlab.jfxed.figures.clazz.Coub;
+import ru.agentlab.jfxed.figures.device.ClassFigure;
+import ru.agentlab.jfxed.figures.device.Coub;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
