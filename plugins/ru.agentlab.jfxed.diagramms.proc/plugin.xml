@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension point="ru.agentlab.jfxed.diagram">
+         <diagram name="proc" class="ru.agentlab.jfxed.diagramms.proc.ClazzDiagram" ontoUri="http://www.agentlab.ru/jfxed/onto/proc"/>
+   </extension>
+</plugin>

@@ -1,7 +1,7 @@
 package ru.agentlab.jfxed.figures;
 
-import ru.agentlab.jfxed.figures.clazz.ClassArrow;
-import ru.agentlab.jfxed.figures.clazz.ClassFigure;
+import ru.agentlab.jfxed.figures.process.ClassArrow;
+import ru.agentlab.jfxed.figures.process.ClassFigure;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;

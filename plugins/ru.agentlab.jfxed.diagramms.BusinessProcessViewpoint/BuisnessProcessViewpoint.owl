@@ -2,126 +2,126 @@
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.0="http://www.agentlab.ru/jfxed/onto/strategicrationale#"
+    xmlns:j.0="http://www.agentlab.ru/jfxed/onto/proc#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#register">
-    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#customerFile"/>
-    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#damageClaim"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#access"/>
-    <j.0:triggering rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#accept"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#triggering"/>
-    <j.0:composition rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#handleClaim"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#composition"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessProcess"/>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#insuransePolicy">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessObject"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#customerFile">
-    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#accept"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#access"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessObject"/>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#customerFile">
+    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#accept"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#access"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessObject"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#valuate">
-    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#damageClaim"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#access"/>
-    <j.0:triggering rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#pay"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#triggering"/>
-    <j.0:composition rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#handleClaim"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#composition"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessProcess"/>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#Realation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#triggering">
-    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessProcess"/>
-    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessProcess"/>
-    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessEvent"/>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#Concept">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#damageOccured">
+    <j.0:triggering rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#register"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#triggering"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#representation">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#buisnessProcess">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#damageClaim">
+    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#accept"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#access"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#triggering">
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessProcess"/>
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessProcess"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessEvent"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Realation"/>
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#Realation"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#composition">
-    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessProcess"/>
-    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessProcess"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Realation"/>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#pay">
+    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#customerFile"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#access"/>
+    <j.0:composition rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#handleClaim"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#composition"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#accept">
+    <j.0:triggering rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#valuate"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#triggering"/>
+    <j.0:composition rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#handleClaim"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#composition"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#handleClaim">
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#realiztion">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#Realation"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#accept">
-    <j.0:triggering rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#valuate"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#triggering"/>
-    <j.0:composition rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#handleClaim"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#composition"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessProcess"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Realation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#damageOccured">
-    <j.0:triggering rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#register"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#triggering"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessEvent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#claimForm">
-    <j.0:realization rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#damageClaim"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#realiztion"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#representation"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessProcess">
-    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#insurancePolicy">
-    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#accept"/>
-    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#register"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#access"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#access">
-    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessProcess"/>
-    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessObject"/>
-    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessObject"/>
-    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessProcess"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Realation"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#realiztion">
-    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Realation"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#damageClaim">
-    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#accept"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#access"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessObject"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#representation">
-    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#insuransePolicy">
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessObject"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#pay">
-    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#customerFile"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#access"/>
-    <j.0:composition rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#handleClaim"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#composition"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessProcess"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessEvent">
-    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#realization">
-    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessObject"/>
-    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#representation"/>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#realization">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessObject"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#representation"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#handleClaim">
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessProcess"/>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#access">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessProcess"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessObject"/>
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessObject"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessProcess"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#Realation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#buisnessObject">
-    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#claimForm">
+    <j.0:realization rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#damageClaim"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#realiztion"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#representation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#register">
+    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#customerFile"/>
+    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#damageClaim"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#access"/>
+    <j.0:triggering rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#accept"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#triggering"/>
+    <j.0:composition rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#handleClaim"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#composition"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#valuate">
+    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#damageClaim"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#access"/>
+    <j.0:triggering rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#pay"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#triggering"/>
+    <j.0:composition rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#handleClaim"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#composition"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#composition">
+    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessProcess"/>
+    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#buisnessProcess"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#Realation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#insurancePolicy">
+    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#accept"/>
+    <j.0:access rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#register"/>
+    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#access"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#buisnessEvent">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/proc#buisnessObject">
+    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/proc#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
 </rdf:RDF>
