@@ -1,18 +1,32 @@
 package ru.agentlab.jfxed.figures.clazz
 
+import de.fxdiagram.core.XNode
+import javafx.scene.layout.GridPane
 import javafx.scene.layout.HBox
-import javafx.scene.layout.VBox
 import javafx.scene.text.Text
-import ru.agentlab.jfxed.figures.BaseFigure
+import ru.agentlab.jfxed.IFigure
 
-class ClassFigure extends BaseFigure {
+class ClassFigure extends XNode implements IFigure {
 	
-	String name = " State2";
+	var GridPane root
+	
+	val nameTextBox = new Text
+	var String name
+
+	new(String name) {
+		super(name)
+		this.name = name
+	}
 	
 	new (){
-		root = new VBox
+		super("Class");
 		
-		initHandlers()
+		name = "Class";	
+		
+		root = new GridPane
+		
+		node = root
+		
 		
 		val s = ClassFigure.getResource("ClassFigure.css").toExternalForm()
 		root.stylesheets += s
@@ -25,7 +39,7 @@ class ClassFigure extends BaseFigure {
 		    children += new HBox => [
 				styleClass += "ClassFigure-Inc"
 			]		
-			children += new Text => [
+			children += nameTextBox => [
 				text = name
 				styleClass += "ClassFigure-Text"
 			]			
@@ -47,5 +61,15 @@ class ClassFigure extends BaseFigure {
 				text = "method 3 lalalala"
 			]
 		]*/
+	}
+	override setName(String name) {
+		nameTextBox.text = name
+	}
+
+	def getName() {
+		nameTextBox.text
+	}
+	override getRoot() {
+		this
 	}
 }
