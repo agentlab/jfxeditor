@@ -1,0 +1,67 @@
+.ClassFigure {
+	-fx-background-color: Cyan;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+	-fx-alignment: CENTER;
+}
+
+.ClassFigure-Image-Section{
+	-fx-border-color: none;
+	-fx-alignment: top-right;
+    -fx-border-width: 1 1 1 1;
+    -fx-padding: 5 5 0 0;
+    -fx-border-radius: 0 0 0 0;
+}
+
+.ClassFigure-Line-Section {
+	-fx-border-color: none;
+	-fx-alignment: top-right;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 0 0 0 0;
+}
+
+.Line {
+	-fx-stroke-type: inside;
+	-fx-border-color: black;
+	-fx-alignment: top-right;
+    -fx-padding: 4 4 4 4;
+    -fx-background-color: none ;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 0;
+    -fx-border-width: 1 0 0 0;
+    -fx-rotate: 0;
+    }
+
+.ClassFigure-Circle-Section{
+	-fx-border-color: none;
+	-fx-alignment: top-right;
+    -fx-border-width: 1 1 1 1;
+    -fx-padding: 5 5 0 10;
+    -fx-border-radius: 0 0 0 0;
+}
+
+.Circle {
+	-fx-stroke-type: inside;
+	-fx-border-color: black;
+	-fx-alignment: top-right;
+    -fx-padding: 5 5 5 5;
+    -fx-background-color: none ;
+    -fx-background-radius: 100;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 100;
+    -fx-border-width: 1 1 0 0;
+    -fx-rotate: 225;
+    }
+
+.ClassFigure-Name-Section{
+	-fx-padding: 0 45 25 50;
+}
+
+.ClassFigure-Text{
+    -fx-font: bold 14pt "Arial";
+    -fx-stroke-type: outside;
+    -fx-stroke-width: 0;
+}
