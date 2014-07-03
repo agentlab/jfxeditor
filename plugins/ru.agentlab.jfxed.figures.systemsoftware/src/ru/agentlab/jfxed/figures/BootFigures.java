@@ -1,7 +1,7 @@
 package ru.agentlab.jfxed.figures;
 
-import ru.agentlab.jfxed.figures.shalaev.Rectangle;
-import ru.agentlab.jfxed.figures.shalaev.Coub;
+import ru.agentlab.jfxed.figures.systemsoftware.Rectangle;
+import ru.agentlab.jfxed.figures.systemsoftware.Coub;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;

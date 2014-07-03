@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.figures.shalaev
+package ru.agentlab.jfxed.figures.systemsoftware
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon
