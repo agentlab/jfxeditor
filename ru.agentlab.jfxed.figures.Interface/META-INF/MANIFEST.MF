@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ru.agentlab.jfxed.figures.function;singleton:=true
+Bundle-SymbolicName: ru.agentlab.jfxed.figures.Interface;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -20,5 +20,4 @@ Require-Bundle: org.eclipse.core.runtime,
  de.fxdiagram.lib;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: ru.agentlab.jfxed.figures,
- ru.agentlab.jfxed.figures.function
-
+ ru.agentlab.jfxed.figures.Interface

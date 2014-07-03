@@ -1,0 +1,388 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/gold#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/gold#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/gold"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/gold#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/gold"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#Composition -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Composition">
+        <rdfs:domain rdf:resource="&j.0;BusinessInteraction"/>
+        <rdfs:range rdf:resource="&j.0;BusinessProcess"/>
+        <rdfs:domain rdf:resource="&j.0;BusinessProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#Realization -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Realization">
+        <rdfs:domain rdf:resource="&j.0;BusinessProcess"/>
+        <rdfs:range rdf:resource="&j.0;BusinessService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#Triggering -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Triggering">
+        <rdfs:range rdf:resource="&j.0;BusinessInteraction"/>
+        <rdfs:domain rdf:resource="&j.0;BusinessInteraction"/>
+        <rdfs:range rdf:resource="&j.0;BusinessProcess"/>
+        <rdfs:domain rdf:resource="&j.0;BusinessProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#Usedby -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Usedby">
+        <rdfs:range rdf:resource="&j.0;BusinessRole"/>
+        <rdfs:domain rdf:resource="&j.0;BusinessService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#Usedby1 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Usedby1">
+        <rdfs:domain rdf:resource="&j.0;ApplicationService"/>
+        <rdfs:range rdf:resource="&j.0;BusinessInteraction"/>
+        <rdfs:range rdf:resource="&j.0;BusinessProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#Usedby2 -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Usedby2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#ApplicationService -->
+
+    <owl:Class rdf:about="&j.0;ApplicationService">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#BusinessInteraction -->
+
+    <owl:Class rdf:about="&j.0;BusinessInteraction">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#BusinessProcess -->
+
+    <owl:Class rdf:about="&j.0;BusinessProcess">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#BusinessRole -->
+
+    <owl:Class rdf:about="&j.0;BusinessRole">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#BusinessService -->
+
+    <owl:Class rdf:about="&j.0;BusinessService">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#Composition -->
+
+    <owl:Class rdf:about="&j.0;Composition">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#Concept -->
+
+    <owl:Class rdf:about="&j.0;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#Realization -->
+
+    <owl:Class rdf:about="&j.0;Realization">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#Relation -->
+
+    <owl:Class rdf:about="&j.0;Relation"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#Triggering -->
+
+    <owl:Class rdf:about="&j.0;Triggering">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#Usedby -->
+
+    <owl:Class rdf:about="&j.0;Usedby">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#ClaimRegistration -->
+
+    <owl:NamedIndividual rdf:about="&j.0;ClaimRegistration">
+        <rdf:type rdf:resource="&j.0;BusinessService"/>
+        <rdf:type rdf:resource="&j.0;Usedby"/>
+        <j.0:Usedby rdf:resource="&j.0;Customer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#ContractingService -->
+
+    <owl:NamedIndividual rdf:about="&j.0;ContractingService">
+        <rdf:type rdf:resource="&j.0;ApplicationService"/>
+        <rdf:type rdf:resource="&j.0;Usedby"/>
+        <j.0:Usedby1 rdf:resource="&j.0;createContract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#Customer -->
+
+    <owl:NamedIndividual rdf:about="&j.0;Customer">
+        <rdf:type rdf:resource="&j.0;BusinessRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#FormalizeRequest -->
+
+    <owl:NamedIndividual rdf:about="&j.0;FormalizeRequest">
+        <rdf:type rdf:resource="&j.0;BusinessInteraction"/>
+        <rdf:type rdf:resource="&j.0;Composition"/>
+        <rdf:type rdf:resource="&j.0;Triggering"/>
+        <j.0:Composition rdf:resource="&j.0;closeContract"/>
+        <j.0:Triggering rdf:resource="&j.0;createContract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#accept -->
+
+    <owl:NamedIndividual rdf:about="&j.0;accept">
+        <rdf:type rdf:resource="&j.0;BusinessProcess"/>
+        <rdf:type rdf:resource="&j.0;Composition"/>
+        <rdf:type rdf:resource="&j.0;Realization"/>
+        <rdf:type rdf:resource="&j.0;Triggering"/>
+        <j.0:Realization rdf:resource="&j.0;customerInformation"/>
+        <j.0:Composition rdf:resource="&j.0;handleClaim"/>
+        <j.0:Triggering rdf:resource="&j.0;valuate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#checkAndSignContract -->
+
+    <owl:NamedIndividual rdf:about="&j.0;checkAndSignContract">
+        <rdf:type rdf:resource="&j.0;BusinessInteraction"/>
+        <rdf:type rdf:resource="&j.0;Composition"/>
+        <j.0:Composition rdf:resource="&j.0;closeContract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#claimpayment -->
+
+    <owl:NamedIndividual rdf:about="&j.0;claimpayment">
+        <rdf:type rdf:resource="&j.0;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#claimsInformationService -->
+
+    <owl:NamedIndividual rdf:about="&j.0;claimsInformationService">
+        <rdf:type rdf:resource="&j.0;ApplicationService"/>
+        <rdf:type rdf:resource="&j.0;Usedby"/>
+        <j.0:Usedby1 rdf:resource="&j.0;FormalizeRequest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#cliampayment -->
+
+    <owl:NamedIndividual rdf:about="&j.0;cliampayment">
+        <rdf:type rdf:resource="&j.0;Usedby"/>
+        <j.0:Usedby rdf:resource="&j.0;Customer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#closeContract -->
+
+    <owl:NamedIndividual rdf:about="&j.0;closeContract">
+        <rdf:type rdf:resource="&j.0;BusinessProcess"/>
+        <rdf:type rdf:resource="&j.0;Realization"/>
+        <j.0:Realization rdf:resource="&j.0;insuranceApplication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#createContract -->
+
+    <owl:NamedIndividual rdf:about="&j.0;createContract">
+        <rdf:type rdf:resource="&j.0;BusinessProcess"/>
+        <rdf:type rdf:resource="&j.0;Composition"/>
+        <rdf:type rdf:resource="&j.0;Triggering"/>
+        <j.0:Triggering rdf:resource="&j.0;checkAndSignContract"/>
+        <j.0:Composition rdf:resource="&j.0;closeContract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#customerInformation -->
+
+    <owl:NamedIndividual rdf:about="&j.0;customerInformation">
+        <rdf:type rdf:resource="&j.0;BusinessService"/>
+        <rdf:type rdf:resource="&j.0;Usedby"/>
+        <j.0:Usedby rdf:resource="&j.0;Customer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#handleClaim -->
+
+    <owl:NamedIndividual rdf:about="&j.0;handleClaim">
+        <rdf:type rdf:resource="&j.0;BusinessProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#insuranceApplication -->
+
+    <owl:NamedIndividual rdf:about="&j.0;insuranceApplication">
+        <rdf:type rdf:resource="&j.0;BusinessService"/>
+        <rdf:type rdf:resource="&j.0;Usedby"/>
+        <j.0:Usedby rdf:resource="&j.0;Customer"/>
+        <j.0:Usedby rdf:resource="&j.0;register"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#pay -->
+
+    <owl:NamedIndividual rdf:about="&j.0;pay">
+        <rdf:type rdf:resource="&j.0;BusinessProcess"/>
+        <rdf:type rdf:resource="&j.0;Composition"/>
+        <rdf:type rdf:resource="&j.0;Realization"/>
+        <j.0:Realization rdf:resource="&j.0;claimpayment"/>
+        <j.0:Composition rdf:resource="&j.0;handleClaim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#policyCreationService -->
+
+    <owl:NamedIndividual rdf:about="&j.0;policyCreationService">
+        <rdf:type rdf:resource="&j.0;ApplicationService"/>
+        <rdf:type rdf:resource="&j.0;Usedby"/>
+        <j.0:Usedby1 rdf:resource="&j.0;checkAndSignContract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#register -->
+
+    <owl:NamedIndividual rdf:about="&j.0;register">
+        <rdf:type rdf:resource="&j.0;BusinessProcess"/>
+        <rdf:type rdf:resource="&j.0;Composition"/>
+        <rdf:type rdf:resource="&j.0;Realization"/>
+        <rdf:type rdf:resource="&j.0;Triggering"/>
+        <j.0:Realization rdf:resource="&j.0;ClaimRegistration"/>
+        <j.0:Triggering rdf:resource="&j.0;accept"/>
+        <j.0:Composition rdf:resource="&j.0;handleClaim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/gold#valuate -->
+
+    <owl:NamedIndividual rdf:about="&j.0;valuate">
+        <rdf:type rdf:resource="&j.0;BusinessProcess"/>
+        <rdf:type rdf:resource="&j.0;Composition"/>
+        <rdf:type rdf:resource="&j.0;Triggering"/>
+        <j.0:Composition rdf:resource="&j.0;handleClaim"/>
+        <j.0:Triggering rdf:resource="&j.0;pay"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
