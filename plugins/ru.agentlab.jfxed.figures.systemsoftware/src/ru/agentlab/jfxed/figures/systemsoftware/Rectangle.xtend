@@ -1,4 +1,4 @@
-package ru.agentlab.jfxed.figures.shalaev
+package ru.agentlab.jfxed.figures.systemsoftware
 
 import javafx.scene.layout.VBox
 import javafx.scene.text.Text
