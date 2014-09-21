@@ -1,0 +1,587 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ServiceRealizationViewpoint "http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ServiceRealizationViewpoint="http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#fromAccess -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;fromAccess">
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Access"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessProcess"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#fromAggregation -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;fromAggregation">
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Aggregation"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#fromAssignment -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;fromAssignment">
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;ApplicationComponent"/>
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Assignment"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessActor"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessProcess"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#fromFlow -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;fromFlow">
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessProcess"/>
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Flow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#fromRealization -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;fromRealization">
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessProcess"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;DataObject"/>
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Realization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#fromSpecialization -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;fromSpecialization">
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;ApplicationCollaboration"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessCollaboration"/>
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Specialization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#fromTriggering -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;fromTriggering">
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessEvent"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessProcess"/>
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Triggering"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#fromUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;fromUsedBy">
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;ApplicationService"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessService"/>
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;UsedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#toAccess -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;toAccess">
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Access"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#toAggregation -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;toAggregation">
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Aggregation"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;ApplicationCollaboration"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessCollaboration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#toAssignment -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;toAssignment">
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;ApplicationComponent"/>
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Assignment"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessActor"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessProcess"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#toFlow -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;toFlow">
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessProcess"/>
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Flow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#toRealization -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;toRealization">
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;ApplicationService"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessObject"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessService"/>
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Realization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#toSpecialization -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;toSpecialization">
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessRole"/>
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Specialization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#toTriggering -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;toTriggering">
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessEvent"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessProcess"/>
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;Triggering"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#toUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&ServiceRealizationViewpoint;toUsedBy">
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessProcess"/>
+        <rdfs:range rdf:resource="&ServiceRealizationViewpoint;BusinessRole"/>
+        <rdfs:domain rdf:resource="&ServiceRealizationViewpoint;UsedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Access -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;Access">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Aggregation -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;Aggregation">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#ApplicationCollaboration -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;ApplicationCollaboration">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#ApplicationComponent -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;ApplicationComponent">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#ApplicationService -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;ApplicationService">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Assignment -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;Assignment">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#BusinessActor -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;BusinessActor">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#BusinessCollaboration -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;BusinessCollaboration">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#BusinessEvent -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;BusinessEvent">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#BusinessObject -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;BusinessObject">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#BusinessProcess -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;BusinessProcess">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#BusinessRole -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;BusinessRole">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#BusinessService -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;BusinessService">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Concept -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#DataObject -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;DataObject">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Flow -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;Flow">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Realization -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;Realization">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Relationship -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;Relationship"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Specialization -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;Specialization">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Triggering -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;Triggering">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#UsedBy -->
+
+    <owl:Class rdf:about="&ServiceRealizationViewpoint;UsedBy">
+        <rdfs:subClassOf rdf:resource="&ServiceRealizationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#ClaimRegService -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;ClaimRegService">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#ClaimsPayService -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;ClaimsPayService">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#CloseContract -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;CloseContract">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;BusinessProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#CollectPrem -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;CollectPrem">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;BusinessProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#CustomInfoService -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;CustomInfoService">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Customer -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;Customer">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;BusinessRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#HandleClaim -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;HandleClaim">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;BusinessProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#InformCustom -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;InformCustom">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;BusinessProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#InsAppService -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;InsAppService">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#PremPayService -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;PremPayService">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;BusinessService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Realization_ClaimRegService_HandleClaim -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;Realization_ClaimRegService_HandleClaim">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;Realization"/>
+        <toRealization rdf:resource="&ServiceRealizationViewpoint;ClaimRegService"/>
+        <fromRealization rdf:resource="&ServiceRealizationViewpoint;HandleClaim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Realization_ClaimsPayService_HandleClaim -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;Realization_ClaimsPayService_HandleClaim">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;Realization"/>
+        <toRealization rdf:resource="&ServiceRealizationViewpoint;ClaimsPayService"/>
+        <fromRealization rdf:resource="&ServiceRealizationViewpoint;HandleClaim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Realization_CustomInfoService_InformCustom -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;Realization_CustomInfoService_InformCustom">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;Realization"/>
+        <toRealization rdf:resource="&ServiceRealizationViewpoint;CustomInfoService"/>
+        <fromRealization rdf:resource="&ServiceRealizationViewpoint;InformCustom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Realization_InsAppService_CloseContract -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;Realization_InsAppService_CloseContract">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;Realization"/>
+        <fromRealization rdf:resource="&ServiceRealizationViewpoint;CloseContract"/>
+        <toRealization rdf:resource="&ServiceRealizationViewpoint;InsAppService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Realization_PremPayService_CollectPrem -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;Realization_PremPayService_CollectPrem">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;Realization"/>
+        <fromRealization rdf:resource="&ServiceRealizationViewpoint;CollectPrem"/>
+        <toRealization rdf:resource="&ServiceRealizationViewpoint;PremPayService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Triggering_CollectPrem_InformCustom -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;Triggering_CollectPrem_InformCustom">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;Triggering"/>
+        <toTriggering rdf:resource="&ServiceRealizationViewpoint;CollectPrem"/>
+        <fromTriggering rdf:resource="&ServiceRealizationViewpoint;InformCustom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#Triggering_InformCustom_HandleClaim -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;Triggering_InformCustom_HandleClaim">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;Triggering"/>
+        <fromTriggering rdf:resource="&ServiceRealizationViewpoint;HandleClaim"/>
+        <toTriggering rdf:resource="&ServiceRealizationViewpoint;InformCustom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#UsedBy_Customer_ClaimRegService -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;UsedBy_Customer_ClaimRegService">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&ServiceRealizationViewpoint;ClaimRegService"/>
+        <toUsedBy rdf:resource="&ServiceRealizationViewpoint;Customer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#UsedBy_Customer_ClaimsPayService -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;UsedBy_Customer_ClaimsPayService">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&ServiceRealizationViewpoint;ClaimsPayService"/>
+        <toUsedBy rdf:resource="&ServiceRealizationViewpoint;Customer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#UsedBy_Customer_CustomInfoService -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;UsedBy_Customer_CustomInfoService">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&ServiceRealizationViewpoint;CustomInfoService"/>
+        <toUsedBy rdf:resource="&ServiceRealizationViewpoint;Customer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#UsedBy_Customer_InsAppService -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;UsedBy_Customer_InsAppService">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;UsedBy"/>
+        <toUsedBy rdf:resource="&ServiceRealizationViewpoint;Customer"/>
+        <fromUsedBy rdf:resource="&ServiceRealizationViewpoint;InsAppService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ServiceRealizationViewpoint#UsedBy_Customer_PremPayService -->
+
+    <owl:NamedIndividual rdf:about="&ServiceRealizationViewpoint;UsedBy_Customer_PremPayService">
+        <rdf:type rdf:resource="&ServiceRealizationViewpoint;UsedBy"/>
+        <toUsedBy rdf:resource="&ServiceRealizationViewpoint;Customer"/>
+        <fromUsedBy rdf:resource="&ServiceRealizationViewpoint;PremPayService"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
