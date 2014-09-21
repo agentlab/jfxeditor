@@ -1,0 +1,12 @@
+ .network-Rect{
+	-fx-fill: CYAN;
+    -fx-stroke: BLACK;
+}
+
+.network-Circle{
+	-fx-fill: BLACK;
+}
+ 
+.network-Text{
+    -fx-font: 21pt "Arial";
+}
