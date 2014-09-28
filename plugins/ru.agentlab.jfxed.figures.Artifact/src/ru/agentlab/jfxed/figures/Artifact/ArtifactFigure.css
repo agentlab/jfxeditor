@@ -1,0 +1,8 @@
+ .artifact-Rect{
+	-fx-fill: LightGreen;
+    -fx-stroke: BLACK;
+}
+
+.artifact-Text{
+    -fx-font: 21pt "Arial";
+}
