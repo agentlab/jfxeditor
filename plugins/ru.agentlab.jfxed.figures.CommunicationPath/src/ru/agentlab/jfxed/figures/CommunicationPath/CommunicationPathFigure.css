@@ -1,0 +1,8 @@
+ .communicationPath-Rect{
+	-fx-fill: CYAN;
+    -fx-stroke: BLACK;
+}
+
+.communicationPath-Text{
+    -fx-font: 21pt "Arial";
+}
