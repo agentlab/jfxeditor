@@ -1,0 +1,541 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY LandscapeMapViewpoint "http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:LandscapeMapViewpoint="http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#fromAssignment -->
+
+    <owl:ObjectProperty rdf:about="&LandscapeMapViewpoint;fromAssignment">
+        <rdfs:domain rdf:resource="&LandscapeMapViewpoint;Assignment"/>
+        <rdfs:range rdf:resource="&LandscapeMapViewpoint;BusinessFunction"/>
+        <rdfs:range rdf:resource="&LandscapeMapViewpoint;Product"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#fromUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&LandscapeMapViewpoint;fromUsedBy">
+        <rdfs:range rdf:resource="&LandscapeMapViewpoint;ApplicationComponent"/>
+        <rdfs:domain rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#toAssignment -->
+
+    <owl:ObjectProperty rdf:about="&LandscapeMapViewpoint;toAssignment">
+        <rdfs:domain rdf:resource="&LandscapeMapViewpoint;Assignment"/>
+        <rdfs:range rdf:resource="&LandscapeMapViewpoint;BusinessFunction"/>
+        <rdfs:range rdf:resource="&LandscapeMapViewpoint;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#toUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&LandscapeMapViewpoint;toUsedBy">
+        <rdfs:range rdf:resource="&LandscapeMapViewpoint;BusinessFunction"/>
+        <rdfs:range rdf:resource="&LandscapeMapViewpoint;Product"/>
+        <rdfs:domain rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#ApplicationComponent -->
+
+    <owl:Class rdf:about="&LandscapeMapViewpoint;ApplicationComponent">
+        <rdfs:subClassOf rdf:resource="&LandscapeMapViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Assignment -->
+
+    <owl:Class rdf:about="&LandscapeMapViewpoint;Assignment">
+        <rdfs:subClassOf rdf:resource="&LandscapeMapViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#BusinessFunction -->
+
+    <owl:Class rdf:about="&LandscapeMapViewpoint;BusinessFunction">
+        <rdfs:subClassOf rdf:resource="&LandscapeMapViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Concept -->
+
+    <owl:Class rdf:about="&LandscapeMapViewpoint;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Product -->
+
+    <owl:Class rdf:about="&LandscapeMapViewpoint;Product">
+        <rdfs:subClassOf rdf:resource="&LandscapeMapViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Relationship -->
+
+    <owl:Class rdf:about="&LandscapeMapViewpoint;Relationship"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy -->
+
+    <owl:Class rdf:about="&LandscapeMapViewpoint;UsedBy">
+        <rdfs:subClassOf rdf:resource="&LandscapeMapViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#ArchiSurance -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;ArchiSurance">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;Product"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Assignment_ArchiSurance_Car -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;Assignment_ArchiSurance_Car">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&LandscapeMapViewpoint;ArchiSurance"/>
+        <fromAssignment rdf:resource="&LandscapeMapViewpoint;Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Assignment_ArchiSurance_DocProc -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;Assignment_ArchiSurance_DocProc">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&LandscapeMapViewpoint;ArchiSurance"/>
+        <fromAssignment rdf:resource="&LandscapeMapViewpoint;DocProc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Assignment_ArchiSurance_HomeAway -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;Assignment_ArchiSurance_HomeAway">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&LandscapeMapViewpoint;ArchiSurance"/>
+        <fromAssignment rdf:resource="&LandscapeMapViewpoint;HomeAway"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Assignment_ArchiSurance_LegalAid -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;Assignment_ArchiSurance_LegalAid">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&LandscapeMapViewpoint;ArchiSurance"/>
+        <fromAssignment rdf:resource="&LandscapeMapViewpoint;LegalAid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Assignment_ArchiSurance_MainCustomInterRel -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;Assignment_ArchiSurance_MainCustomInterRel">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&LandscapeMapViewpoint;ArchiSurance"/>
+        <fromAssignment rdf:resource="&LandscapeMapViewpoint;MainCustomInterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Assignment_Car_ArchiSurance -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;Assignment_Car_ArchiSurance">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&LandscapeMapViewpoint;ArchiSurance"/>
+        <toAssignment rdf:resource="&LandscapeMapViewpoint;Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Assignment_DocProc_ArchiSurance -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;Assignment_DocProc_ArchiSurance">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&LandscapeMapViewpoint;ArchiSurance"/>
+        <toAssignment rdf:resource="&LandscapeMapViewpoint;DocProc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Assignment_HomeAway_ArchiSurance -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;Assignment_HomeAway_ArchiSurance">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&LandscapeMapViewpoint;ArchiSurance"/>
+        <toAssignment rdf:resource="&LandscapeMapViewpoint;HomeAway"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Assignment_LegalAid_ArchiSurance -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;Assignment_LegalAid_ArchiSurance">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&LandscapeMapViewpoint;ArchiSurance"/>
+        <toAssignment rdf:resource="&LandscapeMapViewpoint;LegalAid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Assignment_MainCustomInterRel_ArchiSurance -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;Assignment_MainCustomInterRel_ArchiSurance">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&LandscapeMapViewpoint;ArchiSurance"/>
+        <toAssignment rdf:resource="&LandscapeMapViewpoint;MainCustomInterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#CRMSystem -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;CRMSystem">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#CallCenterApp -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;CallCenterApp">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#Car -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;Car">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;Product"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#CarInsApp -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;CarInsApp">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#DocManageSystem -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;DocManageSystem">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#DocProc -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;DocProc">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;BusinessFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#HomeAway -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;HomeAway">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;BusinessFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#HomeAwayFinApp -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;HomeAwayFinApp">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#HomeAwayPolAd -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;HomeAwayPolAd">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#LegalAid -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;LegalAid">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;Product"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#LegalAidBackOS -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;LegalAidBackOS">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#LegalAidCRM -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;LegalAidCRM">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#MainCustomInterRel -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;MainCustomInterRel">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;BusinessFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_CallCenterApp_CRMSystem -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_CallCenterApp_CRMSystem">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;CRMSystem"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;CallCenterApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_CarInsApp_CRMSystem -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_CarInsApp_CRMSystem">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;CRMSystem"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;CarInsApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_Car_CarInsApp -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_Car_CarInsApp">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;Car"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;CarInsApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_DocManageSystem_CarInsApp -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_DocManageSystem_CarInsApp">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;CarInsApp"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;DocManageSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_DocManageSystem_HomeAwayFinApp -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_DocManageSystem_HomeAwayFinApp">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;DocManageSystem"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;HomeAwayFinApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_DocManageSystem_LegalAidBackOS -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_DocManageSystem_LegalAidBackOS">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;DocManageSystem"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;LegalAidBackOS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_DocProc_DocManageSystem -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_DocProc_DocManageSystem">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;DocManageSystem"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;DocProc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_HomeAwayPolAd_CRMSystem -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_HomeAwayPolAd_CRMSystem">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;CRMSystem"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;HomeAwayPolAd"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_HomeAway_HomeAwayFinApp -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_HomeAway_HomeAwayFinApp">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;HomeAway"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;HomeAwayFinApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_HomeAway_HomeAwayPolAd -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_HomeAway_HomeAwayPolAd">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;HomeAway"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;HomeAwayPolAd"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_LegalAidBackOS_LegalAidCRM -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_LegalAidBackOS_LegalAidCRM">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;LegalAidBackOS"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;LegalAidCRM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_LegalAid_LegalAidBackOS -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_LegalAid_LegalAidBackOS">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;LegalAid"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;LegalAidBackOS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_LegalAid_LegalAidCRM -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_LegalAid_LegalAidCRM">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;LegalAid"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;LegalAidCRM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_MainCustomInterRel_CRMSystem -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_MainCustomInterRel_CRMSystem">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;CRMSystem"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;MainCustomInterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_MainCustomInterRel_CallCenterApp -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_MainCustomInterRel_CallCenterApp">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;CallCenterApp"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;MainCustomInterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_WebPortal_CRMSystem -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_WebPortal_CRMSystem">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;CRMSystem"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;WebPortal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#UsedBy_WebPortal_LegalAidCRM -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;UsedBy_WebPortal_LegalAidCRM">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&LandscapeMapViewpoint;LegalAidCRM"/>
+        <toUsedBy rdf:resource="&LandscapeMapViewpoint;WebPortal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/LandscapeMapViewpoint#WebPortal -->
+
+    <owl:NamedIndividual rdf:about="&LandscapeMapViewpoint;WebPortal">
+        <rdf:type rdf:resource="&LandscapeMapViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
