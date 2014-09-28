@@ -1,0 +1,729 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ApplicationCooperationViewpoint "http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ApplicationCooperationViewpoint="http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#fromAccess -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;fromAccess">
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Access"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationFunction"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationInteraction"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#fromAggregation -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;fromAggregation">
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Aggregation"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#fromAssignment -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;fromAssignment">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationCollaboration"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationFunction"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationInteraction"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationInterface"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationService"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#fromComposition -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;fromComposition">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationInterface"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Composition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#fromFlow -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;fromFlow">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationFunction"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationInteraction"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Flow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#fromRealization -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;fromRealization">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationFunction"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationInteraction"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Realization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#fromSpecialization -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;fromSpecialization">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationCollaboration"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Specialization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#fromTriggering -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;fromTriggering">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationFunction"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationInteraction"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Triggering"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#fromUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;fromUsedBy">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationInterface"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationService"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;UsedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#toAccess -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;toAccess">
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Access"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;DataObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#toAggregation -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;toAggregation">
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Aggregation"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationCollaboration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#toAssignment -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;toAssignment">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationCollaboration"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationFunction"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationInteraction"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationInterface"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationService"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#toComposition -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;toComposition">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Composition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#toFlow -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;toFlow">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationFunction"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationInteraction"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Flow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#toRealization -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;toRealization">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationService"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Realization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#toSpecialization -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;toSpecialization">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Specialization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#toTriggering -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;toTriggering">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationFunction"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationInteraction"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;Triggering"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#toUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationCooperationViewpoint;toUsedBy">
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationFunction"/>
+        <rdfs:range rdf:resource="&ApplicationCooperationViewpoint;ApplicationInteraction"/>
+        <rdfs:domain rdf:resource="&ApplicationCooperationViewpoint;UsedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Access -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;Access">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Aggregation -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;Aggregation">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#ApplicationCollaboration -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;ApplicationCollaboration">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#ApplicationComponent -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;ApplicationComponent">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#ApplicationFunction -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;ApplicationFunction">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#ApplicationInteraction -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;ApplicationInteraction">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#ApplicationInterface -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;ApplicationInterface">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#ApplicationService -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;ApplicationService">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;Assignment">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Composition -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;Composition">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Concept -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#DataObject -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;DataObject">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Flow -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;Flow">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Location -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;Location">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Realization -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;Realization">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Relationship -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;Relationship"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Specialization -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;Specialization">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Triggering -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;Triggering">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#UsedBy -->
+
+    <owl:Class rdf:about="&ApplicationCooperationViewpoint;UsedBy">
+        <rdfs:subClassOf rdf:resource="&ApplicationCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_BackOffice_CustomDataAcc -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_BackOffice_CustomDataAcc">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;BackOffice"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;CustomDataAcc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_BackOffice_HomeAwayFinApp -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_BackOffice_HomeAwayFinApp">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;BackOffice"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;HomeAwayFinApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_BackOffice_HomeAwayPolAdmin -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_BackOffice_HomeAwayPolAdmin">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;BackOffice"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;HomeAwayPolAdmin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_BackOffice_PolDataManage -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_BackOffice_PolDataManage">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;BackOffice"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;PolDataManage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_CRMSystem_FrontOffice -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_CRMSystem_FrontOffice">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;CRMSystem"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;FrontOffice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_CallCenterApp_FrontOffice -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_CallCenterApp_FrontOffice">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;CallCenterApp"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;FrontOffice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_CustomDataAcc_BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_CustomDataAcc_BackOffice">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;BackOffice"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;CustomDataAcc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_FrontOffice_CRMSystem -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_FrontOffice_CRMSystem">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;CRMSystem"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;FrontOffice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_FrontOffice_CallCenterApp -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_FrontOffice_CallCenterApp">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;CallCenterApp"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;FrontOffice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_FrontOffice_RiskAssessment -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_FrontOffice_RiskAssessment">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;FrontOffice"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;RiskAssessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_FrontOffice_WebPortal -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_FrontOffice_WebPortal">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;FrontOffice"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;WebPortal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_HomeAwayFinApp_BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_HomeAwayFinApp_BackOffice">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;BackOffice"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;HomeAwayFinApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_HomeAwayPolAdmin_BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_HomeAwayPolAdmin_BackOffice">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;BackOffice"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;HomeAwayPolAdmin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_PolDataManage_BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_PolDataManage_BackOffice">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;BackOffice"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;PolDataManage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_RiskAssessment_FrontOffice -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_RiskAssessment_FrontOffice">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;FrontOffice"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;RiskAssessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Assignment_WebPortal_FrontOffice -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Assignment_WebPortal_FrontOffice">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ApplicationCooperationViewpoint;FrontOffice"/>
+        <toAssignment rdf:resource="&ApplicationCooperationViewpoint;WebPortal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;BackOffice">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#BankSystem -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;BankSystem">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#CRMSystem -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;CRMSystem">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#CallCenterApp -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;CallCenterApp">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Composition_HomeAwayPolAdmin_CustomDataAcc -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Composition_HomeAwayPolAdmin_CustomDataAcc">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Composition"/>
+        <fromComposition rdf:resource="&ApplicationCooperationViewpoint;CustomDataAcc"/>
+        <toComposition rdf:resource="&ApplicationCooperationViewpoint;HomeAwayPolAdmin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#Composition_HomeAwayPolAdmin_PolDataManage -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;Composition_HomeAwayPolAdmin_PolDataManage">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Composition"/>
+        <toComposition rdf:resource="&ApplicationCooperationViewpoint;HomeAwayPolAdmin"/>
+        <fromComposition rdf:resource="&ApplicationCooperationViewpoint;PolDataManage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#CustomDataAcc -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;CustomDataAcc">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#FrontOffice -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;FrontOffice">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#HomeAwayFinApp -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;HomeAwayFinApp">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#HomeAwayPolAdmin -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;HomeAwayPolAdmin">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#PolDataManage -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;PolDataManage">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#RiskAssessment -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;RiskAssessment">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#UsedBy_CallCenterApp_CustomDataAcc -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;UsedBy_CallCenterApp_CustomDataAcc">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;UsedBy"/>
+        <toUsedBy rdf:resource="&ApplicationCooperationViewpoint;CallCenterApp"/>
+        <fromUsedBy rdf:resource="&ApplicationCooperationViewpoint;CustomDataAcc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#UsedBy_HomeAwayFinApp_BankSystem -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;UsedBy_HomeAwayFinApp_BankSystem">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&ApplicationCooperationViewpoint;BankSystem"/>
+        <toUsedBy rdf:resource="&ApplicationCooperationViewpoint;HomeAwayFinApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#UsedBy_HomeAwayPolAdmin_HomeAwayFinApp -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;UsedBy_HomeAwayPolAdmin_HomeAwayFinApp">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&ApplicationCooperationViewpoint;HomeAwayFinApp"/>
+        <toUsedBy rdf:resource="&ApplicationCooperationViewpoint;HomeAwayPolAdmin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#UsedBy_RiskAssessment_CustomDataAcc -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;UsedBy_RiskAssessment_CustomDataAcc">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&ApplicationCooperationViewpoint;CustomDataAcc"/>
+        <toUsedBy rdf:resource="&ApplicationCooperationViewpoint;RiskAssessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#UsedBy_WebPortal_CRMSystem -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;UsedBy_WebPortal_CRMSystem">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&ApplicationCooperationViewpoint;CRMSystem"/>
+        <toUsedBy rdf:resource="&ApplicationCooperationViewpoint;WebPortal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#UsedBy_WebPortal_CallCenterApp -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;UsedBy_WebPortal_CallCenterApp">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&ApplicationCooperationViewpoint;CallCenterApp"/>
+        <toUsedBy rdf:resource="&ApplicationCooperationViewpoint;WebPortal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#UsedBy_WebPortal_RiskAssessment -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;UsedBy_WebPortal_RiskAssessment">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&ApplicationCooperationViewpoint;RiskAssessment"/>
+        <toUsedBy rdf:resource="&ApplicationCooperationViewpoint;WebPortal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ApplicationCooperationViewpoint#WebPortal -->
+
+    <owl:NamedIndividual rdf:about="&ApplicationCooperationViewpoint;WebPortal">
+        <rdf:type rdf:resource="&ApplicationCooperationViewpoint;ApplicationComponent"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
