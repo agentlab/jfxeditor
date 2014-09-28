@@ -1,0 +1,13 @@
+ .actor-Rect{
+	-fx-fill: CYAN;
+    -fx-stroke: BLACK;
+}
+
+.actor-Circle{
+	-fx-fill: CYAN;
+	-fx-stroke: BLACK;
+}
+
+.actor-Text{
+    -fx-font: 22pt "Arial";
+}
