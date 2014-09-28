@@ -1,0 +1,849 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ActorCooperationViewpoint "http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ActorCooperationViewpoint="http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#fromAggregation -->
+
+    <owl:ObjectProperty rdf:about="&ActorCooperationViewpoint;fromAggregation">
+        <rdfs:domain rdf:resource="&ActorCooperationViewpoint;Aggregation"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#fromAssignment -->
+
+    <owl:ObjectProperty rdf:about="&ActorCooperationViewpoint;fromAssignment">
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;ApplicationInterface"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;ApplicationService"/>
+        <rdfs:domain rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessCollaboration"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessInterface"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessRole"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#fromComposition -->
+
+    <owl:ObjectProperty rdf:about="&ActorCooperationViewpoint;fromComposition">
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;ApplicationInterface"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessInterface"/>
+        <rdfs:domain rdf:resource="&ActorCooperationViewpoint;Composition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#fromFlow -->
+
+    <owl:ObjectProperty rdf:about="&ActorCooperationViewpoint;fromFlow">
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessRole"/>
+        <rdfs:domain rdf:resource="&ActorCooperationViewpoint;Flow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#fromSpecialization -->
+
+    <owl:ObjectProperty rdf:about="&ActorCooperationViewpoint;fromSpecialization">
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessCollaboration"/>
+        <rdfs:domain rdf:resource="&ActorCooperationViewpoint;Specialization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#fromUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&ActorCooperationViewpoint;fromUsedBy">
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;ApplicationInterface"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;ApplicationService"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessInterface"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessService"/>
+        <rdfs:domain rdf:resource="&ActorCooperationViewpoint;UsedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#toAggregation -->
+
+    <owl:ObjectProperty rdf:about="&ActorCooperationViewpoint;toAggregation">
+        <rdfs:domain rdf:resource="&ActorCooperationViewpoint;Aggregation"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessCollaboration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#toAssignment -->
+
+    <owl:ObjectProperty rdf:about="&ActorCooperationViewpoint;toAssignment">
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;ApplicationInterface"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;ApplicationService"/>
+        <rdfs:domain rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessCollaboration"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessInterface"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessRole"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#toComposition -->
+
+    <owl:ObjectProperty rdf:about="&ActorCooperationViewpoint;toComposition">
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessRole"/>
+        <rdfs:domain rdf:resource="&ActorCooperationViewpoint;Composition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#toFlow -->
+
+    <owl:ObjectProperty rdf:about="&ActorCooperationViewpoint;toFlow">
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessRole"/>
+        <rdfs:domain rdf:resource="&ActorCooperationViewpoint;Flow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#toSpecialization -->
+
+    <owl:ObjectProperty rdf:about="&ActorCooperationViewpoint;toSpecialization">
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessRole"/>
+        <rdfs:domain rdf:resource="&ActorCooperationViewpoint;Specialization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#toUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&ActorCooperationViewpoint;toUsedBy">
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&ActorCooperationViewpoint;BusinessRole"/>
+        <rdfs:domain rdf:resource="&ActorCooperationViewpoint;UsedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Aggregation -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;Aggregation">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#ApplicationComponent -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;ApplicationComponent">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#ApplicationInterface -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;ApplicationInterface">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#ApplicationService -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;ApplicationService">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;Assignment">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#BusinessActor -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;BusinessActor">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#BusinessCollaboration -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;BusinessCollaboration">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#BusinessInterface -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;BusinessInterface">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#BusinessRole -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;BusinessRole">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#BusinessService -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;BusinessService">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Composition -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;Composition">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Concept -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;Flow">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Relationship -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;Relationship"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Specialization -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;Specialization">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#UsedBy -->
+
+    <owl:Class rdf:about="&ActorCooperationViewpoint;UsedBy">
+        <rdfs:subClassOf rdf:resource="&ActorCooperationViewpoint;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Aggregation_Collaboration_CustomerBank -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Aggregation_Collaboration_CustomerBank">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Aggregation"/>
+        <toAggregation rdf:resource="&ActorCooperationViewpoint;Collaboration"/>
+        <fromAggregation rdf:resource="&ActorCooperationViewpoint;CustomerBank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Aggregation_Collaboration_DocProcSSC -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Aggregation_Collaboration_DocProcSSC">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Aggregation"/>
+        <toAggregation rdf:resource="&ActorCooperationViewpoint;Collaboration"/>
+        <fromAggregation rdf:resource="&ActorCooperationViewpoint;DocProcSSC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#ArchiSurance -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;ArchiSurance">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_ArchiSurance_BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_ArchiSurance_BackOffice">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;ArchiSurance"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_ArchiSurance_DocProcSSC -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_ArchiSurance_DocProcSSC">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;ArchiSurance"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;DocProcSSC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_ArchiSurance_Finance -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_ArchiSurance_Finance">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;ArchiSurance"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;Finance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_ArchiSurance_FrontOffice -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_ArchiSurance_FrontOffice">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;ArchiSurance"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;FrontOffice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_ArchiSurance_HRM -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_ArchiSurance_HRM">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;ArchiSurance"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;HRM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_ArchiSurance_ProductDev -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_ArchiSurance_ProductDev">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;ArchiSurance"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;ProductDev"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_BackOffice_ArchiSurance -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_BackOffice_ArchiSurance">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;ArchiSurance"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_BackOffice_Car -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_BackOffice_Car">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_BackOffice_HomeAway -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_BackOffice_HomeAway">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;HomeAway"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_BackOffice_LegalAid -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_BackOffice_LegalAid">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;LegalAid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_Car_BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_Car_BackOffice">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_CustomRel_FrontOffice -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_CustomRel_FrontOffice">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;CustomRel"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;FrontOffice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_DocProcSSC_ArchiSurance -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_DocProcSSC_ArchiSurance">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;ArchiSurance"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;DocProcSSC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_Finance_ArchiSurance -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_Finance_ArchiSurance">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;ArchiSurance"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;Finance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_FrontOffice_ArchiSurance -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_FrontOffice_ArchiSurance">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;ArchiSurance"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;FrontOffice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_FrontOffice_CustomRel -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_FrontOffice_CustomRel">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;CustomRel"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;FrontOffice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_FrontOffice_InterRel -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_FrontOffice_InterRel">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;FrontOffice"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;InterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_HRM_ArchiSurance -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_HRM_ArchiSurance">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;ArchiSurance"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;HRM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_HomeAway_BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_HomeAway_BackOffice">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;HomeAway"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_InterRel_FrontOffice -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_InterRel_FrontOffice">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;FrontOffice"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;InterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_LegalAid_BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_LegalAid_BackOffice">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;LegalAid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Assignment_ProductDev_ArchiSurance -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Assignment_ProductDev_ArchiSurance">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Assignment"/>
+        <fromAssignment rdf:resource="&ActorCooperationViewpoint;ArchiSurance"/>
+        <toAssignment rdf:resource="&ActorCooperationViewpoint;ProductDev"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;BackOffice">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Car -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Car">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Collaboration -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Collaboration">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessCollaboration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#CustomRel -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;CustomRel">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Customer -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Customer">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#CustomerBank -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;CustomerBank">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#DocProcSSC -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;DocProcSSC">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Finance -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Finance">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_BackOffice_DocProcSSC -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_BackOffice_DocProcSSC">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;DocProcSSC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_BackOffice_Finance -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_BackOffice_Finance">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;Finance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_BackOffice_HRM -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_BackOffice_HRM">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;HRM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_BackOffice_ProductDev -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_BackOffice_ProductDev">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;ProductDev"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_CustomRel_DocProcSSC -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_CustomRel_DocProcSSC">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;CustomRel"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;DocProcSSC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_CustomerBank_Finance -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_CustomerBank_Finance">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;CustomerBank"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;Finance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_DocProcSSC_BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_DocProcSSC_BackOffice">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;DocProcSSC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_DocProcSSC_CustomRel -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_DocProcSSC_CustomRel">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;CustomRel"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;DocProcSSC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_DocProcSSC_InterRel -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_DocProcSSC_InterRel">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;DocProcSSC"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;InterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_Finance_BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_Finance_BackOffice">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;Finance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_Finance_CustomerBank -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_Finance_CustomerBank">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;CustomerBank"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;Finance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_HRM_BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_HRM_BackOffice">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;HRM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_InterRel_DocProcSSC -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_InterRel_DocProcSSC">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;DocProcSSC"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;InterRel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Flow_ProductDev_BackOffice -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Flow_ProductDev_BackOffice">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;Flow"/>
+        <fromFlow rdf:resource="&ActorCooperationViewpoint;BackOffice"/>
+        <toFlow rdf:resource="&ActorCooperationViewpoint;ProductDev"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#FrontOffice -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;FrontOffice">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#HRM -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;HRM">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#HomeAway -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;HomeAway">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#InterRel -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;InterRel">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#Intermediary -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;Intermediary">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#LegalAid -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;LegalAid">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#ProductDev -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;ProductDev">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;BusinessActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#UsedBy_Customer_CustomRel -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;UsedBy_Customer_CustomRel">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&ActorCooperationViewpoint;CustomRel"/>
+        <toUsedBy rdf:resource="&ActorCooperationViewpoint;Customer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#UsedBy_Customer_DocProcSSC -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;UsedBy_Customer_DocProcSSC">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;UsedBy"/>
+        <toUsedBy rdf:resource="&ActorCooperationViewpoint;Customer"/>
+        <fromUsedBy rdf:resource="&ActorCooperationViewpoint;DocProcSSC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/ActorCooperationViewpoint#UsedBy_Intermediary_InterRel -->
+
+    <owl:NamedIndividual rdf:about="&ActorCooperationViewpoint;UsedBy_Intermediary_InterRel">
+        <rdf:type rdf:resource="&ActorCooperationViewpoint;UsedBy"/>
+        <fromUsedBy rdf:resource="&ActorCooperationViewpoint;InterRel"/>
+        <toUsedBy rdf:resource="&ActorCooperationViewpoint;Intermediary"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
