@@ -1,75 +1,196 @@
-<?xml version="1.0" encoding="windows-1252"?>
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.0="http://www.agentlab.ru/jfxed/onto/strategicrationale#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Realization">
-    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#ApplicationComponent"/>
-    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#ApplicationComponent"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#insurancePolicyData">
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#DataObject"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#damageClaimData">
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#DataObject"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#customerDataAccess">
-    <j.0:Aggregation rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#customerFileData"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Access"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#ApplicationComponent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#DataObject">
-    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#riskAssessment">
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#ApplicationComponent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#homeAndAwayPolicyAdministration">
-    <j.0:Realization rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#riskAssessment"/>
-    <j.0:Realization rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#policyDataManagement"/>
-    <j.0:Realization rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#claimDataManagement"/>
-    <j.0:Realization rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#customerDataAccess"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Composition"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#ApplicationComponent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#customerFileData">
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#DataObject"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Composition">
-    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Aggregation">
-    <rdfs:range rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#DataObject"/>
-    <rdfs:domain rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#ApplicationComponent"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Access">
-    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#ApplicationComponent">
-    <rdfs:subClassOf rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#policyDataManagement">
-    <j.0:Aggregation rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#insurancePolicyData"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Access"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#ApplicationComponent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#claimDataManagement">
-    <j.0:Aggregation rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#damageClaimData"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#Access"/>
-    <rdf:type rdf:resource="http://www.agentlab.ru/jfxed/onto/strategicrationale#ApplicationComponent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY j.0 "http://www.agentlab.ru/jfxed/onto/strategicrationale#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/strategicrationale#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/strategicrationale"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:j.0="http://www.agentlab.ru/jfxed/onto/strategicrationale#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/strategicrationale"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#Aggregation -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Aggregation">
+        <rdfs:domain rdf:resource="&j.0;ApplicationComponent"/>
+        <rdfs:range rdf:resource="&j.0;DataObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#Realization -->
+
+    <owl:ObjectProperty rdf:about="&j.0;Realization">
+        <rdfs:range rdf:resource="&j.0;ApplicationComponent"/>
+        <rdfs:domain rdf:resource="&j.0;ApplicationComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#Access -->
+
+    <owl:Class rdf:about="&j.0;Access">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#ApplicationComponent -->
+
+    <owl:Class rdf:about="&j.0;ApplicationComponent">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#Composition -->
+
+    <owl:Class rdf:about="&j.0;Composition">
+        <rdfs:subClassOf rdf:resource="&j.0;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#Concept -->
+
+    <owl:Class rdf:about="&j.0;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#DataObject -->
+
+    <owl:Class rdf:about="&j.0;DataObject">
+        <rdfs:subClassOf rdf:resource="&j.0;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#Relation -->
+
+    <owl:Class rdf:about="&j.0;Relation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#claimDataManagement -->
+
+    <owl:NamedIndividual rdf:about="&j.0;claimDataManagement">
+        <rdf:type rdf:resource="&j.0;Access"/>
+        <rdf:type rdf:resource="&j.0;ApplicationComponent"/>
+        <Aggregation rdf:resource="&j.0;damageClaimData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#customerDataAccess -->
+
+    <owl:NamedIndividual rdf:about="&j.0;customerDataAccess">
+        <rdf:type rdf:resource="&j.0;Access"/>
+        <rdf:type rdf:resource="&j.0;ApplicationComponent"/>
+        <Aggregation rdf:resource="&j.0;customerFileData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#customerFileData -->
+
+    <owl:NamedIndividual rdf:about="&j.0;customerFileData">
+        <rdf:type rdf:resource="&j.0;DataObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#damageClaimData -->
+
+    <owl:NamedIndividual rdf:about="&j.0;damageClaimData">
+        <rdf:type rdf:resource="&j.0;DataObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#homeAndAwayPolicyAdministration -->
+
+    <owl:NamedIndividual rdf:about="&j.0;homeAndAwayPolicyAdministration">
+        <rdf:type rdf:resource="&j.0;ApplicationComponent"/>
+        <rdf:type rdf:resource="&j.0;Composition"/>
+        <Realization rdf:resource="&j.0;claimDataManagement"/>
+        <Realization rdf:resource="&j.0;customerDataAccess"/>
+        <Realization rdf:resource="&j.0;policyDataManagement"/>
+        <Realization rdf:resource="&j.0;riskAssessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#insurancePolicyData -->
+
+    <owl:NamedIndividual rdf:about="&j.0;insurancePolicyData">
+        <rdf:type rdf:resource="&j.0;DataObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#policyDataManagement -->
+
+    <owl:NamedIndividual rdf:about="&j.0;policyDataManagement">
+        <rdf:type rdf:resource="&j.0;Access"/>
+        <rdf:type rdf:resource="&j.0;ApplicationComponent"/>
+        <Aggregation rdf:resource="&j.0;insurancePolicyData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/strategicrationale#riskAssessment -->
+
+    <owl:NamedIndividual rdf:about="&j.0;riskAssessment">
+        <rdf:type rdf:resource="&j.0;ApplicationComponent"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
