@@ -1,0 +1,13 @@
+ .role-Rect{
+	-fx-fill: CYAN;
+    -fx-stroke: BLACK;
+}
+
+.role-Circle{
+	-fx-stroke: black;
+	-fx-fill: CYAN;
+}
+ 
+.role-Text{
+    -fx-font: 21pt "Arial";
+}
