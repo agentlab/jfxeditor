@@ -1,0 +1,642 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ontology "http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#associationFrom -->
+
+    <owl:ObjectProperty rdf:about="&ontology;associationFrom">
+        <rdfs:range rdf:resource="&ontology;Annotation"/>
+        <rdfs:domain rdf:resource="&ontology;Association"/>
+        <rdfs:range rdf:resource="&ontology;Call_Activity"/>
+        <rdfs:range rdf:resource="&ontology;Complex"/>
+        <rdfs:range rdf:resource="&ontology;Data_object"/>
+        <rdfs:range rdf:resource="&ontology;Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Exclusive"/>
+        <rdfs:range rdf:resource="&ontology;Exclusive_Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Group"/>
+        <rdfs:range rdf:resource="&ontology;Inclusive"/>
+        <rdfs:range rdf:resource="&ontology;Intermediate"/>
+        <rdfs:range rdf:resource="&ontology;Lane"/>
+        <rdfs:range rdf:resource="&ontology;Parallel"/>
+        <rdfs:range rdf:resource="&ontology;Parallel_Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Pool"/>
+        <rdfs:range rdf:resource="&ontology;Start"/>
+        <rdfs:range rdf:resource="&ontology;SubProcess"/>
+        <rdfs:range rdf:resource="&ontology;Task"/>
+        <rdfs:range rdf:resource="&ontology;Transaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#associationTo -->
+
+    <owl:ObjectProperty rdf:about="&ontology;associationTo">
+        <rdfs:range rdf:resource="&ontology;Annotation"/>
+        <rdfs:domain rdf:resource="&ontology;Association"/>
+        <rdfs:range rdf:resource="&ontology;Call_Activity"/>
+        <rdfs:range rdf:resource="&ontology;Complex"/>
+        <rdfs:range rdf:resource="&ontology;Data_object"/>
+        <rdfs:range rdf:resource="&ontology;End"/>
+        <rdfs:range rdf:resource="&ontology;Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Exclusive"/>
+        <rdfs:range rdf:resource="&ontology;Exclusive_Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Group"/>
+        <rdfs:range rdf:resource="&ontology;Inclusive"/>
+        <rdfs:range rdf:resource="&ontology;Intermediate"/>
+        <rdfs:range rdf:resource="&ontology;Lane"/>
+        <rdfs:range rdf:resource="&ontology;Parallel"/>
+        <rdfs:range rdf:resource="&ontology;Parallel_Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Pool"/>
+        <rdfs:range rdf:resource="&ontology;SubProcess"/>
+        <rdfs:range rdf:resource="&ontology;Task"/>
+        <rdfs:range rdf:resource="&ontology;Transaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#messageFrom -->
+
+    <owl:ObjectProperty rdf:about="&ontology;messageFrom">
+        <rdfs:range rdf:resource="&ontology;Annotation"/>
+        <rdfs:range rdf:resource="&ontology;Call_Activity"/>
+        <rdfs:range rdf:resource="&ontology;Complex"/>
+        <rdfs:range rdf:resource="&ontology;Data_object"/>
+        <rdfs:range rdf:resource="&ontology;Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Exclusive"/>
+        <rdfs:range rdf:resource="&ontology;Exclusive_Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Group"/>
+        <rdfs:range rdf:resource="&ontology;Inclusive"/>
+        <rdfs:range rdf:resource="&ontology;Lane"/>
+        <rdfs:domain rdf:resource="&ontology;Message_flow"/>
+        <rdfs:range rdf:resource="&ontology;Parallel"/>
+        <rdfs:range rdf:resource="&ontology;Parallel_Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Pool"/>
+        <rdfs:range rdf:resource="&ontology;Start"/>
+        <rdfs:range rdf:resource="&ontology;SubProcess"/>
+        <rdfs:range rdf:resource="&ontology;Task"/>
+        <rdfs:range rdf:resource="&ontology;Transaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#messageTo -->
+
+    <owl:ObjectProperty rdf:about="&ontology;messageTo">
+        <rdfs:range rdf:resource="&ontology;Annotation"/>
+        <rdfs:range rdf:resource="&ontology;Call_Activity"/>
+        <rdfs:range rdf:resource="&ontology;Complex"/>
+        <rdfs:range rdf:resource="&ontology;Data_object"/>
+        <rdfs:range rdf:resource="&ontology;End"/>
+        <rdfs:range rdf:resource="&ontology;Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Exclusive"/>
+        <rdfs:range rdf:resource="&ontology;Exclusive_Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Group"/>
+        <rdfs:range rdf:resource="&ontology;Inclusive"/>
+        <rdfs:range rdf:resource="&ontology;Intermediate"/>
+        <rdfs:range rdf:resource="&ontology;Lane"/>
+        <rdfs:domain rdf:resource="&ontology;Message_flow"/>
+        <rdfs:range rdf:resource="&ontology;Parallel"/>
+        <rdfs:range rdf:resource="&ontology;Parallel_Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Pool"/>
+        <rdfs:range rdf:resource="&ontology;SubProcess"/>
+        <rdfs:range rdf:resource="&ontology;Task"/>
+        <rdfs:range rdf:resource="&ontology;Transaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#sequenceFrom -->
+
+    <owl:ObjectProperty rdf:about="&ontology;sequenceFrom">
+        <rdfs:range rdf:resource="&ontology;Annotation"/>
+        <rdfs:range rdf:resource="&ontology;Call_Activity"/>
+        <rdfs:range rdf:resource="&ontology;Complex"/>
+        <rdfs:range rdf:resource="&ontology;Data_object"/>
+        <rdfs:range rdf:resource="&ontology;Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Exclusive"/>
+        <rdfs:range rdf:resource="&ontology;Exclusive_Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Group"/>
+        <rdfs:range rdf:resource="&ontology;Inclusive"/>
+        <rdfs:range rdf:resource="&ontology;Lane"/>
+        <rdfs:range rdf:resource="&ontology;Parallel"/>
+        <rdfs:range rdf:resource="&ontology;Parallel_Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Pool"/>
+        <rdfs:domain rdf:resource="&ontology;Sequence_flow"/>
+        <rdfs:range rdf:resource="&ontology;Start"/>
+        <rdfs:range rdf:resource="&ontology;SubProcess"/>
+        <rdfs:range rdf:resource="&ontology;Task"/>
+        <rdfs:range rdf:resource="&ontology;Transaction"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#sequenceTo -->
+
+    <owl:ObjectProperty rdf:about="&ontology;sequenceTo">
+        <rdfs:range rdf:resource="&ontology;Annotation"/>
+        <rdfs:range rdf:resource="&ontology;Call_Activity"/>
+        <rdfs:range rdf:resource="&ontology;Complex"/>
+        <rdfs:range rdf:resource="&ontology;Data_object"/>
+        <rdfs:range rdf:resource="&ontology;End"/>
+        <rdfs:range rdf:resource="&ontology;Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Exclusive"/>
+        <rdfs:range rdf:resource="&ontology;Exclusive_Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Group"/>
+        <rdfs:range rdf:resource="&ontology;Inclusive"/>
+        <rdfs:range rdf:resource="&ontology;Intermediate"/>
+        <rdfs:range rdf:resource="&ontology;Lane"/>
+        <rdfs:range rdf:resource="&ontology;Parallel"/>
+        <rdfs:range rdf:resource="&ontology;Parallel_Event_Based"/>
+        <rdfs:range rdf:resource="&ontology;Pool"/>
+        <rdfs:domain rdf:resource="&ontology;Sequence_flow"/>
+        <rdfs:range rdf:resource="&ontology;SubProcess"/>
+        <rdfs:range rdf:resource="&ontology;Task"/>
+        <rdfs:range rdf:resource="&ontology;Transaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Activity -->
+
+    <owl:Class rdf:about="&ontology;Activity">
+        <rdfs:subClassOf rdf:resource="&ontology;Flow_objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Annotation -->
+
+    <owl:Class rdf:about="&ontology;Annotation">
+        <rdfs:subClassOf rdf:resource="&ontology;Artifacts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Artifacts -->
+
+    <owl:Class rdf:about="&ontology;Artifacts"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Association -->
+
+    <owl:Class rdf:about="&ontology;Association">
+        <rdfs:subClassOf rdf:resource="&ontology;Connecting_objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Call_Activity -->
+
+    <owl:Class rdf:about="&ontology;Call_Activity">
+        <rdfs:subClassOf rdf:resource="&ontology;Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Complex -->
+
+    <owl:Class rdf:about="&ontology;Complex">
+        <rdfs:subClassOf rdf:resource="&ontology;Gateway"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Connecting_objects -->
+
+    <owl:Class rdf:about="&ontology;Connecting_objects"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Data_object -->
+
+    <owl:Class rdf:about="&ontology;Data_object">
+        <rdfs:subClassOf rdf:resource="&ontology;Artifacts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#End -->
+
+    <owl:Class rdf:about="&ontology;End">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Event -->
+
+    <owl:Class rdf:about="&ontology;Event">
+        <rdfs:subClassOf rdf:resource="&ontology;Flow_objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Event_Based -->
+
+    <owl:Class rdf:about="&ontology;Event_Based">
+        <rdfs:subClassOf rdf:resource="&ontology;Gateway"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Exclusive -->
+
+    <owl:Class rdf:about="&ontology;Exclusive">
+        <rdfs:subClassOf rdf:resource="&ontology;Gateway"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Exclusive_Event_Based -->
+
+    <owl:Class rdf:about="&ontology;Exclusive_Event_Based">
+        <rdfs:subClassOf rdf:resource="&ontology;Gateway"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Flow_objects -->
+
+    <owl:Class rdf:about="&ontology;Flow_objects"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Gateway -->
+
+    <owl:Class rdf:about="&ontology;Gateway">
+        <rdfs:subClassOf rdf:resource="&ontology;Flow_objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Group -->
+
+    <owl:Class rdf:about="&ontology;Group">
+        <rdfs:subClassOf rdf:resource="&ontology;Artifacts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Inclusive -->
+
+    <owl:Class rdf:about="&ontology;Inclusive">
+        <rdfs:subClassOf rdf:resource="&ontology;Gateway"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Intermediate -->
+
+    <owl:Class rdf:about="&ontology;Intermediate">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Lane -->
+
+    <owl:Class rdf:about="&ontology;Lane">
+        <rdfs:subClassOf rdf:resource="&ontology;Swim_lanes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Message_flow -->
+
+    <owl:Class rdf:about="&ontology;Message_flow">
+        <rdfs:subClassOf rdf:resource="&ontology;Connecting_objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Parallel -->
+
+    <owl:Class rdf:about="&ontology;Parallel">
+        <rdfs:subClassOf rdf:resource="&ontology;Gateway"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Parallel_Event_Based -->
+
+    <owl:Class rdf:about="&ontology;Parallel_Event_Based">
+        <rdfs:subClassOf rdf:resource="&ontology;Gateway"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Pool -->
+
+    <owl:Class rdf:about="&ontology;Pool">
+        <rdfs:subClassOf rdf:resource="&ontology;Swim_lanes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Sequence_flow -->
+
+    <owl:Class rdf:about="&ontology;Sequence_flow">
+        <rdfs:subClassOf rdf:resource="&ontology;Connecting_objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Start -->
+
+    <owl:Class rdf:about="&ontology;Start">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#SubProcess -->
+
+    <owl:Class rdf:about="&ontology;SubProcess">
+        <rdfs:subClassOf rdf:resource="&ontology;Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Swim_lanes -->
+
+    <owl:Class rdf:about="&ontology;Swim_lanes"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Task -->
+
+    <owl:Class rdf:about="&ontology;Task">
+        <rdfs:subClassOf rdf:resource="&ontology;Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Transaction -->
+
+    <owl:Class rdf:about="&ontology;Transaction">
+        <rdfs:subClassOf rdf:resource="&ontology;Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Allow_1_week_for_discussion -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Allow_1_week_for_discussion">
+        <rdf:type rdf:resource="&ontology;Annotation"/>
+        <associationTo rdf:resource="&ontology;Announce_Issues_For_Discussion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Announce_Issues_For_Discussion -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Announce_Issues_For_Discussion">
+        <rdf:type rdf:resource="&ontology;Task"/>
+        <associationFrom rdf:resource="&ontology;Allow_1_week_for_discussion"/>
+        <sequenceTo rdf:resource="&ontology;Check_calendar"/>
+        <messageFrom rdf:resource="&ontology;Issue_Voting_List"/>
+        <sequenceTo rdf:resource="&ontology;Moderate_E-mail_Discussion"/>
+        <sequenceFrom rdf:resource="&ontology;start"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Calendar -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Calendar">
+        <rdf:type rdf:resource="&ontology;Data_object"/>
+        <messageTo rdf:resource="&ontology;Check_calendar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Check_calendar -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Check_calendar">
+        <rdf:type rdf:resource="&ontology;Task"/>
+        <associationFrom rdf:resource="&ontology;Announce_Issues_For_Discussion"/>
+        <sequenceFrom rdf:resource="&ontology;Check_calendar"/>
+        <sequenceTo rdf:resource="&ontology;Cinference_Call"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Cinference_Call -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Cinference_Call">
+        <rdf:type rdf:resource="&ontology;Exclusive"/>
+        <sequenceTo rdf:resource="&ontology;Check_calendar"/>
+        <sequenceTo rdf:resource="&ontology;Exclusive2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Delay_6_Days -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Delay_6_Days">
+        <rdf:type rdf:resource="&ontology;Intermediate"/>
+        <sequenceFrom rdf:resource="&ontology;Announce_Issues_For_Discussion"/>
+        <sequenceTo rdf:resource="&ontology;Discussion_Deadline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Discussion_Deadline -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Discussion_Deadline">
+        <rdf:type rdf:resource="&ontology;Task"/>
+        <sequenceFrom rdf:resource="&ontology;Delay_6_Days"/>
+        <sequenceTo rdf:resource="&ontology;Parallel1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#End -->
+
+    <owl:NamedIndividual rdf:about="&ontology;End">
+        <rdf:type rdf:resource="&ontology;End"/>
+        <sequenceFrom rdf:resource="&ontology;Evaluate_Discussion_Progress"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Evaluate_Discussion_Progress -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Evaluate_Discussion_Progress">
+        <rdf:type rdf:resource="&ontology;Task"/>
+        <sequenceTo rdf:resource="&ontology;End"/>
+        <sequenceFrom rdf:resource="&ontology;Parallel1"/>
+        <associationFrom rdf:resource="&ontology;Task_returns_status_of_discussion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Exclusive1 -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Exclusive1">
+        <rdf:type rdf:resource="&ontology;Exclusive"/>
+        <sequenceFrom rdf:resource="&ontology;Moderate_E-mail_Discussion"/>
+        <sequenceTo rdf:resource="&ontology;Parallel1"/>
+        <sequenceFrom rdf:resource="&ontology;Seven_Days"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Exclusive2 -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Exclusive2">
+        <rdf:type rdf:resource="&ontology;Exclusive"/>
+        <sequenceFrom rdf:resource="&ontology;Cinference_Call"/>
+        <sequenceFrom rdf:resource="&ontology;Moderate_Call_Discussion"/>
+        <sequenceTo rdf:resource="&ontology;Parallel1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Issue_Voting_List -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Issue_Voting_List">
+        <rdf:type rdf:resource="&ontology;Data_object"/>
+        <messageTo rdf:resource="&ontology;Announce_Issues_For_Discussion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Moderate_Call_Discussion -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Moderate_Call_Discussion">
+        <rdf:type rdf:resource="&ontology;Task"/>
+        <sequenceTo rdf:resource="&ontology;Exclusive2"/>
+        <sequenceFrom rdf:resource="&ontology;Wait_Until_Thursday"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Moderate_E-mail_Discussion -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Moderate_E-mail_Discussion">
+        <rdf:type rdf:resource="&ontology;Task"/>
+        <sequenceFrom rdf:resource="&ontology;Announce_Issues_For_Discussion"/>
+        <sequenceTo rdf:resource="&ontology;Exclusive1"/>
+        <sequenceTo rdf:resource="&ontology;Seven_Days"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Parallel1 -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Parallel1">
+        <rdf:type rdf:resource="&ontology;Parallel"/>
+        <sequenceFrom rdf:resource="&ontology;Discussion_Deadline"/>
+        <sequenceTo rdf:resource="&ontology;Evaluate_Discussion_Progress"/>
+        <sequenceFrom rdf:resource="&ontology;Exclusive1"/>
+        <sequenceFrom rdf:resource="&ontology;Exclusive2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Seven_Days -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Seven_Days">
+        <rdf:type rdf:resource="&ontology;Intermediate"/>
+        <sequenceFrom rdf:resource="&ontology;Moderate_E-mail_Discussion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Task_returns_status_of_discussion -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Task_returns_status_of_discussion">
+        <rdf:type rdf:resource="&ontology;Annotation"/>
+        <associationTo rdf:resource="&ontology;Evaluate_Discussion_Progress"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#Wait_Until_Thursday -->
+
+    <owl:NamedIndividual rdf:about="&ontology;Wait_Until_Thursday">
+        <rdf:type rdf:resource="&ontology;Intermediate"/>
+        <sequenceFrom rdf:resource="&ontology;Cinference_Call"/>
+        <sequenceTo rdf:resource="&ontology;Moderate_Call_Discussion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#begin -->
+
+    <owl:NamedIndividual rdf:about="&ontology;begin">
+        <rdf:type rdf:resource="&ontology;Sequence_flow"/>
+        <sequenceFrom rdf:resource="&ontology;start"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/BusinessProcessModelandNotation#start -->
+
+    <owl:NamedIndividual rdf:about="&ontology;start">
+        <rdf:type rdf:resource="&ontology;Start"/>
+        <sequenceTo rdf:resource="&ontology;Announce_Issues_For_Discussion"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

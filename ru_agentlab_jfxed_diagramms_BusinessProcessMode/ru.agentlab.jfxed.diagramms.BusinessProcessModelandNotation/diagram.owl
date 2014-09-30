@@ -1,0 +1,1036 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/xcariba/ontologies/2014/5/untitled-ontology-4"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/xcariba/ontologies/2014/5/untitled-ontology-4">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Annotation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Artifacts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Association"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Call_Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Complex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Connecting_objects"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data_object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#End"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event_Based"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Exclusive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Exclusive_Event_Based"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flow_objects"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gateway"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Inclusive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intermediate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Message_flow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parallel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parallel_Event_Based"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sequence_flow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Start"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SubProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Swim_lanes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Task"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transaction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#associationFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#associationTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#messageFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#messageTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sequenceFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sequenceTo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Allow_1_week_for_discussion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Announce_Issues_For_Discussion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Calendar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Check_calendar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cinference_Call"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delay_6_Days"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discussion_Deadline"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#End"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Evaluate_Discussion_Progress"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Exclusive1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Exclusive2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Issue_Voting_List"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Moderate_Call_Discussion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Moderate_E-mail_Discussion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Parallel1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Seven_Days"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Task_returns_status_of_discussion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wait_Until_Thursday"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#begin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#start"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Activity"/>
+        <Class IRI="#Flow_objects"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Annotation"/>
+        <Class IRI="#Artifacts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Association"/>
+        <Class IRI="#Connecting_objects"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Call_Activity"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Complex"/>
+        <Class IRI="#Gateway"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data_object"/>
+        <Class IRI="#Artifacts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#End"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <Class IRI="#Flow_objects"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event_Based"/>
+        <Class IRI="#Gateway"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Exclusive"/>
+        <Class IRI="#Gateway"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Exclusive_Event_Based"/>
+        <Class IRI="#Gateway"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gateway"/>
+        <Class IRI="#Flow_objects"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Group"/>
+        <Class IRI="#Artifacts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Inclusive"/>
+        <Class IRI="#Gateway"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intermediate"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lane"/>
+        <Class IRI="#Swim_lanes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Message_flow"/>
+        <Class IRI="#Connecting_objects"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parallel"/>
+        <Class IRI="#Gateway"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parallel_Event_Based"/>
+        <Class IRI="#Gateway"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pool"/>
+        <Class IRI="#Swim_lanes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sequence_flow"/>
+        <Class IRI="#Connecting_objects"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Start"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SubProcess"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Task"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Transaction"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Annotation"/>
+        <NamedIndividual IRI="#Allow_1_week_for_discussion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Task"/>
+        <NamedIndividual IRI="#Announce_Issues_For_Discussion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Data_object"/>
+        <NamedIndividual IRI="#Calendar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Task"/>
+        <NamedIndividual IRI="#Check_calendar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exclusive"/>
+        <NamedIndividual IRI="#Cinference_Call"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Intermediate"/>
+        <NamedIndividual IRI="#Delay_6_Days"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Task"/>
+        <NamedIndividual IRI="#Discussion_Deadline"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#End"/>
+        <NamedIndividual IRI="#End"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Task"/>
+        <NamedIndividual IRI="#Evaluate_Discussion_Progress"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exclusive"/>
+        <NamedIndividual IRI="#Exclusive1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exclusive"/>
+        <NamedIndividual IRI="#Exclusive2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Data_object"/>
+        <NamedIndividual IRI="#Issue_Voting_List"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Task"/>
+        <NamedIndividual IRI="#Moderate_Call_Discussion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Task"/>
+        <NamedIndividual IRI="#Moderate_E-mail_Discussion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parallel"/>
+        <NamedIndividual IRI="#Parallel1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Intermediate"/>
+        <NamedIndividual IRI="#Seven_Days"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Annotation"/>
+        <NamedIndividual IRI="#Task_returns_status_of_discussion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Intermediate"/>
+        <NamedIndividual IRI="#Wait_Until_Thursday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sequence_flow"/>
+        <NamedIndividual IRI="#begin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Start"/>
+        <NamedIndividual IRI="#start"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#associationTo"/>
+        <NamedIndividual IRI="#Allow_1_week_for_discussion"/>
+        <NamedIndividual IRI="#Announce_Issues_For_Discussion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#associationFrom"/>
+        <NamedIndividual IRI="#Announce_Issues_For_Discussion"/>
+        <NamedIndividual IRI="#Allow_1_week_for_discussion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#messageFrom"/>
+        <NamedIndividual IRI="#Announce_Issues_For_Discussion"/>
+        <NamedIndividual IRI="#Issue_Voting_List"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Announce_Issues_For_Discussion"/>
+        <NamedIndividual IRI="#start"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Announce_Issues_For_Discussion"/>
+        <NamedIndividual IRI="#Moderate_E-mail_Discussion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Announce_Issues_For_Discussion"/>
+        <NamedIndividual IRI="#Check_calendar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#messageTo"/>
+        <NamedIndividual IRI="#Calendar"/>
+        <NamedIndividual IRI="#Check_calendar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#associationFrom"/>
+        <NamedIndividual IRI="#Check_calendar"/>
+        <NamedIndividual IRI="#Announce_Issues_For_Discussion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Check_calendar"/>
+        <NamedIndividual IRI="#Check_calendar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Check_calendar"/>
+        <NamedIndividual IRI="#Cinference_Call"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Cinference_Call"/>
+        <NamedIndividual IRI="#Exclusive2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Cinference_Call"/>
+        <NamedIndividual IRI="#Check_calendar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Delay_6_Days"/>
+        <NamedIndividual IRI="#Announce_Issues_For_Discussion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Delay_6_Days"/>
+        <NamedIndividual IRI="#Discussion_Deadline"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Discussion_Deadline"/>
+        <NamedIndividual IRI="#Delay_6_Days"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Discussion_Deadline"/>
+        <NamedIndividual IRI="#Parallel1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#End"/>
+        <NamedIndividual IRI="#Evaluate_Discussion_Progress"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#associationFrom"/>
+        <NamedIndividual IRI="#Evaluate_Discussion_Progress"/>
+        <NamedIndividual IRI="#Task_returns_status_of_discussion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Evaluate_Discussion_Progress"/>
+        <NamedIndividual IRI="#Parallel1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Evaluate_Discussion_Progress"/>
+        <NamedIndividual IRI="#End"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Exclusive1"/>
+        <NamedIndividual IRI="#Moderate_E-mail_Discussion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Exclusive1"/>
+        <NamedIndividual IRI="#Seven_Days"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Exclusive1"/>
+        <NamedIndividual IRI="#Parallel1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Exclusive2"/>
+        <NamedIndividual IRI="#Moderate_Call_Discussion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Exclusive2"/>
+        <NamedIndividual IRI="#Cinference_Call"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Exclusive2"/>
+        <NamedIndividual IRI="#Parallel1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#messageTo"/>
+        <NamedIndividual IRI="#Issue_Voting_List"/>
+        <NamedIndividual IRI="#Announce_Issues_For_Discussion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Moderate_Call_Discussion"/>
+        <NamedIndividual IRI="#Wait_Until_Thursday"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Moderate_Call_Discussion"/>
+        <NamedIndividual IRI="#Exclusive2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Moderate_E-mail_Discussion"/>
+        <NamedIndividual IRI="#Announce_Issues_For_Discussion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Moderate_E-mail_Discussion"/>
+        <NamedIndividual IRI="#Seven_Days"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Moderate_E-mail_Discussion"/>
+        <NamedIndividual IRI="#Exclusive1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Parallel1"/>
+        <NamedIndividual IRI="#Exclusive2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Parallel1"/>
+        <NamedIndividual IRI="#Exclusive1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Parallel1"/>
+        <NamedIndividual IRI="#Discussion_Deadline"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Parallel1"/>
+        <NamedIndividual IRI="#Evaluate_Discussion_Progress"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Seven_Days"/>
+        <NamedIndividual IRI="#Moderate_E-mail_Discussion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#associationTo"/>
+        <NamedIndividual IRI="#Task_returns_status_of_discussion"/>
+        <NamedIndividual IRI="#Evaluate_Discussion_Progress"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#Wait_Until_Thursday"/>
+        <NamedIndividual IRI="#Cinference_Call"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#Wait_Until_Thursday"/>
+        <NamedIndividual IRI="#Moderate_Call_Discussion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <NamedIndividual IRI="#begin"/>
+        <NamedIndividual IRI="#start"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <NamedIndividual IRI="#start"/>
+        <NamedIndividual IRI="#Announce_Issues_For_Discussion"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Association"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Association"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Message_flow"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Message_flow"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Sequence_flow"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Sequence_flow"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Call_Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Complex"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Data_object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Exclusive"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Exclusive_Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Group"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Inclusive"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Intermediate"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Lane"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Parallel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Parallel_Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Pool"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Start"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#SubProcess"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationFrom"/>
+        <Class IRI="#Transaction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Call_Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Complex"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Data_object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#End"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Exclusive"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Exclusive_Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Group"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Inclusive"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Intermediate"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Lane"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Parallel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Parallel_Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Pool"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#SubProcess"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associationTo"/>
+        <Class IRI="#Transaction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Call_Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Complex"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Data_object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Exclusive"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Exclusive_Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Group"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Inclusive"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Lane"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Parallel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Parallel_Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Pool"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Start"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#SubProcess"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageFrom"/>
+        <Class IRI="#Transaction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Call_Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Complex"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Data_object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#End"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Exclusive"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Exclusive_Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Group"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Inclusive"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Intermediate"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Lane"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Parallel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Parallel_Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Pool"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#SubProcess"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#messageTo"/>
+        <Class IRI="#Transaction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Call_Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Complex"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Data_object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Exclusive"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Exclusive_Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Group"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Inclusive"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Lane"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Parallel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Parallel_Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Pool"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Start"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#SubProcess"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceFrom"/>
+        <Class IRI="#Transaction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Call_Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Complex"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Data_object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#End"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Exclusive"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Exclusive_Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Group"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Inclusive"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Intermediate"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Lane"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Parallel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Parallel_Event_Based"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Pool"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#SubProcess"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sequenceTo"/>
+        <Class IRI="#Transaction"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
