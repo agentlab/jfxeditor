@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY UMLComponentDiagram "http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#"
+     xml:base="http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UMLComponentDiagram="http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#">
+    <owl:Ontology rdf:about="http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#fromAssignment -->
+
+    <owl:ObjectProperty rdf:about="&UMLComponentDiagram;fromAssignment">
+        <rdfs:domain rdf:resource="&UMLComponentDiagram;Assignment"/>
+        <rdfs:range rdf:resource="&UMLComponentDiagram;InventorySystem"/>
+        <rdfs:range rdf:resource="&UMLComponentDiagram;OrderSystem"/>
+        <rdfs:range rdf:resource="&UMLComponentDiagram;StoreSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#fromUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&UMLComponentDiagram;fromUsedBy">
+        <rdfs:range rdf:resource="&UMLComponentDiagram;OrderSystem"/>
+        <rdfs:domain rdf:resource="&UMLComponentDiagram;UsedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#toAssignment -->
+
+    <owl:ObjectProperty rdf:about="&UMLComponentDiagram;toAssignment">
+        <rdfs:domain rdf:resource="&UMLComponentDiagram;Assignment"/>
+        <rdfs:range rdf:resource="&UMLComponentDiagram;InventorySystem"/>
+        <rdfs:range rdf:resource="&UMLComponentDiagram;OrderSystem"/>
+        <rdfs:range rdf:resource="&UMLComponentDiagram;StoreSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#toUsedBy -->
+
+    <owl:ObjectProperty rdf:about="&UMLComponentDiagram;toUsedBy">
+        <rdfs:range rdf:resource="&UMLComponentDiagram;InventorySystem"/>
+        <rdfs:domain rdf:resource="&UMLComponentDiagram;UsedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#Assignment -->
+
+    <owl:Class rdf:about="&UMLComponentDiagram;Assignment">
+        <rdfs:subClassOf rdf:resource="&UMLComponentDiagram;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#Concept -->
+
+    <owl:Class rdf:about="&UMLComponentDiagram;Concept"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#InventorySystem -->
+
+    <owl:Class rdf:about="&UMLComponentDiagram;InventorySystem">
+        <rdfs:subClassOf rdf:resource="&UMLComponentDiagram;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#OrderSystem -->
+
+    <owl:Class rdf:about="&UMLComponentDiagram;OrderSystem">
+        <rdfs:subClassOf rdf:resource="&UMLComponentDiagram;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#Relationship -->
+
+    <owl:Class rdf:about="&UMLComponentDiagram;Relationship"/>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#StoreSystem -->
+
+    <owl:Class rdf:about="&UMLComponentDiagram;StoreSystem">
+        <rdfs:subClassOf rdf:resource="&UMLComponentDiagram;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#UsedBy -->
+
+    <owl:Class rdf:about="&UMLComponentDiagram;UsedBy">
+        <rdfs:subClassOf rdf:resource="&UMLComponentDiagram;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#Assignment_Customer_Store -->
+
+    <owl:NamedIndividual rdf:about="&UMLComponentDiagram;Assignment_Customer_Store">
+        <rdf:type rdf:resource="&UMLComponentDiagram;Assignment"/>
+        <toAssignment rdf:resource="&UMLComponentDiagram;Customer"/>
+        <fromAssignment rdf:resource="&UMLComponentDiagram;Store"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#Assignment_Order_Store -->
+
+    <owl:NamedIndividual rdf:about="&UMLComponentDiagram;Assignment_Order_Store">
+        <rdf:type rdf:resource="&UMLComponentDiagram;Assignment"/>
+        <toAssignment rdf:resource="&UMLComponentDiagram;Order"/>
+        <fromAssignment rdf:resource="&UMLComponentDiagram;Store"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#Assignment_Product_Store -->
+
+    <owl:NamedIndividual rdf:about="&UMLComponentDiagram;Assignment_Product_Store">
+        <rdf:type rdf:resource="&UMLComponentDiagram;Assignment"/>
+        <toAssignment rdf:resource="&UMLComponentDiagram;Product"/>
+        <fromAssignment rdf:resource="&UMLComponentDiagram;Store"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#Assignment_Store_Customer -->
+
+    <owl:NamedIndividual rdf:about="&UMLComponentDiagram;Assignment_Store_Customer">
+        <rdf:type rdf:resource="&UMLComponentDiagram;Assignment"/>
+        <fromAssignment rdf:resource="&UMLComponentDiagram;Customer"/>
+        <toAssignment rdf:resource="&UMLComponentDiagram;Store"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#Assignment_Store_Order -->
+
+    <owl:NamedIndividual rdf:about="&UMLComponentDiagram;Assignment_Store_Order">
+        <rdf:type rdf:resource="&UMLComponentDiagram;Assignment"/>
+        <fromAssignment rdf:resource="&UMLComponentDiagram;Order"/>
+        <toAssignment rdf:resource="&UMLComponentDiagram;Store"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#Assignment_Store_Product -->
+
+    <owl:NamedIndividual rdf:about="&UMLComponentDiagram;Assignment_Store_Product">
+        <rdf:type rdf:resource="&UMLComponentDiagram;Assignment"/>
+        <fromAssignment rdf:resource="&UMLComponentDiagram;Product"/>
+        <toAssignment rdf:resource="&UMLComponentDiagram;Store"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#Customer -->
+
+    <owl:NamedIndividual rdf:about="&UMLComponentDiagram;Customer">
+        <rdf:type rdf:resource="&UMLComponentDiagram;InventorySystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#Order -->
+
+    <owl:NamedIndividual rdf:about="&UMLComponentDiagram;Order">
+        <rdf:type rdf:resource="&UMLComponentDiagram;OrderSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#Product -->
+
+    <owl:NamedIndividual rdf:about="&UMLComponentDiagram;Product">
+        <rdf:type rdf:resource="&UMLComponentDiagram;InventorySystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#Store -->
+
+    <owl:NamedIndividual rdf:about="&UMLComponentDiagram;Store">
+        <rdf:type rdf:resource="&UMLComponentDiagram;StoreSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#UsedBy_Customer_Order -->
+
+    <owl:NamedIndividual rdf:about="&UMLComponentDiagram;UsedBy_Customer_Order">
+        <rdf:type rdf:resource="&UMLComponentDiagram;UsedBy"/>
+        <toUsedBy rdf:resource="&UMLComponentDiagram;Customer"/>
+        <fromUsedBy rdf:resource="&UMLComponentDiagram;Order"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agentlab.ru/jfxed/onto/UMLComponentDiagram#UsedBy_Product_Order -->
+
+    <owl:NamedIndividual rdf:about="&UMLComponentDiagram;UsedBy_Product_Order">
+        <rdf:type rdf:resource="&UMLComponentDiagram;UsedBy"/>
+        <fromUsedBy rdf:resource="&UMLComponentDiagram;Order"/>
+        <toUsedBy rdf:resource="&UMLComponentDiagram;Product"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,21 @@
+ .state3-Rect{
+	-fx-fill: WHITE;
+    -fx-stroke: BLUE;
+}
+
+ .state3-RectS{
+	-fx-fill: #C4E5FF;
+	-fx-stroke: BLUE;
+}
+
+ .state3-RectB{
+	-fx-fill: BLUE;
+}
+
+.state3-Circle{
+	-fx-fill: BLACK;
+}
+ 
+.state3-Text{
+    -fx-font: 21pt "Arial";
+}
